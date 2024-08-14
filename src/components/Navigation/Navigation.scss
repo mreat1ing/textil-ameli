@@ -1,0 +1,66 @@
+@use '../../variables.scss' as v;
+
+.navigation-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid v.$primary;
+}
+
+.navigation {
+  align-content: center;
+  width: 1170px;
+  height: 55px;
+  margin: 0 16px;
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__item {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: start;
+  letter-spacing: 1px;
+}
+
+.navigation__item a {
+  position: relative;
+  color: v.$title;
+  padding: 16px;
+}
+
+.navigation__item a:hover {
+  color: v.$primary;
+}
+
+.navigation__item a::after {
+  position: absolute;
+  display: block;
+  content: '';
+  height: 5px;
+  bottom: -5px;
+  left: 50%;
+  background-color: v.$primary;
+  transition: 0.3s ease;
+  width: 0;
+  transform: translateX(-50%);
+}
+
+.navigation__item a:hover::after {
+  width: 100%;
+}
+
+.navigation__item.active a::after {
+  width: 100%;
+}

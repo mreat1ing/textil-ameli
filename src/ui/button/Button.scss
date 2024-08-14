@@ -1,0 +1,22 @@
+@use '../../variables.scss' as v;
+
+.base-button {
+  cursor: pointer;
+  color: white;
+  background-color: v.$primary;
+  padding: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px 0 rgba(v.$shadow, 0.2);
+  transition: all 0.1s ease;
+}
+
+.base-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 30px 0 rgba(v.$color-pink, 0.8);
+}

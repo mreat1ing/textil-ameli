@@ -1,0 +1,12 @@
+@use '../../variables.scss' as v;
+
+.instagram-icon svg {
+  cursor: pointer;
+  fill: v.$primary;
+  transition: all 0.2s ease;
+}
+
+.instagram-icon:hover svg {
+  fill: white;
+  background-color: v.$primary;
+}

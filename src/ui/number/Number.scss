@@ -1,0 +1,22 @@
+@use '../../variables.scss' as v;
+
+.number {
+  display: flex;
+  align-items: center;
+}
+
+.number__icon {
+  height: 25px;
+}
+
+.number__phone {
+  font-family: Oswald;
+  font-size: 25px;
+  color: v.$secondary;
+  transition: color 0.1s ease;
+  font-weight: 400;
+}
+
+.number__phone:hover {
+  color: v.$accent;
+}

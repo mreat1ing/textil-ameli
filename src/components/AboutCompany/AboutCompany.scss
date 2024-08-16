@@ -1,0 +1,190 @@
+@use '../../variables.scss' as v;
+
+.about-company {
+  width: 100%;
+}
+
+.about-company__wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.about-company__top-block {
+  display: flex;
+}
+
+.about-company__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 600px;
+  margin-top: 75px;
+  margin-bottom: 25px;
+}
+
+.about-company__title {
+  color: v.$text;
+  font-family: Oswald;
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-align: start;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.about-company__about {
+  word-break: normal;
+  color: v.$text;
+  font-size: 19px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.about-company__expanded-block {
+  display: flex;
+  width: 100%;
+  padding: 50px 35px;
+  border: 7px solid v.$primary;
+  margin: -50px 0;
+  margin-left: 24px;
+}
+
+.about-company__card {
+  margin-top: 75px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 25px 50px 25px;
+  background-color: v.$color-white;
+  width: 230px;
+  min-width: auto;
+  margin-right: 30px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.about-company__card-title {
+  color: v.$title;
+  font-family: Oswald;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  transition: color 0.2s ease;
+}
+
+.about-company__card-description {
+  color: v.$text;
+  font-size: 17px;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: center;
+  line-height: 27px;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  transition: color 0.2s ease;
+}
+
+.about-company__card .about-company__card-image svg {
+  transition: fill 0.2s ease;
+}
+
+.about-company__card:hover {
+  background-color: v.$secondary;
+  color: white;
+}
+
+.about-company__card:hover .about-company__card-title {
+  color: white;
+}
+
+.about-company__card:hover .about-company__card-description {
+  color: white;
+}
+
+.about-company__card:hover .about-company__card-image svg {
+  fill: white;
+}
+
+.about-company__bottom-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-company__bottom-block-image {
+  background-image: url('../../assets/img/bg-curtains.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: absolute;
+  height: 180%;
+  width: 100%;
+  z-index: -1;
+}
+
+.about-company__bottom-block-cards {
+  display: flex;
+  width: 1170px;
+  justify-content: space-between;
+}
+
+.about-company__bottom-block-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  height: 150px;
+  width: 23%;
+  border-radius: 5px;
+  border-bottom: 7px solid v.$primary;
+  user-select: none;
+}
+
+.about-company__bottom-block-card svg {
+  transition: scale 0.2s ease;
+}
+
+.about-company__bottom-block-card:hover svg {
+  scale: 1.2;
+}
+
+.about-company__bottom-block-title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  margin-top: 16px;
+}

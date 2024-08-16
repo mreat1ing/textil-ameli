@@ -6,7 +6,7 @@
     "node": true,
     "jest": true
   },
-  "ignorePatterns": ["node_modules", "dist", "build"],
+  "ignorePatterns": ["node_modules", "dist", "build", "*.d.ts"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",

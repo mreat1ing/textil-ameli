@@ -1,0 +1,10 @@
+@use '../../variables.scss' as v;
+
+.mail {
+  color: white;
+  transition: color 0.1s ease;
+}
+
+.mail:hover {
+  color: v.$accent;
+}

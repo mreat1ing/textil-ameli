@@ -16,6 +16,14 @@ html {
   box-sizing: border-box;
 }
 
+p,
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   margin-right: calc(-1 * (100vw - 100%)) !important;

@@ -1,12 +1,42 @@
 @use '../../variables.scss' as v;
 
-.instagram-icon svg {
+.instagram-icon .instagram-icon__link {
+  display: flex;
+  align-items: center;
   cursor: pointer;
+}
+
+.instagram-icon svg {
   fill: v.$primary;
   transition: all 0.2s ease;
+}
+
+.instagram-icon.w-description svg {
+  fill: white;
 }
 
 .instagram-icon:hover svg {
   fill: white;
   background-color: v.$primary;
+}
+
+.instagram-icon.w-description:hover svg,
+.instagram-icon.w-description:hover .instagram-icon__description {
+  fill: v.$accent;
+  color: v.$accent;
+  background-color: inherit;
+}
+
+.instagram-icon__description {
+  color: white;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 22px;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-left: 8px;
+  transition: color 0.2s ease;
 }

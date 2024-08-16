@@ -2,9 +2,16 @@ import { FC } from 'react';
 
 import './Mail.scss';
 
-const Mail: FC = () => {
+interface IMail {
+  className?: string;
+}
+
+const Mail: FC<IMail> = ({ className }) => {
   return (
-    <a className="mail" href="mailto:stdamelie@gmail.com">
+    <a
+      className={`mail${className ? ' ' + className : ''}`}
+      href="mailto:stdamelie@gmail.com"
+    >
       stdamelie@gmail.com
     </a>
   );

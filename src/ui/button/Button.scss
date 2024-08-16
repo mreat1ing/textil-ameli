@@ -14,6 +14,7 @@
   border-radius: 5px;
   box-shadow: 0 5px 20px 0 rgba(v.$shadow, 0.2);
   transition: all 0.1s ease;
+  width: max-content;
 }
 
 .base-button:hover {

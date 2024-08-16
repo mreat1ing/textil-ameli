@@ -8,6 +8,10 @@
   border-bottom: 2px solid v.$primary;
 }
 
+.navigation-wrapper.no-border {
+  border: none;
+}
+
 .navigation {
   align-content: center;
   width: 1170px;
@@ -63,4 +67,41 @@
 
 .navigation__item.active a::after {
   width: 100%;
+}
+
+// footer styles
+
+.navigation-footer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation-footer__item {
+  display: block;
+}
+
+.navigation-footer__item a {
+  display: block;
+  padding: 15px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 12px;
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+  transition: color 0.1s ease;
+}
+
+.navigation-footer__item.active a {
+  color: v.$accent;
+}
+
+.navigation-footer__item a:hover {
+  color: v.$accent;
 }

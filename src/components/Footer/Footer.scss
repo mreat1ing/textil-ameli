@@ -1,0 +1,65 @@
+@use '../../variables.scss' as v;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: v.$text;
+}
+
+.footer__wrapper {
+  padding: 100px 0;
+  width: 1170px;
+  margin: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  min-width: auto;
+}
+
+.footer__about-us {
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+}
+
+.footer__navigation {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.footer__description {
+  color: white;
+  font-family: 'Oswald';
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  line-height: 28px;
+  margin: 25px 0 50px 0;
+}
+
+.footer__time-work {
+  color: white;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+.footer__mail {
+  font-family: Oswald;
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 30px;
+  text-align: right;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: 300;
+}

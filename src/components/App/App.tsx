@@ -8,11 +8,12 @@ import { FC } from 'react';
 
 import './App.scss';
 import Layout from 'src/pages/layout';
+import Main from 'src/pages/main';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
-      <Route path="/" element={<div></div>} />
+      <Route path="/" element={<Main />} />
     </Route>
   )
 );

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import Address from 'src/ui/address';
 import Mail from 'src/ui/mail';
@@ -22,7 +23,9 @@ const Header: FC = () => {
         <div className="header__bottom-wrapper">
           <div className="header__bottom">
             <div className="header__logo-wrapper">
-              <Logo width="200px" />
+              <Link to="/">
+                <Logo width="200px" />
+              </Link>
               <p className="header__title">
                 Семейная студия
                 <br /> текстильного дизайна

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import Logo from 'src/ui/logo';
 import Address from 'src/ui/address';
@@ -14,7 +15,9 @@ const Footer: FC = () => {
     <footer className="footer">
       <div className="footer__wrapper">
         <div className="footer__about-us">
-          <Logo fill="white" width="150px" />
+          <Link to="/">
+            <Logo fill="white" width="150px" />
+          </Link>
           <p className="footer__description">
             Семейная студия
             <br />

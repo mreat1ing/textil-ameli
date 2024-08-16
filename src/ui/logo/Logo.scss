@@ -1,0 +1,13 @@
+@use '../../variables.scss' as v;
+
+.logo.primary path {
+  fill: v.$primary;
+}
+
+.logo.white path {
+  fill: white;
+}
+
+.logo.black path {
+  fill: black;
+}

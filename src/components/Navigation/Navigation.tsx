@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import './Navigation.scss';
 
@@ -15,22 +16,22 @@ const Navigation: FC<INavigation> = ({ type }) => {
       <nav className={classType}>
         <ul className={`${classType}__list`}>
           <li className={`${classType}__item active`}>
-            <a href="/">Главная</a>
+            <Link to="/">Главная</Link>
           </li>
           <li className={`${classType}__item`}>
-            <a href="/">О нас</a>
+            <Link to="/about">О нас</Link>
           </li>
           <li className={`${classType}__item`}>
-            <a href="/">Услуги</a>
+            <Link to="/services">Услуги</Link>
           </li>
           <li className={`${classType}__item`}>
-            <a href="/">Ассортимент</a>
+            <Link to="/assortment">Ассортимент</Link>
           </li>
           <li className={`${classType}__item`}>
-            <a href="/">Наши работы</a>
+            <Link to="/our-works">Наши работы</Link>
           </li>
           <li className={`${classType}__item`}>
-            <a href="/">Контакты</a>
+            <Link to="/contacts">Контакты</Link>
           </li>
         </ul>
       </nav>

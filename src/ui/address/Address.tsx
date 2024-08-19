@@ -2,9 +2,15 @@ import { FC } from 'react';
 
 import './Address.scss';
 
-const Address: FC = () => {
+interface IAddress {
+  className?: string;
+}
+
+const Address: FC<IAddress> = ({ className }) => {
+  const addressClass = 'address' + (className ? ' ' + className : '');
+
   return (
-    <p className="address">
+    <p className={addressClass}>
       Севастополь, МЦ “DOMINO” (б-р Гидронавтов, 60, 2 эт.)
     </p>
   );

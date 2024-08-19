@@ -5,6 +5,7 @@ import BgVideo from 'src/components/BgVideo';
 import CompletedOrders from 'src/components/CompletedOrders';
 import ContactUs from 'src/components/ContactUs';
 import Order from 'src/components/Order';
+import OurLocation from 'src/components/OurLocation';
 
 const Main: FC = () => {
   return (
@@ -14,6 +15,7 @@ const Main: FC = () => {
       <Order />
       <CompletedOrders />
       <ContactUs />
+      <OurLocation />
     </>
   );
 };

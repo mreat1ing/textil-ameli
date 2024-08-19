@@ -1,0 +1,20 @@
+@use '../../variables.scss' as v;
+
+.input {
+  outline: 1px solid gray;
+  display: block;
+  padding: 16px;
+  background-color: v.$bg-input;
+  width: 100%;
+}
+
+.label {
+  color: v.$text;
+  cursor: default;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0px;
+  line-height: 30px;
+}

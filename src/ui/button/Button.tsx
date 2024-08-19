@@ -1,15 +1,23 @@
-import { FC } from 'react';
+import { FC, FormEvent } from 'react';
 
 import './Button.scss';
 
 interface IButton {
-  children: string;
+  children: React.ReactNode;
   className?: string;
+  type?: 'submit' | 'button';
+  submitHandler?: () => void;
 }
 
-const Button: FC<IButton> = ({ children, className }) => {
+const Button: FC<IButton> = ({ children, className, type, submitHandler }) => {
+  const buttonClass = 'base-button' + (className ? ' ' + className : '');
+
+  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+    if (submitHandler) submitHandler();
+  };
+
   return (
-    <button className={`base-button${className ? ' ' + className : ''}`}>
+    <button className={buttonClass} type={type} onClick={handleSubmit}>
       {children}
     </button>
   );

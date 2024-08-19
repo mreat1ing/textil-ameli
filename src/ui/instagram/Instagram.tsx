@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
 
 import { ReactComponent as Insta } from 'src/assets/icons/instagram-icon.svg';
 
@@ -19,12 +18,17 @@ const Instagram: FC<IInsta> = ({ width, height, description }) => {
 
   return (
     <div className={`instagram-icon${addedClass}`}>
-      <Link className="instagram-icon__link" to={'#'}>
+      <a
+        className="instagram-icon__link"
+        href="https://www.instagram.com/amelie_studio_sevastopol/"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         <Insta width={iconW} height={iconH} />
         {description && (
           <p className="instagram-icon__description">{description}</p>
         )}
-      </Link>
+      </a>
     </div>
   );
 };

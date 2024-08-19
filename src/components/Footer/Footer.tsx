@@ -29,10 +29,10 @@ const Footer: FC = () => {
           <Navigation type="footer" />
         </div>
         <div className="footer__contacts">
-          <Number value="8 978 828 05 25" />
-          <Number value="8 978 979 53 43" />
-          <Number value="8 978 979 06 90" />
-          <Number value="8 978 164 97 10" />
+          <Number className="footer__number" value="8 978 828 05 25" />
+          <Number className="footer__number" value="8 978 979 53 43" />
+          <Number className="footer__number" value="8 978 979 06 90" />
+          <Number className="footer__number" value="8 978 164 97 10" />
           <p className="footer__time-work">Ежедневно, 10:00 - 18:00</p>
           <Mail className="footer__mail" />
           <Instagram width="35px" description="наш инстаграм" />

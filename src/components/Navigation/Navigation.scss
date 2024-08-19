@@ -65,7 +65,7 @@
   width: 100%;
 }
 
-.navigation__item.active a::after {
+.navigation__item a.active::after {
   width: 100%;
 }
 
@@ -98,7 +98,7 @@
   transition: color 0.1s ease;
 }
 
-.navigation-footer__item.active a {
+.navigation-footer__item a.active {
   color: v.$accent;
 }
 

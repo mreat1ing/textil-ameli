@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import './Navigation.scss';
 
@@ -15,23 +15,23 @@ const Navigation: FC<INavigation> = ({ type }) => {
     <div className={`navigation-wrapper${!type ? '' : ' no-border'}`}>
       <nav className={classType}>
         <ul className={`${classType}__list`}>
-          <li className={`${classType}__item active`}>
-            <Link to="/">Главная</Link>
+          <li className={`${classType}__item`}>
+            <NavLink to="/">Главная</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <Link to="/about">О нас</Link>
+            <NavLink to="/about">О нас</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <Link to="/services">Услуги</Link>
+            <NavLink to="/services">Услуги</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <Link to="/assortment">Ассортимент</Link>
+            <NavLink to="/assortment">Ассортимент</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <Link to="/our-works">Наши работы</Link>
+            <NavLink to="/our-works">Наши работы</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <Link to="/contacts">Контакты</Link>
+            <NavLink to="/contacts">Контакты</NavLink>
           </li>
         </ul>
       </nav>

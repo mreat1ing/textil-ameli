@@ -68,6 +68,9 @@
 .navigation__item a.active::after {
   width: 100%;
 }
+.navigation__item a.active {
+  color: v.$primary;
+}
 
 // footer styles
 
@@ -99,7 +102,7 @@
 }
 
 .navigation-footer__item a.active {
-  color: v.$accent;
+  color: v.$secondary;
 }
 
 .navigation-footer__item a:hover {

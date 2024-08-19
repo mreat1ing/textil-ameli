@@ -1,0 +1,54 @@
+@use '../../variables.scss' as v;
+
+.our-projects {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.our-projects__wrapper {
+  width: 1170px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+  margin: 25px 0 25px 16px;
+}
+
+.our-projects__title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.our-projects__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.our-projects__item {
+  width: 33.3%;
+  overflow: hidden;
+}
+
+.our-projects__item img {
+  width: 100%;
+  transition: scale 0.2s ease;
+}
+
+.our-projects__item:hover img {
+  scale: 1.2;
+  cursor: zoom-in;
+}

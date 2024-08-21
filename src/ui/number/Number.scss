@@ -17,6 +17,15 @@
   font-weight: 400;
 }
 
+.number a {
+  display: flex;
+  align-items: center;
+}
+
+.number a svg {
+  margin-right: 8px;
+}
+
 .number__phone:hover {
   color: v.$accent;
 }

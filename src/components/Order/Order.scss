@@ -12,7 +12,7 @@
   width: 1170px;
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  margin: 0 16px;
   height: 100%;
 }
 
@@ -103,4 +103,47 @@
 
 .order__button:hover .order__button-text {
   transform: translateX(19%);
+}
+
+@media (max-width: 770px) {
+  .order__main {
+    flex-direction: column;
+  }
+
+  .order__image-wrapper {
+    align-self: center;
+  }
+
+  .order__title {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .order__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 96px;
+  }
+
+  .order__image {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .order__form {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .order__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 48px;
+  }
 }

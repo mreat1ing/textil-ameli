@@ -40,7 +40,8 @@
 }
 
 .bg-video__content {
-  width: 1170px;
+  width: 100%;
+  max-width: 1170px;
   margin: 16px;
   margin-top: 86px;
   display: flex;
@@ -84,5 +85,16 @@
     top: 0;
     transform: translateX(-50%) translateX(50vw);
     width: calc(200vh / 0.5624);
+  }
+}
+
+@media (max-width: 460px) {
+  .bg-video__content > p {
+    font-size: 18px;
+  }
+
+  .bg-video__title {
+    font-size: 48px;
+    line-height: normal;
   }
 }

@@ -11,7 +11,14 @@ const ContactUs: FC = () => {
         <div className="contact-us__content">
           <h3 className="contact-us__title">Есть вопросы?</h3>
           <p className="contact-us__description">Задайте их прямо сейчас!</p>
-          <Number className="contact-us__number" value="8 978 828 05 25" />
+          <Number
+            className="contact-us__number"
+            value="8 978 828 05 25"
+            color="rgb(66, 66, 66)"
+            hover="rgb(253, 7, 178)"
+            width="45"
+            height="45"
+          />
         </div>
       </div>
     </div>

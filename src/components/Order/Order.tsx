@@ -28,18 +28,20 @@ const Order: FC = () => {
               Для пошива штор наш дизайнер бесплатно нарисует эскиз. Это
               позволит представить, как будут выглядеть шторы на окнах.
             </p>
-            <Input
-              ref={inputNameRef}
-              label="Ваше имя: *"
-              className="order__input"
-            />
-            <Input
-              ref={inputPhoneRef}
-              label="Ваш телефон: *"
-              className="order__input"
-              pattern=""
-              type="number"
-            />
+            <div className="order__input-wrapper">
+              <Input
+                ref={inputNameRef}
+                label="Ваше имя: *"
+                className="order__input"
+              />
+              <Input
+                ref={inputPhoneRef}
+                label="Ваш телефон: *"
+                className="order__input"
+                pattern=""
+                type="number"
+              />
+            </div>
             <div className="order__button-wrapper">
               <Button type="submit" className="order__button">
                 <div className="order__button-text">

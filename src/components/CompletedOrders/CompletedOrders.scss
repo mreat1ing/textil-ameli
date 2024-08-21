@@ -54,3 +54,15 @@
   scale: 1.2;
   cursor: zoom-in;
 }
+
+@media (max-width: 770px) {
+  .our-projects__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 420px) {
+  .our-projects__item {
+    width: 100%;
+  }
+}

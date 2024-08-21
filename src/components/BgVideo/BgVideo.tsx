@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import videoBg from 'src/assets/video/girlBG.mp4';
 import Button from 'src/ui/button';
@@ -6,10 +6,23 @@ import Button from 'src/ui/button';
 import './BgVideo.scss';
 
 const BgVideo: FC = () => {
+  useEffect(() => {
+    const video: HTMLVideoElement | null =
+      document.querySelector('.bg-video__video');
+
+    video?.play();
+  }, []);
+
   return (
     <div className="bg-video">
       <div className="bg-video__video-wrapper">
-        <video className="bg-video__video" autoPlay loop muted>
+        <video
+          className="bg-video__video"
+          preload="auto"
+          playsInline
+          loop
+          muted
+        >
           <source src={videoBg} />
         </video>
       </div>

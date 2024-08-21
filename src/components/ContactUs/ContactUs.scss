@@ -8,8 +8,9 @@
 }
 
 .contact-us__wrapper {
-  width: 1170px;
-  margin-left: 16px;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,4 +65,30 @@
 
 .contact-us__number:hover {
   color: v.$primary;
+}
+
+@media (max-width: 444px) {
+  .contact-us__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .contact-us__number {
+    font-size: 24px;
+    line-height: 20px;
+  }
+
+  .contact-us__content .number svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-us__description {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 24px;
+  }
 }

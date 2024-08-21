@@ -25,6 +25,9 @@
 }
 
 .bg-video__video {
+  background-image: url('../../assets/img/bg-pod-video.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   height: calc(100vw * 0.5625);
   left: calc(0px - ((100vw - 100%) / 2));
   position: absolute;

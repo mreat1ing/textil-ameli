@@ -82,15 +82,31 @@
 
   .footer__description {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 48px;
   }
 
-  .footer__description + .address {
+  .footer__about-us .address {
     text-align: center;
     font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-bottom: 48px;
   }
 
   .footer__contacts {
     align-items: center;
+  }
+
+  .footer__contacts .number {
+    margin-bottom: 10px;
+    line-height: 32px;
+  }
+
+  .footer__time-work {
+    margin-bottom: 10px;
+  }
+
+  .footer__mail {
+    margin-bottom: 16px;
   }
 }

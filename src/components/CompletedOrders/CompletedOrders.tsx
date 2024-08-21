@@ -32,15 +32,6 @@ const CompletedOrders: FC = () => {
           <li className="our-projects__item">
             <img src={placeholder} alt="card" />
           </li>
-          <li className="our-projects__item">
-            <img src={placeholder} alt="card" />
-          </li>
-          <li className="our-projects__item">
-            <img src={placeholder} alt="card" />
-          </li>
-          <li className="our-projects__item">
-            <img src={placeholder} alt="card" />
-          </li>
         </ul>
         <Link to="/our-works">
           <Button>Показать еще</Button>

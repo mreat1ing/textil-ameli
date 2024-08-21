@@ -1,11 +1,10 @@
 @use '../../variables.scss' as v;
 
 .navigation-wrapper {
-  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   border-bottom: 2px solid v.$primary;
+  justify-content: center;
 }
 
 .navigation-wrapper.no-border {
@@ -13,8 +12,12 @@
 }
 
 .navigation {
-  align-content: center;
-  width: 1170px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1170px;
   height: 55px;
   margin: 0 16px;
 }
@@ -107,4 +110,76 @@
 
 .navigation-footer__item a:hover {
   color: v.$accent;
+}
+
+// burger styles
+
+.burger {
+  display: flex;
+  align-items: center;
+  height: 51px;
+  padding-right: 16px;
+}
+
+.burger .navigation-wrapper {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 360px;
+  background-color: white;
+  padding: 75px 30px 30px 30px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+}
+
+.burger.burger--expanded .navigation-wrapper {
+  transform: translateX(0);
+}
+
+.burger-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: v.$shadow;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.burger-bg.burger--expanded {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.navigation-burger__item a {
+  display: block;
+  padding: 20px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 14px;
+  text-decoration: none;
+  text-align: left;
+  text-transform: uppercase;
+  color: v.$text;
+  transition: color 0.15s ease;
+}
+
+.navigation-burger__item a.active {
+  color: v.$primary;
+}
+
+.navigation-burger__item a:hover {
+  color: v.$primary;
 }

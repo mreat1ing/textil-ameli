@@ -9,14 +9,20 @@
 .instagram-icon svg {
   fill: v.$primary;
   transition: all 0.2s ease;
+  border-radius: 30%;
 }
 
 .instagram-icon.w-description svg {
   fill: white;
+  border-radius: 0;
 }
 
 .instagram-icon:hover svg {
-  fill: white;
+  fill: v.$accent;
+  box-shadow: 0 0 20px 0 rgba(v.$accent, 0.3);
+}
+
+.instagram-icon:hover svg path {
   background-color: v.$primary;
 }
 
@@ -25,6 +31,7 @@
   fill: v.$accent;
   color: v.$accent;
   background-color: inherit;
+  box-shadow: none;
 }
 
 .instagram-icon__description {

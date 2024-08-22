@@ -1,10 +1,22 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import Number from 'src/ui/number';
+import observer from 'src/utils/observer.utils';
 
 import './ContactUs.scss';
 
 const ContactUs: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.contact-us');
+    const observerFirst = component && observer(component);
+
+    component && observerFirst?.observe(component);
+
+    return () => {
+      observerFirst?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="contact-us">
       <div className="contact-us__wrapper">

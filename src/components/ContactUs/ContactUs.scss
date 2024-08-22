@@ -67,6 +67,10 @@
   color: v.$primary;
 }
 
+.contact-us.render-animation {
+  animation: v.$component-animation;
+}
+
 @media (max-width: 444px) {
   .contact-us__title {
     font-size: 24px;

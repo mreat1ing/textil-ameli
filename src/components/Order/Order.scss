@@ -139,6 +139,10 @@
   }
 }
 
+.order__image-wrapper.render-animation {
+  animation: v.$component-animation;
+}
+
 @media (max-width: 350px) {
   .order__input-wrapper {
     display: flex;

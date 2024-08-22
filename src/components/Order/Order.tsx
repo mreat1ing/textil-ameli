@@ -1,8 +1,9 @@
-import { FC, FormEvent, useRef } from 'react';
+import { FC, FormEvent, useEffect, useRef } from 'react';
 
 import Eskiz from 'src/assets/img/eskiz.jpg';
 import Input from 'src/ui/input';
 import Button from 'src/ui/button';
+import observer from 'src/utils/observer.utils';
 import { ReactComponent as Plane } from 'src/assets/icons/paper-plane.svg';
 
 import './Order.scss';
@@ -14,6 +15,17 @@ const Order: FC = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
   };
+
+  useEffect(() => {
+    const component = document.querySelector('.order__image-wrapper');
+    const observerFirst = component && observer(component);
+
+    component && observerFirst?.observe(component);
+
+    return () => {
+      observerFirst?.disconnect();
+    };
+  }, []);
 
   return (
     <div className="order">

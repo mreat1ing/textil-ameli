@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import { ReactComponent as Curtain } from 'src/assets/icons/curtain.svg';
 import { ReactComponent as Photos } from 'src/assets/icons/photos.svg';
@@ -6,10 +6,30 @@ import { ReactComponent as Calculator } from 'src/assets/icons/calculator.svg';
 import { ReactComponent as Delivery } from 'src/assets/icons/delivery.svg';
 import { ReactComponent as Pencil } from 'src/assets/icons/pencil.svg';
 import { ReactComponent as Clock } from 'src/assets/icons/clock.svg';
+import ParallaxBgImage from 'src/components/ParallaxBgImage';
+import bgCurtains from 'src/assets/img/bg-curtains.jpg';
+import observer from 'src/utils/observer.utils';
 
 import './AboutCompany.scss';
 
 const AboutCompany: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.about-company__top-block');
+    const componentSecond = document.querySelector(
+      '.about-company__bottom-block-cards'
+    );
+    const observerFirst = component && observer(component);
+    const observerSecond = componentSecond && observer(componentSecond);
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="about-company">
       <div className="about-company__wrapper">
@@ -55,33 +75,35 @@ const AboutCompany: FC = () => {
         </div>
       </div>
       <div className="about-company__bottom-block">
-        <div className="about-company__bottom-block-image"></div>
-        <div className="about-company__bottom-block-cards">
-          <div className="about-company__bottom-block-card">
-            <Calculator width={60} height={60} />
-            <h4 className="about-company__bottom-block-title">
-              Оптовые цены на ткани
-            </h4>
+        <ParallaxBgImage image={bgCurtains}>
+          <div className="about-company__bottom-block-cards">
+            <div className="about-company__bottom-block-card">
+              <Calculator width={60} height={60} />
+              <h4 className="about-company__bottom-block-title">
+                Оптовые цены на ткани
+              </h4>
+            </div>
+            <div className="about-company__bottom-block-card">
+              <Clock width={60} height={60} />
+              <h4 className="about-company__bottom-block-title">
+                Время пошива до 4 недель
+              </h4>
+            </div>
+            <div className="about-company__bottom-block-card">
+              <Pencil width={60} height={60} />
+              <h4 className="about-company__bottom-block-title">
+                Бесплатный замер
+              </h4>
+            </div>
+            <div className="about-company__bottom-block-card">
+              <Delivery width={60} height={60} />
+              <h4 className="about-company__bottom-block-title">
+                Доставим и оформим
+              </h4>
+            </div>
           </div>
-          <div className="about-company__bottom-block-card">
-            <Clock width={60} height={60} />
-            <h4 className="about-company__bottom-block-title">
-              Время пошива до 4 недель
-            </h4>
-          </div>
-          <div className="about-company__bottom-block-card">
-            <Pencil width={60} height={60} />
-            <h4 className="about-company__bottom-block-title">
-              Бесплатный замер
-            </h4>
-          </div>
-          <div className="about-company__bottom-block-card">
-            <Delivery width={60} height={60} />
-            <h4 className="about-company__bottom-block-title">
-              Доставим и оформим
-            </h4>
-          </div>
-        </div>
+        </ParallaxBgImage>
+        {/* <div className="about-company__bottom-block-image"></div> */}
       </div>
     </div>
   );

@@ -1,12 +1,24 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import placeholder from 'src/assets/img/item-placeholder.png';
 import Button from 'src/ui/button';
+import observer from 'src/utils/observer.utils';
 
 import './CompletedOrders.scss';
 
 const CompletedOrders: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.our-projects__title');
+    const observerFirst = component && observer(component);
+
+    component && observerFirst?.observe(component);
+
+    return () => {
+      observerFirst?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="our-projects">
       <div className="our-projects__wrapper">

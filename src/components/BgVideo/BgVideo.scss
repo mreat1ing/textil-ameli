@@ -81,6 +81,10 @@
   margin: 25px 0;
 }
 
+.bg-video__text-wrapper.render-animation {
+  animation: smooth-render 1s ease;
+}
+
 @media (max-width: 1096px) {
   .bg-video__video {
     left: 0;

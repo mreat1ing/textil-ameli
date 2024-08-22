@@ -7,10 +7,28 @@ import './BgVideo.scss';
 
 const BgVideo: FC = () => {
   useEffect(() => {
+    const component = document.querySelector('.bg-video__text-wrapper');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        component?.classList.add('render-animation');
+        observer.disconnect();
+      }
+    });
+
+    component && observer.observe(component);
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     const video: HTMLVideoElement | null =
       document.querySelector('.bg-video__video');
 
-    video?.play();
+    try {
+      setTimeout(() => video?.play(), 500);
+    } catch (error) {
+      return;
+    }
   }, []);
 
   return (

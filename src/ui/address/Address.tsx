@@ -11,7 +11,7 @@ const Address: FC<IAddress> = ({ className }) => {
 
   return (
     <p className={addressClass}>
-      Севастополь, МЦ “DOMINO” (б-р Гидронавтов, 60, 2 эт.)
+      Севастополь, МЦ “DOMINO” (б-р Гидронавтов, 60, 1 эт.)
     </p>
   );
 };

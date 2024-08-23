@@ -1,7 +1,7 @@
 import { FC, useCallback, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import BurgerMenu from 'src/components/BurgerMenu';
+import BurgerMenu from 'src/common/BurgerMenu';
 import burgerToggle from 'src/utils/burgerToggle.utils';
 import CloseButton from 'src/ui/closeButton';
 import Instagram from 'src/ui/instagram';

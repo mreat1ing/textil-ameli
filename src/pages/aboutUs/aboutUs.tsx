@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import bgCurtains from 'src/assets/img/bg-curtains2.jpg';
-import ParallaxBgImage from 'src/components/ParallaxBgImage';
+import ParallaxBgImage from 'src/common/ParallaxBgImage';
 
 const AboutUs: FC = () => {
   return (

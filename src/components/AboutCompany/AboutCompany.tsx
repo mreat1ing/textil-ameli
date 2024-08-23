@@ -6,9 +6,10 @@ import { ReactComponent as Calculator } from 'src/assets/icons/calculator.svg';
 import { ReactComponent as Delivery } from 'src/assets/icons/delivery.svg';
 import { ReactComponent as Pencil } from 'src/assets/icons/pencil.svg';
 import { ReactComponent as Clock } from 'src/assets/icons/clock.svg';
-import ParallaxBgImage from 'src/components/ParallaxBgImage';
+import ParallaxBgImage from 'src/common/ParallaxBgImage';
 import bgCurtains from 'src/assets/img/bg-curtains.jpg';
 import observer from 'src/utils/observer.utils';
+import AssortmentCart from 'src/common/AssortmentCart';
 
 import './AboutCompany.scss';
 
@@ -48,29 +49,18 @@ const AboutCompany: FC = () => {
             </p>
           </div>
           <div className="about-company__expanded-block">
-            <div className="about-company__card">
-              <div className="about-company__card-image">
-                <Curtain width={48} height={48} />
-              </div>
-
-              <h3 className="about-company__card-title">
-                Для дома под любые задачи
-              </h3>
-              <p className="about-company__card-description">
-                Индивидуальное изготовление штор любой сложности
-              </p>
-            </div>
-            <div className="about-company__card">
-              <div className="about-company__card-image">
-                <Photos width={48} height={48} />
-              </div>
-              <h3 className="about-company__card-title">
-                В коммерческое помещение
-              </h3>
-              <p className="about-company__card-description">
-                Шторы, жалюзи в офис, конференц-зал, ресторан и др.
-              </p>
-            </div>
+            <AssortmentCart
+              className="about-company__card"
+              icon={<Curtain width={48} height={48} />}
+              description="Индивидуальное изготовление штор любой сложности"
+              title="Для дома под любые задачи"
+            />
+            <AssortmentCart
+              className="about-company__card"
+              icon={<Photos width={48} height={48} />}
+              description="В коммерческое помещение"
+              title="Шторы, жалюзи в офис, конференц-зал, ресторан и др."
+            />
           </div>
         </div>
       </div>

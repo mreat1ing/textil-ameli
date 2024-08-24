@@ -4,15 +4,20 @@ import './ParallaxBgImage.scss';
 
 interface IParallaxBgImage {
   children?: JSX.Element;
-  height?: string | number;
+  padding?: string | number;
   image: string;
+  imageHeight?: string;
+  top?: string;
 }
 
 const ParallaxBgImage: FC<IParallaxBgImage> = ({
   children,
   image,
-  height = 400,
+  padding = 75,
+  imageHeight,
+  top,
 }) => {
+  const uniqueId = String(Math.random()).slice(2);
   const parallaxImage: React.MutableRefObject<HTMLElement | null> =
     useRef<HTMLElement | null>(null);
   const windowScrollY = useRef(window.scrollY);
@@ -30,18 +35,16 @@ const ParallaxBgImage: FC<IParallaxBgImage> = ({
   }, []);
 
   useEffect(() => {
-    const imgElement: Element | null = document.querySelector(
-      '.parallax-bg__image'
-    );
-    parallaxImage.current = document.querySelector('.parallax-bg__image');
+    const imgElement: Element | null = document.getElementById(uniqueId);
+    parallaxImage.current = document.getElementById(uniqueId);
     const options = {
       root: null,
       rootMargin: '0px 100% 0px 100%',
       threshold: 0,
     };
     const observer = new IntersectionObserver((entries) => {
-      handleScroll();
       if (entries[0].isIntersecting) {
+        handleScroll();
         document.addEventListener('scroll', handleScroll);
       } else {
         document.removeEventListener('scroll', handleScroll);
@@ -53,16 +56,24 @@ const ParallaxBgImage: FC<IParallaxBgImage> = ({
       observer.disconnect();
       document.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]);
+  }, [handleScroll, uniqueId]);
 
   return (
     <div className="parallax-bg">
-      <div className="parallax-bg__container" style={{ height: height }}>
+      <div
+        className="parallax-bg__container"
+        style={{ paddingTop: padding, paddingBottom: padding }}
+      >
         <div className="parallax-bg__overlay" />
         <div className="parallax-bg__wrapper">
           <div
             className="parallax-bg__image"
-            style={{ backgroundImage: `url(${image})` }}
+            id={uniqueId}
+            style={{
+              backgroundImage: `url(${image})`,
+              height: `${imageHeight}`,
+              top: `${top}`,
+            }}
           />
         </div>
         {children}

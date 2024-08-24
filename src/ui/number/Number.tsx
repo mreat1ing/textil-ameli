@@ -39,15 +39,13 @@ const Number: FC<INumber> = ({
 
   return (
     <div className="number">
-      <a href={`tel:${stripedValue}`} style={{}}>
+      <a
+        href={`tel:${stripedValue}`}
+        onMouseOver={handleOver}
+        onMouseOut={handleOut}
+      >
         <Phone ref={iconRef} width={width} height={height} fill={color} />
-        <span
-          className={numberClass}
-          onMouseOver={handleOver}
-          onMouseOut={handleOut}
-        >
-          {value}
-        </span>
+        <span className={numberClass}>{value}</span>
       </a>
     </div>
   );

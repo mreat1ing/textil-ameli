@@ -65,7 +65,7 @@ const AboutCompany: FC = () => {
         </div>
       </div>
       <div className="about-company__bottom-block">
-        <ParallaxBgImage image={bgCurtains}>
+        <ParallaxBgImage image={bgCurtains} padding={150}>
           <div className="about-company__bottom-block-cards">
             <div className="about-company__bottom-block-card">
               <Calculator width={60} height={60} />

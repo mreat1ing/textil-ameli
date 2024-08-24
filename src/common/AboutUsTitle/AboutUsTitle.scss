@@ -1,0 +1,32 @@
+.about-us-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.about-us-title__description {
+  color: white;
+  text-align: center;
+  font-size: 19px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.about-us-title__title {
+  color: white;
+  font-weight: normal;
+  font-family: 'Oswald';
+  font-size: 56px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 65px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  margin: 16px 0;
+}

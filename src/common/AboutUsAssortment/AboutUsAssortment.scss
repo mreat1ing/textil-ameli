@@ -1,0 +1,63 @@
+@use '../../variables.scss' as v;
+
+.assortment {
+  width: 100%;
+  padding: 100px 16px;
+}
+
+.assortment__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+}
+
+.assortment__title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: 75px;
+  font-weight: normal;
+}
+
+.assortment__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.assortment__card {
+  margin: 0;
+  width: 31%;
+  box-shadow: 0 10px 20px 0 v.$shadow;
+}
+
+@media (max-width: 960px) {
+  .assortment__cards {
+    gap: 20px;
+  }
+
+  .assortment__card {
+    width: 48%;
+  }
+
+  .assortment__card:last-child {
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .assortment__cards {
+    gap: 20px;
+  }
+
+  .assortment__card {
+    width: 100%;
+  }
+}

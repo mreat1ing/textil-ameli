@@ -1,0 +1,108 @@
+@use '../../variables.scss' as v;
+
+.services {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.services__wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.services__title {
+  color: white;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.services__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.services__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23%;
+  border: 5px solid v.$border;
+  padding: 15px;
+}
+
+.card__title {
+  color: white;
+  font-size: 19px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  min-height: 20px;
+  margin: 16px 0;
+}
+
+// @media (max-width: 940px) {
+//   .services__card {
+//     width: 31%;
+//   }
+
+//   .services__card:nth-last-child(2) {
+//     width: 48%;
+//   }
+
+//   .services__card:last-child {
+//     width: 48%;
+//   }
+// }
+
+@media (max-width: 940px) {
+  .services__cards {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .services__card {
+    width: 33.3333%;
+    border-width: 1px;
+  }
+
+  .services__card:nth-last-child(2),
+  .services__card:last-child {
+    width: 50%;
+  }
+}
+
+@media (max-width: 660px) {
+  .services__card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  .services__card {
+    width: 100%;
+  }
+
+  .card__title {
+    font-size: 17px;
+  }
+
+  .services__card:nth-last-child(2),
+  .services__card:last-child {
+    width: inherit;
+  }
+}

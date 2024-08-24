@@ -1,0 +1,125 @@
+@use '../../variables.scss' as v;
+
+.our-clients {
+  width: 100%;
+  background-color: v.$color-white;
+  padding: 75px 16px 100px;
+}
+
+.our-clients__wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.our-clients__title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: 50px;
+  font-weight: normal;
+}
+
+.our-clients__cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.our-clients__item {
+  position: relative;
+  display: flex;
+  outline: 1px solid v.$border;
+  border-radius: 4px;
+  width: 23%;
+}
+
+.our-clients__item img {
+  height: 100%;
+  width: 100%;
+}
+
+.our-clients__description {
+  margin-top: 50px;
+  color: v.$text;
+  font-size: 19px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+}
+
+.item__caption {
+  position: absolute;
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.our-clients__item:hover .item__caption {
+  opacity: 1;
+}
+
+.item__background {
+  position: absolute;
+  background-color: v.$primary;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.item__title {
+  user-select: none;
+  font-family: 'Oswald';
+  text-align: center;
+  margin: auto 0;
+  color: white;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+}
+
+@media (max-width: 820px) {
+  .our-clients__item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 540px) {
+  .our-clients__item {
+    width: 60%;
+  }
+}

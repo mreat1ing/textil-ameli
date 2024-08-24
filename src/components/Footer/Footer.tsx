@@ -14,7 +14,7 @@ const Footer: FC = () => {
   const [navShow, setNavShow] = useState(true);
 
   const handleResize = useCallback(() => {
-    if (window.innerWidth <= 580) {
+    if (window.innerWidth <= 610) {
       setNavShow(false);
     } else setNavShow(true);
   }, []);

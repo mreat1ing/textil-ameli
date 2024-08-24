@@ -18,7 +18,7 @@ const Order: FC = () => {
 
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
-    const observerFirst = component && observer(component);
+    const observerFirst = component && observer(component, 'from-left');
 
     component && observerFirst?.observe(component);
 

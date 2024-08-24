@@ -1,7 +1,7 @@
-export default function observer(component: Element) {
+export default function observer(component: Element, additionalClass = '') {
   const observerLocal = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
-      component?.classList.add('render-animation');
+      additionalClass && component?.classList.add(additionalClass);
       observerLocal.disconnect();
     }
   });

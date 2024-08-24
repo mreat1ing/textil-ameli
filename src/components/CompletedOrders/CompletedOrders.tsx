@@ -9,13 +9,19 @@ import './CompletedOrders.scss';
 
 const CompletedOrders: FC = () => {
   useEffect(() => {
-    const component = document.querySelector('.our-projects__title');
-    const observerFirst = component && observer(component);
+    const componentFirst = document.querySelector('.our-projects__title');
+    const componentSecond = document.querySelector('.our-projects__content');
+    const observerFirst =
+      componentFirst && observer(componentFirst, 'from-top');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'smooth-render');
 
-    component && observerFirst?.observe(component);
+    componentFirst && observerFirst?.observe(componentFirst);
+    componentSecond && observerSecond?.observe(componentSecond);
 
     return () => {
       observerFirst?.disconnect();
+      observerSecond?.disconnect();
     };
   }, []);
 

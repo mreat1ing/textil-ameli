@@ -8,7 +8,7 @@ import './ContactUs.scss';
 const ContactUs: FC = () => {
   useEffect(() => {
     const component = document.querySelector('.contact-us');
-    const observerFirst = component && observer(component);
+    const observerFirst = component && observer(component, 'from-top');
 
     component && observerFirst?.observe(component);
 

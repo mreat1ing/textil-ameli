@@ -2,22 +2,21 @@ import { FC, useEffect } from 'react';
 
 import videoBg from 'src/assets/video/girlBG.mp4';
 import Button from 'src/ui/button';
+import observer from 'src/utils/observer.utils';
 
 import './BgVideo.scss';
 
 const BgVideo: FC = () => {
   useEffect(() => {
     const component = document.querySelector('.bg-video__text-wrapper');
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        component?.classList.add('render-animation');
-        observer.disconnect();
-      }
-    });
 
-    component && observer.observe(component);
+    const observerFirst = component && observer(component, 'smooth-render');
 
-    return () => observer.disconnect();
+    component && observerFirst?.observe(component);
+
+    return () => {
+      observerFirst?.disconnect();
+    };
   }, []);
 
   useEffect(() => {

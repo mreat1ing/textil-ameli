@@ -55,10 +55,6 @@
   cursor: zoom-in;
 }
 
-.our-projects__title.render-animation {
-  animation: v.$component-animation;
-}
-
 @media (max-width: 770px) {
   .our-projects__item {
     width: 50%;

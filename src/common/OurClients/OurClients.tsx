@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import chayka from 'src/assets/img/companies/chayka.jpg';
 import discovery from 'src/assets/img/companies/discovery.jpg';
@@ -8,10 +8,32 @@ import kirov from 'src/assets/img/companies/kirov.jpg';
 import montazh from 'src/assets/img/companies/montazh.jpg';
 import palmira from 'src/assets/img/companies/palmira.jpg';
 import tavros from 'src/assets/img/companies/tavros.jpg';
+import observer from 'src/utils/observer.utils';
 
 import './OurClients.scss';
 
 const OurClients: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.our-clients__title');
+    const componentSecond = document.querySelector('.our-clients__cards');
+    const componentThird = document.querySelector('.our-clients__description');
+    const observerFirst = component && observer(component, 'from-top');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'smooth-render');
+    const observerThird =
+      componentThird && observer(componentThird, 'from-left');
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+    componentThird && observerThird?.observe(componentThird);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+      observerThird?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="our-clients">
       <div className="our-clients__wrapper">

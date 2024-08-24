@@ -1,8 +1,26 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+
+import observer from 'src/utils/observer.utils';
 
 import './AboutUsWorkingTime.scss';
 
 const AboutUsWorkingTime: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.working-time__description-box');
+    const componentSecond = document.querySelector('.working-time__box');
+    const observerFirst = component && observer(component, 'from-left');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'from-right');
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="working-time">
       <div className="working-time__wrapper">

@@ -1,11 +1,28 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
-import AssortmentCart from 'src/common/AssortmentCart';
 import { ReactComponent as Curtain } from 'src/assets/icons/curtain.svg';
+import AssortmentCart from 'src/common/AssortmentCart';
+import observer from 'src/utils/observer.utils';
 
 import './AboutUsAssortment.scss';
 
 const AboutUsAssortment: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.assortment__title');
+    const componentSecond = document.querySelector('.assortment__cards');
+    const observerFirst = component && observer(component, 'from-top');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'smooth-render');
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="assortment">
       <div className="assortment__wrapper">

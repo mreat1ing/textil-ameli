@@ -19,8 +19,9 @@ const AboutCompany: FC = () => {
     const componentSecond = document.querySelector(
       '.about-company__bottom-block-cards'
     );
-    const observerFirst = component && observer(component);
-    const observerSecond = componentSecond && observer(componentSecond);
+    const observerFirst = component && observer(component, 'from-left');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'from-right');
 
     component && observerFirst?.observe(component);
     componentSecond && observerSecond?.observe(componentSecond);

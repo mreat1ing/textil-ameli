@@ -1,10 +1,32 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './AboutUsInvite.scss';
 import Number from 'src/ui/number';
 import Button from 'src/ui/button';
+import observer from 'src/utils/observer.utils';
 
 const AboutUsInvite: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.invitation__description');
+    const componentSecond = document.getElementById('first-block');
+    const componentThird = document.getElementById('second-block');
+    const observerFirst = component && observer(component, 'from-top');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'from-left');
+    const observerThird =
+      componentThird && observer(componentThird, 'from-right');
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+    componentThird && observerThird?.observe(componentThird);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+      observerThird?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="invitation">
       <div className="invitation__wrapper">
@@ -19,7 +41,7 @@ const AboutUsInvite: FC = () => {
           нашего любого заказчика.
         </p>
         <div className="invitation__blocks-wrapper">
-          <div className="invitation__block">
+          <div className="invitation__block" id="first-block">
             <p className="block__description">
               Мы работаем ежедневно с 10:00 до 18:00. Наберите номер или
               нажмите, чтобы позвонить:
@@ -32,7 +54,7 @@ const AboutUsInvite: FC = () => {
               color="black"
             />
           </div>
-          <div className="invitation__block">
+          <div className="invitation__block" id="second-block">
             <p className="block__description">
               В нерабочее время нажмите, чтобы заказать звонок — мы перезвоним
               вам:

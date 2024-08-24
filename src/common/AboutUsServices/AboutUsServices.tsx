@@ -1,8 +1,26 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
+
+import observer from 'src/utils/observer.utils';
 
 import './AboutUsServices.scss';
 
 const AboutUsServices: FC = () => {
+  useEffect(() => {
+    const component = document.querySelector('.services__title');
+    const componentSecond = document.querySelector('.services__cards');
+    const observerFirst = component && observer(component, 'from-top');
+    const observerSecond =
+      componentSecond && observer(componentSecond, 'smooth-render');
+
+    component && observerFirst?.observe(component);
+    componentSecond && observerSecond?.observe(componentSecond);
+
+    return () => {
+      observerFirst?.disconnect();
+      observerSecond?.disconnect();
+    };
+  }, []);
+
   return (
     <div className="services">
       <div className="services__wrapper">

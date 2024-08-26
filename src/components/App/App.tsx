@@ -10,6 +10,7 @@ import './App.scss';
 import Layout from 'src/pages/layout';
 import Main from 'src/pages/main';
 import AboutUs from 'src/pages/aboutUs';
+import OurWorks from 'src/pages/ourWorks';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +19,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<AboutUs />} />
       <Route path="/services" element={<h2>services</h2>} />
       <Route path="/assortment" element={<h2>assortment</h2>} />
-      <Route path="/our-works" element={<h2>Our works</h2>} />
+      <Route path="/our-works" element={<OurWorks />} />
       <Route path="/contacts" element={<h2>contacts</h2>} />
     </Route>
   )

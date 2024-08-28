@@ -30,3 +30,7 @@
   text-transform: none;
   margin: 16px 0;
 }
+
+.about-us-title:not(.about-us-title.smooth-render) {
+  opacity: 0;
+}

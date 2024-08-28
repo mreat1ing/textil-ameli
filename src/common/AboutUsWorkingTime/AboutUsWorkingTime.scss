@@ -72,6 +72,11 @@
   margin: 25px 0;
 }
 
+.working-time__description-box:not(.working-time__description-box.from-left),
+.working-time__box:not(.working-time__box.from-right) {
+  opacity: 0;
+}
+
 @media (max-width: 800px) {
   .working-time__wrapper {
     flex-direction: column;

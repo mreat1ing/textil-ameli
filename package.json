@@ -32,11 +32,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "format": "npx prettier --write ./src",
     "eject": "react-scripts eject",
     "dev": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "prod-build": "parcel build public/index.html"
   },
   "eslintConfig": {
     "extends": [

@@ -82,6 +82,10 @@
   margin: 25px 0;
 }
 
+.bg-video__text-wrapper:not(.bg-video__text-wrapper.smooth-render) {
+  opacity: 0;
+}
+
 @media (max-width: 1096px) {
   .bg-video__video {
     left: 0;

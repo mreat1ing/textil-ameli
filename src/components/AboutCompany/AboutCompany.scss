@@ -124,6 +124,13 @@
   margin-top: 16px;
 }
 
+.about-company__top-block:not(.about-company__top-block.from-left),
+.about-company__bottom-block-cards:not(
+    .about-company__bottom-block-cards.from-right
+  ) {
+  opacity: 0;
+}
+
 @media (max-width: 1210px) {
   .about-company__wrapper {
     padding: 0 16px;

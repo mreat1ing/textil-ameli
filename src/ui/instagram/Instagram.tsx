@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { ReactComponent as Insta } from 'src/assets/icons/instagram-icon.svg';
+import { InstagramIcon } from 'src/common/icons';
 
 import './Instagram.scss';
 
@@ -27,7 +27,7 @@ const Instagram: FC<IInsta> = ({ width, height, description, className }) => {
         target="_blank"
         rel="noreferrer noopener"
       >
-        <Insta width={iconW} height={iconH} />
+        <InstagramIcon width={iconW} height={iconH} />
         {description && (
           <p className="instagram-icon__description">{description}</p>
         )}

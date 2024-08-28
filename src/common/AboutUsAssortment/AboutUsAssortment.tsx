@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 
-import { ReactComponent as Curtain } from 'src/assets/icons/curtain.svg';
+import { Curtain } from 'src/common/icons';
 import AssortmentCart from 'src/common/AssortmentCart';
 import observer from 'src/utils/observer.utils';
 

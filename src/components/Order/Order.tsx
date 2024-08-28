@@ -4,7 +4,7 @@ import Eskiz from 'src/assets/img/eskiz.jpg';
 import Input from 'src/ui/input';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
-import { ReactComponent as Plane } from 'src/assets/icons/paper-plane.svg';
+import { PaperPlane } from 'src/common/icons';
 
 import './Order.scss';
 
@@ -57,7 +57,7 @@ const Order: FC = () => {
             <div className="order__button-wrapper">
               <Button type="submit" className="order__button">
                 <div className="order__button-text">
-                  <Plane width={30} height={30} />
+                  <PaperPlane width={30} height={30} />
                   <span>Отправить</span>
                 </div>
               </Button>

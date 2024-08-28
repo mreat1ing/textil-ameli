@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import burgerToggle from 'src/utils/burgerToggle.utils';
-import { ReactComponent as BurgerIcon } from 'src/assets/icons/burger-menu.svg';
+import { BurgerIcon } from 'src/common/icons';
 
 import './BurgerMenu.scss';
 

@@ -1,11 +1,13 @@
 import { FC, useEffect } from 'react';
 
-import { ReactComponent as Curtain } from 'src/assets/icons/curtain.svg';
-import { ReactComponent as Photos } from 'src/assets/icons/photos.svg';
-import { ReactComponent as Calculator } from 'src/assets/icons/calculator.svg';
-import { ReactComponent as Delivery } from 'src/assets/icons/delivery.svg';
-import { ReactComponent as Pencil } from 'src/assets/icons/pencil.svg';
-import { ReactComponent as Clock } from 'src/assets/icons/clock.svg';
+import {
+  Curtain,
+  Photos,
+  Calculator,
+  Delivery,
+  Pencil,
+  Clock,
+} from 'src/common/icons';
 import ParallaxBgImage from 'src/common/ParallaxBgImage';
 import bgCurtains from 'src/assets/img/bg-curtains.jpg';
 import observer from 'src/utils/observer.utils';

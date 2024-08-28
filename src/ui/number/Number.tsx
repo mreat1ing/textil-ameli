@@ -1,6 +1,6 @@
 import { FC, useRef } from 'react';
 
-import { ReactComponent as Phone } from 'src/assets/icons/phone.svg';
+import { Phone } from 'src/common/icons';
 
 import './Number.scss';
 

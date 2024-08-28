@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { ReactComponent as LogoImg } from 'src/assets/img/logo.svg';
+import { LogoIcon } from 'src/common/icons';
 
 import './Logo.scss';
 
@@ -11,7 +11,7 @@ interface ILogo {
 }
 
 const Logo: FC<ILogo> = ({ width, height, fill = 'primary' }) => {
-  return <LogoImg className={`logo ${fill}`} width={width} height={height} />;
+  return <LogoIcon className={`logo ${fill}`} width={width} height={height} />;
 };
 
 export default Logo;

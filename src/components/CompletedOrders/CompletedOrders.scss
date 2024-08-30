@@ -40,6 +40,10 @@
   padding: 0;
 }
 
+.our-projects__button {
+  background-color: v.$secondary;
+}
+
 .our-projects__item {
   width: 33.3%;
   overflow: hidden;
@@ -53,6 +57,10 @@
 .our-projects__item:hover img {
   scale: 1.2;
   cursor: zoom-in;
+}
+
+.our-projects__button:hover {
+  box-shadow: 0 0 30px 0 rgba(v.$secondary, 0.8);
 }
 
 @media (max-width: 770px) {

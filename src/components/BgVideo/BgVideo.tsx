@@ -19,15 +19,39 @@ const BgVideo: FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const video: HTMLVideoElement | null =
-      document.querySelector('.bg-video__video');
+  const preloadVideo = async (src: string) => {
+    const res = await fetch(src);
+    const blob = await res.blob();
+    return URL.createObjectURL(blob);
+  };
 
-    try {
-      setTimeout(() => video?.play(), 500);
-    } catch (error) {
-      return;
-    }
+  useEffect(() => {
+    const videoElement: HTMLVideoElement | null =
+      document.querySelector('.bg-video__video');
+    if (!videoElement) return;
+    let timeoutVideo: NodeJS.Timeout;
+    let timeoutAnimation: NodeJS.Timeout;
+    preloadVideo(videoBg)
+      .then((p) => {
+        timeoutAnimation = setTimeout(
+          () => videoElement.classList.add('show-content'),
+          1000
+        );
+        return p;
+      })
+      .then((p) => {
+        timeoutVideo = setTimeout(() => {
+          if (videoElement.paused) {
+            videoElement.src = p;
+            videoElement.play();
+          }
+        }, 2000);
+      });
+
+    return () => {
+      clearTimeout(timeoutAnimation);
+      clearTimeout(timeoutVideo);
+    };
   }, []);
 
   return (
@@ -39,9 +63,7 @@ const BgVideo: FC = () => {
           playsInline
           loop
           muted
-        >
-          <source src={videoBg} />
-        </video>
+        />
       </div>
       <div className="bg-video__text-wrapper">
         <div className="bg-video__content">

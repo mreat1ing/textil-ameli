@@ -52,7 +52,7 @@ const CompletedOrders: FC = () => {
           </li>
         </ul>
         <Link to="/our-works">
-          <Button>Показать еще</Button>
+          <Button className="our-projects__button">Показать еще</Button>
         </Link>
       </div>
     </div>

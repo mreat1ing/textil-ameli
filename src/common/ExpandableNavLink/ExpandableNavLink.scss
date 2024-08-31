@@ -1,0 +1,64 @@
+@use '../../variables.scss' as v;
+
+.expandable-nav-link {
+  position: relative;
+}
+
+.expandable-nav-link__list {
+  cursor: default;
+  position: absolute;
+  width: 400px;
+  background-color: v.$primary;
+  padding: 8px;
+  animation: showBlock 0.2s linear forwards;
+  z-index: 99;
+}
+
+.expandable-nav-link__item {
+  width: 100%;
+  display: list-item;
+}
+
+.expandable-nav-link__item a {
+  color: white;
+  width: 100%;
+  display: block;
+  height: 100%;
+  padding: 12px;
+}
+
+.expandable-nav-link__item a:hover {
+  border: none;
+  background: rgba(white, 0.3);
+  color: white;
+}
+
+.expandable-nav-link__item:hover {
+  border: none;
+}
+
+.expandable-nav-link__list li a {
+  cursor: pointer;
+}
+
+.expandable-nav-link__list.hide {
+  animation: removeBlock 0.2s linear forwards;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes removeBlock {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

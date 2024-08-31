@@ -1,16 +1,16 @@
 import { FC } from 'react';
 
 import AboutCompany from 'src/components/AboutCompany';
-import BgVideo from 'src/components/BgVideo';
+import TopBlock from 'src/components/TopBlock';
 import CompletedOrders from 'src/components/CompletedOrders';
-import ContactUs from 'src/components/ContactUs';
+import ContactUs from 'src/common/ContactUs';
 import Order from 'src/components/Order';
 import OurLocation from 'src/components/OurLocation';
 
 const Main: FC = () => {
   return (
     <>
-      <BgVideo />
+      <TopBlock />
       <AboutCompany />
       <Order />
       <CompletedOrders />

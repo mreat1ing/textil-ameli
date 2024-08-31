@@ -60,7 +60,7 @@
   color: v.$color-pink !important;
 }
 
-.our-location__map {
+.our-location .map {
   width: 66.7%;
   border: none;
 }
@@ -86,7 +86,7 @@
     margin-top: 0;
   }
 
-  .our-location__map {
+  .our-location .map {
     width: 100%;
     height: 320px;
   }

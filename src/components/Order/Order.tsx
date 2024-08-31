@@ -1,4 +1,5 @@
-import { FC, FormEvent, useEffect, useRef } from 'react';
+import { FC, useEffect } from 'react';
+import * as React from 'react';
 
 import Eskiz from 'src/assets/img/eskiz.jpg';
 import Input from 'src/ui/input';
@@ -8,14 +9,23 @@ import { PaperPlane } from 'src/common/icons';
 
 import './Order.scss';
 
-const Order: FC = () => {
-  const inputNameRef = useRef<HTMLInputElement>(null);
-  const inputPhoneRef = useRef<HTMLInputElement>(null);
+interface IOrder {
+  image?: boolean;
+  textarea?: JSX.Element;
+  title?: string;
+  description?: boolean;
+  titleSize?: string | number;
+  className?: string;
+}
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-  };
-
+const Order: FC<IOrder> = ({
+  image = true,
+  textarea = false,
+  title,
+  description = true,
+  titleSize = 40,
+  className,
+}) => {
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
     const observerFirst = component && observer(component, 'from-left');
@@ -28,32 +38,37 @@ const Order: FC = () => {
   }, []);
 
   return (
-    <div className="order">
+    <div className={`order${className ? ' ' + className : ''}`}>
       <div className="order__wrapper">
         <div className="order__main">
-          <div className="order__image-wrapper">
-            <img className="order__image" src={Eskiz} alt="Эскиз" />
-          </div>
-          <form className="order__form" onSubmit={handleSubmit}>
-            <h2 className="order__title">Ваши шторы начинаются с эскиза</h2>
-            <p className="order__description">
-              Для пошива штор наш дизайнер бесплатно нарисует эскиз. Это
-              позволит представить, как будут выглядеть шторы на окнах.
-            </p>
+          {image && (
+            <div className="order__image-wrapper">
+              <img className="order__image" src={Eskiz} alt="Эскиз" />
+            </div>
+          )}
+          <form
+            className={`order__form${className ? ' ' + className + '--form' : ''}`}
+          >
+            <h2 className="order__title" style={{ fontSize: titleSize }}>
+              {title ? title : 'Ваши шторы начинаются с эскиза'}
+            </h2>
+            {description && (
+              <p className="order__description">
+                Для пошива штор наш дизайнер бесплатно нарисует эскиз. Это
+                позволит представить, как будут выглядеть шторы на окнах.
+              </p>
+            )}
             <div className="order__input-wrapper">
+              <Input label="Ваше имя: *" className="order__input" required />
               <Input
-                ref={inputNameRef}
-                label="Ваше имя: *"
-                className="order__input"
-              />
-              <Input
-                ref={inputPhoneRef}
                 label="Ваш телефон: *"
                 className="order__input"
                 pattern=""
                 type="number"
+                required
               />
             </div>
+            {textarea && textarea}
             <div className="order__button-wrapper">
               <Button type="submit" className="order__button">
                 <div className="order__button-text">

@@ -3,6 +3,7 @@ import { FC } from 'react';
 import './OurLocation.scss';
 import Address from 'src/ui/address';
 import Instagram from 'src/ui/instagram';
+import YMap from 'src/common/YMap';
 
 const OurLocation: FC = () => {
   return (
@@ -17,11 +18,7 @@ const OurLocation: FC = () => {
           height="35"
         />
       </div>
-      <iframe
-        className="our-location__map"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7085e432aba851ddee287ae6408e607f4facd57fdf8f8c75fe76795e3150e89&amp;source=constructor"
-        title="amelie"
-      />
+      <YMap />
     </div>
   );
 };

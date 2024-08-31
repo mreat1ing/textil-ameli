@@ -33,7 +33,7 @@ const Video: FC<IVideo> = ({ src }) => {
             videoElement.src = p;
             videoElement.play();
           }
-        }, 2000);
+        }, 1400);
       });
 
     return () => {

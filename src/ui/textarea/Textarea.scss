@@ -1,0 +1,24 @@
+@use '../../variables.scss' as v;
+
+.textarea {
+  outline: 1px solid gray;
+  display: block;
+  padding: 16px;
+  background-color: v.$bg-input;
+  width: 100%;
+  border: none;
+  resize: vertical;
+  min-height: 150px;
+  font-size: 13px;
+}
+
+.label {
+  color: v.$text;
+  cursor: default;
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0px;
+  line-height: 30px;
+}

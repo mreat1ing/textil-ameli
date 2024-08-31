@@ -5,6 +5,7 @@ import BurgerMenu from 'src/common/BurgerMenu';
 import burgerToggle from 'src/utils/burgerToggle.utils';
 import CloseButton from 'src/ui/closeButton';
 import Instagram from 'src/ui/instagram';
+import ExpandableNavLink from 'src/common/ExpandableNavLink';
 
 import './Navigation.scss';
 
@@ -47,7 +48,16 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
                 <NavLink to="/about">О нас</NavLink>
               </li>
               <li className="navigation-burger__item">
-                <NavLink to="/services">Услуги</NavLink>
+                <ExpandableNavLink
+                  to="/services"
+                  items={[
+                    <NavLink key="cheta" to={'services/cheta'}>
+                      Чета
+                    </NavLink>,
+                  ]}
+                >
+                  Услуги
+                </ExpandableNavLink>
               </li>
               <li className="navigation-burger__item">
                 <NavLink to="/assortment">Ассортимент</NavLink>
@@ -84,7 +94,28 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
             <NavLink to="/about">О нас</NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <NavLink to="/services">Услуги</NavLink>
+            <ExpandableNavLink
+              to="/services"
+              items={[
+                <NavLink key="design" to={'services/design'}>
+                  Дизайн и пошив
+                </NavLink>,
+                <NavLink key="maintenance" to={'services/maintenance'}>
+                  Сервисное обслуживание
+                </NavLink>,
+                <NavLink key="sun-protection" to={'services/sun-protection'}>
+                  Солнцезащита
+                </NavLink>,
+                <NavLink key="cornices" to={'services/cornices'}>
+                  Карнизы
+                </NavLink>,
+                <NavLink key="bedspreads" to={'services/bedspreads'}>
+                  Покрывала и скатерти
+                </NavLink>,
+              ]}
+            >
+              Услуги
+            </ExpandableNavLink>
           </li>
           <li className={`${classType}__item`}>
             <NavLink to="/assortment">Ассортимент</NavLink>

@@ -13,10 +13,12 @@ import AboutUs from 'src/pages/aboutUs';
 import OurWorks from 'src/pages/ourWorks';
 import Services from 'src/pages/services';
 import Contacts from 'src/pages/contacts';
+import Error from 'src/pages/error';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
+      <Route path="*" element={<Error />} />
       <Route path="/" element={<Main />} />
       <Route path="/about" element={<AboutUs />} />
       <Route path="/services" element={<Services />} />

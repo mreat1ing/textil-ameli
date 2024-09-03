@@ -5,7 +5,15 @@ import Number from 'src/ui/number';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
 
-const AboutUsInvite: FC = () => {
+interface IAboutUsInvite {
+  description?: boolean;
+  className?: string;
+}
+
+const AboutUsInvite: FC<IAboutUsInvite> = ({
+  description = true,
+  className,
+}) => {
   useEffect(() => {
     const component = document.querySelector('.invitation__description');
     const componentSecond = document.getElementById('first-block');
@@ -30,17 +38,22 @@ const AboutUsInvite: FC = () => {
   return (
     <div className="invitation">
       <div className="invitation__wrapper">
-        <p className="invitation__description">
-          Будем рады разработать для Вас дизайн-проекты текстильного оформления.
-          Напоминаем, что ценовая политика очень разнообразна. Наш ассортимент
-          на данный момент насчитывает{' '}
-          <span style={{ color: 'rgb(19, 162, 197)' }}>
-            около 7000 образцов
-          </span>{' '}
-          тканей. Потому мы уверены, что сможем заинтересовать и порадовать
-          нашего любого заказчика.
-        </p>
-        <div className="invitation__blocks-wrapper">
+        {description && (
+          <p className="invitation__description">
+            Будем рады разработать для Вас дизайн-проекты текстильного
+            оформления. Напоминаем, что ценовая политика очень разнообразна. Наш
+            ассортимент на данный момент насчитывает{' '}
+            <span style={{ color: 'rgb(19, 162, 197)' }}>
+              около 7000 образцов
+            </span>{' '}
+            тканей. Потому мы уверены, что сможем заинтересовать и порадовать
+            нашего любого заказчика.
+          </p>
+        )}
+
+        <div
+          className={`invitation__blocks-wrapper${className ? ' ' + className : ''}`}
+        >
           <div className="invitation__block" id="first-block">
             <p className="block__description">
               Мы работаем ежедневно с 10:00 до 18:00. Наберите номер или

@@ -7,11 +7,16 @@
 .expandable-nav-link__list {
   cursor: default;
   position: absolute;
-  width: 400px;
+  width: 350px;
   background-color: v.$primary;
-  padding: 8px;
   animation: showBlock 0.2s linear forwards;
-  z-index: 99;
+  z-index: 1;
+  padding: 8px;
+}
+
+.navigation-burger__item .expandable-nav-link__list {
+  position: relative;
+  width: 100%;
 }
 
 .expandable-nav-link__item {
@@ -19,7 +24,7 @@
   display: list-item;
 }
 
-.expandable-nav-link__item a {
+.expandable-nav-link__list .expandable-nav-link__item a {
   color: white;
   width: 100%;
   display: block;
@@ -27,10 +32,32 @@
   padding: 12px;
 }
 
-.expandable-nav-link__item a:hover {
+.expandable-nav-link__item .expandable-nav-link.active {
+  color: white;
+}
+
+.expandable-nav-link__list .expandable-nav-link__item {
+  position: relative;
+}
+
+.expandable-nav-link__list
+  .expandable-nav-link__item
+  .expandable-nav-link__button::before {
+  border-bottom: 5px solid white;
+}
+
+.expandable-nav-link__list .expandable-nav-link__item a:hover {
   border: none;
   background: rgba(white, 0.3);
   color: white;
+}
+
+.navigation-burger__item
+  .expandable-nav-link__list
+  .expandable-nav-link__item
+  a.active {
+  color: white;
+  background: rgba(white, 0.3);
 }
 
 .expandable-nav-link__item:hover {
@@ -41,8 +68,119 @@
   cursor: pointer;
 }
 
+.expandable-nav-link__button-container {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 15px;
+  z-index: 2;
+  transform: rotate(90deg);
+}
+
+.expandable-nav-link__item .expandable-nav-link__button-container {
+  top: 9px;
+}
+
+.expandable-nav-link__button {
+  cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.navigation-burger__item .expandable-nav-link::before {
+  display: none;
+}
+
+.navigation-burger__item .expandable-nav-link__list {
+  padding-inline-start: 20px;
+  min-height: 0;
+  overflow: hidden;
+  animation: showBurgerBlock 0.4s linear forwards;
+}
+
+.navigation-burger__item .expandable-nav-link__list.hide {
+  animation: removeBurgerBlock 0.4s linear forwards;
+}
+
+.expandable-nav-link__button::before {
+  content: '';
+  cursor: pointer;
+  position: absolute;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid v.$primary;
+}
+
 .expandable-nav-link__list.hide {
   animation: removeBlock 0.2s linear forwards;
+}
+
+.expandable-nav-link::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 45%;
+  transform: rotateZ(180deg);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid #2f2f2f;
+  transition: transform 0.2s ease;
+}
+
+.expandable-nav-link__list
+  .expandable-nav-link__item
+  .expandable-nav-link::before {
+  border-bottom: 3px solid white;
+}
+
+.expandable-nav-link:hover::before {
+  transform: rotateZ(0deg);
+}
+
+.navigation-burger__item
+  .expandable-nav-link__list
+  .expandable-nav-link__item:first-child {
+  margin-top: 16px;
+}
+
+.navigation-burger__item
+  .expandable-nav-link__list
+  .expandable-nav-link__item:last-child {
+  margin-bottom: 16px;
+}
+
+@supports selector(has) {
+  .expandable-nav-link:has(+ .expandable-nav-link__list:hover)::before {
+    transform: rotateZ(0deg);
+  }
+
+  .expandable-nav-link:has(+ .expandable-nav-link__list:hover)::after {
+    width: 100%;
+  }
+}
+
+@keyframes showBurgerBlock {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 650px;
+  }
+}
+
+@keyframes removeBurgerBlock {
+  0% {
+    max-height: 650px;
+  }
+  100% {
+    max-height: 0;
+  }
 }
 
 @keyframes showBlock {

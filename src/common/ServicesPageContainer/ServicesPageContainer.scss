@@ -1,0 +1,18 @@
+.services-card-page {
+  width: 100%;
+  padding: 75px 16px;
+}
+
+.services-card-page__wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  overflow: visible;
+}
+
+.services-card-page__content {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}

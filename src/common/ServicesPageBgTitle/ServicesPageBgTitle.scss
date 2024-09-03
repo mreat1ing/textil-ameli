@@ -1,0 +1,31 @@
+@use '../../variables.scss' as v;
+
+.services-page-top-block {
+  width: 100%;
+  max-width: 770px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-page-top-block__image {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services-page-top-block__title {
+  text-align: center;
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  text-decoration: none;
+  text-transform: none;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}

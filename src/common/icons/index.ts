@@ -9,6 +9,13 @@ import pencil from './pencil/pencil';
 import phone from './phone/phone';
 import photos from './photos/photos';
 import logo from './logo/logo';
+import completed from './completed/completed';
+import assortment from './assortment/assortment';
+import contact from './contact/contact';
+import heart from './heart/heart';
+import house from './house/house';
+import services from './services/services';
+import needle from './needle/needle';
 
 export {
   burgerMenu as BurgerIcon,
@@ -22,4 +29,11 @@ export {
   phone as Phone,
   photos as Photos,
   logo as LogoIcon,
+  completed as Completed,
+  assortment as Assortment,
+  contact as Contact,
+  heart as Heart,
+  house as House,
+  services as Services,
+  needle as Needle,
 };

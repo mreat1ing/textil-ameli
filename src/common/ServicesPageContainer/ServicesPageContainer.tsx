@@ -5,6 +5,7 @@ import './ServicesPageContainer.scss';
 
 import ServicesPageLinks from 'src/common/ServicesPageLinks';
 import ServicesPageBgTitle from 'src/common/ServicesPageBgTitle';
+import ServicesDesign from 'src/components/ServicesDesign';
 import AboutUsInvite from 'src/common/AboutUsInvite';
 import design from 'src/assets/img/serviceCards/nashi-raboti-1.jpg';
 import maintenance from 'src/assets/img/serviceCards/zhalyuzi-img.jpg';
@@ -21,7 +22,7 @@ type components =
 
 const components = {
   design: {
-    component: <h1>Design</h1>,
+    component: <ServicesDesign />,
     image: design,
     title: 'Дизайн и пошив',
   },

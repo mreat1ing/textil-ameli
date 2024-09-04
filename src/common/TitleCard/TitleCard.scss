@@ -1,0 +1,36 @@
+@use '../../variables.scss' as v;
+
+.title-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  justify-content: center;
+  align-items: center;
+  background-color: v.$color-white;
+  height: 150px;
+  border-radius: 5px;
+  border-bottom: 7px solid v.$primary;
+  user-select: none;
+}
+
+.title-card svg {
+  transition: scale 0.2s ease;
+}
+
+.title-card:hover svg {
+  scale: 1.2;
+}
+
+.title-card__text {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  margin-top: 16px;
+}

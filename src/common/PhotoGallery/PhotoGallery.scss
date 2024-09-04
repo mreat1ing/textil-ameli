@@ -1,0 +1,24 @@
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-gallery__photo {
+  cursor: pointer;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.photo-gallery__photo div {
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease-out;
+}
+
+.photo-gallery__photo:hover div {
+  transform: scale(1.3);
+}

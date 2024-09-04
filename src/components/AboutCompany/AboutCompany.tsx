@@ -12,6 +12,7 @@ import ParallaxBgImage from 'src/common/ParallaxBgImage';
 import bgCurtains from 'src/assets/img/bg-curtains.jpg';
 import observer from 'src/utils/observer.utils';
 import AssortmentCart from 'src/common/AssortmentCart';
+import TitleCard from 'src/common/TitleCard';
 
 import './AboutCompany.scss';
 
@@ -70,30 +71,26 @@ const AboutCompany: FC = () => {
       <div className="about-company__bottom-block">
         <ParallaxBgImage image={bgCurtains} padding={150}>
           <div className="about-company__bottom-block-cards">
-            <div className="about-company__bottom-block-card">
-              <Calculator width={60} height={60} />
-              <h4 className="about-company__bottom-block-title">
-                Оптовые цены на ткани
-              </h4>
-            </div>
-            <div className="about-company__bottom-block-card">
-              <Clock width={60} height={60} />
-              <h4 className="about-company__bottom-block-title">
-                Время пошива до 4 недель
-              </h4>
-            </div>
-            <div className="about-company__bottom-block-card">
-              <Pencil width={60} height={60} />
-              <h4 className="about-company__bottom-block-title">
-                Бесплатный замер
-              </h4>
-            </div>
-            <div className="about-company__bottom-block-card">
-              <Delivery width={60} height={60} />
-              <h4 className="about-company__bottom-block-title">
-                Доставим и оформим
-              </h4>
-            </div>
+            <TitleCard
+              className="about-company__bottom-block-card"
+              image={<Calculator width={60} height={60} />}
+              text="Оптовые цены на ткани"
+            />
+            <TitleCard
+              className="about-company__bottom-block-card"
+              image={<Clock width={60} height={60} />}
+              text="Время пошива до 4 недель"
+            />
+            <TitleCard
+              className="about-company__bottom-block-card"
+              image={<Pencil width={60} height={60} />}
+              text="Бесплатный замер"
+            />
+            <TitleCard
+              className="about-company__bottom-block-card"
+              image={<Delivery width={60} height={60} />}
+              text="Доставим и оформим"
+            />
           </div>
         </ParallaxBgImage>
         {/* <div className="about-company__bottom-block-image"></div> */}

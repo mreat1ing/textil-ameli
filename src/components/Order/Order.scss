@@ -68,7 +68,33 @@
   text-transform: none;
 }
 
-.order__input {
+.order__categories-title {
+  color: v.$title;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.order__categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order__categories > div {
+  width: calc(100% / 4);
+  border-left-color: transparent;
+}
+
+.order__categories > div:last-child,
+.order__categories > div:nth-last-child(2) {
+  border-top-color: transparent;
+}
+
+.order__categories > div:nth-last-child(2),
+.order__categories > div:first-child {
+  border-left-color: v.$border;
+}
+
+.order__categories > div .order__input {
   margin-bottom: 16px;
 }
 

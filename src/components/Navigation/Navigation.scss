@@ -49,6 +49,8 @@
 }
 
 .navigation__item > a {
+  display: flex;
+  align-items: center;
   position: relative;
   color: v.$title;
   padding: 16px;
@@ -56,6 +58,33 @@
 
 .navigation__item > a:hover {
   color: v.$primary;
+}
+
+.navigation__item:has(svg) a::after {
+  bottom: 0;
+}
+
+.navigation__item svg {
+  margin-right: 8px;
+}
+
+.navigation__item svg:not(.stroke) path,
+.navigation__item svg:not(.stroke) {
+  fill: v.$text;
+}
+
+.navigation__item .stroke path {
+  stroke: v.$text;
+}
+
+.navigation__item > a:hover .stroke path,
+.navigation__item > a.active .stroke path {
+  stroke: v.$primary;
+}
+
+.navigation__item > a:hover svg:not(.stroke) path,
+.navigation__item > a.active svg:not(.stroke) path {
+  fill: v.$primary;
 }
 
 .navigation__item > a::after {

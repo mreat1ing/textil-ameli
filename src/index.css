@@ -16,6 +16,10 @@ html {
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 p,
 h1,
 h2,

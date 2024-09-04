@@ -89,39 +89,7 @@
 }
 
 .about-company__bottom-block-card {
-  display: flex;
-  flex-direction: column;
-  padding-top: 16px;
-  justify-content: center;
-  align-items: center;
-  background-color: v.$color-white;
-  height: 150px;
   width: 23%;
-  border-radius: 5px;
-  border-bottom: 7px solid v.$primary;
-  user-select: none;
-}
-
-.about-company__bottom-block-card svg {
-  transition: scale 0.2s ease;
-}
-
-.about-company__bottom-block-card:hover svg {
-  scale: 1.2;
-}
-
-.about-company__bottom-block-title {
-  color: v.$title;
-  font-family: 'Oswald';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  letter-spacing: 0px;
-  line-height: 30px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
-  margin-top: 16px;
 }
 
 .about-company__top-block:not(.about-company__top-block.from-left),

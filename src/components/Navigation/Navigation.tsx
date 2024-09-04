@@ -6,6 +6,14 @@ import burgerToggle from 'src/utils/burgerToggle.utils';
 import CloseButton from 'src/ui/closeButton';
 import Instagram from 'src/ui/instagram';
 import ExpandableNavLink from 'src/common/ExpandableNavLink';
+import {
+  Completed,
+  Assortment,
+  Contact,
+  Heart,
+  House,
+  Services,
+} from 'src/common/icons';
 
 import './Navigation.scss';
 
@@ -188,10 +196,18 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
       <nav className={classType}>
         <ul className={`${classType}__list`}>
           <li className={`${classType}__item`}>
-            <NavLink to="/">Главная</NavLink>
+            <NavLink to="/">
+              {type === 'header' && <House width={25} height={25} />}
+              Главная
+            </NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <NavLink to="/about">О нас</NavLink>
+            <NavLink to="/about">
+              {type === 'header' && (
+                <Heart className="stroke" width={25} height={25} />
+              )}
+              О нас
+            </NavLink>
           </li>
           <li className={`${classType}__item`}>
             {type === 'footer' && <NavLink to="/services">Услуги</NavLink>}
@@ -216,6 +232,7 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
                   </NavLink>,
                 ]}
               >
+                <Services width={25} height={25} />
                 Услуги
               </ExpandableNavLink>
             )}
@@ -304,15 +321,27 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
                   </NavLink>,
                 ]}
               >
+                <Assortment
+                  width={25}
+                  height={25}
+                  stroke="black"
+                  className="stroke"
+                />
                 Ассортимент
               </ExpandableNavLink>
             )}
           </li>
           <li className={`${classType}__item`}>
-            <NavLink to="/our-works">Наши работы</NavLink>
+            <NavLink to="/our-works">
+              {type === 'header' && <Completed width={25} height={25} />}
+              Наши работы
+            </NavLink>
           </li>
           <li className={`${classType}__item`}>
-            <NavLink to="/contacts">Контакты</NavLink>
+            <NavLink to="/contacts">
+              {type === 'header' && <Contact width={25} height={25} />}
+              Контакты
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,21 @@
+@use '../../variables.scss' as v;
+
+.services-maintenance__list {
+  margin-bottom: 48px;
+}
+
+.services-maintenance__list-item {
+  color: v.$text;
+  list-style: disc;
+}
+
+.services-maintenance__list-item span {
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 34px;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+}

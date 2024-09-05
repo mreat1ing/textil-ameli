@@ -9,13 +9,12 @@
 
 .our-projects__wrapper {
   width: 100%;
-  max-width: 1170px;
-  margin-left: 16px;
+  // max-width: 1170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 25px;
-  margin: 25px 16px 25px 16px;
+  // margin: 25px 16px 25px 16px;
 }
 
 .our-projects__title {
@@ -41,6 +40,7 @@
 }
 
 .our-projects__button {
+  margin-top: 48px;
   background-color: v.$secondary;
 }
 
@@ -64,13 +64,13 @@
 }
 
 @media (max-width: 770px) {
-  .our-projects__item {
-    width: 50%;
+  .photo-gallery__photo {
+    width: 50% !important;
   }
 }
 
 @media (max-width: 420px) {
-  .our-projects__item {
-    width: 100%;
+  .photo-gallery__photo {
+    width: 100% !important;
   }
 }

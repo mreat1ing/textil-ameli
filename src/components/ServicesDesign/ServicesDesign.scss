@@ -26,6 +26,7 @@
   padding: 8px;
   box-shadow: 0 10px 20px v.$shadow;
   height: 172px;
+  margin-bottom: 30px;
 }
 
 .services-design__item h4 {
@@ -72,7 +73,6 @@
 @media (max-width: 990px) {
   .services-design__item {
     width: calc((100% / 2) - 16px);
-    margin-bottom: 30px;
   }
 }
 
@@ -141,5 +141,9 @@
 
   .order__categories > div:last-child {
     border-left-color: v.$border;
+  }
+
+  .services-design__item {
+    width: 100%;
   }
 }

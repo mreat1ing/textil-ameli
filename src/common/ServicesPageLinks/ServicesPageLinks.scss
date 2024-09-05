@@ -45,6 +45,8 @@
   overflow: hidden;
   width: 103px;
   height: 103px;
+  min-width: 103px;
+  min-height: 103px;
 }
 
 .services-page-item-link__image {
@@ -80,4 +82,10 @@
 
 .services-page-item-link:hover .services-page-item-link__title {
   color: v.$primary;
+}
+
+@media (max-width: 320px) {
+  .services-page-item-link__title {
+    word-break: break-all;
+  }
 }

@@ -11,7 +11,7 @@ interface IPhotoLink {
   folder?: string;
 }
 
-const PhotoLink: FC<IPhotoLink> = ({ name, folder, image }) => {
+const PhotoLink: FC<IPhotoLink> = ({ name, image }) => {
   return (
     <div className="photo-link">
       <div className="photo-link__overlay" />

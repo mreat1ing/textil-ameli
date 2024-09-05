@@ -1,8 +1,12 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './ServicesMaintenance.scss';
 
 const ServicesMaintenance: FC = () => {
+  useEffect(() => {
+    document.title = 'Сервисное обслуживание';
+  }, []);
+
   return (
     <div className="services-maintenance">
       <ul className="services-maintenance__list">

@@ -1,8 +1,12 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './ServicesBedspreads.scss';
 
 const ServicesBedspreads: FC = () => {
+  useEffect(() => {
+    document.title = 'Покрывала и скатерти';
+  }, []);
+
   return (
     <div className="services-bedspreads">
       <p className="services-p">

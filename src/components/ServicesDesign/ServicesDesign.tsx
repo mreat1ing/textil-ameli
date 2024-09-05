@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './ServicesDesign.scss';
 import TitleCard from 'src/common/TitleCard';
@@ -14,6 +14,10 @@ import photo5 from 'src/assets/img/ourWorks/5.jpg';
 import photo6 from 'src/assets/img/ourWorks/6.jpg';
 
 const ServicesDesign: FC = () => {
+  useEffect(() => {
+    document.title = 'Дизайн и пошив';
+  }, []);
+
   return (
     <div className="services-design">
       <p className="services-p">

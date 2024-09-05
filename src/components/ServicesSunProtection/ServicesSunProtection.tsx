@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './ServicesSunProtection.scss';
 import TitleCard from 'src/common/TitleCard';
@@ -17,6 +17,10 @@ import photo3 from 'src/assets/img/ourWorks/8.jpg';
 import photo4 from 'src/assets/img/serviceCards/nashi-raboti-10.jpg';
 
 const ServicesSunProtection: FC = () => {
+  useEffect(() => {
+    document.title = 'Солнцезащита';
+  }, []);
+
   return (
     <div className="services-sun-protection">
       <p className="services-p">

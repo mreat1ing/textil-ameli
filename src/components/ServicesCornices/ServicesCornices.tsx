@@ -1,8 +1,12 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './ServicesCornices.scss';
 
 const ServicesCornices: FC = () => {
+  useEffect(() => {
+    document.title = 'Карнизы';
+  }, []);
+
   return (
     <div className="services-cornices">
       <p className="services-p">

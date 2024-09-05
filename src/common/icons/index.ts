@@ -16,6 +16,8 @@ import heart from './heart/heart';
 import house from './house/house';
 import services from './services/services';
 import needle from './needle/needle';
+import guarantee from './guarantee/guarantee';
+import consultation from './consultation/consultation';
 
 export {
   burgerMenu as BurgerIcon,
@@ -36,4 +38,6 @@ export {
   house as House,
   services as Services,
   needle as Needle,
+  guarantee as Guarantee,
+  consultation as Consultation,
 };

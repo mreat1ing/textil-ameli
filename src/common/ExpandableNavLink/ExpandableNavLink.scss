@@ -156,6 +156,11 @@
 }
 
 @supports selector(has) {
+  .expandable-nav-link__list
+    .expandable-nav-link__item:has(> .expandable-nav-link__list:hover) {
+    background-color: v.$text-inverse;
+  }
+
   .expandable-nav-link:has(+ .expandable-nav-link__list:hover)::before {
     transform: rotateZ(0deg);
   }

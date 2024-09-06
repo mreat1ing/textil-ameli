@@ -13,6 +13,10 @@
   height: max-content;
 }
 
+.services-page-links:not(.services-page-links.from-right) {
+  opacity: 0;
+}
+
 .services-page-link-title {
   color: v.$title;
   font-family: 'Oswald';

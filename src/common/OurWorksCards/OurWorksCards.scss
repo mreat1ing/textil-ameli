@@ -3,6 +3,10 @@
   padding: 75px 16px;
 }
 
+.assortment-cards:not(.assortment-cards.smooth-render) {
+  opacity: 0;
+}
+
 .assortment-cards__wrapper {
   width: 100%;
   max-width: 1170px;

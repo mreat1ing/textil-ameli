@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import './ServicesItem.scss';
 import Button from 'src/ui/button';
@@ -11,6 +11,8 @@ interface IServicesItem {
 }
 
 const ServicesItem: FC<IServicesItem> = ({ image, name, src }) => {
+  const { pathname } = useLocation();
+
   return (
     <div className="services-item">
       <div className="services-item__image">
@@ -21,10 +23,10 @@ const ServicesItem: FC<IServicesItem> = ({ image, name, src }) => {
           }}
         />
       </div>
-      <NavLink to={`/services/${src}`}>
+      <NavLink to={pathname + '/' + src}>
         <h2 className="services-item__name">{name}</h2>
       </NavLink>
-      <NavLink to={`/services/${src}`}>
+      <NavLink to={pathname + '/' + src}>
         <Button className="services-item__button">подробнее</Button>
       </NavLink>
     </div>

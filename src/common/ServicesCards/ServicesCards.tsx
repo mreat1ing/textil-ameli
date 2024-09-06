@@ -31,25 +31,35 @@ const ServicesCards: FC = () => {
     <div className="services-cards">
       <div className="services-cards__wrapper">
         <h1 className="services-cards__title">Услуги студии</h1>
-        <div className="services-cards__cards">
-          <ServicesItem image={design} name="Дизайн и пошив" src="design" />
-          <ServicesItem
-            image={zhaluzi}
-            name="Сервисное обслуживание"
-            src="maintenance"
-          />
-          <ServicesItem
-            image={window}
-            name="Солнцезащита"
-            src="sun-protection"
-          />
-          <ServicesItem image={karniz} name="Карнизы" src="cornices" />
-          <ServicesItem
-            image={pled}
-            name="Покрывала и скатерти"
-            src="bedspreads"
-          />
-        </div>
+        <ul className="services-cards__cards">
+          <li className="services-cards__item">
+            <ServicesItem image={design} name="Дизайн и пошив" src="design" />
+          </li>
+          <li className="services-cards__item">
+            <ServicesItem
+              image={zhaluzi}
+              name="Сервисное обслуживание"
+              src="maintenance"
+            />
+          </li>
+          <li className="services-cards__item">
+            <ServicesItem
+              image={window}
+              name="Солнцезащита"
+              src="sun-protection"
+            />
+          </li>
+          <li className="services-cards__item">
+            <ServicesItem image={karniz} name="Карнизы" src="cornices" />
+          </li>
+          <li className="services-cards__item">
+            <ServicesItem
+              image={pled}
+              name="Покрывала и скатерти"
+              src="bedspreads"
+            />
+          </li>
+        </ul>
       </div>
     </div>
   );

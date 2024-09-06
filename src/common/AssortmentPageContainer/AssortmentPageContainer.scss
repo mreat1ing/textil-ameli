@@ -1,0 +1,21 @@
+.assortment-container {
+  width: 100%;
+  padding: 75px 16px;
+}
+
+.assortment-wrapper {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.assortment-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+}
+
+.assortment-list__item {
+  width: calc((100% / 3) - 16px);
+}

@@ -28,6 +28,12 @@
 .services-cards__cards {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+.services-cards__item {
+  width: calc((100% / 3) - 20px);
 }
 
 .services-cards__title:not(.services-cards__title.from-left),
@@ -36,7 +42,7 @@
 }
 
 @media (max-width: 1024px) {
-  .services-cards__cards .services-item {
+  .services-cards__cards .services-cards__item {
     width: calc((100% / 2) - 20px);
   }
 }
@@ -46,7 +52,7 @@
     position: relative;
   }
 
-  .services-cards__cards .services-item {
+  .services-cards__cards .services-cards__item {
     width: 100%;
   }
 }

@@ -8,6 +8,7 @@ import maintenance from 'src/assets/img/serviceCards/zhalyuzi-img.jpg';
 import sunProtection from 'src/assets/img/serviceCards/nashi-raboti-10.jpg';
 import cornices from 'src/assets/img/serviceCards/karniz-img.jpg';
 import bedspreads from 'src/assets/img/serviceCards/pled-img.jpg';
+import observer from 'src/utils/observer.utils';
 
 type components =
   | 'design'
@@ -46,6 +47,18 @@ interface IServicesPageLinks {
 
 const ServicesPageLinks: FC<IServicesPageLinks> = ({ current }) => {
   const [items, setItems] = useState<JSX.Element[]>([]);
+
+  useEffect(() => {
+    const componentFirst = document.querySelector('.services-page-links');
+    const observerFirst =
+      componentFirst && observer(componentFirst, 'from-right');
+
+    componentFirst && observerFirst?.observe(componentFirst);
+
+    return () => {
+      observerFirst?.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     const allItems = [];

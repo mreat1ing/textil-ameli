@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 import './ServicesPageContainer.scss';
 
+import Error from 'src/common/Error';
 import ServicesPageLinks from 'src/common/ServicesPageLinks';
 import ServicesPageBgTitle from 'src/common/ServicesPageBgTitle';
 import ServicesDesign from 'src/components/ServicesDesign';
@@ -55,13 +56,14 @@ const components = {
 const ServicesPageContainer: FC = () => {
   const { id }: { id?: components } = useParams();
   const element = id && components[id];
-  const { title, image, component } = element || components.design;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   }, [id]);
 
-  if (!id) return null;
+  if (!element) return <Error />;
+
+  const { title, image, component } = element || components.design;
 
   return (
     <div className="services-card-page">

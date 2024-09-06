@@ -25,6 +25,15 @@ interface INavigation {
 
 const Navigation: FC<INavigation> = ({ type = 'header' }) => {
   const [navType, setNavType] = useState<navType>(type);
+  // TODO: Навигация для всех страниц кроме главной //////////////////
+  //
+  //
+  // const { pathname } = useLocation();
+
+  // useEffect(() => {
+  //   console.log(pathname);
+  // }, [pathname]);
+  // /////////////////////////////////////////////////////////////////
 
   const handleResize = useCallback(() => {
     if (window.innerWidth <= 990) {

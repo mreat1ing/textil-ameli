@@ -16,6 +16,7 @@ import Contacts from 'src/pages/contacts';
 import Error from 'src/pages/error';
 import ServicesCardLayout from 'src/pages/servicesCardLayout';
 import Assortment from 'src/pages/assortment';
+import AssortmentPageItems from 'src/common/AssortmentPageItems';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,6 +27,8 @@ const router = createBrowserRouter(
       <Route path="/services" element={<Services />}></Route>
       <Route path="/services/:id" element={<ServicesCardLayout />} />
       <Route path="/assortment" element={<Assortment />} />
+      <Route path="/assortment/:id" element={<AssortmentPageItems />} />
+      <Route path="/assortment/:id/:id" element={<AssortmentPageItems />} />
       <Route path="/our-works" element={<OurWorks />} />
       <Route path="/contacts" element={<Contacts />} />
     </Route>

@@ -4,7 +4,7 @@ import {
   createRoutesFromElements,
   createBrowserRouter,
 } from 'react-router-dom';
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import './App.scss';
 import Layout from 'src/pages/layout';
@@ -33,6 +33,12 @@ const router = createBrowserRouter(
 );
 
 const App: FC = () => {
+  useEffect(() => {
+    document
+      .getElementById('root')
+      ?.setAttribute('style', 'scroll-behavior: auto;');
+  }, []);
+
   return <RouterProvider router={router} />;
 };
 

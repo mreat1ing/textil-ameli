@@ -58,7 +58,7 @@ const ServicesPageContainer: FC = () => {
   const { title, image, component } = element || components.design;
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, [id]);
 
   if (!id) return null;

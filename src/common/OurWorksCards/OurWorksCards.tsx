@@ -4,7 +4,7 @@ import PhotoLink from 'src/common/PhotoLink';
 import balcony from 'src/assets/img/assortmentCards/balcony.jpg';
 import bathroom from 'src/assets/img/assortmentCards/bathroom.jpg';
 import accessories from 'src/assets/img/assortmentCards/accessories.jpg';
-import arcWindow from 'src/assets/img/assortmentCards/arcWindow.jpg';
+import arcWindow from 'src/assets/img/assortmentCards/arcWindow.png';
 import alcove from 'src/assets/img/assortmentCards/alcove.jpg';
 import childrenRoom from 'src/assets/img/assortmentCards/childrenRoom.jpg';
 import bedCurtain from 'src/assets/img/assortmentCards/bedCurtain.jpg';

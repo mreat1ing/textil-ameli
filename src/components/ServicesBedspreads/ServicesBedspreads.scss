@@ -1,0 +1,48 @@
+@use '../../variables.scss' as v;
+
+.services-bedspread__flex-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-bedspread__list {
+  width: 50%;
+}
+
+.services-bedspread__list-item {
+  list-style: disc;
+  color: v.$text;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.services-bedspread__bg-image {
+  width: 50%;
+  min-height: 250px;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+@media (max-width: 615px) {
+  .services-bedspread__flex-box {
+    flex-direction: column;
+  }
+
+  .services-bedspread__list {
+    width: 100%;
+  }
+
+  .services-bedspread__bg-image {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -7,7 +7,7 @@ interface IExpandable {
   to: string;
   items?: JSX.Element[];
   direction?: 'bottom' | 'right' | 'left';
-  children: JSX.Element | string;
+  children: React.ReactNode;
   timeoutOver?: number;
   type?: 'burger' | 'default';
 }
@@ -78,13 +78,7 @@ const ExpandableNavLink: FC<IExpandable> = ({
   };
 
   const structuredItems = items?.map((item) => (
-    <li
-      key={item.key}
-      className={'expandable-nav-link__item'}
-      // onClick={() => {
-      //   setHover(false);
-      // }}
-    >
+    <li key={item.key} className={'expandable-nav-link__item'}>
       {item}
     </li>
   ));

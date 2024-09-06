@@ -32,11 +32,23 @@ const ServicesCards: FC = () => {
       <div className="services-cards__wrapper">
         <h1 className="services-cards__title">Услуги студии</h1>
         <div className="services-cards__cards">
-          <ServicesItem image={design} name="Дизайн и пошив" />
-          <ServicesItem image={zhaluzi} name="Сервисное обслуживание" />
-          <ServicesItem image={window} name="Солнцезащита" />
-          <ServicesItem image={karniz} name="Карнизы" />
-          <ServicesItem image={pled} name="Покрывала и скатерти" />
+          <ServicesItem image={design} name="Дизайн и пошив" src="design" />
+          <ServicesItem
+            image={zhaluzi}
+            name="Сервисное обслуживание"
+            src="maintenance"
+          />
+          <ServicesItem
+            image={window}
+            name="Солнцезащита"
+            src="sun-protection"
+          />
+          <ServicesItem image={karniz} name="Карнизы" src="cornices" />
+          <ServicesItem
+            image={pled}
+            name="Покрывала и скатерти"
+            src="bedspreads"
+          />
         </div>
       </div>
     </div>

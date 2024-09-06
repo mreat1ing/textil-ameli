@@ -1,8 +1,13 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import Error from 'src/common/Error';
 
 const ErrorPage: FC = () => {
+  useEffect(() => {
+    document.title = 'Амели | Пошив штор в Севастополе';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <>
       <Error />

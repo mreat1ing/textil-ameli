@@ -25,6 +25,7 @@
   text-transform: none;
   text-align: center;
   font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 .services-item__image {
@@ -49,4 +50,8 @@
   transform: none;
   background-color: v.$color-pink;
   box-shadow: inherit;
+}
+
+.services-item__name:hover {
+  color: v.$primary;
 }

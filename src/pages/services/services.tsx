@@ -1,8 +1,13 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import ServicesCards from 'src/common/ServicesCards';
 
 const Services: FC = () => {
+  useEffect(() => {
+    document.title = 'Услуги';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <>
       <ServicesCards />

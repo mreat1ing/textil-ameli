@@ -1,0 +1,103 @@
+@use '../../variables.scss' as v;
+
+.checkbox-image {
+  position: relative;
+  cursor: pointer;
+  height: 227px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid v.$border;
+  user-select: none;
+}
+
+.checkbox-image::before {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
+  top: 1px;
+  border: 4px solid transparent;
+  z-index: 1;
+}
+
+.checkbox-image__image {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.15s ease-in;
+}
+
+.checkbox-image__checkbox-container {
+  cursor: pointer;
+  position: relative;
+  color: v.$text;
+  font-size: 13px;
+  letter-spacing: 0px;
+  padding-left: 32px;
+}
+
+.checkbox-image__checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-image__checkbox {
+  cursor: pointer;
+  position: absolute;
+  top: -6px;
+  left: 0px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.checkbox-image__checkbox-container input:checked ~ .checkbox-image__checkbox {
+  background-color: v.$primary;
+  outline: 2px solid v.$primary;
+}
+
+.checkbox-image:hover input ~ .checkbox-image__checkbox {
+  outline: 2px solid v.$primary;
+}
+
+.checkbox-image:hover::before,
+.checkbox-image.checked::before {
+  outline: 4px solid v.$primary;
+}
+
+.checkbox-image:hover .checkbox-image__image {
+  transform: scale(1.2);
+}
+
+.checkbox-image__checkbox:after {
+  content: '';
+  position: absolute;
+  scale: 0;
+  transition: scale 0.2s ease;
+}
+
+.checkbox-image__checkbox-container
+  input:checked
+  ~ .checkbox-image__checkbox:after {
+  scale: 1;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-image__checkbox-container .checkbox-image__checkbox:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

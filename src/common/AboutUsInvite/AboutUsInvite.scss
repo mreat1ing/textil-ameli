@@ -2,7 +2,7 @@
 
 .invitation {
   width: 100%;
-  padding: 100px 16px;
+  padding: 50px 0;
 }
 
 .invitation__wrapper {
@@ -22,7 +22,7 @@
   text-decoration: none;
   text-transform: none;
   font-weight: normal;
-  margin-bottom: 125px;
+  margin-bottom: 75px;
 }
 
 .invitation__blocks-wrapper {
@@ -58,6 +58,17 @@
 
 .block__number {
   color: v.$text;
+}
+
+.block__button {
+  transition:
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.block__button:hover {
+  box-shadow: 0 0 40px -5px rgba(v.$primary, 0.6);
+  background-color: v.$color-pink;
 }
 
 .block__number:hover {

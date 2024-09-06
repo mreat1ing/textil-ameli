@@ -1,6 +1,7 @@
+@use '../../variables.scss' as v;
+
 .photo-link {
   position: relative;
-  // width: 285px;
   height: 285px;
 }
 
@@ -14,8 +15,8 @@
   height: 100%;
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(255, 255, 255, 0) 30%
+    rgba(black, 0.6) 0%,
+    rgba(255, 255, 255, 0) 45%
   );
   z-index: 3;
 }
@@ -44,6 +45,7 @@
   line-height: normal;
   font-size: 16px;
   margin-bottom: 16px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 1);
 }
 
 .photo-link__img-count {

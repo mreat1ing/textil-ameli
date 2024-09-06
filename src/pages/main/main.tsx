@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import AboutCompany from 'src/components/AboutCompany';
 import TopBlock from 'src/components/TopBlock';
@@ -8,6 +8,11 @@ import Order from 'src/components/Order';
 import OurLocation from 'src/components/OurLocation';
 
 const Main: FC = () => {
+  useEffect(() => {
+    document.title = 'Амели | Пошив штор в Севастополе';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <>
       <TopBlock />

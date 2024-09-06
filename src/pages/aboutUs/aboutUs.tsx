@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 
 import bgCurtains from 'src/assets/img/bg-curtains2.jpg';
 import bgRoom from 'src/assets/img/bg-room.jpg';
@@ -11,6 +11,11 @@ import AboutUsServices from 'src/common/AboutUsServices';
 import AboutUsInvite from 'src/common/AboutUsInvite';
 
 const AboutUs: FC = () => {
+  useEffect(() => {
+    document.title = 'О нас';
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <div>
       <ParallaxBgImage

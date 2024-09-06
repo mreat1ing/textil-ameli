@@ -1,0 +1,91 @@
+@use '../../variables.scss' as v;
+
+.services-page-links {
+  margin-left: 24px;
+  background-color: v.$color-white;
+  border-radius: 6px;
+  padding: 24px;
+  display: inline-block;
+  box-shadow: 0 10px 20px v.$shadow;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 24px;
+  height: max-content;
+}
+
+.services-page-link-title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 34px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  font-weight: normal;
+  margin-top: 55px;
+}
+
+.services-page-link-items {
+  margin: 0;
+  padding: 0;
+}
+
+.services-page-item-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.services-page-item-link__image-wrapper {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 103px;
+  height: 103px;
+  min-width: 103px;
+  min-height: 103px;
+}
+
+.services-page-item-link__image {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: -5px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s ease;
+}
+
+.services-page-item-link__title {
+  color: v.$title;
+  font-family: 'Oswald';
+  font-size: 20px;
+  font-style: normal;
+  letter-spacing: 0px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: none;
+  text-align: left;
+  font-weight: normal;
+  transition: color 0.2s ease;
+}
+
+.services-page-item-link:hover .services-page-item-link__image {
+  transform: scale(0.9);
+}
+
+.services-page-item-link:hover .services-page-item-link__title {
+  color: v.$primary;
+}
+
+@media (max-width: 320px) {
+  .services-page-item-link__title {
+    word-break: break-all;
+  }
+}

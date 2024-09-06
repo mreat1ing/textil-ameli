@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
 import './AssortmentPageItems.scss';
@@ -156,6 +156,10 @@ const accessoriesAssortment: IAssortment[] = [
 const AssortmentPageItems: FC = () => {
   const { id }: { id?: assortmentNames } = useParams();
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [id]);
 
   if (!id) return <Error />;
 

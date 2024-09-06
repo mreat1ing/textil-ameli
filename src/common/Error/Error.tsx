@@ -13,7 +13,7 @@ const Error: FC = () => {
           <div className="error__overlay" />
           <h1 className="error__title">404</h1>
           <p className="error__description">Страница не найдена</p>
-          <NavLink to="/">
+          <NavLink to="/" replace>
             <Button className="error__button">на главную</Button>
           </NavLink>
         </div>

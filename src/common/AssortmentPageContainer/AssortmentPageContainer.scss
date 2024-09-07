@@ -58,6 +58,20 @@
   }
 
   .assortment-list__item.row--3:nth-child(2n) {
+.assortment-list__item:nth-child(3) {
+  margin-right: 0;
+}
+
+@media (max-width: 990px) {
+  .assortment-list__item {
+    width: calc((100% / 2) - 8px);
+  }
+
+  .assortment-list__item:nth-child(3) {
+    margin-right: 16px;
+  }
+
+  .assortment-list__item:nth-child(2n) {
     margin-right: 0;
   }
 }
@@ -66,10 +80,6 @@
   .assortment-list__item.row--3,
   .assortment-list__item.row--2 {
     width: calc(100%);
-  }
-
-  .assortment-list__item.row--3,
-  .assortment-list__item.row--2 {
     margin-right: 0 !important;
   }
 }

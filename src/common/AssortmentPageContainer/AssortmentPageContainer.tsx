@@ -6,15 +6,18 @@ import observer from 'src/utils/observer.utils';
 interface IAssortmentPageContainer {
   children?: JSX.Element | JSX.Element[];
   title?: string;
+  count?: 1 | 2 | 3;
 }
 
 const AssortmentPageContainer: FC<IAssortmentPageContainer> = ({
   children,
   title = 'Ассортимент',
+  count = 3,
 }) => {
+  const itemsCount = count === 3 ? 'row--3' : count === 2 ? 'row--2' : 'row--1';
   const elements = Array.isArray(children)
     ? children.map((el) => (
-        <li className="assortment-list__item" key={el.key}>
+        <li className={`assortment-list__item ${itemsCount}`} key={el.key}>
           {el}
         </li>
       ))

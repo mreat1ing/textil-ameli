@@ -62,7 +62,7 @@ const AboutUsInvite: FC<IAboutUsInvite> = ({
             <Number
               className="block__number"
               value="8 978 828 05 25"
-              width="20"
+              width="18"
               hover="rgb(253, 7, 178)"
               color="black"
             />

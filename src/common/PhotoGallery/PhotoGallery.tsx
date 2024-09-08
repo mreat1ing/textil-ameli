@@ -6,15 +6,27 @@ import observer from 'src/utils/observer.utils';
 interface IPhotoGallery {
   inLineCount?: number;
   photoHeight?: number | string;
+  photoWidth?: number | string;
   children?: React.ReactNode[] | React.ReactNode;
+  type?: 'default' | 'assortment' | 'gallery';
+  className?: string;
 }
 
 const PhotoGallery: FC<IPhotoGallery> = ({
   children,
-  inLineCount = 3,
-  photoHeight = 250,
+  inLineCount,
+  photoHeight,
+  photoWidth,
+  type = 'default',
+  className,
 }) => {
   const [items, setItems] = useState<React.ReactNode[]>([]);
+  const additionalClass =
+    type === 'default'
+      ? ''
+      : type === 'assortment'
+        ? ' photo-gallery-assortment'
+        : ' photo-gallery-gallery';
 
   useEffect(() => {
     const componentFirst = document.querySelector('.photo-gallery');
@@ -28,36 +40,49 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     };
   }, []);
 
-  useEffect(() => {
-    setItems((state) => {
-      if (!Array.isArray(children)) {
-        if (children) return [children];
-        else return state;
-      }
-
+  const normalizeNodes = (nodes: React.ReactNode[]) => {
+    return nodes.map((el) => {
+      if (!isValidElement(el)) return;
+      const { src } = el.props;
       return (
-        children.map((el) => {
-          if (!isValidElement(el)) return;
-          const { src } = el.props;
-
-          return (
-            <li
-              key={String(Math.random())}
-              style={{
-                width: `calc(100% / ${inLineCount})`,
-                height: photoHeight,
-              }}
-              className="photo-gallery__photo"
-            >
-              <div style={{ backgroundImage: `url(${src})`, height: '100%' }} />
-            </li>
-          );
-        }) || state
+        <li
+          key={String(Math.random())}
+          style={
+            type !== 'assortment'
+              ? {
+                  width: inLineCount
+                    ? `calc(100% / ${inLineCount})`
+                    : photoWidth
+                      ? photoWidth
+                      : undefined,
+                  height: photoHeight ? photoHeight : undefined,
+                }
+              : undefined
+          }
+          className={`photo-gallery__photo${additionalClass}`}
+        >
+          <div style={{ backgroundImage: `url(${src})`, height: '100%' }} />
+        </li>
       );
     });
-  }, [children, inLineCount, photoHeight]);
+  };
 
-  return <ul className="photo-gallery">{items}</ul>;
+  useEffect(() => {
+    setItems(() => {
+      if (!Array.isArray(children)) {
+        return normalizeNodes([children]);
+      }
+      return normalizeNodes(children);
+    });
+  }, [additionalClass, children, inLineCount, photoHeight, type]);
+
+  return (
+    <ul
+      className={`photo-gallery${additionalClass}${className ? ' ' + className : ''}`}
+    >
+      {items}
+    </ul>
+  );
 };
 
 export default PhotoGallery;

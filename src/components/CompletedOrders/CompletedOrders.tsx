@@ -37,7 +37,7 @@ const CompletedOrders: FC = () => {
         <h2 className="our-projects__title">
           Посмотрите наши выполненные проекты
         </h2>
-        <PhotoGallery photoHeight={350}>
+        <PhotoGallery photoHeight={350} inLineCount={3}>
           <img src={photo1} alt="card" />
           <img src={photo2} alt="card" />
           <img src={photo3} alt="card" />

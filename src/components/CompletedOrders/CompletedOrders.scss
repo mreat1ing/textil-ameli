@@ -64,13 +64,13 @@
 }
 
 @media (max-width: 770px) {
-  .photo-gallery__photo {
+  .our-projects__wrapper .photo-gallery__photo {
     width: 50% !important;
   }
 }
 
 @media (max-width: 420px) {
-  .photo-gallery__photo {
+  .our-projects__wrapper .photo-gallery__photo {
     width: 100% !important;
   }
 }

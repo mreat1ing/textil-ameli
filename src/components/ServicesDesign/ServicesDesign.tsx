@@ -59,7 +59,7 @@ const ServicesDesign: FC = () => {
         Портьеры, шторы с ламбрекенами, кисея, французские и японские шторы —
         разрабатываем любой дизайн, подходящий под ваш интерьер.
       </p>
-      <PhotoGallery>
+      <PhotoGallery inLineCount={3} photoHeight={250}>
         <img src={photo1} alt="photo1" />
         <img src={photo2} alt="photo2" />
         <img src={photo3} alt="photo3" />

@@ -19,7 +19,7 @@ const AssortmentPageItems: FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, [id]);
 
   if (!id) return <Error />;

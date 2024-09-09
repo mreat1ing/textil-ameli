@@ -6,7 +6,7 @@ import ContactsVideoBg from 'src/common/ContactsVideoBg';
 const Contacts: FC = () => {
   useEffect(() => {
     document.title = 'Контакты';
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

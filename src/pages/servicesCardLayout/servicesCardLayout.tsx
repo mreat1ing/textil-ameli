@@ -4,7 +4,7 @@ import ServicesPageContainer from 'src/common/ServicesPageContainer';
 
 const ServicesCardLayout: FC = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

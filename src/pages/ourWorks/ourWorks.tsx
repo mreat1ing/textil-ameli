@@ -5,7 +5,7 @@ import OurWorksCards from 'src/common/OurWorksCards';
 const OurWorks: FC = () => {
   useEffect(() => {
     document.title = 'Наши работы';
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return <OurWorksCards />;

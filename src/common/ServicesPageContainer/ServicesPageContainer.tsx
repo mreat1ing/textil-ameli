@@ -58,7 +58,7 @@ const ServicesPageContainer: FC = () => {
   const element = id && components[id];
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, [id]);
 
   if (!element) return <Error />;

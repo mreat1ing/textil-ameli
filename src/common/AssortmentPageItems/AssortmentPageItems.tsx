@@ -13,6 +13,7 @@ import {
   cornicesAssortment,
 } from 'src/db/assortment';
 import IAssortment from 'src/interfaces/assortment.interface';
+import AssortmentPorternie from 'src/components/AssortmentPorternie';
 
 const AssortmentPageItems: FC = () => {
   const { id }: { id?: assortmentNames } = useParams();
@@ -25,13 +26,22 @@ const AssortmentPageItems: FC = () => {
   if (!id) return <Error />;
 
   const splittedPath = pathname.split('/');
-  let findObject: IAssortment[] = assortment;
+  let findObject: IAssortment[] | JSX.Element = assortment;
   if (splittedPath.length > 3) {
     if (splittedPath[2] === 'rimskie-mekhanizmy')
       return <AssortmentItemContainer />;
     if (splittedPath[2] === 'karnisy') findObject = cornicesAssortment;
     else if (splittedPath[2] === 'accessories')
       findObject = accessoriesAssortment;
+  }
+
+  if (splittedPath[2] === 'porternye-tkani') {
+    return (
+      <AssortmentItemContainer
+        component={<AssortmentPorternie />}
+        title={'Портьерные и тюлевые ткани'}
+      />
+    );
   }
 
   const normalItems = [];

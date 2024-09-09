@@ -7,22 +7,34 @@ import observer from 'src/utils/observer.utils';
 import './AssortmentItemContainer.scss';
 import AboutUsInvite from '../AboutUsInvite';
 
-const AssortmentItemContainer: FC = () => {
+interface IAssortmentItemContainer {
+  component?: JSX.Element;
+  title?: string;
+}
+
+const AssortmentItemContainer: FC<IAssortmentItemContainer> = ({
+  component,
+  title,
+}) => {
   const { id } = useParams();
   const { pathname } = useLocation();
   const splittedPath = pathname.split('/');
   const pathWoId = splittedPath.slice(0, splittedPath.length - 1).join('/');
-  const item = id ? getItems(pathname.split('/')[2], id) : null;
+  let item;
+
+  if (!component) {
+    item = id ? getItems(pathname.split('/')[2], id) : null;
+  } else item = { name: title, component: component };
 
   useEffect(() => {
-    const component = document.querySelector('.services-cards__title');
-    const componentSecond = document.querySelector('.assortment-item__content');
-    const observerFirst = component && observer(component, 'from-left');
+    const element = document.querySelector('.services-cards__title');
+    const elementSecond = document.querySelector('.assortment-item__content');
+    const observerFirst = element && observer(element, 'from-left');
     const observerSecond =
-      componentSecond && observer(componentSecond, 'smooth-render');
+      elementSecond && observer(elementSecond, 'smooth-render');
 
-    component && observerFirst?.observe(component);
-    componentSecond && observerSecond?.observe(componentSecond);
+    element && observerFirst?.observe(element);
+    elementSecond && observerSecond?.observe(elementSecond);
 
     return () => {
       observerFirst?.disconnect();

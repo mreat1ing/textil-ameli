@@ -11,7 +11,7 @@ import pokrivalo from 'src/assets/img/assormentCards/pokrivalo.webp';
 const Assortment: FC = () => {
   useEffect(() => {
     document.title = 'Ассортимент';
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

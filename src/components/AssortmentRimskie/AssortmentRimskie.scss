@@ -1,0 +1,86 @@
+@use '../../variables.scss' as v;
+
+.assortment-item-header {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.assortment-item-header__photo {
+  outline: 7px solid v.$primary;
+  display: block;
+  width: auto;
+}
+
+.assortment-item-header__photo li {
+  width: 530px;
+  height: 530px;
+  min-width: 280px;
+}
+
+.assortment-item-header__photo li div {
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.assortment-item-header__list {
+  color: v.$text;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 31px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.assortment-item-header__list li {
+  list-style: disc;
+}
+
+.assortment-item-header__right-block-wrapper h4 {
+  margin: 0;
+  text-align: start;
+}
+
+.assortment-item-button {
+  display: block;
+  margin-top: 48px;
+  margin-left: auto;
+  transition: all 0.2s ease;
+}
+
+.assortment-item-button:hover {
+  box-shadow: 0 0 20px 0 rgba(v.$primary, 0.6);
+  background-color: v.$color-pink;
+}
+
+.assortment-rimskie h2 {
+  text-align: start;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+
+.assortment-rimskie p {
+  margin-top: 48px;
+  margin-right: auto;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1150px) {
+  .assortment-item-header {
+    flex-direction: column;
+  }
+
+  .assortment-item-header__photo li {
+    width: 100% !important;
+    height: 530px;
+  }
+}
+
+@media (max-width: 560px) {
+  .assortment-item-header__photo li {
+    height: 360px !important;
+  }
+}

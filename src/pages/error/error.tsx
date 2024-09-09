@@ -5,7 +5,7 @@ import Error from 'src/common/Error';
 const ErrorPage: FC = () => {
   useEffect(() => {
     document.title = 'Амели | Пошив штор в Севастополе';
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

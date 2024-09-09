@@ -24,7 +24,7 @@ const AssortmentPageContainer: FC<IAssortmentPageContainer> = ({
     : children;
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   useEffect(() => {

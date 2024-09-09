@@ -1,0 +1,45 @@
+@use '../../variables.scss' as v;
+
+.container {
+  width: 100%;
+  padding: 75px 16px;
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.wrapper .services-cards__title {
+  margin-bottom: 48px;
+}
+
+.wrapper .invitation .invitation__wrapper .invitation__blocks-wrapper {
+  justify-content: space-between;
+}
+
+.left-background {
+  position: absolute;
+  max-width: 480px;
+  width: calc(100% / 3);
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: v.$color-white;
+  z-index: -1;
+}
+
+.back-link {
+  color: v.$secondary;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: v.$primary;
+}
+
+.back-link::before {
+  content: '←';
+  padding-right: 8px;
+}

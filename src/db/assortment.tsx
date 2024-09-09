@@ -1,3 +1,4 @@
+import AssortmentRimskie from 'src/components/AssortmentRimskie';
 import IAssortment from 'src/interfaces/assortment.interface';
 import electro from 'src/assets/img/assormentCards/cornices/electro.png';
 import alluminum from 'src/assets/img/assormentCards/cornices/alluminum.jpg';
@@ -55,6 +56,82 @@ import magnet117 from 'src/assets/img/assormentCards/accesories/magnets/magniti-
 import magnet116 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537116-5.jpg';
 import magnet329 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537329-5.jpg';
 import magnet052 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537052-1.jpg';
+import compactMImg1 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-1.jpg';
+import compactMImg2 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-2.jpg';
+import compactMImg3 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-3.jpg';
+import compactLuxeImg1 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-1.jpg';
+import compactLuxeImg2 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-2.jpg';
+import compactLuxeImg3 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-3.jpg';
+import compactLuxeImg4 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-4.jpg';
+import compactLipImg1 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-1.jpg';
+import compactLipImg2 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-2.jpg';
+import compactLipImg3 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-3.jpg';
+import compact60Img1 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-1.jpg';
+import compact60Img2 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-2.jpg';
+
+export const getItems = (where: string, search: string) => {
+  let searchedObject;
+  const listObjects = [assortment, cornicesAssortment, accessoriesAssortment];
+  for (const array of listObjects) {
+    if (searchedObject) break;
+    for (const object of array) {
+      if (object.url === where) {
+        searchedObject = object;
+        break;
+      }
+    }
+  }
+  return searchedObject?.items.find((el) => el.src === search);
+};
+
+const rimskieMekhanizmi = {
+  'compact-m': {
+    descriptionList: [
+      'Минимальная длина карниза для римских штор - 21 см (2 рабочих блока).',
+      'Минимальная длина карниза (без экрера, торцевая часть) для французских штор - 28 см (3 рабочих блока).',
+      'Минимальная длина карниза  (средняя часть карниза) для французских штор - 14 см (1 рабочий блок)',
+      'Максимальная длина карниза (суммарная длина всех частей карниза) - 400 см',
+      'Максимальная высота карнизасо шторой - 500 см',
+      'Максимальное количество эркерных соединителей - 4',
+      'Угол поворота эркерного соединителя - 90-180 градусов',
+      'Максимально возможная нагрузка на механизм (вес шторы с утяжелителями) независимо от количества секций - 4 кг',
+    ],
+    images: [compactMImg1, compactMImg2, compactMImg3],
+  },
+  'compact-luxe': {
+    descriptionList: [
+      'Минимальная длина карниза для римских штор - 30 см (2 рабочих блока).',
+      'Минимальная длина карниза для французских штор - 55 см (3 рабочих блока).',
+      'Максимальная длина карниза (суммарная длина всех частей карниза) - 400 см',
+      'Максимальная высота карниза со шторой - 3,2 м',
+    ],
+    images: [
+      compactLuxeImg1,
+      compactLuxeImg2,
+      compactLuxeImg3,
+      compactLuxeImg4,
+    ],
+  },
+  'compact-lip': {
+    descriptionList: [
+      'Минимальная длина карниза для римских штор - 30 см (2 рабочих блока).',
+      'Минимальная длина карниза для французских штор - 55 см (3 рабочих блока).',
+      'Максимальная длина карниза (суммарная длина всех частей карниза) - 400 см',
+      'Максимальная высота карниза со шторой - 3,2 м',
+    ],
+    images: [compactLipImg1, compactLipImg2, compactLipImg3],
+  },
+  'compact-60': {
+    descriptionList: [
+      'Минимальная длина карниза: зависит от минимального допустимого количества используемых рабочих блоков: для римских штор - 35 см (минимум 2 рабочих блока); для французских штор - 55 см (минимум 3 рабочих блока).',
+      'Максимальная ширина карниза со шторой - 4 м',
+      'Максимальная высота карниза со шторой - 5,5 м',
+      'Минимальная высота карниза со шторой - 0,3 м',
+      'Максимально возможная нагрузка на механизм (вес шторы с утяжелителями на один карниз) независимо от длины карниза - 15 кг',
+    ],
+    images: [compact60Img1, compact60Img2],
+  },
+};
 
 export const assortment: IAssortment[] = [
   {
@@ -102,24 +179,52 @@ export const assortment: IAssortment[] = [
         key: 'Компакт-M',
         src: 'compact-m',
         image: compactM,
+        component: (
+          <AssortmentRimskie
+            description={rimskieMekhanizmi['compact-m'].descriptionList}
+            images={rimskieMekhanizmi['compact-m'].images}
+            headerImage={compactM}
+          />
+        ),
       },
       {
         name: 'Компакт-Люкс',
         key: 'Компакт-Люкс',
         src: 'compact-luxe',
         image: compactLuxe,
+        component: (
+          <AssortmentRimskie
+            description={rimskieMekhanizmi['compact-luxe'].descriptionList}
+            images={rimskieMekhanizmi['compact-luxe'].images}
+            headerImage={compactLuxe}
+          />
+        ),
       },
       {
         name: 'Компакт-Лип',
         key: 'Компакт-Лип',
         src: 'compact-lip',
         image: compactLip,
+        component: (
+          <AssortmentRimskie
+            description={rimskieMekhanizmi['compact-lip'].descriptionList}
+            images={rimskieMekhanizmi['compact-lip'].images}
+            headerImage={compactLip}
+          />
+        ),
       },
       {
         name: 'Компакт-60',
         key: 'Компакт-60',
         src: 'compact-60',
         image: compact60,
+        component: (
+          <AssortmentRimskie
+            description={rimskieMekhanizmi['compact-60'].descriptionList}
+            images={rimskieMekhanizmi['compact-60'].images}
+            headerImage={compact60}
+          />
+        ),
       },
     ],
   },

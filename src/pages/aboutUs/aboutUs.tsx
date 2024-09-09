@@ -13,7 +13,7 @@ import AboutUsInvite from 'src/common/AboutUsInvite';
 const AboutUs: FC = () => {
   useEffect(() => {
     document.title = 'О нас';
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (

@@ -57,6 +57,9 @@
   .expandable-nav-link__item
   a.active {
   color: white;
+}
+
+.expandable-nav-link__item a.active {
   background: rgba(white, 0.3);
 }
 

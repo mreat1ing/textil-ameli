@@ -3,6 +3,7 @@ export interface IItem {
   src: string;
   image: string;
   key: string;
+  component?: JSX.Element;
 }
 
 interface IAssortment {

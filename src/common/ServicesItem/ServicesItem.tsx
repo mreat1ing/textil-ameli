@@ -16,12 +16,14 @@ const ServicesItem: FC<IServicesItem> = ({ image, name, src }) => {
   return (
     <div className="services-item">
       <div className="services-item__image">
-        <div
-          style={{
-            backgroundImage: `url(${image})`,
-            backgroundSize: 'inherit',
-          }}
-        />
+        <NavLink to={pathname + '/' + src}>
+          <div
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'inherit',
+            }}
+          />
+        </NavLink>
       </div>
       <NavLink to={pathname + '/' + src}>
         <h2 className="services-item__name">{name}</h2>

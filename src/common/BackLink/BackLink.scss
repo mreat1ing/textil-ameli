@@ -1,0 +1,26 @@
+@use '../../variables.scss' as v;
+
+.back-link {
+  width: 100%;
+  padding: 16px;
+}
+
+.back-link__wrapper {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.back-link__link {
+  color: v.$secondary;
+  transition: color 0.2s ease;
+}
+
+.back-link__link:hover {
+  color: v.$primary;
+}
+
+.back-link__link::before {
+  content: '←';
+  padding-right: 8px;
+}

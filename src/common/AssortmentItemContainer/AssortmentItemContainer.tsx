@@ -1,5 +1,5 @@
 import { FC, useEffect } from 'react';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 
 import { getItems } from 'src/db/assortment';
 import observer from 'src/utils/observer.utils';
@@ -20,7 +20,6 @@ const AssortmentItemContainer: FC<IAssortmentItemContainer> = ({
   const { id } = useParams();
   const { pathname } = useLocation();
   const splittedPath = pathname.split('/');
-  const pathWoId = splittedPath.slice(0, splittedPath.length - 1).join('/');
   let item;
 
   useEffect(() => {
@@ -51,9 +50,6 @@ const AssortmentItemContainer: FC<IAssortmentItemContainer> = ({
     <div className="container">
       <div className="wrapper">
         <div className="left-background" />
-        <NavLink className="back-link" to={pathWoId}>
-          Назад
-        </NavLink>
         <h1 className="services-cards__title">{item?.name}</h1>
         <div className="assortment-item__content">{item?.component}</div>
         <AboutUsInvite description={false} />

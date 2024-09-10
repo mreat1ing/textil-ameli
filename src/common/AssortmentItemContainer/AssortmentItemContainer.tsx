@@ -6,6 +6,7 @@ import observer from 'src/utils/observer.utils';
 
 import './AssortmentItemContainer.scss';
 import AboutUsInvite from '../AboutUsInvite';
+import Error from '../Error';
 
 interface IAssortmentItemContainer {
   component?: JSX.Element;
@@ -22,10 +23,6 @@ const AssortmentItemContainer: FC<IAssortmentItemContainer> = ({
   const pathWoId = splittedPath.slice(0, splittedPath.length - 1).join('/');
   let item;
 
-  if (!component) {
-    item = id ? getItems(pathname.split('/')[2], id) : null;
-  } else item = { name: title, component: component };
-
   useEffect(() => {
     const element = document.querySelector('.services-cards__title');
     const elementSecond = document.querySelector('.assortment-item__content');
@@ -41,6 +38,14 @@ const AssortmentItemContainer: FC<IAssortmentItemContainer> = ({
       observerSecond?.disconnect();
     };
   }, []);
+
+  if (!component) {
+    item = id
+      ? getItems(pathname.split('/')[splittedPath.length - 2], id)
+      : null;
+  } else if (component) item = { name: title, component: component };
+
+  if (!item) return <Error />;
 
   return (
     <div className="container">

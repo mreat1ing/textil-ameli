@@ -1,3 +1,4 @@
+import AssortmentAccessories from 'src/components/AssortmentAccessories';
 import AssortmentRimskie from 'src/components/AssortmentRimskie';
 import IAssortment from 'src/interfaces/assortment.interface';
 import electro from 'src/assets/img/assormentCards/cornices/electro.png';
@@ -68,6 +69,97 @@ import compactLipImg2 from 'src/assets/img/assormentCards/rimskie/compact-lip/ko
 import compactLipImg3 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-3.jpg';
 import compact60Img1 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-1.jpg';
 import compact60Img2 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-2.jpg';
+import podhvat537509img1 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-1.jpg';
+import podhvat537509img2 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-2.jpg';
+import podhvat537509img3 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-3.jpg';
+import podhvat537509img4 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-4.jpg';
+import podhvat537510img1 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-1.jpg';
+import podhvat537510img2 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-2.jpg';
+import podhvat537510img3 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-3.jpg';
+import podhvat537510img4 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-4.jpg';
+import podhvat537511img1 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-1.jpg';
+import podhvat537511img2 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-2.jpg';
+import podhvat537511img3 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-3.jpg';
+import podhvat537511img4 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-4.jpg';
+import podhvat537506img1 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-1.jpg';
+import podhvat537506img2 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-2.jpg';
+import podhvat537506img3 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-3.jpg';
+import podhvat537506img4 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-4.jpg';
+import podhvat537506img5 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-5.jpg';
+import podhvat537506img6 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-6.jpg';
+import podhvat537196img1 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-1.jpg';
+import podhvat537196img2 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-2.jpg';
+import podhvat537196img3 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-3.jpg';
+import podhvat537196img4 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-4.jpg';
+import podhvat537196img5 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-5.jpg';
+import kist535800img1 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-1.jpg';
+import kist535800img2 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-2.jpg';
+import kist535800img3 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-3.jpg';
+import kist535800img4 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-4.jpg';
+import kist535800img5 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-5.jpg';
+import kist535800img6 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-6.jpg';
+import kist535800img7 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-7.jpg';
+import kist535800img8 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-8.jpg';
+import kist535800img9 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-9.jpg';
+import kist535800img10 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-10.jpg';
+import kist535800img11 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-11.jpg';
+import kist535800img12 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-12.jpg';
+import kist535800img13 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-13.jpg';
+import kist535800img14 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-14.jpg';
+import kist535800img15 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-15.jpg';
+import kist535800img16 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-16.jpg';
+import kist537411img1 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-1.jpg';
+import kist537411img2 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-2.jpg';
+import kist537411img3 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-3.jpg';
+import kist537411img4 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-4.jpg';
+import kist537411img5 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-5.jpg';
+import kist537411img6 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-6.jpg';
+import kist537411img7 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-7.jpg';
+import kist537410img1 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-1.jpg';
+import kist537410img2 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-2.jpg';
+import kist537410img3 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-3.jpg';
+import kist537410img4 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-4.jpg';
+import kist537410img5 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-5.jpg';
+import kist537410img6 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-6.jpg';
+import kist536233img1 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-1.jpg';
+import kist536233img2 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-2.jpg';
+import kist536233img3 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-3.jpg';
+import kist536233img4 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-4.jpg';
+import kist536233img5 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-5.jpg';
+import kist536233img6 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-6.jpg';
+import kist536233img7 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-7.jpg';
+import kist536233img8 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-8.jpg';
+import kist536233img9 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-9.jpg';
+import kist536191img1 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-1.jpg';
+import kist536191img2 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-2.jpg';
+import kist536191img3 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-3.jpg';
+import kist536191img4 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-4.jpg';
+import kist536191img5 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-5.jpg';
+import kist536191img6 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-6.jpg';
+import kist536191img7 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-7.jpg';
+import kist536191img8 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-8.jpg';
+import kist536191img9 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-9.jpg';
+import magnet537117img1 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-1.jpg';
+import magnet537117img2 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-2.jpg';
+import magnet537117img3 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-3.jpg';
+import magnet537117img4 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-4.jpg';
+import magnet537117img5 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-5.jpg';
+import magnet537117img6 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-6.jpg';
+import magnet537116img1 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-1.jpg';
+import magnet537116img2 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-2.jpg';
+import magnet537116img3 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-3.jpg';
+import magnet537116img4 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-4.jpg';
+import magnet537116img5 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-5.jpg';
+import magnet537329img1 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-1.jpg';
+import magnet537329img2 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-2.jpg';
+import magnet537329img3 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-3.jpg';
+import magnet537329img4 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-4.jpg';
+import magnet537329img5 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-5.jpg';
+import magnet537052img1 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-1.jpg';
+import magnet537052img2 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-2.jpg';
+import magnet537052img3 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-3.jpg';
+import magnet537052img4 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-4.jpg';
+import magnet537052img5 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-5.jpg';
 
 export const getItems = (where: string, search: string) => {
   let searchedObject;
@@ -465,6 +557,168 @@ export const cornicesAssortment: IAssortment[] = [
   },
 ];
 
+const podhvatiAssortment = {
+  'Подхват 537509': {
+    images: [
+      podhvat537509img1,
+      podhvat537509img2,
+      podhvat537509img3,
+      podhvat537509img4,
+    ],
+  },
+  'Подхват 537510': {
+    images: [
+      podhvat537510img1,
+      podhvat537510img2,
+      podhvat537510img3,
+      podhvat537510img4,
+    ],
+  },
+  'Подхват 537511': {
+    images: [
+      podhvat537511img1,
+      podhvat537511img2,
+      podhvat537511img3,
+      podhvat537511img4,
+    ],
+  },
+  'Подхват 537506': {
+    images: [
+      podhvat537506img1,
+      podhvat537506img2,
+      podhvat537506img3,
+      podhvat537506img4,
+      podhvat537506img5,
+      podhvat537506img6,
+    ],
+  },
+  'Подхват 537196': {
+    images: [
+      podhvat537196img1,
+      podhvat537196img2,
+      podhvat537196img3,
+      podhvat537196img4,
+      podhvat537196img5,
+    ],
+  },
+};
+
+const kistiAssortment = {
+  'Кисть 535800': {
+    images: [
+      kist535800img1,
+      kist535800img2,
+      kist535800img3,
+      kist535800img4,
+      kist535800img5,
+      kist535800img6,
+      kist535800img7,
+      kist535800img8,
+      kist535800img9,
+      kist535800img10,
+      kist535800img11,
+      kist535800img12,
+      kist535800img13,
+      kist535800img14,
+      kist535800img15,
+      kist535800img16,
+    ],
+  },
+  'Кисть 537411': {
+    images: [
+      kist537411img1,
+      kist537411img2,
+      kist537411img3,
+      kist537411img4,
+      kist537411img5,
+      kist537411img6,
+      kist537411img7,
+    ],
+  },
+  'Кисть 537410': {
+    images: [
+      kist537410img1,
+      kist537410img2,
+      kist537410img3,
+      kist537410img4,
+      kist537410img5,
+      kist537410img6,
+    ],
+  },
+  'Кисть 536233': {
+    images: [
+      kist536233img1,
+      kist536233img2,
+      kist536233img3,
+      kist536233img4,
+      kist536233img5,
+      kist536233img6,
+      kist536233img7,
+      kist536233img8,
+      kist536233img9,
+    ],
+  },
+  'Кисть 536191': {
+    images: [
+      kist536191img1,
+      kist536191img2,
+      kist536191img3,
+      kist536191img4,
+      kist536191img5,
+      kist536191img6,
+      kist536191img7,
+      kist536191img8,
+      kist536191img9,
+    ],
+  },
+};
+
+const magnetsAssortment = {
+  'Магнит 537463': {
+    images: [magnet463],
+  },
+  'Магнит 537642': {
+    images: [magnet642],
+  },
+  'Магнит 537117': {
+    images: [
+      magnet537117img1,
+      magnet537117img2,
+      magnet537117img3,
+      magnet537117img4,
+      magnet537117img5,
+      magnet537117img6,
+    ],
+  },
+  'Магнит 537116': {
+    images: [
+      magnet537116img1,
+      magnet537116img2,
+      magnet537116img3,
+      magnet537116img4,
+      magnet537116img5,
+    ],
+  },
+  'Магнит 537329': {
+    images: [
+      magnet537329img1,
+      magnet537329img2,
+      magnet537329img3,
+      magnet537329img4,
+      magnet537329img5,
+    ],
+  },
+  'Магнит 537052': {
+    images: [
+      magnet537052img1,
+      magnet537052img2,
+      magnet537052img3,
+      magnet537052img4,
+      magnet537052img5,
+    ],
+  },
+};
+
 export const accessoriesAssortment: IAssortment[] = [
   {
     url: 'podhvati',
@@ -475,30 +729,55 @@ export const accessoriesAssortment: IAssortment[] = [
         key: 'Подхват 537509',
         src: 'podhvat-537509',
         image: podhvat509,
+        component: (
+          <AssortmentAccessories
+            images={podhvatiAssortment['Подхват 537509'].images}
+          />
+        ),
       },
       {
         name: 'Подхват 537510',
         key: 'Подхват 537510',
         src: 'podhvat-537510',
         image: podhvat510,
+        component: (
+          <AssortmentAccessories
+            images={podhvatiAssortment['Подхват 537510'].images}
+          />
+        ),
       },
       {
         name: 'Подхват 537511',
         key: 'Подхват 537511',
         src: 'podhvat-537511',
         image: podhvat511,
+        component: (
+          <AssortmentAccessories
+            images={podhvatiAssortment['Подхват 537511'].images}
+          />
+        ),
       },
       {
         name: 'Подхват 537506',
         key: 'Подхват 537506',
         src: 'podhvat-537506',
         image: podhvat506,
+        component: (
+          <AssortmentAccessories
+            images={podhvatiAssortment['Подхват 537506'].images}
+          />
+        ),
       },
       {
         name: 'Подхват 537196',
         key: 'Подхват 537196',
         src: 'podhvat-537196',
         image: podhvat196,
+        component: (
+          <AssortmentAccessories
+            images={podhvatiAssortment['Подхват 537196'].images}
+          />
+        ),
       },
     ],
   },
@@ -507,34 +786,59 @@ export const accessoriesAssortment: IAssortment[] = [
     title: 'Кисти',
     items: [
       {
-        name: 'Кисть 535800​',
-        key: 'Кисть 535800​',
-        src: 'kist-535800​',
+        name: 'Кисть 535800',
+        key: 'Кисть 535800',
+        src: 'kist-535800',
         image: kist800,
+        component: (
+          <AssortmentAccessories
+            images={kistiAssortment['Кисть 535800'].images}
+          />
+        ),
       },
       {
         name: 'Кисть 537411',
         key: 'Кисть 537411',
         src: 'kist-537411',
         image: kist411,
+        component: (
+          <AssortmentAccessories
+            images={kistiAssortment['Кисть 537411'].images}
+          />
+        ),
       },
       {
         name: 'Кисть 537410',
         key: 'Кисть 537410',
         src: 'kist-537410',
         image: kist410,
+        component: (
+          <AssortmentAccessories
+            images={kistiAssortment['Кисть 537410'].images}
+          />
+        ),
       },
       {
         name: 'Кисть 536233',
         key: 'Кисть 536233',
         src: 'kist-536233',
         image: kist233,
+        component: (
+          <AssortmentAccessories
+            images={kistiAssortment['Кисть 536233'].images}
+          />
+        ),
       },
       {
         name: 'Кисть 536191',
         key: 'Кисть 536191',
         src: 'kist-536191',
         image: kist191,
+        component: (
+          <AssortmentAccessories
+            images={kistiAssortment['Кисть 536191'].images}
+          />
+        ),
       },
     ],
   },
@@ -547,36 +851,66 @@ export const accessoriesAssortment: IAssortment[] = [
         key: 'Магнит 537463',
         src: 'magnet-537463',
         image: magnet463,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537463'].images}
+          />
+        ),
       },
       {
         name: 'Магнит 537642',
         key: 'Магнит 537642',
         src: 'magnet-537642',
         image: magnet642,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537642'].images}
+          />
+        ),
       },
       {
-        name: 'Магниты 537117',
-        key: 'Магниты 537117',
+        name: 'Магнит 537117',
+        key: 'Магнит 537117',
         src: 'magnet-537117',
         image: magnet117,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537117'].images}
+          />
+        ),
       },
       {
-        name: 'Магниты 537116',
-        key: 'Магниты 537116',
+        name: 'Магнит 537116',
+        key: 'Магнит 537116',
         src: 'magnet-537116',
         image: magnet116,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537116'].images}
+          />
+        ),
       },
       {
-        name: 'Магниты 537329',
-        key: 'Магниты 537329',
+        name: 'Магнит 537329',
+        key: 'Магнит 537329',
         src: 'magnet-537329',
         image: magnet329,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537329'].images}
+          />
+        ),
       },
       {
-        name: 'Магниты 537052',
-        key: 'Магниты 537052',
+        name: 'Магнит 537052',
+        key: 'Магнит 537052',
         src: 'magnet-537052',
         image: magnet052,
+        component: (
+          <AssortmentAccessories
+            images={magnetsAssortment['Магнит 537052'].images}
+          />
+        ),
       },
     ],
   },

@@ -42,6 +42,13 @@ const AssortmentPageItems: FC = () => {
         title={'Портьерные и тюлевые ткани'}
       />
     );
+  } else if (splittedPath[2] === 'pokrivala') {
+    return (
+      <AssortmentItemContainer
+        component={<h1>Pokrivala</h1>}
+        title="Покрывала"
+      />
+    );
   }
 
   const normalItems = [];

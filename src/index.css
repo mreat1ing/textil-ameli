@@ -62,10 +62,7 @@ input {
   border: 0;
 }
 
-body.modal-open {
-  overflow-y: hidden;
-}
-
-body.burger--expanded {
+body.burger--expanded,
+body.modal--expanded {
   overflow: hidden;
 }

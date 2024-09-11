@@ -1,3 +1,5 @@
+@use '../../variables.scss' as v;
+
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +20,7 @@
   background-size: cover;
   background-position: center;
   transition: transform 0.2s ease-out;
+  pointer-events: none;
 }
 
 .photo-gallery__photo:hover div {
@@ -39,6 +42,112 @@
 .photo-gallery__photo.photo-gallery-assortment div {
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.photo-gallery-expanded-item {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  min-width: 320px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(v.$overlay, 0.8);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  animation: test 0.5s ease;
+}
+
+.photo-gallery-expanded-item:hover .photo-gallery-expanded-item__button-close {
+  opacity: 1;
+}
+
+.photo-gallery-expanded-item:has(> .photo-gallery-expanded-item__item:hover)
+  .photo-gallery-expanded-item__button-close,
+.photo-gallery-expanded-item:has(> .photo-gallery-expanded-item__button:hover)
+  .photo-gallery-expanded-item__button-close {
+  opacity: 0.3;
+}
+
+.photo-gallery-expanded-item__item {
+  position: fixed;
+  display: block;
+  left: 0;
+  right: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-position: center;
+  width: 80%;
+  height: 80%;
+  cursor: default;
+  margin: 0 auto;
+  min-width: 320px;
+  transition: background-image 0.2s ease;
+}
+
+@keyframes test {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.photo-gallery-expanded-item__item-background {
+  background-repeat: repeat;
+  filter: blur(2px) brightness(0.5) saturate(0.3);
+  border: none;
+}
+
+.photo-gallery-expanded-item__button-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  pointer-events: none;
+  background-color: transparent;
+  color: white;
+  font-size: 17px;
+  z-index: 1;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.photo-gallery-expanded-item__button {
+  cursor: pointer;
+  position: absolute;
+  height: 80%;
+  width: 10%;
+  background-color: transparent;
+  color: white;
+  font-size: 48px;
+  z-index: 1;
+  text-shadow: 0 0 5px v.$shadow;
+  background-image: url('../../assets/icons/navArrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+  opacity: 0.3;
+  transition: opacity 0.2s ease;
+}
+
+.photo-gallery-expanded-item__button:hover {
+  opacity: 1;
+}
+
+.photo-gallery-expanded-item__button-back {
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.photo-gallery-expanded-item__button-forward {
+  right: 0;
 }
 
 @media (max-width: 1050px) {

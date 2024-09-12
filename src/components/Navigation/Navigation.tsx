@@ -372,7 +372,7 @@ const Navigation: FC<INavigation> = ({ type = 'header' }) => {
           </ul>
         </nav>
       </div>
-      {splittedPath.length > 2 && <BackLink />}
+      {splittedPath.length > 2 && type === 'header' ? <BackLink /> : null}
     </>
   );
 };

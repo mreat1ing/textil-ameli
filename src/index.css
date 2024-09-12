@@ -66,3 +66,9 @@ body.burger--expanded,
 body.modal--expanded {
   overflow: hidden;
 }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}

@@ -7,6 +7,7 @@ import {
   DetailedReactHTMLElement,
   HTMLAttributes,
   useCallback,
+  useRef,
 } from 'react';
 
 import './PhotoGallery.scss';
@@ -30,15 +31,22 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   type = 'default',
   className,
 }) => {
+  const imageRef = useRef<HTMLDivElement | null>(null);
+  const imageBgRef = useRef<HTMLDivElement | null>(null);
   const [items, setItems] = useState<
     DetailedReactHTMLElement<HTMLAttributes<HTMLElement>, HTMLElement>[]
   >([]);
   const [isExpanded, setExpanded] = useState(false);
-  const [next, setNext] = useState<boolean | number>(false);
-  const [prev, setPrev] = useState<boolean | number>(false);
+  const [next, setNext] = useState(-1);
+  const [prev, setPrev] = useState(-1);
   const [renderedItem, setRenderedItem] = useState<JSX.Element | null>(null);
   const [renderedBluredItem, setRenderedBluredItem] =
     useState<JSX.Element | null>(null);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchStartY, setTouchStartY] = useState(0);
+  const [moveDirection, setMoveDirection] = useState<'side' | 'bottom' | null>(
+    null
+  );
   const additionalClass =
     type === 'default'
       ? ''
@@ -59,8 +67,8 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   }, []);
 
   const resetAllExpandedItems = () => {
-    setNext(false);
-    setPrev(false);
+    setNext(-1);
+    setPrev(-1);
     setExpanded(false);
     setRenderedBluredItem(null);
     setRenderedItem(null);
@@ -68,28 +76,26 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   };
 
   const setAllExpandedItems = (direction: 'next' | 'prev') => {
-    const nextItem = typeof next === 'number' && items[next];
-    const prevItem = typeof prev === 'number' && items[prev];
-    const isPrev = typeof prev === 'number';
-    const isNext = typeof next === 'number';
-    const nextItemExist = isNext && items[next + 1];
-    const prevItemExist = isPrev && items[prev - 1];
     switch (direction) {
       case 'next':
-        if (nextItem) {
-          setRenderedItem(setItem(nextItem));
-          setRenderedBluredItem(setBluredItem(nextItem));
-          isPrev ? setPrev(prev + 1) : setPrev(0);
-          nextItemExist ? setNext(next + 1) : setNext(false);
-        }
+        setRenderedItem(setItem(items[next]));
+        setRenderedBluredItem(setBluredItem(items[next]));
+        if (prev < items.length - 1) {
+          setPrev(prev + 1);
+        } else setPrev(0);
+        if (next < items.length - 1) {
+          setNext(next + 1);
+        } else setNext(0);
         break;
       case 'prev':
-        if (prevItem) {
-          setRenderedItem(setItem(prevItem));
-          setRenderedBluredItem(setBluredItem(prevItem));
-          isNext ? setNext(next - 1) : setNext(items.length - 1);
-          prevItemExist ? setPrev(prev - 1) : setPrev(false);
-        }
+        setRenderedItem(setItem(items[prev]));
+        setRenderedBluredItem(setBluredItem(items[prev]));
+        if (prev > 0) {
+          setPrev(prev - 1);
+        } else setPrev(items.length - 1);
+        if (next > 0) {
+          setNext(next - 1);
+        } else setNext(items.length - 1);
         break;
     }
   };
@@ -106,6 +112,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       <div
         className="photo-gallery-expanded-item__item"
         style={{ backgroundImage: image }}
+        ref={imageRef}
       />
     );
   };
@@ -122,6 +129,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       <div
         className="photo-gallery-expanded-item__item photo-gallery-expanded-item__item-background"
         style={{ backgroundImage: image }}
+        ref={imageBgRef}
       />
     );
   };
@@ -130,11 +138,11 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     const target = e.target as HTMLElement;
     if (target.localName === 'ul') return;
     const itemId = items.findIndex((el) => el.key === target.id);
-    let nextItem: number | boolean = false;
-    let prevItem: number | boolean = false;
+    const clickedItem = items[itemId];
+    let nextItem = 0;
+    let prevItem = items.length - 1;
     if (itemId > 0) prevItem = itemId - 1;
     if (items.length - 1 !== itemId) nextItem = itemId + 1;
-    const clickedItem = items[itemId];
     setNext(nextItem);
     setPrev(prevItem);
     setRenderedBluredItem(setBluredItem(clickedItem));
@@ -191,6 +199,62 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     setAllExpandedItems('next');
   };
 
+  const touchMoveStartHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    const startX = e.changedTouches[0].clientX;
+    const startY = e.changedTouches[0].clientY;
+    setTouchStartX(startX);
+    setTouchStartY(startY);
+  };
+
+  const touchMoveEndHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    // console.log('startX:', touchStartX, 'startY:', touchStartY);
+    // console.log('endX:', endX, 'endY:', endY);
+    if (moveDirection === 'bottom') {
+      if (touchStartY < endY - 200) {
+        resetAllExpandedItems();
+      }
+    } else if (moveDirection === 'side') {
+      if (touchStartX > endX + 60) {
+        handlerNext();
+      } else if (touchStartX < endX - 60) {
+        handlerBack();
+      }
+    }
+    setMoveDirection(null);
+    const image = imageRef.current;
+    const imageBg = imageBgRef.current;
+    if (!image || !imageBg) return;
+    image.style.transform = 'translateX(0px)';
+    imageBg.style.transform = 'translateX(0px)';
+  };
+
+  const touchMoveHandler = (e: React.TouchEvent<HTMLDivElement>) => {
+    const curX = e.changedTouches[0].clientX;
+    const curY = e.changedTouches[0].clientY;
+    if (!moveDirection) {
+      if (touchStartX > curX + 20 || touchStartX < curX - 20) {
+        setMoveDirection('side');
+      } else if (touchStartY < curY - 20) {
+        setMoveDirection('bottom');
+      }
+    }
+    const image = imageRef.current;
+    const imageBg = imageBgRef.current;
+    if (!image || !imageBg) return;
+    if (moveDirection === 'bottom' && touchStartY < curY) {
+      image.style.transform = `translateY(${curY - touchStartY}px)`;
+      imageBg.style.transform = `translateY(${curY - touchStartY}px)`;
+    } else if (moveDirection === 'side') {
+      image.style.transform = `translateX(${curX - touchStartX}px)`;
+      imageBg.style.transform = `translateX(${curX - touchStartX}px)`;
+    } else {
+      imageBg.style.transform = 'translateY(0px)';
+      image.style.transform = 'translateY(0px)';
+    }
+  };
+
   useEffect(() => {
     setItems((state) => {
       if (!children) return state;
@@ -211,11 +275,17 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   return (
     <>
       {isExpanded && (
-        <div className="photo-gallery-expanded-item" onClick={handlerClose}>
+        <div
+          className="photo-gallery-expanded-item"
+          onMouseUp={handlerClose}
+          onTouchStart={touchMoveStartHandler}
+          onTouchEnd={touchMoveEndHandler}
+          onTouchMove={touchMoveHandler}
+        >
           <button className="photo-gallery-expanded-item__button-close">
             Закрыть
           </button>
-          {prev !== false && (
+          {!(prev < 0) && (
             <button
               className="photo-gallery-expanded-item__button photo-gallery-expanded-item__button-back"
               onClick={handlerBack}
@@ -223,7 +293,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
           )}
           {renderedBluredItem}
           {renderedItem}
-          {next && (
+          {!(next < 0) && (
             <button
               className="photo-gallery-expanded-item__button photo-gallery-expanded-item__button-forward"
               onClick={handlerNext}

@@ -1,5 +1,6 @@
 import AssortmentAccessories from 'src/components/AssortmentAccessories';
 import AssortmentRimskie from 'src/components/AssortmentRimskie';
+import AssortmentElectro from 'src/components/AssortmentElectro';
 import IAssortment from 'src/interfaces/assortment.interface';
 import electro from 'src/assets/img/assormentCards/cornices/electro.png';
 import alluminum from 'src/assets/img/assormentCards/cornices/alluminum.jpg';
@@ -160,6 +161,11 @@ import magnet537052img2 from 'src/assets/img/assormentCards/accesories/magnets/5
 import magnet537052img3 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-3.jpg';
 import magnet537052img4 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-4.jpg';
 import magnet537052img5 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-5.jpg';
+import electroSomfyHeaderImage1 from 'src/assets/img/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy--1-.jpg';
+import electroSomfyHeaderImage2 from 'src/assets/img/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy-2.jpg';
+import electroSomfy40Image1 from 'src/assets/img/assormentCards/cornices/electro/images/kompakt-60-s-elektroprivodom-somfy-sonesse-401.png';
+import electroKarniziImage from 'src/assets/img/assormentCards/cornices/electro/images/sravnenie.png';
+
 
 export const getItems = (where: string, search: string) => {
   let searchedObject;
@@ -355,6 +361,164 @@ export const assortment: IAssortment[] = [
     items: [],
   },
 ];
+const electroKarnizi = {
+  'somfy-40': {
+    descriptionList: [
+      'Максимальная высота – 5,50 м',
+      'Максимальная ширина – 4,00 м',
+      'Минимальная ширина – 0,60 м',
+      'Максимальная площадь – 10,00 м.кв.',
+    ],
+    privods: [
+      {
+        title: 'Sonesse40 RTS с радиоприёмником',
+        items: [],
+      },
+      {
+        title: 'Sonesse40 без радиоприёмника',
+        items: [],
+      },
+    ],
+    variants: ['индивидуальное,', 'групповое,', 'индивидуальное и групповое'],
+    variantsText: [
+      'Происхождение Франция',
+      'Широкие возможности модернизации',
+      'Возможность индивидуального и группового управления',
+      'Возможность интегрировать в систему «Умный дом»',
+      'Большой выбор радиоуправления (1, 2, 4, 6, 16-канальные передатчики), выбор дизайна позволит подобрать к вашему интерьеру более подходящий радиопульт',
+      'Характерна бесшумная работа электропривода',
+      'Запоминание Вашего любимого положения - функция «My» в устройствах дистанционного, радиоуправления',
+      'Срок службы электропривода не менее 15 лет, 5-летняя международная гарантия соответствие международным стандартам',
+    ],
+    images: [electroSomfy40Image1],
+  },
+  somfy: {
+    descriptionList: [
+      'Минимальная ширина – 0,65 м',
+      'Максимальная высота – 3,20 м',
+      'Максимальная ширина – 3,00 м',
+      'Максимальный вес шторы – 2,30 кг',
+      'Максимальная площадь - 5,5 м2',
+    ],
+    privods: [
+      {
+        title: 'Tilt&Lift 25 WireFree RTS c радиоприёмником',
+        items: [
+          'Встроенный радиоприёмник RTS',
+          'Электронные концевые положения',
+          'Сниженный уровень шума',
+          'Возможность интеграции в системы беспроводной домашней автоматизации',
+          'Удобное беспроводное решение',
+          'Центральное расположение в карнизе',
+        ],
+      },
+      {
+        title: 'Электропривод LW 25',
+        items: [
+          'Центральное расположение в карнизе',
+          'Остановка привода по усилию',
+          'Возможность интеграции в систему "Умный дом"',
+        ],
+      },
+      {
+        title: 'Беспроводная версия WireFree',
+        items: [
+          'Без прокладки кабеля электропитания',
+          'Без проводов между приводом и пультом',
+          'Без повреждения стен',
+          'Привод рассчитан на эксплуатацию более 10 лет',
+          'Патент низкого энергопотребления Somfy',
+        ],
+      },
+    ],
+  },
+  compact60electro: {
+    descriptionText:
+      'Создать Уют ещё никогда не было так просто, как с новым приводом из линейки бесшумных моторов Somfy Sonesse®. Он оснащен встроенной перезаряжаемой литиево-ионной батареей для минимизации усилий по установке, а высокая мощность 2 Нм открывает перед Вами возможности моторизовать различные типы штор и жалюзи даже больших размеров. И никаких проводов!',
+    descriptionList: [
+      'Минимальная ширина – 80см',
+      'Максимальная ширина – 300см',
+      'Максимальная высота – 400см',
+      'Максимальная площадь – 5м2',
+    ],
+    privods: [{title: 'Sonesse Ultra WireFree RTS', items: []}],
+    variants: ['индивидуальное,', 'групповое,', 'индивидуальное и групповое'],
+    variantsText: [
+      'Не требуется устанавливать и заменять батареи',
+      'Возможность поднимать тяжелые шторы',
+      'Регулируемая скорость движения штор и жалюзи',
+      'Возможность интеграции в системы беспроводной домашней автоматизации',
+      'Совместимость с пультом Telis Modulis RTS, обеспечивающим точный контроль положения ламелей жалюзи',
+      'Тонкая голова привода светлого цвета сливается с большинством стандартных креплений',
+      'Плавный старт и остановка. Плавность работы конструкции',
+      'Настройка промежуточного положения «My». Вызов одним нажатием на пульте управления',
+      'Светодиод, сигнализирующий о низком заряде аккумулятора',
+      'Отсутствие внешнего контейнера для батареек',
+    ],
+    pluses: [{title: 'Просто следить.', text: 'Светодиодные индикаторы помогут настроить оборудование и отслеживать уровень заряда батареи'},
+      {title: 'Просто установить.', text: 'Программируемая кнопка позволяет управлять оборудованием вручную, упрощая процесс установки'},
+      {title: 'Просто эксплуатировать.', text: 'Встроенная перезаряжаемая литий-ионная батарея'},
+      {title: 'Удобно.', text: 'Беспроводная технология, не нужно беспокоиться о проводке'},
+      {title: 'Тихо.', text: 'Создан быть бесшумным и дарить пользователю комфорт'},
+      {title: 'Надёжно. ', text: 'Каждый привод проходит контроль качества'},
+    ],
+    images: [electroSomfy40Image1],
+  },
+  karniz: {
+    descriptionText: 'Инновационные решения SOMFY для автоматизации шторных карнизов и штор весом до 100 кг',
+    descriptionList: [
+      'Надежный, стильный и тихий электропривод',
+      'Пригодны для удаленного управления - и подключения к системе "умный дом"',
+      'Плавное и равномерное движение',
+      'Запоминание вашего предпочтительного положения - функция «my» в устройствах дистанционного управления',
+      'Автоматическое включение при ручном перемещении шторы',
+      'Электрокарниз glydea с регулируемой скоростью',
+    ],
+    variants: ['Glydea Ultra,', 'Irismo WireFree,', 'Movelite,', 'Movelite WireFree'],
+    privods: [
+      {
+        title: 'Универсальность', 
+        items: [
+          'Подходит для всех типов штор',
+          'Электрокарниз различной формы: прямой, изогнутый или дугообразный',
+          'Возможность перемещения шторы даже в случае отключения электричества',
+        ]
+      },
+      {
+        title: 'Простота', 
+        items: [
+          'Легко установить. Не требует обслуживания',
+          'Возможны различные варианты монтажа привода: классический или скрытая установка под подвесным потолком',
+          'Одностороннее, двустороннее, асимметричное или классическое (с перекрытием) открытие',
+          'Подключение к обычной электросети 220 В'
+        ]
+      },
+      {
+        title: 'Дизайн', 
+        items: [
+          'Конструкция со скрытым кабелем',
+          'Высококачественный корпус электропривода',
+          'Регулировка конечных положений позволяет всегда сохранять безупречную форму Вашей портьеры',
+          'Функция «Обратное движение» позволяет выровнять верх и низ шторы, когда низ стелется по полу',
+        ]
+      },
+      {
+        title: 'Комфорт', 
+        items: [
+          'Плавное автоматическое открытие и закрытие штор',
+          'Регулировка скорости движения штор',
+          'Настройка крайних положений штор',
+          'Функция TOUCH MOTION позволяет перемещать полотно шторы вручную без повреждения конструкции',
+          'Бесшумная работа электропривода',
+          'Выбор устройств управления: с помощью сенсорного радиовыключателя; с помощью радиопульта; через систему «Умный дом» от Somfy',
+        ]
+      },
+    ],
+    imagesTitle: 'Сравнительная таблица электроприводов для моторизации шторных карнизов:',
+    images: [electroKarniziImage]
+
+  },
+};
 
 export const cornicesAssortment: IAssortment[] = [
   {
@@ -366,24 +530,69 @@ export const cornicesAssortment: IAssortment[] = [
         key: 'Компакт 60 с электроприводом SOMFY Sonesse 40',
         name: 'Компакт 60 с электроприводом SOMFY Sonesse 40',
         src: 'kompakt-60-s-elektroprivodom-somfy-sonesse-40',
+        component: (
+          <AssortmentElectro
+            description={electroKarnizi['somfy-40'].descriptionList}
+            privods={electroKarnizi['somfy-40'].privods}
+            images={electroKarnizi['somfy-40'].images}
+            variantsText={electroKarnizi['somfy-40'].variantsText}
+            variants={electroKarnizi['somfy-40'].variants}
+            headerImage={somfy40}
+            showHarakteristics={true}
+          />
+        ),
       },
       {
         image: somfy,
         key: 'Компакт с электроприводами Somfy',
         name: 'Компакт с электроприводами Somfy',
         src: 'kompakt-s-elektroprivodami-somfy',
+        component: (
+          <AssortmentElectro
+            description={electroKarnizi['somfy'].descriptionList}
+            privods={electroKarnizi['somfy'].privods}
+            headerImage={somfy}
+          />
+        ),
       },
       {
         image: compact60electro,
         key: 'Карниз римских штор Компакт 60 с электроприводом Sonesse Ultra 30 WF RTS',
         name: 'Карниз римских штор Компакт 60 с электроприводом Sonesse Ultra 30 WF RTS',
         src: 'karniz-rimskikh-shtor-kompakt-60-s-elektroprivodom-sonesse-ultra-30-wf-rts',
+        component: (
+          <AssortmentElectro
+            descriptionText={electroKarnizi['compact60electro'].descriptionText}
+            description={electroKarnizi['compact60electro'].descriptionList}
+            privods={electroKarnizi['compact60electro'].privods}
+            variants={electroKarnizi['compact60electro'].variants}
+            variantsText={electroKarnizi['compact60electro'].variantsText}
+            pluses={electroKarnizi['compact60electro'].pluses}
+            images={electroKarnizi['compact60electro'].images}
+            descrTitle={true}
+            headerImage={somfy}
+            showHarakteristics={true}
+          />
+        ),
       },
       {
         image: karniz,
         key: 'Электрокарнизы для штор',
         name: 'Электрокарнизы для штор',
         src: 'elektrokarnizy-dlya-shtor',
+        component: (
+          <AssortmentElectro
+            descriptionText={electroKarnizi['karniz'].descriptionText}
+            description={electroKarnizi['karniz'].descriptionList}
+            privods={electroKarnizi['karniz'].privods}
+            variants={electroKarnizi['karniz'].variants}
+            imagesTitle={electroKarnizi['karniz'].imagesTitle}
+            images={electroKarnizi['karniz'].images}
+            showPrivodsTitles={false}
+            descrTitle={true}
+            headerImage={somfy}
+          />
+        ),
       },
     ],
   },

@@ -165,6 +165,24 @@ import electroSomfyHeaderImage1 from 'src/assets/img/assormentCards/cornices/ele
 import electroSomfyHeaderImage2 from 'src/assets/img/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy-2.jpg';
 import electroSomfy40Image1 from 'src/assets/img/assormentCards/cornices/electro/images/kompakt-60-s-elektroprivodom-somfy-sonesse-401.png';
 import electroKarniziImage from 'src/assets/img/assormentCards/cornices/electro/images/sravnenie.png';
+import profilyaS1variantIzgiba1 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-1.jpg';
+import profilyaS1variantIzgiba2 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-2-3.jpg';
+import profilyaS1variantIzgiba3 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-3-3.jpg';
+import profilyaS1variantIzgiba4 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-4-4.jpg';
+import profilyaS1variantIzgiba5 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-5-2.jpg';
+import profilyaS1variantIzgiba6 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-6-2.jpg';
+import profilyaS1variantIzgiba7 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-7-3.jpg';
+import profilyaS1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/s1/chertezh-profilya.jpg';
+import profilyaS1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/s1/blok-s-nagruzkoj.jpg';
+import profilyaS2chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/s2/chertezh-2.jpg';
+import profilyaL1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/l1/chertezh.jpg';
+import profilyaL1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/l1/blok-s-nagruzkoj-1-.png';
+import profilyaT1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/t1/chertezh-3.jpg';
+import profilyaT1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/t1/blok-s-nagruzkoj-7.jpg';
+import profilyaSt2chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/st2/shema.jpg';
+import profilyaSt2chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st2/blok-s-nagruzkoj.jpg';
+import profilyaSt3chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/st3/shema.jpg';
+import profilyaSt3chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st3/blok-s-nagruzkoj-8.jpg';
 
 
 export const getItems = (where: string, search: string) => {
@@ -441,7 +459,7 @@ const electroKarnizi = {
       'Максимальная высота – 400см',
       'Максимальная площадь – 5м2',
     ],
-    privods: [{title: 'Sonesse Ultra WireFree RTS', items: []}],
+    privods: [{ title: 'Sonesse Ultra WireFree RTS', items: [] }],
     variants: ['индивидуальное,', 'групповое,', 'индивидуальное и групповое'],
     variantsText: [
       'Не требуется устанавливать и заменять батареи',
@@ -455,17 +473,34 @@ const electroKarnizi = {
       'Светодиод, сигнализирующий о низком заряде аккумулятора',
       'Отсутствие внешнего контейнера для батареек',
     ],
-    pluses: [{title: 'Просто следить.', text: 'Светодиодные индикаторы помогут настроить оборудование и отслеживать уровень заряда батареи'},
-      {title: 'Просто установить.', text: 'Программируемая кнопка позволяет управлять оборудованием вручную, упрощая процесс установки'},
-      {title: 'Просто эксплуатировать.', text: 'Встроенная перезаряжаемая литий-ионная батарея'},
-      {title: 'Удобно.', text: 'Беспроводная технология, не нужно беспокоиться о проводке'},
-      {title: 'Тихо.', text: 'Создан быть бесшумным и дарить пользователю комфорт'},
-      {title: 'Надёжно. ', text: 'Каждый привод проходит контроль качества'},
+    pluses: [
+      {
+        title: 'Просто следить.',
+        text: 'Светодиодные индикаторы помогут настроить оборудование и отслеживать уровень заряда батареи',
+      },
+      {
+        title: 'Просто установить.',
+        text: 'Программируемая кнопка позволяет управлять оборудованием вручную, упрощая процесс установки',
+      },
+      {
+        title: 'Просто эксплуатировать.',
+        text: 'Встроенная перезаряжаемая литий-ионная батарея',
+      },
+      {
+        title: 'Удобно.',
+        text: 'Беспроводная технология, не нужно беспокоиться о проводке',
+      },
+      {
+        title: 'Тихо.',
+        text: 'Создан быть бесшумным и дарить пользователю комфорт',
+      },
+      { title: 'Надёжно. ', text: 'Каждый привод проходит контроль качества' },
     ],
     images: [electroSomfy40Image1],
   },
   karniz: {
-    descriptionText: 'Инновационные решения SOMFY для автоматизации шторных карнизов и штор весом до 100 кг',
+    descriptionText:
+      'Инновационные решения SOMFY для автоматизации шторных карнизов и штор весом до 100 кг',
     descriptionList: [
       'Надежный, стильный и тихий электропривод',
       'Пригодны для удаленного управления - и подключения к системе "умный дом"',
@@ -474,36 +509,41 @@ const electroKarnizi = {
       'Автоматическое включение при ручном перемещении шторы',
       'Электрокарниз glydea с регулируемой скоростью',
     ],
-    variants: ['Glydea Ultra,', 'Irismo WireFree,', 'Movelite,', 'Movelite WireFree'],
+    variants: [
+      'Glydea Ultra,',
+      'Irismo WireFree,',
+      'Movelite,',
+      'Movelite WireFree',
+    ],
     privods: [
       {
-        title: 'Универсальность', 
+        title: 'Универсальность',
         items: [
           'Подходит для всех типов штор',
           'Электрокарниз различной формы: прямой, изогнутый или дугообразный',
           'Возможность перемещения шторы даже в случае отключения электричества',
-        ]
+        ],
       },
       {
-        title: 'Простота', 
+        title: 'Простота',
         items: [
           'Легко установить. Не требует обслуживания',
           'Возможны различные варианты монтажа привода: классический или скрытая установка под подвесным потолком',
           'Одностороннее, двустороннее, асимметричное или классическое (с перекрытием) открытие',
-          'Подключение к обычной электросети 220 В'
-        ]
+          'Подключение к обычной электросети 220 В',
+        ],
       },
       {
-        title: 'Дизайн', 
+        title: 'Дизайн',
         items: [
           'Конструкция со скрытым кабелем',
           'Высококачественный корпус электропривода',
           'Регулировка конечных положений позволяет всегда сохранять безупречную форму Вашей портьеры',
           'Функция «Обратное движение» позволяет выровнять верх и низ шторы, когда низ стелется по полу',
-        ]
+        ],
       },
       {
-        title: 'Комфорт', 
+        title: 'Комфорт',
         items: [
           'Плавное автоматическое открытие и закрытие штор',
           'Регулировка скорости движения штор',
@@ -511,12 +551,145 @@ const electroKarnizi = {
           'Функция TOUCH MOTION позволяет перемещать полотно шторы вручную без повреждения конструкции',
           'Бесшумная работа электропривода',
           'Выбор устройств управления: с помощью сенсорного радиовыключателя; с помощью радиопульта; через систему «Умный дом» от Somfy',
-        ]
+        ],
       },
     ],
-    imagesTitle: 'Сравнительная таблица электроприводов для моторизации шторных карнизов:',
-    images: [electroKarniziImage]
+    imagesTitle:
+      'Сравнительная таблица электроприводов для моторизации шторных карнизов:',
+    images: [electroKarniziImage],
+  },
+};
 
+const profilya = {
+  s1: {
+    descriptionText:
+      'С-1 - профильный алюминиевый карниз для ламбрекенов, воланов и бандо',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images: [
+      profilyaS1variantIzgiba1,
+      profilyaS1variantIzgiba2,
+      profilyaS1variantIzgiba3,
+      profilyaS1variantIzgiba4,
+      profilyaS1variantIzgiba5,
+      profilyaS1variantIzgiba6,
+      profilyaS1variantIzgiba7,
+    ],
+    images2: [profilyaS1chertezh1, profilyaS1chertezh2],
+  },
+  s2: {
+    descriptionText:
+      'С-2 - профильный алюминиевый карниз для среднего веса штор',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images: [
+      profilyaS1variantIzgiba1,
+      profilyaS1variantIzgiba2,
+      profilyaS1variantIzgiba3,
+      profilyaS1variantIzgiba4,
+      profilyaS1variantIzgiba5,
+      profilyaS1variantIzgiba6,
+      profilyaS1variantIzgiba7,
+    ],
+    images2: [profilyaS2chertezh1, profilyaS1chertezh2],
+  },
+  l1: {
+    descriptionText:
+      'Л-1 - профильный алюминиевый карниз для легкого веса штор и тюля',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images: [
+      profilyaS1variantIzgiba2,
+      profilyaS1variantIzgiba3,
+      profilyaS1variantIzgiba4,
+      profilyaS1variantIzgiba5,
+      profilyaS1variantIzgiba6,
+      profilyaS1variantIzgiba7,
+    ],
+    images2: [profilyaL1chertezh1, profilyaL1chertezh2],
+  },
+  t1: {
+    descriptionText:
+      'Т1 - профильный алюминиевый карниз для среднего и тяжелого веса штор',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images: [
+      profilyaS1variantIzgiba2,
+      profilyaS1variantIzgiba3,
+      profilyaS1variantIzgiba4,
+      profilyaS1variantIzgiba5,
+      profilyaS1variantIzgiba6,
+      profilyaS1variantIzgiba7,
+    ],
+    images2: [profilyaT1chertezh1, profilyaT1chertezh2],
+  },
+  st2: {
+    descriptionText:
+      'СТ-2 - 2-х рядный профильный алюминиевый карниз для среднего веса штор. конфигураций декора окна в кухне, детской, гостиной, спальне',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images2: [profilyaSt2chertezh1, profilyaSt2chertezh2],
+  },
+  st3: {
+    descriptionText:
+      'СТ-3 - 3-х рядный профильный алюминиевый карниз для тяжелого веса штор. конфигураций декора окна в кухне, детской, гостиной, спальне',
+    description: [
+      'Возможность совмещения различных профилей на одном окне',
+      'Цвет профиля - белый, RAL 9016',
+      'Цвет комплектующих - белый',
+      'Длина карниза (max) - без ограничений',
+      'Изготовление карнизов без стыковочных элементов - до 6 м',
+    ],
+    images2: [profilyaSt3chertezh1, profilyaSt3chertezh2],
+  },
+  glide1: {
+    descriptionText:
+      'Однорядный алюминиевый карниз используется для легкого и среднего веса штор, прямой',
+    descriptionList: [
+      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0']},
+      {title: 'Количество рядов', items: ['Однорядные']}
+    ]
+  },
+  glide2: {
+    descriptionText:
+      'Двухрядный алюминиевый карниз используется для среднего веса штор, прямой',
+    descriptionList: [
+      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
+      {title: 'Количество рядов', items: ['Двухрядные']}
+    ]
+  },
+  glide3: {
+    descriptionText:
+      'Трехрядный алюминиевый карниз используется для средних и тяжелых штор, прямой',
+    descriptionList: [
+      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
+      {title: 'Количество рядов', items: ['Трехрядные']}
+    ]
   },
 };
 
@@ -605,54 +778,136 @@ export const cornicesAssortment: IAssortment[] = [
         key: 'Профиль С-1',
         name: 'Профиль С-1',
         src: 'profil-s-1',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['s1'].descriptionText}
+            description={profilya['s1'].description}
+            images={profilya['s1'].images}
+            images2={profilya['s1'].images2}
+            headerImage={s1}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: s2,
         key: 'Профиль С-2',
         name: 'Профиль С-2',
         src: 'profil-s-2',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['s2'].descriptionText}
+            description={profilya['s2'].description}
+            images={profilya['s2'].images}
+            images2={profilya['s2'].images2}
+            headerImage={s2}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: l1,
         key: 'Профиль Л-1',
         name: 'Профиль Л-1',
         src: 'profil-l-1',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['l1'].descriptionText}
+            description={profilya['l1'].description}
+            images={profilya['l1'].images}
+            images2={profilya['l1'].images2}
+            headerImage={l1}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: t1,
         key: 'Профиль T-1',
         name: 'Профиль T-1',
         src: 'profil-t-1',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['t1'].descriptionText}
+            description={profilya['t1'].description}
+            images={profilya['t1'].images}
+            images2={profilya['t1'].images2}
+            headerImage={t1}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: st2,
         key: 'Профиль CT-2',
         name: 'Профиль CT-2',
         src: 'profil-st-2',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['st2'].descriptionText}
+            description={profilya['st2'].description}
+            images2={profilya['st2'].images2}
+            headerImage={st2}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: st3,
         key: 'Профиль CT-3',
         name: 'Профиль CT-3',
         src: 'profil-st-3',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['st3'].descriptionText}
+            description={profilya['st3'].description}
+            images2={profilya['st3'].images2}
+            headerImage={st3}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: glide1,
         key: 'GLIDE 1 (Профиль С-2)',
         name: 'GLIDE 1 (Профиль С-2)',
         src: 'glide-1-profil-s-2',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['glide1'].descriptionText}
+            desctriptionList={profilya['glide1'].descriptionList}
+            headerImage={glide1}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: glide2,
         key: 'GLIDE 2 (Профиль СТ-2)',
         name: 'GLIDE 2 (Профиль СТ-2)',
         src: 'glide-2-profil-st-2',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['glide2'].descriptionText}
+            desctriptionList={profilya['glide2'].descriptionList}
+            headerImage={glide2}
+            isProfiles={true}
+          />
+        ),
       },
       {
         image: glide3,
         key: 'GLIDE 3 (Профиль СТ-3)',
         name: 'GLIDE 3 (Профиль СТ-3)',
         src: 'glide-3-profil-st-3',
+        component: (
+          <AssortmentRimskie
+            descriptionText={profilya['glide3'].descriptionText}
+            desctriptionList={profilya['glide3'].descriptionList}
+            headerImage={glide3}
+            isProfiles={true}
+          />
+        ),
       },
     ],
   },

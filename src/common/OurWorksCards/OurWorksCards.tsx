@@ -10,6 +10,9 @@ import childrenRoom from 'src/assets/img/ourWorksCards/childrenRoom.jpg';
 import bedCurtain from 'src/assets/img/ourWorksCards/bedCurtain.jpg';
 import cover from 'src/assets/img/ourWorksCards/cover.png';
 import bedCover from 'src/assets/img/ourWorksCards/bedCover.jpg';
+import rimskie from 'src/assets/img/ourWorksCards/rimskie.jpg';
+import plisse from 'src/assets/img/ourWorksCards/plisse.jpg';
+import curtains from 'src/assets/img/ourWorksCards/curtains.jpg';
 import observer from 'src/utils/observer.utils';
 
 import './OurWorksCards.scss';
@@ -40,6 +43,9 @@ const OurWorksCards: FC = () => {
           <PhotoLink name="Зонирование" image={bedCurtain} />
           <PhotoLink name="Чехлы" image={cover} />
           <PhotoLink name="Покрывала" image={bedCover} />
+          <PhotoLink name="Римские шторы" image={rimskie} />
+          <PhotoLink name="Шторы плиссе" image={plisse} />
+          <PhotoLink name="Шторы, Тюль" image={curtains} />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 
 import './AssortmentRimskie.scss';
 import PhotoGallery from 'src/common/PhotoGallery';
@@ -41,7 +41,7 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
     <img src={image} alt="" key={image} />
   ));
   const normalizedDescriptionList = desctriptionList.map((item) => (
-    <>
+    <Fragment key={item.title}>
       <h4 className="services-h4">{item.title}</h4>
       <ul className="assortment-item-header__list">
         {item.items.map((elem) => (
@@ -50,7 +50,7 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
           </li>
         ))}
       </ul>
-    </>
+    </Fragment>
   ));
 
   return (

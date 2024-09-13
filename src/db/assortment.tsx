@@ -183,6 +183,144 @@ import profilyaSt2chertezh1 from 'src/assets/img/assormentCards/cornices/profily
 import profilyaSt2chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st2/blok-s-nagruzkoj.jpg';
 import profilyaSt3chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/st3/shema.jpg';
 import profilyaSt3chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st3/blok-s-nagruzkoj-8.jpg';
+import kovanieColors1 from 'src/assets/img/assormentCards/cornices/kovanie/colors/vista-serebro-matovoe.jpg';
+import kovanieColors2 from 'src/assets/img/assormentCards/cornices/kovanie/colors/vista-zoloto-matovoe.jpg';
+import kovanieColors3 from 'src/assets/img/assormentCards/cornices/kovanie/colors/swan-shtanga--1-.jpg';
+import kovanieColors4 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--hrom-1.jpg';
+import kovanieColors5 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--satin-1.jpg';
+import kovanieColors6 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-5.jpg';
+import kovanieColors7 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-glyanets.jpg';
+import kovanieColors8 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-beloe-zoloto-1.jpg';
+import kovanieColors9 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-hrom-2-1.jpg';
+import kovanieColors10 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-satin-2-1.jpg';
+import kovanieColors11 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-6-2.jpg';
+import KovanieVidi1 from 'src/assets/img/assormentCards/cornices/kovanie/vidi/dyv-16-gladkaya-shtanga.jpg';
+import KovanieVidi2 from 'src/assets/img/assormentCards/cornices/kovanie/vidi/dyv-16-vitaya-shtanga.jpg';
+import kovanieNakonechniki1 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-afina-satin-diy16-1.jpg';
+import kovanieNakonechniki2 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-listochki-satin-1.png';
+import kovanieNakonechniki3 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-modul-diy16-satin-1.jpg';
+import kovanieNakonechniki4 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-11.jpg';
+import kovanieNakonechniki5 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-13.jpg';
+import kovanieNakonechniki6 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-15.jpg';
+import kovanieNakonechniki7 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-16.jpg';
+import kovanieNakonechniki9 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-17.jpg';
+import kovanieNakonechniki10 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-18.jpg';
+import kovanieNakonechniki11 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-2.png';
+import kovanieNakonechniki12 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-20.jpg';
+import kovanieNakonechniki13 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-21.jpg';
+import kovanieNakonechniki14 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-22.jpg';
+import kovanieNakonechniki15 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-23.jpg';
+import kovanieNakonechniki16 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-25.jpg';
+import kovanieNakonechniki17 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-27.jpg';
+import kovanieNakonechniki18 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-3.jpg';
+import kovanieNakonechniki19 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-30.jpg';
+import kovanieNakonechniki20 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-32.jpg';
+import kovanieNakonechniki21 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-33.jpg';
+import kovanieNakonechniki22 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-5.jpg';
+import kovanieNakonechniki23 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-zaglushka.jpg';
+import kovanieNakonechniki24 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-shar-riflennyj-diy16-satin.jpg';
+import kovanieColors12 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-beloe-zoloto.jpg';
+import kovanieColors13 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-hrom.jpg';
+import kovanieColors14 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-satin.jpg';
+import kovanieColors15 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-zoloto-antik.jpg';
+import kovanieNakonechniki25 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-10.jpg';
+import kovanieNakonechniki26 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-37.jpg';
+import kovanieNakonechniki27 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-38.jpg';
+import kovanieNakonechniki28 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-39.jpg';
+import kovanieNakonechniki29 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-41.jpg';
+import kovanieNakonechniki30 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-42.jpg';
+import kovanieNakonechniki31 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-43.jpg';
+import kovanieNakonechniki32 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-45.jpg';
+import kovanieNakonechniki33 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-47.jpg';
+import kovanieNakonechniki34 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-7.jpg';
+import kovanieNakonechniki35 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-8.jpg';
+import kovanieNakonechniki36 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-sirius-satin-diy28.jpg';
+import kovanieColorsSintra from 'src/assets/img/assormentCards/cornices/kovanie/colors/sintra/top-dekor_str-25--1-.jpg';
+import kovanieKomplektacia1 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-2--1-.jpg';
+import kovanieKomplektacia2 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-4--1-.jpg';
+import kovanieKomplektacia3 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-10.jpg';
+import kovanieKomplektacia4 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-12.jpg';
+import kovanieKomplektacia5 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-13.jpg';
+import kovanieKomplektacia6 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-14.jpg';
+import kovanieKomplektacia7 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-2.jpg';
+import kovanieKomplektacia8 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-4.jpg';
+import kovanieKomplektacia9 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-6.jpg';
+import kovanieKomplektacia10 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-8.jpg';
+import kovanieRozetki1 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-1.jpg';
+import kovanieRozetki2 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-10.jpg';
+import kovanieRozetki3 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-11.jpg';
+import kovanieRozetki4 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-12.jpg';
+import kovanieRozetki5 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-2.jpg';
+import kovanieRozetki6 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-3.jpg';
+import kovanieRozetki7 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-4.jpg';
+import kovanieRozetki8 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-5.jpg';
+import kovanieRozetki9 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-6.jpg';
+import kovanieRozetki10 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-7.jpg';
+import kovanieRozetki11 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-8.jpg';
+import kovanieRozetki12 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-9.jpg';
+import kovanieDerzhateli1 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-1.jpg';
+import kovanieDerzhateli2 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-2.jpg';
+import kovanieDerzhateli3 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-3.jpg';
+import kovanieDerzhateli4 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-4.jpg';
+import kovanieColorsOst from 'src/assets/img/assormentCards/cornices/kovanie/colors/ost/ost-tsveta.png';
+import kovanieKomplektacia11 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-11.jpg';
+import kovanieKomplektacia12 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-13.jpg';
+import kovanieKomplektacia13 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-15.jpg';
+import kovanieKomplektacia14 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-16.jpg';
+import kovanieKomplektacia15 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-3.jpg';
+import kovanieKomplektacia16 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-5.jpg';
+import kovanieKomplektacia17 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-7.jpg';
+import kovanieKomplektacia18 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-9.jpg';
+import kovanieDerzhateli5 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-1.jpg';
+import kovanieDerzhateli6 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-2.jpg';
+import kovanieDerzhateli7 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-3.jpg';
+import kovanieDerzhateli8 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-4.jpg';
+import kovanieKomplektacia19 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_3.jpg';
+import kovanieKomplektacia20 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_5.jpg';
+import kovanieKomplektacia21 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_7.jpg';
+import kovanieKomplektacia22 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_8.jpg';
+import AssortmentKovanie from 'src/components/AssortmentKovanie';
+import derevyannieColors1 from 'src/assets/img/assormentCards/cornices/derevyannie/colors/binario-tsvet-profiley.png';
+import derevyannieKomplektaciya1 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-2--1-.jpg';
+import derevyannieKomplektaciya2 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-4--1-.jpg';
+import derevyannieKomplektaciya3 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-6--1-.jpg';
+import derevyannieColors2 from 'src/assets/img/assormentCards/cornices/derevyannie/colors/tsveta-vintazh.png';
+import derevyannieKomplektaciya4 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_3--1-.jpg';
+import derevyannieKomplektaciya5 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_5--1-.jpg';
+import derevyannieKomplektaciya6 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_3--1-.jpg';
+import derevyannieKomplektaciya7 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_5--1-.jpg';
+import derevyannieKomplektaciya8 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_6--1-.jpg';
+import exclusuveColors1 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-antik.jpg';
+import exclusuveColors2 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-bel--1-.jpg';
+import exclusuveColors3 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-satin.jpg';
+import exclusuveColors4 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-h-ryadnyj.jpg';
+import exclusuveColors5 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-1.jpg';
+import exclusuveColors6 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-serebro-1.jpg';
+import exclusuveColors7 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/selebrity-bone-2-royal.jpg';
+import exclusuveColors8 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-h-ryadnyj-kor.jpg';
+import exclusuveColors9 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-antik.jpg';
+import exclusuveColors10 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-serebro.jpg';
+import exclusuveColors11 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-slonovaya-kost.jpg';
+import exclusuveColors12 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product2_big.png';
+import exclusuveColors13 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product3_big.png';
+import exclusuveColors14 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product_big.png';
+import exclusuveNakonechniki1 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/liana-2-h-ryadnyj-bel--1-.jpg';
+import exclusuveNakonechniki2 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-malyj-2-h-ryadnyj-bel--1-.jpg';
+import exclusuveNakonechniki3 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-riflenyj-2-h-ryadnyj-bel.jpg';
+import exclusuveNakonechniki4 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/trapetsiya-2-h-ryadnyj-bel.jpg';
+import exclusuveNakonechniki5 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-kedr.jpg';
+import exclusuveNakonechniki6 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-lanterna.jpg';
+import exclusuveNakonechniki7 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-rose.jpg';
+import exclusuveNakonechniki8 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-royal.jpg';
+import exclusuveNakonechniki9 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-twist.jpg';
+import exclusuveNakonechniki10 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-zagl.jpg';
+import exclusuveNakonechniki11 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/emily-roza-2-ryadnyj-serebro.jpg';
+import exclusuveNakonechniki12 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/filigran-2-ryadnyj-serebro.jpg';
+import exclusuveNakonechniki13 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/giostra-2-ryadnyj-serebro.jpg';
+import exclusuveNakonechniki14 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/rikamo-2-ryadnyj-serebro.jpg';
+import exclusuveNakonechniki15 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/ursula2_img_product_big.png';
+import exclusuveNakonechniki16 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/vanesa2_img_product_big.png';
+import exclusuveNakonechniki17 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/walda2_img_product_big.png';
 
 
 export const getItems = (where: string, search: string) => {
@@ -671,25 +809,466 @@ const profilya = {
     descriptionText:
       'Однорядный алюминиевый карниз используется для легкого и среднего веса штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0']},
-      {title: 'Количество рядов', items: ['Однорядные']}
-    ]
+      { title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0'] },
+      { title: 'Количество рядов', items: ['Однорядные'] },
+    ],
   },
   glide2: {
     descriptionText:
       'Двухрядный алюминиевый карниз используется для среднего веса штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
-      {title: 'Количество рядов', items: ['Двухрядные']}
-    ]
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5'],
+      },
+      { title: 'Количество рядов', items: ['Двухрядные'] },
+    ],
   },
   glide3: {
     descriptionText:
       'Трехрядный алюминиевый карниз используется для средних и тяжелых штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
-      {title: 'Количество рядов', items: ['Трехрядные']}
-    ]
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5'],
+      },
+      { title: 'Количество рядов', items: ['Трехрядные'] },
+    ],
+  },
+};
+const kovanieKarnizi = {
+  vista16: {
+    descriptionText:
+      'Виста - металлопластиковые карнизы Ø16 мм. Карниз поставляется полностью в готовой комплектации, наконечники входят в комплект. Упаковка - термоусадочная пленка',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:  1,6  |  1,8  |  2,0  |  2,4  |  3,0'],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 16 мм', 'Двухрядные Ø 16/16 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [kovanieColors1, kovanieColors2],
+  },
+  swan22: {
+    descriptionText:
+      'Swan — металлический карниз Ø22мм. Карниз поставляется в готовой комплектации с наконечниками. Упаковка - термоусадочная пленка',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:  1,6  |  2,0  |  2,4  |  3,0'],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 22 мм', 'Двухрядные Ø 22/22 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [kovanieColors3],
+  },
+  diy16: {
+    descriptionText:
+      'DIY 16 мм — карнизы Ø16мм, с гальваническим покрытием, бесшумными кольцами, усиленными кронштейнами 21см',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: [
+          'Цельные штанги: 1,4  |  1,6  |  1,8  |  2,0  |  2,4  |  3,0',
+          'Составные по центру: 2,8  |  3,0  |  3,2  |  3,6  |  4,0',
+        ],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 16 мм', 'Двухрядные Ø 16/16 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      kovanieColors4,
+      kovanieColors5,
+      kovanieColors6,
+      kovanieColors7,
+      kovanieColors8,
+      kovanieColors9,
+      kovanieColors10,
+      kovanieColors11,
+    ],
+    images2Title: 'Виды карнизов:',
+    images2: [KovanieVidi1, KovanieVidi2],
+    images3Title: 'Наконечники:',
+    images3: [
+      kovanieNakonechniki1,
+      kovanieNakonechniki2,
+      kovanieNakonechniki3,
+      kovanieNakonechniki4,
+      kovanieNakonechniki5,
+      kovanieNakonechniki6,
+      kovanieNakonechniki7,
+      kovanieNakonechniki9,
+      kovanieNakonechniki10,
+      kovanieNakonechniki11,
+      kovanieNakonechniki12,
+      kovanieNakonechniki13,
+      kovanieNakonechniki14,
+      kovanieNakonechniki15,
+      kovanieNakonechniki16,
+      kovanieNakonechniki17,
+      kovanieNakonechniki18,
+      kovanieNakonechniki19,
+      kovanieNakonechniki20,
+      kovanieNakonechniki21,
+      kovanieNakonechniki22,
+      kovanieNakonechniki23,
+      kovanieNakonechniki24,
+    ],
+  },
+  diy28: {
+    descriptionText:
+      'Коллекция DIY Ø28 мм — металлические карнизы с гальваническим покрытием',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: [
+          'Цельные штанги: 1,4  |  1,6  |  1,8  |  2,0  |  2,4  |  3,0',
+          'Составные по центру: 2,8  |  3,0  |  3,2  |  3,6',
+        ],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 28 мм', 'Двухрядные Ø 28/16 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      kovanieColors12,
+      kovanieColors13,
+      kovanieColors14,
+      kovanieColors15,
+    ],
+    images3Title: 'Наконечники:',
+    images3: [
+      kovanieNakonechniki25,
+      kovanieNakonechniki26,
+      kovanieNakonechniki27,
+      kovanieNakonechniki28,
+      kovanieNakonechniki29,
+      kovanieNakonechniki30,
+      kovanieNakonechniki31,
+      kovanieNakonechniki32,
+      kovanieNakonechniki33,
+      kovanieNakonechniki34,
+      kovanieNakonechniki35,
+      kovanieNakonechniki36,
+    ],
+  },
+  sintra: {
+    descriptionText:
+      'Коллекция Синтра - это стальные, латунные наконечники сложных эллипсоидных форм; кронштейны коллекции, также как и наконечники, имеют плавные линии. Идея отсутствия в данной коллекции острых углов и граней с компьютерной точностью воплощается в жизнь на высокотехнологичных станках с программным управлением',
+    descriptionList: [
+      {
+        title: 'Окраска',
+        items: [
+          'Все изделия коллекции Синтра могут быть выполнены по таблице цвета Топ-Декор. Возможна окраска по каталогу Tikkurila и RAL',
+          'Достойное предложение для взыскательных клиентов',
+        ],
+      },
+    ],
+    imagesTitle: 'Возможные цвета:',
+    images: [kovanieColorsSintra],
+    images3Title: 'Комплектация:',
+    images3: [kovanieKomplektacia1, kovanieKomplektacia2],
+  },
+  ampir: {
+    descriptionText:
+      'Коллекция латунных карнизов Ампир - одна из эксклюзивных коллекций круглых карнизов - это легкость, изящество, надежность, долговечность! Богатство форм и тонкая обрабртка латунных элементов карниза: наконечников, кронштейнов, колец, держателей, подхватов для штор, художественное литье',
+    descriptionList: [
+      {
+        title: 'Особенности',
+        items: [
+          'В коллекции представлены латунные кольца со вставкой для обеспечения бесшумного скольжения по штанге и пластмассовые кольца. Классическая красота в гармонии с современной функциональностью - это коллекция Ампир',
+        ],
+      },
+    ],
+    imagesTitle: 'Держатели:',
+    images: [
+      kovanieDerzhateli1,
+      kovanieDerzhateli2,
+      kovanieDerzhateli3,
+      kovanieDerzhateli4,
+    ],
+    images2Title: 'Розетки:',
+    images2: [
+      kovanieRozetki1,
+      kovanieRozetki2,
+      kovanieRozetki3,
+      kovanieRozetki4,
+      kovanieRozetki5,
+      kovanieRozetki6,
+      kovanieRozetki7,
+      kovanieRozetki8,
+      kovanieRozetki9,
+      kovanieRozetki10,
+      kovanieRozetki11,
+      kovanieRozetki12,
+    ],
+    images3Title: 'Комплектация:',
+    images3: [
+      kovanieKomplektacia3,
+      kovanieKomplektacia4,
+      kovanieKomplektacia5,
+      kovanieKomplektacia6,
+      kovanieKomplektacia7,
+      kovanieKomplektacia8,
+      kovanieKomplektacia9,
+      kovanieKomplektacia10,
+    ],
+  },
+  ost: {
+    descriptionText:
+      'Коллекция круглых металлических карнизов Ост: D16мм, D20мм, D25мм, D35мм. Держатели штор, подхваты, декоративные розетки, крючки. Эркерные соединители штанг. настенные, в том числе консольные кронштейны, потолочные кронштейны, кронштейны эконом. Возможность комбинирования штанг различных диаметров в одном карнизе. Однорядные и двухрядные открытые кронштейны обеспечивают дополнительное удобство при установке',
+    descriptionList: [
+      {
+        title: 'О коллекции',
+        items: [
+          'Наконечники выполнены в разнообразных стилях: строгие геометрические формы, растительные мотивы, имитация ковки, использование страз и художественного стекла в декоре наконечников, а также возможность выбора диаметра и декора штанг (витые, рифленые и гладкие) обеспечивает популярность коллекции',
+          'Широкая цветовая палитра',
+        ],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [kovanieColorsOst],
+    images3Title: 'Комплектация:',
+    images3: [
+      kovanieKomplektacia11,
+      kovanieKomplektacia12,
+      kovanieKomplektacia13,
+      kovanieKomplektacia14,
+      kovanieKomplektacia15,
+      kovanieKomplektacia16,
+      kovanieKomplektacia17,
+      kovanieKomplektacia18,
+    ],
+  },
+  gotika: {
+    descriptionText:
+      'Готика - коллекция круглых металлических литых карнизов с элементами ковки. Диаметр штанги 20 мм',
+    descriptionList: [
+      {
+        title: 'Цвета',
+        items: [
+          'При желании заказчика возможна окраска элементов коллекции по таблицам цвета, а также по каталогу Tikkurila RAL',
+        ],
+      },
+      {
+        title: 'Особенности',
+        items: ['Сдержанная цветовая палитра. Строгие формы наконечников и кронштейнов: коллекция содержит более десяти видов наконечников, кронштейны разнообразных форм и конструкций, в том числе кронштейн Камелот для второй направляющей'],
+      },
+    ],
+    images2Title: 'Держатели:',
+    images2: [
+      kovanieDerzhateli5,
+      kovanieDerzhateli6,
+      kovanieDerzhateli7,
+      kovanieDerzhateli8,
+    ],
+    images3Title: 'Комплектация:',
+    images3: [
+      kovanieKomplektacia19,
+      kovanieKomplektacia20,
+      kovanieKomplektacia21,
+      kovanieKomplektacia22,
+    ],
+  },
+};
+const karniziDerevyannie = {
+  binario: {
+    descriptionText:
+      'Широкая цветовая палитра деревянного профиля. Металлические заглушки-наконечники и кронштейны из высококачественной нержавеющей стали завершают респектабельный образ',
+    descriptionList: [
+      {
+        title: 'Бинарио',
+        items: [
+          'Алюминиевый профиль-рельс (один или два) вмонтирован в декоративный деревянный профиль и составляет с ним единое целое',
+        ],
+      },
+      {
+        title: 'Бинерио-Кросс',
+        items: ['Карнизы Бинарио-Кросс используются для создания панельных штор. Алюминиевый профиль Кросс (трёх- или четырёхрядный) вмонтирован в декоративный деревянный профиль. Направляющие кросс устанавливаются в многорядный профиль'],
+      },
+    ],
+    images: [
+      derevyannieColors1,
+    ],
+    images3Title: 'Комплектация:',
+    images3: [
+      derevyannieKomplektaciya1,
+      derevyannieKomplektaciya2,
+      derevyannieKomplektaciya3
+    ],
+  },
+  vintage: {
+    descriptionText:
+      'Эксклюзивная коллекция классических деревянных карнизов с наконечниками изысканных классических форм - Савона двухрядные 35/28, однорядные 35, а также кронштейн D35, дающий возможность формировать карниз как с одной штангой, так и в сочетании штанги и второй направляющей',
+    descriptionList: [
+      {
+        title: 'Окраска',
+        items: [
+          'В коллекции использованы специальные технологии окраски элементов по таблице цвета Винтаж, в том числе с эффектом старения: кракелюр, патина',
+        ],
+      },
+      {
+        title: 'Декор',
+        items: ['Предусмотрена возможность декорирования стразами наконечников и кронштейнов по желанию заказчика'],
+      },
+    ],
+    images: [
+      derevyannieColors2,
+    ],
+    images3Title: 'Комплектация:',
+    images3: [
+      derevyannieKomplektaciya4,
+      derevyannieKomplektaciya5,
+    ],
+  },
+  renessans: {
+    descriptionText:
+      'Коллекция Ренессанс - декоративные карнизы со штангой большого диаметра (50 мм)',
+    descriptionList: [
+      {
+        title: 'Абсолютная классика декора',
+        items: [
+          'Крупные наконечники, пропорциональные размеру штанги, повторяют линии элементов декора. Около 10 видов самых разнообразных по форме наконечников, однорядные и двухрядные кронштейны, эркеры',
+          'Специальные высокотехнологичные приемы обработки элементов карниза, в том числе с эффектом старения, патины, кракелюра, нестандартные цвета позволяют создать неповторимый образ в интерьерах любого цветового решения'
+        ],
+      },
+    ],
+    images: [
+      derevyannieColors2,
+    ],
+    images3Title: 'Комплектация:',
+    images3: [
+      derevyannieKomplektaciya6,
+      derevyannieKomplektaciya7,
+      derevyannieKomplektaciya8
+    ],
+  },
+};
+const karniziExclusive = {
+  renome19 : {
+    descriptionText:
+      'Карнизы Renome несут важную функциональную и эстетическую нагрузку. Правильно подобранная модель карниза не только гармонично впишется в пространство, но и визуально скорректирует высоту потолков, размеры помещения',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: [
+          'Цельные штанги:  1,6  |  1,8  |  2,0  |  2,4  |  3,0',
+        ],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 19 мм', 'Двухрядные Ø 19/19 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      exclusuveColors1,
+      exclusuveColors2,
+      exclusuveColors3,
+    ],
+    images3Title: 'Наконечники:',
+    images3: [
+      exclusuveNakonechniki1,
+      exclusuveNakonechniki2,
+      exclusuveNakonechniki3,
+      exclusuveNakonechniki4,
+    ],
+  },
+  selebrity33: {
+    descriptionText:
+      'Дайте волю своей творческой фантазии, составьте неповторимое оформление окна! Цветовая гамма и формы наконечников придадут индивидуальность интерьеру и оживят пространство',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: [
+          'Цельные штанги:  1,6  |  1,8  |  2,0  |  2,4  |  3,0',
+        ],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 33 мм', 'Двухрядные Ø 33/19 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      exclusuveColors4,
+      exclusuveColors5,
+      exclusuveColors6,
+      exclusuveColors7,
+    ],
+    images3Title: 'Наконечники:',
+    images3: [
+      exclusuveNakonechniki5,
+      exclusuveNakonechniki6,
+      exclusuveNakonechniki7,
+      exclusuveNakonechniki8,
+      exclusuveNakonechniki9,
+      exclusuveNakonechniki10,
+    ],
+  },
+  emily19: {
+    descriptionText:
+      'Интерьеры, с одной стороны, должны быть яркими, а с другой — изящными и эстетичными. Этим требованиям на 100% отвечает стилистика металлических карнизов коллекции Emily',
+    descriptionList: [
+      {
+        title: 'Размеры',
+        items: [
+          'Цельные штанги:  1,6  |  1,8  |  2,0  |  2,4  |  3,0',
+        ],
+      },
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 19 мм', 'Двухрядные Ø 19/19 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      exclusuveColors8,
+      exclusuveColors9,
+      exclusuveColors10,
+      exclusuveColors11,
+    ],
+    images3Title: 'Наконечники:',
+    images3: [
+      exclusuveNakonechniki11,
+      exclusuveNakonechniki12,
+      exclusuveNakonechniki13,
+      exclusuveNakonechniki14,
+    ],
+  },
+  kupel35: {
+    descriptionText:
+      'Природные материалы и формы купола используются в различных интерьерах. Особый стиль деревянной архитектуры, тонко сочетает купольную гармонию с древесной мягкостью и природностью исполнения. Благородные породы дерева, ценившиеся во все времена, это всегда приятные для глаз детали, которые могут внести большую значимость и строгость в художественное оформление пространства',
+    descriptionList: [
+      {
+        title: 'Количество рядов',
+        items: ['Однорядные Ø 35 мм', 'Двухрядные Ø 35/20 мм'],
+      },
+    ],
+    imagesTitle: 'Цвета:',
+    images: [
+      exclusuveColors12,
+      exclusuveColors13,
+      exclusuveColors14,
+    ],
+    images3Title: 'Наконечники:',
+    images3: [
+      exclusuveNakonechniki15,
+      exclusuveNakonechniki16,
+      exclusuveNakonechniki17,
+    ],
   },
 };
 
@@ -920,48 +1499,144 @@ export const cornicesAssortment: IAssortment[] = [
         key: 'Виста Ø16 мм',
         name: 'Виста Ø16 мм',
         src: 'vista-16-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['vista16'].descriptionText}
+            desctriptionList={kovanieKarnizi['vista16'].descriptionList}
+            images={kovanieKarnizi['vista16'].images}
+            imagesTitle={kovanieKarnizi['vista16'].imagesTitle}
+            headerImage={vista16}
+            multicolor={false}
+          />
+        )
       },
       {
         image: swan22,
         key: 'Swan Ø22 мм',
         name: 'Swan Ø22 мм',
         src: 'swan-22-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['swan22'].descriptionText}
+            desctriptionList={kovanieKarnizi['swan22'].descriptionList}
+            images={kovanieKarnizi['swan22'].images}
+            imagesTitle={kovanieKarnizi['swan22'].imagesTitle}
+            headerImage={swan22}
+            multicolor={false}
+          />
+        )
       },
       {
         image: diy16,
         key: 'DIY Ø16 мм',
         name: 'DIY Ø16 мм',
         src: 'diy-16-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['diy16'].descriptionText}
+            desctriptionList={kovanieKarnizi['diy16'].descriptionList}
+            images={kovanieKarnizi['diy16'].images}
+            imagesTitle={kovanieKarnizi['diy16'].imagesTitle}
+            images2={kovanieKarnizi['diy16'].images2}
+            images2Title={kovanieKarnizi['diy16'].images2Title}
+            images3={kovanieKarnizi['diy16'].images3}
+            images3Title={kovanieKarnizi['diy16'].images3Title}
+            headerImage={diy16}
+            multicolor={false}
+          />
+        )
       },
       {
         image: diy28,
         key: 'DIY Ø28 мм',
         name: 'DIY Ø28 мм',
         src: 'diy-28-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['diy28'].descriptionText}
+            desctriptionList={kovanieKarnizi['diy28'].descriptionList}
+            images={kovanieKarnizi['diy28'].images}
+            imagesTitle={kovanieKarnizi['diy28'].imagesTitle}
+            images3={kovanieKarnizi['diy28'].images3}
+            images3Title={kovanieKarnizi['diy28'].images3Title}
+            headerImage={diy28}
+            multicolor={false}
+          />
+        )
       },
       {
         image: sintra,
         key: 'Синтра',
         name: 'Синтра',
         src: 'sintra',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['sintra'].descriptionText}
+            desctriptionList={kovanieKarnizi['sintra'].descriptionList}
+            images={kovanieKarnizi['sintra'].images}
+            imagesTitle={kovanieKarnizi['sintra'].imagesTitle}
+            images3={kovanieKarnizi['sintra'].images3}
+            images3Title={kovanieKarnizi['sintra'].images3Title}
+            headerImage={sintra}
+            multicolor={true}
+          />
+        )
       },
       {
         image: ampir,
         key: 'Ампир',
         name: 'Ампир',
         src: 'ampir',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['ampir'].descriptionText}
+            desctriptionList={kovanieKarnizi['ampir'].descriptionList}
+            images={kovanieKarnizi['ampir'].images}
+            imagesTitle={kovanieKarnizi['ampir'].imagesTitle}
+            images2={kovanieKarnizi['ampir'].images2}
+            images2Title={kovanieKarnizi['ampir'].images2Title}
+            images3={kovanieKarnizi['ampir'].images3}
+            images3Title={kovanieKarnizi['ampir'].images3Title}
+            headerImage={ampir}
+            multicolor={false}
+          />
+        )
       },
       {
         image: ost,
         key: 'ОСТ',
         name: 'ОСТ',
         src: 'ost',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['ost'].descriptionText}
+            desctriptionList={kovanieKarnizi['ost'].descriptionList}
+            images={kovanieKarnizi['ost'].images}
+            imagesTitle={kovanieKarnizi['ost'].imagesTitle}
+            images3={kovanieKarnizi['ost'].images3}
+            images3Title={kovanieKarnizi['ost'].images3Title}
+            headerImage={ost}
+            multicolor={true}
+          />
+        )
       },
       {
         image: gotika,
         key: 'Готика',
         name: 'Готика',
         src: 'gotika',
+        component: (
+          <AssortmentKovanie
+            descriptionText={kovanieKarnizi['gotika'].descriptionText}
+            desctriptionList={kovanieKarnizi['gotika'].descriptionList}
+            images2={kovanieKarnizi['gotika'].images2}
+            images2Title={kovanieKarnizi['gotika'].images2Title}
+            images3={kovanieKarnizi['gotika'].images3}
+            images3Title={kovanieKarnizi['gotika'].images3Title}
+            headerImage={gotika}
+            multicolor={false}
+          />
+        )
       },
     ],
   },
@@ -974,18 +1649,51 @@ export const cornicesAssortment: IAssortment[] = [
         key: 'Бинарио, Бинарио-Кросс',
         name: 'Бинарио, Бинарио-Кросс',
         src: 'binario-kross',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziDerevyannie['binario'].descriptionText}
+            desctriptionList={karniziDerevyannie['binario'].descriptionList}
+            images={karniziDerevyannie['binario'].images}
+            images3={karniziDerevyannie['binario'].images3}
+            images3Title={karniziDerevyannie['binario'].images3Title}
+            headerImage={binario}
+            multicolor={true}
+          />
+        )
       },
       {
         image: vintage,
         key: 'Винтаж',
         name: 'Винтаж',
         src: 'vintage',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziDerevyannie['vintage'].descriptionText}
+            desctriptionList={karniziDerevyannie['vintage'].descriptionList}
+            images={karniziDerevyannie['vintage'].images}
+            images3={karniziDerevyannie['vintage'].images3}
+            images3Title={karniziDerevyannie['vintage'].images3Title}
+            headerImage={vintage}
+            multicolor={true}
+          />
+        )
       },
       {
         image: renessans,
         key: 'Ренессанс',
         name: 'Ренессанс',
         src: 'renessans',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziDerevyannie['renessans'].descriptionText}
+            desctriptionList={karniziDerevyannie['renessans'].descriptionList}
+            images={karniziDerevyannie['renessans'].images}
+            images3={karniziDerevyannie['renessans'].images3}
+            images3Title={karniziDerevyannie['renessans'].images3Title}
+            headerImage={renessans}
+            multicolor={true}
+          />
+        )
       },
     ],
   },
@@ -998,24 +1706,72 @@ export const cornicesAssortment: IAssortment[] = [
         key: 'Renome Ø19 мм',
         name: 'Renome Ø19 мм',
         src: 'renome-19-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziExclusive['renome19'].descriptionText}
+            desctriptionList={karniziExclusive['renome19'].descriptionList}
+            images={karniziExclusive['renome19'].images}
+            imagesTitle={karniziExclusive['renome19'].imagesTitle}
+            images3={karniziExclusive['renome19'].images3}
+            images3Title={karniziExclusive['renome19'].images3Title}
+            headerImage={renome19}
+            multicolor={false}
+          />
+        )
       },
       {
         image: selebrity33,
         key: 'Selebrity Ø33 мм',
         name: 'Selebrity Ø33 мм',
         src: 'selebrity-33-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziExclusive['selebrity33'].descriptionText}
+            desctriptionList={karniziExclusive['selebrity33'].descriptionList}
+            images={karniziExclusive['selebrity33'].images}
+            imagesTitle={karniziExclusive['selebrity33'].imagesTitle}
+            images3={karniziExclusive['selebrity33'].images3}
+            images3Title={karniziExclusive['selebrity33'].images3Title}
+            headerImage={selebrity33}
+            multicolor={false}
+          />
+        )
       },
       {
         image: emily19,
         key: 'Emily Ø19 мм',
         name: 'Emily Ø19 мм',
         src: 'emily-19-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziExclusive['emily19'].descriptionText}
+            desctriptionList={karniziExclusive['emily19'].descriptionList}
+            images={karniziExclusive['emily19'].images}
+            imagesTitle={karniziExclusive['emily19'].imagesTitle}
+            images3={karniziExclusive['emily19'].images3}
+            images3Title={karniziExclusive['emily19'].images3Title}
+            headerImage={emily19}
+            multicolor={false}
+          />
+        )
       },
       {
         image: kupel35,
         key: 'Kupel Ø35 мм',
         name: 'Kupel Ø35 мм',
         src: 'kupel-35-mm',
+        component: (
+          <AssortmentKovanie
+            descriptionText={karniziExclusive['kupel35'].descriptionText}
+            desctriptionList={karniziExclusive['kupel35'].descriptionList}
+            images={karniziExclusive['kupel35'].images}
+            imagesTitle={karniziExclusive['kupel35'].imagesTitle}
+            images3={karniziExclusive['kupel35'].images3}
+            images3Title={karniziExclusive['kupel35'].images3Title}
+            headerImage={kupel35}
+            multicolor={false}
+          />
+        )
       },
     ],
   },

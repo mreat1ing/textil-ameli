@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import Swiper from 'swiper';
 
 import './AssortmentElectro.scss';
 import PhotoGallery from 'src/common/PhotoGallery';

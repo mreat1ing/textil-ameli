@@ -11,10 +11,12 @@ import {
   Guarantee,
   Pencil,
 } from 'src/common/icons';
-import photo1 from 'src/assets/img/ourWorks/6.jpg';
-import photo2 from 'src/assets/img/ourWorks/7.jpg';
-import photo3 from 'src/assets/img/ourWorks/8.jpg';
-import photo4 from 'src/assets/img/serviceCards/nashi-raboti-10.jpg';
+import { hostImages } from 'src/constants/hosting';
+
+const photo1 = `${hostImages}/ourWorks/6.jpg`;
+const photo2 = `${hostImages}/ourWorks/7.jpg`;
+const photo3 = `${hostImages}/ourWorks/8.jpg`;
+const photo4 = `${hostImages}/serviceCards/nashi-raboti-10.jpg`;
 
 const ServicesSunProtection: FC = () => {
   useEffect(() => {
@@ -60,7 +62,7 @@ const ServicesSunProtection: FC = () => {
         студии в Севастополе есть в наличии огромное количество вариантов ткани,
         подходящей именно для штор-плиссе или для рулонных штор.
       </p>
-      <PhotoGallery inLineCount={2}>
+      <PhotoGallery inLineCount={2} photoHeight={350}>
         <img src={photo1} alt="" />
         <img src={photo2} alt="" />
         <img src={photo3} alt="" />

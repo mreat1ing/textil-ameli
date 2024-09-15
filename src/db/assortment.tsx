@@ -2,188 +2,189 @@ import AssortmentAccessories from 'src/components/AssortmentAccessories';
 import AssortmentRimskie from 'src/components/AssortmentRimskie';
 import AssortmentElectro from 'src/components/AssortmentElectro';
 import IAssortment from 'src/interfaces/assortment.interface';
-import electro from 'src/assets/img/assormentCards/cornices/electro.png';
-import alluminum from 'src/assets/img/assormentCards/cornices/alluminum.jpg';
-import kovannii from 'src/assets/img/assormentCards/cornices/kovannii.webp';
-import wood from 'src/assets/img/assormentCards/cornices/wood.jpg';
-import exclusive from 'src/assets/img/assormentCards/cornices/exclusive.png';
-import kist from 'src/assets/img/assormentCards/accesories/kist.jpg';
-import podhvat from 'src/assets/img/assormentCards/accesories/podhvat.jpg';
-import magnet from 'src/assets/img/assormentCards/accesories/magnet.jpg';
-import somfy40 from 'src/assets/img/assormentCards/cornices/electro/rim-1.jpg';
-import somfy from 'src/assets/img/assormentCards/cornices/electro/kompakt-s-elektroprivodami-somfy--1-.jpg';
-import compact60electro from 'src/assets/img/assormentCards/cornices/electro/karniz-rimskih-shtor-kompakt-60-s-elektroprivodom-sonesse-ultra-30-wf-rts--1-.jpg';
-import karniz from 'src/assets/img/assormentCards/cornices/electro/elektro-dlya-shtor.png';
-import s1 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-s-1-1.jpg';
-import s2 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-s-2.jpg';
-import l1 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-l-1.jpg';
-import t1 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-t-1.jpg';
-import st2 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-st-2.jpg';
-import st3 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-st-3-1.jpg';
-import glide1 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-glide-1_s-2-2--1-.jpg';
-import glide2 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-glide-2_st-2-1--1-.jpg';
-import glide3 from 'src/assets/img/assormentCards/cornices/alluminium/profilnyj-karniz-glide-3_st-3-1--1-.jpg';
-import vista16 from 'src/assets/img/assormentCards/cornices/kovanie/vista--1-.jpg';
-import swan22 from 'src/assets/img/assormentCards/cornices/kovanie/swan-glavnaya-3--1-.jpg';
-import diy16 from 'src/assets/img/assormentCards/cornices/kovanie/dyv-16-gladkaya-shtanga.jpg';
-import diy28 from 'src/assets/img/assormentCards/cornices/kovanie/diy28.png';
-import sintra from 'src/assets/img/assormentCards/cornices/kovanie/korich-zoloto.jpg';
-import ampir from 'src/assets/img/assormentCards/cornices/kovanie/ampir-1.jpg';
-import gotika from 'src/assets/img/assormentCards/cornices/kovanie/gotika-1.jpg';
-import ost from 'src/assets/img/assormentCards/cornices/kovanie/ost-13.jpg';
-import binario from 'src/assets/img/assormentCards/cornices/derevyannie/temnaya-vishnya.jpg';
-import vintage from 'src/assets/img/assormentCards/cornices/derevyannie/shar-korichneviy-med.jpg';
-import renessans from 'src/assets/img/assormentCards/cornices/derevyannie/temno-zelen---zoloto.jpg';
-import renome19 from 'src/assets/img/assormentCards/cornices/exclusive/liana-2-h-ryadnyj-antik.jpg';
-import selebrity33 from 'src/assets/img/assormentCards/cornices/exclusive/royal-2-h-ryadnyj.jpg';
-import emily19 from 'src/assets/img/assormentCards/cornices/exclusive/emily-roza-2-ryadnyj-antik.jpg';
-import kupel35 from 'src/assets/img/assormentCards/cornices/exclusive/ursula2_img_product_big.png';
-import compactM from 'src/assets/img/assormentCards/rimskie/kompakt-m-erker.jpg';
-import compactLuxe from 'src/assets/img/assormentCards/rimskie/kompakt-lyuks.jpg';
-import compactLip from 'src/assets/img/assormentCards/rimskie/kompakt-lip.jpg';
-import compact60 from 'src/assets/img/assormentCards/rimskie/kompakt-60.jpg';
-import podhvat509 from 'src/assets/img/assormentCards/accesories/podhvati/podhvat-537509-1.jpg';
-import podhvat510 from 'src/assets/img/assormentCards/accesories/podhvati/podhvat-537510-2.jpg';
-import podhvat511 from 'src/assets/img/assormentCards/accesories/podhvati/podhvat-537511-1.jpg';
-import podhvat506 from 'src/assets/img/assormentCards/accesories/podhvati/podhvat-537506-6.jpg';
-import podhvat196 from 'src/assets/img/assormentCards/accesories/podhvati/podhvat-537196-1.jpg';
-import kist800 from 'src/assets/img/assormentCards/accesories/kisti/kist-535800-1.jpg';
-import kist411 from 'src/assets/img/assormentCards/accesories/kisti/kist-537411-1.jpg';
-import kist410 from 'src/assets/img/assormentCards/accesories/kisti/kist-537410-1.jpg';
-import kist233 from 'src/assets/img/assormentCards/accesories/kisti/kist-536233-2.jpg';
-import kist191 from 'src/assets/img/assormentCards/accesories/kisti/kist-536191-1.jpg';
-import magnet463 from 'src/assets/img/assormentCards/accesories/magnets/magnit-537463.jpg';
-import magnet642 from 'src/assets/img/assormentCards/accesories/magnets/magnit-537642.jpg';
-import magnet117 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537117-1.jpg';
-import magnet116 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537116-5.jpg';
-import magnet329 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537329-5.jpg';
-import magnet052 from 'src/assets/img/assormentCards/accesories/magnets/magniti-537052-1.jpg';
-import compactMImg1 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-1.jpg';
-import compactMImg2 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-2.jpg';
-import compactMImg3 from 'src/assets/img/assormentCards/rimskie/compact-m/kompakt-m-3.jpg';
-import compactLuxeImg1 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-1.jpg';
-import compactLuxeImg2 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-2.jpg';
-import compactLuxeImg3 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-3.jpg';
-import compactLuxeImg4 from 'src/assets/img/assormentCards/rimskie/compact-luxe/kompakt-lyuks-4.jpg';
-import compactLipImg1 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-1.jpg';
-import compactLipImg2 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-2.jpg';
-import compactLipImg3 from 'src/assets/img/assormentCards/rimskie/compact-lip/kompakt-lip-3.jpg';
-import compact60Img1 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-1.jpg';
-import compact60Img2 from 'src/assets/img/assormentCards/rimskie/compact-60/kompakt-60-2.jpg';
-import podhvat537509img1 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-1.jpg';
-import podhvat537509img2 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-2.jpg';
-import podhvat537509img3 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-3.jpg';
-import podhvat537509img4 from 'src/assets/img/assormentCards/accesories/podhvati/537509/podhvat-537509-4.jpg';
-import podhvat537510img1 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-1.jpg';
-import podhvat537510img2 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-2.jpg';
-import podhvat537510img3 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-3.jpg';
-import podhvat537510img4 from 'src/assets/img/assormentCards/accesories/podhvati/537510/podhvat-537510-4.jpg';
-import podhvat537511img1 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-1.jpg';
-import podhvat537511img2 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-2.jpg';
-import podhvat537511img3 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-3.jpg';
-import podhvat537511img4 from 'src/assets/img/assormentCards/accesories/podhvati/537511/podhvat-537511-4.jpg';
-import podhvat537506img1 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-1.jpg';
-import podhvat537506img2 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-2.jpg';
-import podhvat537506img3 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-3.jpg';
-import podhvat537506img4 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-4.jpg';
-import podhvat537506img5 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-5.jpg';
-import podhvat537506img6 from 'src/assets/img/assormentCards/accesories/podhvati/537506/podhvat-537506-6.jpg';
-import podhvat537196img1 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-1.jpg';
-import podhvat537196img2 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-2.jpg';
-import podhvat537196img3 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-3.jpg';
-import podhvat537196img4 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-4.jpg';
-import podhvat537196img5 from 'src/assets/img/assormentCards/accesories/podhvati/537196/podhvat-537196-5.jpg';
-import kist535800img1 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-1.jpg';
-import kist535800img2 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-2.jpg';
-import kist535800img3 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-3.jpg';
-import kist535800img4 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-4.jpg';
-import kist535800img5 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-5.jpg';
-import kist535800img6 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-6.jpg';
-import kist535800img7 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-7.jpg';
-import kist535800img8 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-8.jpg';
-import kist535800img9 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-9.jpg';
-import kist535800img10 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-10.jpg';
-import kist535800img11 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-11.jpg';
-import kist535800img12 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-12.jpg';
-import kist535800img13 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-13.jpg';
-import kist535800img14 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-14.jpg';
-import kist535800img15 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-15.jpg';
-import kist535800img16 from 'src/assets/img/assormentCards/accesories/kisti/535800/kist-535800-16.jpg';
-import kist537411img1 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-1.jpg';
-import kist537411img2 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-2.jpg';
-import kist537411img3 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-3.jpg';
-import kist537411img4 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-4.jpg';
-import kist537411img5 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-5.jpg';
-import kist537411img6 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-6.jpg';
-import kist537411img7 from 'src/assets/img/assormentCards/accesories/kisti/537411/kist-537411-7.jpg';
-import kist537410img1 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-1.jpg';
-import kist537410img2 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-2.jpg';
-import kist537410img3 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-3.jpg';
-import kist537410img4 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-4.jpg';
-import kist537410img5 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-5.jpg';
-import kist537410img6 from 'src/assets/img/assormentCards/accesories/kisti/537410/kist-537410-6.jpg';
-import kist536233img1 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-1.jpg';
-import kist536233img2 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-2.jpg';
-import kist536233img3 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-3.jpg';
-import kist536233img4 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-4.jpg';
-import kist536233img5 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-5.jpg';
-import kist536233img6 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-6.jpg';
-import kist536233img7 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-7.jpg';
-import kist536233img8 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-8.jpg';
-import kist536233img9 from 'src/assets/img/assormentCards/accesories/kisti/536233/kist-536233-9.jpg';
-import kist536191img1 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-1.jpg';
-import kist536191img2 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-2.jpg';
-import kist536191img3 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-3.jpg';
-import kist536191img4 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-4.jpg';
-import kist536191img5 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-5.jpg';
-import kist536191img6 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-6.jpg';
-import kist536191img7 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-7.jpg';
-import kist536191img8 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-8.jpg';
-import kist536191img9 from 'src/assets/img/assormentCards/accesories/kisti/536191/kist-536191-9.jpg';
-import magnet537117img1 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-1.jpg';
-import magnet537117img2 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-2.jpg';
-import magnet537117img3 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-3.jpg';
-import magnet537117img4 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-4.jpg';
-import magnet537117img5 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-5.jpg';
-import magnet537117img6 from 'src/assets/img/assormentCards/accesories/magnets/537117/magniti-537117-6.jpg';
-import magnet537116img1 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-1.jpg';
-import magnet537116img2 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-2.jpg';
-import magnet537116img3 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-3.jpg';
-import magnet537116img4 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-4.jpg';
-import magnet537116img5 from 'src/assets/img/assormentCards/accesories/magnets/537116/magniti-537116-5.jpg';
-import magnet537329img1 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-1.jpg';
-import magnet537329img2 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-2.jpg';
-import magnet537329img3 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-3.jpg';
-import magnet537329img4 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-4.jpg';
-import magnet537329img5 from 'src/assets/img/assormentCards/accesories/magnets/537329/magniti-537329-5.jpg';
-import magnet537052img1 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-1.jpg';
-import magnet537052img2 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-2.jpg';
-import magnet537052img3 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-3.jpg';
-import magnet537052img4 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-4.jpg';
-import magnet537052img5 from 'src/assets/img/assormentCards/accesories/magnets/537052/magniti-537052-5.jpg';
-import electroSomfyHeaderImage1 from 'src/assets/img/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy--1-.jpg';
-import electroSomfyHeaderImage2 from 'src/assets/img/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy-2.jpg';
-import electroSomfy40Image1 from 'src/assets/img/assormentCards/cornices/electro/images/kompakt-60-s-elektroprivodom-somfy-sonesse-401.png';
-import electroKarniziImage from 'src/assets/img/assormentCards/cornices/electro/images/sravnenie.png';
-import profilyaS1variantIzgiba1 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-1.jpg';
-import profilyaS1variantIzgiba2 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-2-3.jpg';
-import profilyaS1variantIzgiba3 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-3-3.jpg';
-import profilyaS1variantIzgiba4 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-4-4.jpg';
-import profilyaS1variantIzgiba5 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-5-2.jpg';
-import profilyaS1variantIzgiba6 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-6-2.jpg';
-import profilyaS1variantIzgiba7 from 'src/assets/img/assormentCards/cornices/profilya/variant-izgiba-7-3.jpg';
-import profilyaS1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/s1/chertezh-profilya.jpg';
-import profilyaS1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/s1/blok-s-nagruzkoj.jpg';
-import profilyaS2chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/s2/chertezh-2.jpg';
-import profilyaL1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/l1/chertezh.jpg';
-import profilyaL1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/l1/blok-s-nagruzkoj-1-.png';
-import profilyaT1chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/t1/chertezh-3.jpg';
-import profilyaT1chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/t1/blok-s-nagruzkoj-7.jpg';
-import profilyaSt2chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/st2/shema.jpg';
-import profilyaSt2chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st2/blok-s-nagruzkoj.jpg';
-import profilyaSt3chertezh1 from 'src/assets/img/assormentCards/cornices/profilya/st3/shema.jpg';
-import profilyaSt3chertezh2 from 'src/assets/img/assormentCards/cornices/profilya/st3/blok-s-nagruzkoj-8.jpg';
+import { hostImages } from 'src/constants/hosting';
 
+const electro = `${hostImages}/assormentCards/cornices/electro.png`;
+const alluminum = `${hostImages}/assormentCards/cornices/alluminum.jpg`;
+const kovannii = `${hostImages}/assormentCards/cornices/kovannii.webp`;
+const wood = `${hostImages}/assormentCards/cornices/wood.jpg`;
+const exclusive = `${hostImages}/assormentCards/cornices/exclusive.png`;
+const kist = `${hostImages}/assormentCards/accesories/kist.jpg`;
+const podhvat = `${hostImages}/assormentCards/accesories/podhvat.jpg`;
+const magnet = `${hostImages}/assormentCards/accesories/magnet.jpg`;
+const somfy40 = `${hostImages}/assormentCards/cornices/electro/rim-1.jpg`;
+const somfy = `${hostImages}/assormentCards/cornices/electro/kompakt-s-elektroprivodami-somfy--1-.jpg`;
+const compact60electro = `${hostImages}/assormentCards/cornices/electro/karniz-rimskih-shtor-kompakt-60-s-elektroprivodom-sonesse-ultra-30-wf-rts--1-.jpg`;
+const karniz = `${hostImages}/assormentCards/cornices/electro/elektro-dlya-shtor.png`;
+const s1 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-s-1-1.jpg`;
+const s2 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-s-2.jpg`;
+const l1 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-l-1.jpg`;
+const t1 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-t-1.jpg`;
+const st2 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-st-2.jpg`;
+const st3 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-st-3-1.jpg`;
+const glide1 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-glide-1_s-2-2--1-.jpg`;
+const glide2 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-glide-2_st-2-1--1-.jpg`;
+const glide3 = `${hostImages}/assormentCards/cornices/alluminium/profilnyj-karniz-glide-3_st-3-1--1-.jpg`;
+const vista16 = `${hostImages}/assormentCards/cornices/kovanie/vista--1-.jpg`;
+const swan22 = `${hostImages}/assormentCards/cornices/kovanie/swan-glavnaya-3--1-.jpg`;
+const diy16 = `${hostImages}/assormentCards/cornices/kovanie/dyv-16-gladkaya-shtanga.jpg`;
+const diy28 = `${hostImages}/assormentCards/cornices/kovanie/diy28.png`;
+const sintra = `${hostImages}/assormentCards/cornices/kovanie/korich-zoloto.jpg`;
+const ampir = `${hostImages}/assormentCards/cornices/kovanie/ampir-1.jpg`;
+const gotika = `${hostImages}/assormentCards/cornices/kovanie/gotika-1.jpg`;
+const ost = `${hostImages}/assormentCards/cornices/kovanie/ost-13.jpg`;
+const binario = `${hostImages}/assormentCards/cornices/derevyannie/temnaya-vishnya.jpg`;
+const vintage = `${hostImages}/assormentCards/cornices/derevyannie/shar-korichneviy-med.jpg`;
+const renessans = `${hostImages}/assormentCards/cornices/derevyannie/temno-zelen---zoloto.jpg`;
+const renome19 = `${hostImages}/assormentCards/cornices/exclusive/liana-2-h-ryadnyj-antik.jpg`;
+const selebrity33 = `${hostImages}/assormentCards/cornices/exclusive/royal-2-h-ryadnyj.jpg`;
+const emily19 = `${hostImages}/assormentCards/cornices/exclusive/emily-roza-2-ryadnyj-antik.jpg`;
+const kupel35 = `${hostImages}/assormentCards/cornices/exclusive/ursula2_img_product_big.png`;
+const compactM = `${hostImages}/assormentCards/rimskie/kompakt-m-erker.jpg`;
+const compactLuxe = `${hostImages}/assormentCards/rimskie/kompakt-lyuks.jpg`;
+const compactLip = `${hostImages}/assormentCards/rimskie/kompakt-lip.jpg`;
+const compact60 = `${hostImages}/assormentCards/rimskie/kompakt-60.jpg`;
+const podhvat509 = `${hostImages}/assormentCards/accesories/podhvati/podhvat-537509-1.jpg`;
+const podhvat510 = `${hostImages}/assormentCards/accesories/podhvati/podhvat-537510-2.jpg`;
+const podhvat511 = `${hostImages}/assormentCards/accesories/podhvati/podhvat-537511-1.jpg`;
+const podhvat506 = `${hostImages}/assormentCards/accesories/podhvati/podhvat-537506-6.jpg`;
+const podhvat196 = `${hostImages}/assormentCards/accesories/podhvati/podhvat-537196-1.jpg`;
+const kist800 = `${hostImages}/assormentCards/accesories/kisti/kist-535800-1.jpg`;
+const kist411 = `${hostImages}/assormentCards/accesories/kisti/kist-537411-1.jpg`;
+const kist410 = `${hostImages}/assormentCards/accesories/kisti/kist-537410-1.jpg`;
+const kist233 = `${hostImages}/assormentCards/accesories/kisti/kist-536233-2.jpg`;
+const kist191 = `${hostImages}/assormentCards/accesories/kisti/kist-536191-1.jpg`;
+const magnet463 = `${hostImages}/assormentCards/accesories/magnets/magnit-537463.jpg`;
+const magnet642 = `${hostImages}/assormentCards/accesories/magnets/magnit-537642.jpg`;
+const magnet117 = `${hostImages}/assormentCards/accesories/magnets/magniti-537117-1.jpg`;
+const magnet116 = `${hostImages}/assormentCards/accesories/magnets/magniti-537116-5.jpg`;
+const magnet329 = `${hostImages}/assormentCards/accesories/magnets/magniti-537329-5.jpg`;
+const magnet052 = `${hostImages}/assormentCards/accesories/magnets/magniti-537052-1.jpg`;
+const compactMImg1 = `${hostImages}/assormentCards/rimskie/compact-m/kompakt-m-1.jpg`;
+const compactMImg2 = `${hostImages}/assormentCards/rimskie/compact-m/kompakt-m-2.jpg`;
+const compactMImg3 = `${hostImages}/assormentCards/rimskie/compact-m/kompakt-m-3.jpg`;
+const compactLuxeImg1 = `${hostImages}/assormentCards/rimskie/compact-luxe/kompakt-lyuks-1.jpg`;
+const compactLuxeImg2 = `${hostImages}/assormentCards/rimskie/compact-luxe/kompakt-lyuks-2.jpg`;
+const compactLuxeImg3 = `${hostImages}/assormentCards/rimskie/compact-luxe/kompakt-lyuks-3.jpg`;
+const compactLuxeImg4 = `${hostImages}/assormentCards/rimskie/compact-luxe/kompakt-lyuks-4.jpg`;
+const compactLipImg1 = `${hostImages}/assormentCards/rimskie/compact-lip/kompakt-lip-1.jpg`;
+const compactLipImg2 = `${hostImages}/assormentCards/rimskie/compact-lip/kompakt-lip-2.jpg`;
+const compactLipImg3 = `${hostImages}/assormentCards/rimskie/compact-lip/kompakt-lip-3.jpg`;
+const compact60Img1 = `${hostImages}/assormentCards/rimskie/compact-60/kompakt-60-1.jpg`;
+const compact60Img2 = `${hostImages}/assormentCards/rimskie/compact-60/kompakt-60-2.jpg`;
+const podhvat537509img1 = `${hostImages}/assormentCards/accesories/podhvati/537509/podhvat-537509-1.jpg`;
+const podhvat537509img2 = `${hostImages}/assormentCards/accesories/podhvati/537509/podhvat-537509-2.jpg`;
+const podhvat537509img3 = `${hostImages}/assormentCards/accesories/podhvati/537509/podhvat-537509-3.jpg`;
+const podhvat537509img4 = `${hostImages}/assormentCards/accesories/podhvati/537509/podhvat-537509-4.jpg`;
+const podhvat537510img1 = `${hostImages}/assormentCards/accesories/podhvati/537510/podhvat-537510-1.jpg`;
+const podhvat537510img2 = `${hostImages}/assormentCards/accesories/podhvati/537510/podhvat-537510-2.jpg`;
+const podhvat537510img3 = `${hostImages}/assormentCards/accesories/podhvati/537510/podhvat-537510-3.jpg`;
+const podhvat537510img4 = `${hostImages}/assormentCards/accesories/podhvati/537510/podhvat-537510-4.jpg`;
+const podhvat537511img1 = `${hostImages}/assormentCards/accesories/podhvati/537511/podhvat-537511-1.jpg`;
+const podhvat537511img2 = `${hostImages}/assormentCards/accesories/podhvati/537511/podhvat-537511-2.jpg`;
+const podhvat537511img3 = `${hostImages}/assormentCards/accesories/podhvati/537511/podhvat-537511-3.jpg`;
+const podhvat537511img4 = `${hostImages}/assormentCards/accesories/podhvati/537511/podhvat-537511-4.jpg`;
+const podhvat537506img1 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-1.jpg`;
+const podhvat537506img2 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-2.jpg`;
+const podhvat537506img3 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-3.jpg`;
+const podhvat537506img4 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-4.jpg`;
+const podhvat537506img5 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-5.jpg`;
+const podhvat537506img6 = `${hostImages}/assormentCards/accesories/podhvati/537506/podhvat-537506-6.jpg`;
+const podhvat537196img1 = `${hostImages}/assormentCards/accesories/podhvati/537196/podhvat-537196-1.jpg`;
+const podhvat537196img2 = `${hostImages}/assormentCards/accesories/podhvati/537196/podhvat-537196-2.jpg`;
+const podhvat537196img3 = `${hostImages}/assormentCards/accesories/podhvati/537196/podhvat-537196-3.jpg`;
+const podhvat537196img4 = `${hostImages}/assormentCards/accesories/podhvati/537196/podhvat-537196-4.jpg`;
+const podhvat537196img5 = `${hostImages}/assormentCards/accesories/podhvati/537196/podhvat-537196-5.jpg`;
+const kist535800img1 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-1.jpg`;
+const kist535800img2 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-2.jpg`;
+const kist535800img3 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-3.jpg`;
+const kist535800img4 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-4.jpg`;
+const kist535800img5 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-5.jpg`;
+const kist535800img6 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-6.jpg`;
+const kist535800img7 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-7.jpg`;
+const kist535800img8 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-8.jpg`;
+const kist535800img9 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-9.jpg`;
+const kist535800img10 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-10.jpg`;
+const kist535800img11 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-11.jpg`;
+const kist535800img12 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-12.jpg`;
+const kist535800img13 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-13.jpg`;
+const kist535800img14 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-14.jpg`;
+const kist535800img15 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-15.jpg`;
+const kist535800img16 = `${hostImages}/assormentCards/accesories/kisti/535800/kist-535800-16.jpg`;
+const kist537411img1 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-1.jpg`;
+const kist537411img2 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-2.jpg`;
+const kist537411img3 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-3.jpg`;
+const kist537411img4 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-4.jpg`;
+const kist537411img5 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-5.jpg`;
+const kist537411img6 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-6.jpg`;
+const kist537411img7 = `${hostImages}/assormentCards/accesories/kisti/537411/kist-537411-7.jpg`;
+const kist537410img1 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-1.jpg`;
+const kist537410img2 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-2.jpg`;
+const kist537410img3 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-3.jpg`;
+const kist537410img4 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-4.jpg`;
+const kist537410img5 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-5.jpg`;
+const kist537410img6 = `${hostImages}/assormentCards/accesories/kisti/537410/kist-537410-6.jpg`;
+const kist536233img1 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-1.jpg`;
+const kist536233img2 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-2.jpg`;
+const kist536233img3 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-3.jpg`;
+const kist536233img4 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-4.jpg`;
+const kist536233img5 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-5.jpg`;
+const kist536233img6 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-6.jpg`;
+const kist536233img7 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-7.jpg`;
+const kist536233img8 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-8.jpg`;
+const kist536233img9 = `${hostImages}/assormentCards/accesories/kisti/536233/kist-536233-9.jpg`;
+const kist536191img1 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-1.jpg`;
+const kist536191img2 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-2.jpg`;
+const kist536191img3 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-3.jpg`;
+const kist536191img4 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-4.jpg`;
+const kist536191img5 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-5.jpg`;
+const kist536191img6 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-6.jpg`;
+const kist536191img7 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-7.jpg`;
+const kist536191img8 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-8.jpg`;
+const kist536191img9 = `${hostImages}/assormentCards/accesories/kisti/536191/kist-536191-9.jpg`;
+const magnet537117img1 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-1.jpg`;
+const magnet537117img2 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-2.jpg`;
+const magnet537117img3 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-3.jpg`;
+const magnet537117img4 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-4.jpg`;
+const magnet537117img5 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-5.jpg`;
+const magnet537117img6 = `${hostImages}/assormentCards/accesories/magnets/537117/magniti-537117-6.jpg`;
+const magnet537116img1 = `${hostImages}/assormentCards/accesories/magnets/537116/magniti-537116-1.jpg`;
+const magnet537116img2 = `${hostImages}/assormentCards/accesories/magnets/537116/magniti-537116-2.jpg`;
+const magnet537116img3 = `${hostImages}/assormentCards/accesories/magnets/537116/magniti-537116-3.jpg`;
+const magnet537116img4 = `${hostImages}/assormentCards/accesories/magnets/537116/magniti-537116-4.jpg`;
+const magnet537116img5 = `${hostImages}/assormentCards/accesories/magnets/537116/magniti-537116-5.jpg`;
+const magnet537329img1 = `${hostImages}/assormentCards/accesories/magnets/537329/magniti-537329-1.jpg`;
+const magnet537329img2 = `${hostImages}/assormentCards/accesories/magnets/537329/magniti-537329-2.jpg`;
+const magnet537329img3 = `${hostImages}/assormentCards/accesories/magnets/537329/magniti-537329-3.jpg`;
+const magnet537329img4 = `${hostImages}/assormentCards/accesories/magnets/537329/magniti-537329-4.jpg`;
+const magnet537329img5 = `${hostImages}/assormentCards/accesories/magnets/537329/magniti-537329-5.jpg`;
+const magnet537052img1 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-1.jpg`;
+const magnet537052img2 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-2.jpg`;
+const magnet537052img3 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-3.jpg`;
+const magnet537052img4 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-4.jpg`;
+const magnet537052img5 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-5.jpg`;
+const electroSomfyHeaderImage1 = `${hostImages}/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy--1-.jpg`;
+const electroSomfyHeaderImage2 = `${hostImages}/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy-2.jpg`;
+const electroSomfy40Image1 = `${hostImages}/assormentCards/cornices/electro/images/kompakt-60-s-elektroprivodom-somfy-sonesse-401.png`;
+const electroKarniziImage = `${hostImages}/assormentCards/cornices/electro/images/sravnenie.png`;
+const profilyaS1variantIzgiba1 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-1.jpg`;
+const profilyaS1variantIzgiba2 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-2-3.jpg`;
+const profilyaS1variantIzgiba3 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-3-3.jpg`;
+const profilyaS1variantIzgiba4 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-4-4.jpg`;
+const profilyaS1variantIzgiba5 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-5-2.jpg`;
+const profilyaS1variantIzgiba6 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-6-2.jpg`;
+const profilyaS1variantIzgiba7 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-7-3.jpg`;
+const profilyaS1chertezh1 = `${hostImages}/assormentCards/cornices/profilya/s1/chertezh-profilya.jpg`;
+const profilyaS1chertezh2 = `${hostImages}/assormentCards/cornices/profilya/s1/blok-s-nagruzkoj.jpg`;
+const profilyaS2chertezh1 = `${hostImages}/assormentCards/cornices/profilya/s2/chertezh-2.jpg`;
+const profilyaL1chertezh1 = `${hostImages}/assormentCards/cornices/profilya/l1/chertezh.jpg`;
+const profilyaL1chertezh2 = `${hostImages}/assormentCards/cornices/profilya/l1/blok-s-nagruzkoj-1-.png`;
+const profilyaT1chertezh1 = `${hostImages}/assormentCards/cornices/profilya/t1/chertezh-3.jpg`;
+const profilyaT1chertezh2 = `${hostImages}/assormentCards/cornices/profilya/t1/blok-s-nagruzkoj-7.jpg`;
+const profilyaSt2chertezh1 = `${hostImages}/assormentCards/cornices/profilya/st2/shema.jpg`;
+const profilyaSt2chertezh2 = `${hostImages}/assormentCards/cornices/profilya/st2/blok-s-nagruzkoj.jpg`;
+const profilyaSt3chertezh1 = `${hostImages}/assormentCards/cornices/profilya/st3/shema.jpg`;
+const profilyaSt3chertezh2 = `${hostImages}/assormentCards/cornices/profilya/st3/blok-s-nagruzkoj-8.jpg`;
 
 export const getItems = (where: string, search: string) => {
   let searchedObject;
@@ -671,25 +672,31 @@ const profilya = {
     descriptionText:
       'Однорядный алюминиевый карниз используется для легкого и среднего веса штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0']},
-      {title: 'Количество рядов', items: ['Однорядные']}
-    ]
+      { title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0'] },
+      { title: 'Количество рядов', items: ['Однорядные'] },
+    ],
   },
   glide2: {
     descriptionText:
       'Двухрядный алюминиевый карниз используется для среднего веса штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
-      {title: 'Количество рядов', items: ['Двухрядные']}
-    ]
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5'],
+      },
+      { title: 'Количество рядов', items: ['Двухрядные'] },
+    ],
   },
   glide3: {
     descriptionText:
       'Трехрядный алюминиевый карниз используется для средних и тяжелых штор, прямой',
     descriptionList: [
-      {title: 'Размеры', items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5']},
-      {title: 'Количество рядов', items: ['Трехрядные']}
-    ]
+      {
+        title: 'Размеры',
+        items: ['Цельные штанги:   2,0  |  2,4  |  3,0  |  3,5'],
+      },
+      { title: 'Количество рядов', items: ['Трехрядные'] },
+    ],
   },
 };
 

@@ -8,15 +8,17 @@ import ServicesPageLinks from 'src/common/ServicesPageLinks';
 import ServicesPageBgTitle from 'src/common/ServicesPageBgTitle';
 import ServicesDesign from 'src/components/ServicesDesign';
 import AboutUsInvite from 'src/common/AboutUsInvite';
-import design from 'src/assets/img/serviceCards/nashi-raboti-1.jpg';
-import maintenance from 'src/assets/img/serviceCards/zhalyuzi-img.jpg';
-import sunProtection from 'src/assets/img/serviceCards/nashi-raboti-10.jpg';
-import cornices from 'src/assets/img/serviceCards/karniz-img.jpg';
-import bedspreads from 'src/assets/img/serviceCards/pled-img.jpg';
 import ServicesSunProtection from 'src/components/ServicesSunProtection';
 import ServicesMaintenance from 'src/components/ServicesMaintenance';
 import ServicesCornices from 'src/components/ServicesCornices';
 import ServicesBedspreads from 'src/components/ServicesBedspreads';
+import { hostImages } from 'src/constants/hosting';
+
+const design = `${hostImages}/serviceCards/nashi-raboti-1.jpg`;
+const maintenance = `${hostImages}/serviceCards/zhalyuzi-img.jpg`;
+const sunProtection = `${hostImages}/serviceCards/nashi-raboti-10.jpg`;
+const cornices = `${hostImages}/serviceCards/karniz-img.jpg`;
+const bedspreads = `${hostImages}/serviceCards/pled-img.jpg`;
 
 type components =
   | 'design'

@@ -2,8 +2,10 @@ import { FC, useEffect } from 'react';
 
 import './ServicesBedspreads.scss';
 import TitleCard from 'src/common/TitleCard';
-import sofa from 'src/assets/img/bg-service-sofa.jpg';
 import { Calculator, Clock, Delivery, Pencil } from 'src/common/icons';
+import { hostImages } from 'src/constants/hosting';
+
+const sofa = `${hostImages}/bg-service-sofa.jpg`;
 
 const ServicesBedspreads: FC = () => {
   useEffect(() => {

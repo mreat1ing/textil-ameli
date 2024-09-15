@@ -34,7 +34,7 @@ const OurWorksImages: FC = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <h1>{title}</h1>
+        <h1 className="services-cards__title animated from-left">{title}</h1>
         <PhotoGallery type="gallery" photoHeight={250} inLineCount={4}>
           {normalizedImages}
         </PhotoGallery>

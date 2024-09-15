@@ -1,6 +1,7 @@
 import { FC, useCallback, useEffect } from 'react';
 
 import './Video.scss';
+import { hostImages } from 'src/constants/hosting';
 
 interface IVideo {
   src: string;
@@ -50,6 +51,7 @@ const Video: FC<IVideo> = ({ src }) => {
         playsInline
         loop
         muted
+        style={{ backgroundImage: `url(${hostImages}/bg-pod-video.png)` }}
       />
     </div>
   );

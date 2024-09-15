@@ -1,7 +1,5 @@
 import { FC, useEffect } from 'react';
 
-import bgCurtains from 'src/assets/img/bg-curtains2.jpg';
-import bgRoom from 'src/assets/img/bg-room.jpg';
 import ParallaxBgImage from 'src/common/ParallaxBgImage';
 import AboutUsTitle from 'src/common/AboutUsTitle';
 import AboutUsWorkingTime from 'src/common/AboutUsWorkingTime';
@@ -9,6 +7,10 @@ import OurClients from 'src/common/OurClients';
 import AboutUsAssortment from 'src/common/AboutUsAssortment';
 import AboutUsServices from 'src/common/AboutUsServices';
 import AboutUsInvite from 'src/common/AboutUsInvite';
+import { hostImages } from 'src/constants/hosting';
+
+const bgCurtains = `${hostImages}/bg-curtains2.jpg`;
+const bgRoom = `${hostImages}/bg-room.jpg`;
 
 const AboutUs: FC = () => {
   useEffect(() => {

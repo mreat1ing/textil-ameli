@@ -1,14 +1,16 @@
 import { FC, useEffect } from 'react';
 
 import observer from 'src/utils/observer.utils';
-import design from 'src/assets/img/serviceCards/nashi-raboti-1.jpg';
-import zhaluzi from 'src/assets/img/serviceCards/zhalyuzi-img.jpg';
-import window from 'src/assets/img/serviceCards/nashi-raboti-10.jpg';
-import karniz from 'src/assets/img/serviceCards/karniz-img.jpg';
-import pled from 'src/assets/img/serviceCards/pled-img.jpg';
+import { hostImages } from 'src/constants/hosting';
 
-import './ServicesCards.scss';
 import ServicesItem from '../ServicesItem';
+import './ServicesCards.scss';
+
+const design = `${hostImages}/serviceCards/nashi-raboti-1.jpg`;
+const zhaluzi = `${hostImages}/serviceCards/zhalyuzi-img.jpg`;
+const window = `${hostImages}/serviceCards/nashi-raboti-10.jpg`;
+const karniz = `${hostImages}/serviceCards/karniz-img.jpg`;
+const pled = `${hostImages}/serviceCards/pled-img.jpg`;
 
 const ServicesCards: FC = () => {
   useEffect(() => {

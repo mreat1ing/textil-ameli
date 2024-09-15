@@ -23,7 +23,7 @@ const TopBlock: FC = () => {
   return (
     <div className="top-block">
       <Video src={videoBg} />
-      <div className="top-block__text-wrapper">
+      <div className="top-block__text-wrapper animated">
         <div className="top-block__content">
           <p className="top-block__city shadow">Севастополь</p>
           <h2 className="top-block__title shadow">Тюли, портьеры</h2>

@@ -1,5 +1,10 @@
 @use '../../variables.scss' as v;
 
+.working-time__description-box:not(.animated),
+.working-time__box:not(.animated) {
+  opacity: 0;
+}
+
 .working-time {
   width: 100%;
   padding: 0 16px;
@@ -70,11 +75,6 @@
   text-decoration: none;
   text-transform: none;
   margin: 25px 0;
-}
-
-.working-time__description-box:not(.working-time__description-box.from-left),
-.working-time__box:not(.working-time__box.from-right) {
-  opacity: 0;
 }
 
 @media (max-width: 800px) {

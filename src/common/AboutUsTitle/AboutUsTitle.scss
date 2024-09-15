@@ -1,3 +1,7 @@
+.about-us-title:not(.animated) {
+  opacity: 0;
+}
+
 .about-us-title {
   display: flex;
   flex-direction: column;
@@ -29,8 +33,4 @@
   text-decoration: none;
   text-transform: none;
   margin: 16px 0;
-}
-
-.about-us-title:not(.about-us-title.smooth-render) {
-  opacity: 0;
 }

@@ -4,14 +4,15 @@ import './ServicesDesign.scss';
 import TitleCard from 'src/common/TitleCard';
 import Order from 'src/components/Order';
 import { Calculator, Clock, Pencil, Delivery } from 'src/common/icons';
+import { hostImages } from 'src/constants/hosting';
 import Textarea from 'src/ui/textarea';
 import PhotoGallery from 'src/common/PhotoGallery';
-import photo1 from 'src/assets/img/ourWorks/1.jpg';
-import photo2 from 'src/assets/img/ourWorks/2.jpg';
-import photo3 from 'src/assets/img/ourWorks/3.jpg';
-import photo4 from 'src/assets/img/ourWorks/4.jpg';
-import photo5 from 'src/assets/img/ourWorks/5.jpg';
-import photo6 from 'src/assets/img/ourWorks/6.jpg';
+const photo1 = `${hostImages}/ourWorks/1.jpg`;
+const photo2 = `${hostImages}/ourWorks/2.jpg`;
+const photo3 = `${hostImages}/ourWorks/3.jpg`;
+const photo4 = `${hostImages}/ourWorks/4.jpg`;
+const photo5 = `${hostImages}/ourWorks/5.jpg`;
+const photo6 = `${hostImages}/ourWorks/6.jpg`;
 
 const ServicesDesign: FC = () => {
   useEffect(() => {

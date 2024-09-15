@@ -41,6 +41,8 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   type = 'default',
   className,
 }) => {
+  // const bodyRef = useRef(document.querySelector('body'));
+  // const lastScrollPos = useRef(0);
   const initialScreenW = window.innerWidth > 320 ? window.innerWidth : 320;
   const prevValueX = useRef(0);
   const curValueX = useRef(0);
@@ -63,6 +65,9 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   const [curr, setCurr] = useState<IImage>(initialImage);
   const [screenW, setScreenW] = useState(initialScreenW);
   const [isSliding, setSliding] = useState(false);
+  const [isButtonBack, setButtonBack] = useState(false);
+  const [isButtonNext, setButtonNext] = useState(false);
+  const [countTouchesOnScreen, setCountTouchesOnScreen] = useState(0);
   const additionalClass =
     type === 'default'
       ? ''
@@ -73,6 +78,51 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   const handleResizeWindow = () => {
     if (window.innerWidth > 320) setScreenW(window.innerWidth);
   };
+
+  const setButtons = useCallback(
+    (nextI = next, prevI = prev) => {
+      const nextRef = imageNextRef.current;
+      const prevRef = imagePrevRef.current;
+      if (!nextRef || !prevRef) return;
+      const isNext = detectNotExist(nextI, nextRef);
+      const isPrev = detectNotExist(prevI, prevRef);
+      if (isNext) setButtonNext(false);
+      else setButtonNext(true);
+      if (isPrev) setButtonBack(false);
+      else setButtonBack(true);
+    },
+    [next, prev]
+  );
+
+  //TODO: сделать эту дрочь на айфоны что бы не блымала
+  // const lockBody = () => {
+  //   lastScrollPos.current = window.scrollY;
+  //   const body = bodyRef.current;
+  //   if (!body) return;
+  //   body.style.overflow = 'hidden';
+  //   body.style.position = 'fixed';
+  //   body.style.top = `-${lastScrollPos.current}px`;
+  //   body.style.width = '100%';
+  // };
+
+  // const unlockBody = () => {
+  //   const body = bodyRef.current;
+  //   if (!body) return;
+  //   body.style.removeProperty('overflow');
+  //   body.style.removeProperty('position');
+  //   body.style.removeProperty('top');
+  //   body.style.removeProperty('width');
+  //   window.scrollTo(0, lastScrollPos.current);
+  // };
+
+  // useEffect(() => {
+  //   if (isExpanded) lockBody();
+  //   else unlockBody();
+  // }, [isExpanded]);
+
+  useEffect(() => {
+    setButtons();
+  }, [next, prev, setButtons]);
 
   useEffect(() => {
     const slidePrev = slidePrevRef.current;
@@ -108,7 +158,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       setNext(initialImage);
       setCurr(initialImage);
       setPrev(initialImage);
-    }, 200);
+    }, 350);
   };
 
   const setItem = (
@@ -190,6 +240,16 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     }
   };
 
+  const detectNotExist = (item: IImage, element: HTMLImageElement) => {
+    if (item.id === '-1') {
+      const copied = element;
+      copied.style.width = '0px';
+      copied.style.height = '0px';
+      return true;
+    }
+    return false;
+  };
+
   const handlerBack = (e?: React.MouseEvent) => {
     if (isSliding) return;
     const itemId = Number(imagePrevRef.current?.id);
@@ -208,8 +268,11 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       currRef.id = prevRef.id;
       prevRef.src = prevItem.src;
       prevRef.id = prevItem.id;
+      setButtons({ id: nextRef.id, src: nextRef.src }, prevItem);
+      nextRef.style.removeProperty('width');
+      nextRef.style.removeProperty('height');
       setSliding(false);
-    }, 200);
+    }, 300);
   };
 
   const handlerNext = (e?: React.MouseEvent) => {
@@ -230,8 +293,11 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       currRef.id = nextRef.id;
       nextRef.src = nextItem.src;
       nextRef.id = nextItem.id;
+      setButtons(nextItem, { id: prevRef.id, src: prevRef.src });
+      prevRef.style.removeProperty('width');
+      prevRef.style.removeProperty('height');
       setSliding(false);
-    }, 200);
+    }, 300);
   };
 
   const swipeRight = () => {
@@ -323,14 +389,15 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   };
 
   const touchMoveStartHandler = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (isSliding) return;
+    setCountTouchesOnScreen(e.touches.length);
     const startX = e.changedTouches[0].clientX;
     const startY = e.changedTouches[0].clientY;
+    touchStartX.current = startX;
+    touchStartY.current = startY;
+    if (isSliding) return;
     const prevSlide = slidePrevRef.current;
     const curSlide = slideCurRef.current;
     const nextSlide = slideNextRef.current;
-    touchStartX.current = startX;
-    touchStartY.current = startY;
     if (!prevSlide || !curSlide || !nextSlide) return;
     prevValueX.current = getTranslateX(prevSlide);
     curValueX.current = getTranslateX(curSlide);
@@ -355,7 +422,6 @@ const PhotoGallery: FC<IPhotoGallery> = ({
         if (imageNextRef.current?.id !== '-1') action = 'next';
         else action = null;
       } else if (touchStartX.current < endX - 80) {
-        // console.log(imagePrevRef.current?.src);
         if (imagePrevRef.current?.id !== '-1') action = 'prev';
         else action = null;
       } else action = null;
@@ -366,16 +432,22 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   };
 
   const touchMoveHandler = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (isSliding) return;
+    if (isSliding) {
+      touchMoveStartHandler(e);
+      return;
+    }
+    const scale = window.visualViewport?.scale || 1;
+    if (scale > 1.2) return;
+    if (countTouchesOnScreen > 1) return;
     const curX = e.changedTouches[0].clientX;
     const curY = e.changedTouches[0].clientY;
     const newValueX = curX - touchStartX.current;
     if (!moveDirection.current) {
-      if (touchStartX.current > curX + 10 || touchStartX.current < curX - 10) {
+      if (touchStartX.current > curX + 2 || touchStartX.current < curX - 2) {
         moveDirection.current = 'horizontal';
       } else if (
-        touchStartY.current < curY - 10 ||
-        touchStartY.current > curY + 10
+        touchStartY.current < curY - 5 ||
+        touchStartY.current > curY + 5
       ) {
         moveDirection.current = 'vertical';
       }
@@ -433,7 +505,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
           <button className="photo-gallery-expanded-item__button-close">
             Закрыть
           </button>
-          {imagePrevRef.current?.id !== '-1' && (
+          {isButtonBack && (
             <button
               className="photo-gallery-expanded-item__button photo-gallery-expanded-item__button-back"
               onClick={handlerBack}
@@ -478,7 +550,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
               ref={imageNextRef}
             />
           </div>
-          {imageNextRef.current?.id !== '-1' && (
+          {isButtonNext && (
             <button
               className="photo-gallery-expanded-item__button photo-gallery-expanded-item__button-forward"
               onClick={handlerNext}

@@ -54,6 +54,12 @@
   margin: 50px 0;
 }
 
+@media (min-width: 990px) {
+  .services-card-page {
+    overflow: visible;
+  }
+}
+
 @media (max-height: 720px) {
   .services-card-page__wrapper {
     flex-direction: column;

@@ -1,5 +1,9 @@
 @use '../../variables.scss' as v;
 
+.order__image-wrapper:not(.animated) {
+  opacity: 0;
+}
+
 .order {
   width: 100%;
   display: flex;

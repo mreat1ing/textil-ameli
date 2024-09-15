@@ -1,12 +1,14 @@
 import { FC, useEffect } from 'react';
 
-import Eskiz from 'src/assets/img/eskiz.jpg';
+import { hostImages } from 'src/constants/hosting';
 import Input from 'src/ui/input';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
 import CheckboxWithImage from 'src/common/CheckboxWithImage';
-import placeholder from 'src/assets/img/item-placeholder.png';
 import { PaperPlane } from 'src/common/icons';
+
+const Eskiz = `${hostImages}/eskiz.jpg`;
+const placeholder = `${hostImages}/item-placeholder.png`;
 
 import './Order.scss';
 

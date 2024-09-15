@@ -52,6 +52,10 @@ a {
   color: initial;
 }
 
+main > div {
+  overflow-x: hidden;
+}
+
 button,
 input {
   appearance: none;
@@ -65,6 +69,8 @@ input {
 body.burger--expanded,
 body.modal--expanded {
   overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 #root {

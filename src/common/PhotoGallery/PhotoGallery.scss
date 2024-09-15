@@ -1,5 +1,9 @@
 @use '../../variables.scss' as v;
 
+.photo-gallery:not(.animated) {
+  opacity: 0;
+}
+
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -77,24 +81,24 @@
 }
 
 .photo-gallery-expanded-item:not(.removing) {
-  animation: test 0.2s ease;
+  animation: test 0.4s ease;
 }
 
 .photo-gallery-expanded-item.removing {
-  animation: test-reverse 0.2s ease;
+  animation: test-reverse 0.3s linear;
   opacity: 0;
   pointer-events: none;
 }
 
 .photo-gallery-expanded-item.removing.top .photo-gallery-expanded-item__item {
   opacity: 0;
-  animation: to-top 0.2s ease;
+  animation: to-top 0.3s linear;
 }
 
 .photo-gallery-expanded-item.removing.bottom
   .photo-gallery-expanded-item__item {
   opacity: 0;
-  animation: to-bottom 0.2s ease;
+  animation: to-bottom 0.3s linear;
 }
 
 .photo-gallery-expanded-item:hover .photo-gallery-expanded-item__button-close {
@@ -152,9 +156,11 @@
 @keyframes to-top {
   0% {
     opacity: 1;
-    // transform: inherit;
   }
-
+  75% {
+    opacity: 1;
+    transform: translateY(-75%);
+  }
   100% {
     opacity: 0;
     transform: translateY(-100%);
@@ -164,7 +170,6 @@
 @keyframes to-bottom {
   0% {
     opacity: 1;
-    // transform: inherit;
   }
 
   100% {
@@ -206,11 +211,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.5rem;
-  opacity: 0.3;
+  opacity: 0.8;
   transition: opacity 0.2s ease;
 }
 
-.photo-gallery-expanded-item__button:hover {
+.photo-gallery-expanded-item__button:active {
   opacity: 1;
 }
 
@@ -221,6 +226,16 @@
 
 .photo-gallery-expanded-item__button-forward {
   right: 0;
+}
+
+@media all and (min-width: 1024px) {
+  .photo-gallery-expanded-item__button {
+    opacity: 0.3;
+  }
+
+  .photo-gallery-expanded-item__button:hover {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1050px) {

@@ -1,5 +1,9 @@
 @use '../../variables.scss' as v;
 
+.contact-us:not(.animated) {
+  opacity: 0;
+}
+
 .contact-us {
   width: 100%;
   display: flex;

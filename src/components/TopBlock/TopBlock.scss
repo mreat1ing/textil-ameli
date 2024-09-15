@@ -1,5 +1,9 @@
 @use '../../variables.scss' as v;
 
+.top-block__text-wrapper:not(.animated) {
+  opacity: 0;
+}
+
 .shadow {
   text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
 }
@@ -55,10 +59,6 @@
 
 .top-block__button {
   margin: 25px 0;
-}
-
-.top-block__text-wrapper:not(.top-block__text-wrapper.smooth-render) {
-  opacity: 0;
 }
 
 .top-block__button:hover {

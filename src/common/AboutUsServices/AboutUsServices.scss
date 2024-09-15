@@ -1,5 +1,10 @@
 @use '../../variables.scss' as v;
 
+.services__title:not(.animated),
+.services__cards:not(.animated) {
+  opacity: 0;
+}
+
 .services {
   width: 100%;
   padding: 0 16px;

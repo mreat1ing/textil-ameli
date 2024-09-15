@@ -1,5 +1,10 @@
 @use '../../variables.scss' as v;
 
+.services-cards__title:not(.animated),
+.services-cards__cards:not(.animated) {
+  opacity: 0;
+}
+
 .services-cards {
   width: 100%;
   padding: 75px 16px;
@@ -34,11 +39,6 @@
 
 .services-cards__item {
   width: calc((100% / 3) - 20px);
-}
-
-.services-cards__title:not(.services-cards__title.from-left),
-.services-cards__cards:not(.services-cards__cards.smooth-render) {
-  opacity: 0;
 }
 
 @media (max-width: 1024px) {

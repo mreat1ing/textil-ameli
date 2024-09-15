@@ -1,0 +1,17 @@
+@media (max-width: 777px) {
+  .wrapper .photo-gallery.photo-gallery-gallery > li {
+    width: calc(100% / 3) !important;
+  }
+}
+
+@media (max-width: 555px) {
+  .wrapper .photo-gallery.photo-gallery-gallery > li {
+    width: calc(100% / 2) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper .photo-gallery.photo-gallery-gallery > li {
+    width: 100% !important;
+  }
+}

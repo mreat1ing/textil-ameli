@@ -1,5 +1,10 @@
 @use '../../variables.scss' as v;
 
+.our-projects__title:not(.animated),
+.our-projects__content:not(.animated) {
+  opacity: 0;
+}
+
 .our-projects {
   width: 100%;
   display: flex;
@@ -9,12 +14,10 @@
 
 .our-projects__wrapper {
   width: 100%;
-  // max-width: 1170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 25px;
-  // margin: 25px 16px 25px 16px;
 }
 
 .our-projects__title {

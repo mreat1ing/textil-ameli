@@ -1,7 +1,13 @@
 @use '../../variables.scss' as v;
 
+.about-company__top-block:not(.animated),
+.about-company__bottom-block-cards:not(.animated) {
+  opacity: 0;
+}
+
 .about-company {
   width: 100%;
+  overflow-x: visible;
 }
 
 .about-company__wrapper {
@@ -70,7 +76,6 @@
 }
 
 .about-company__bottom-block-image {
-  background-image: url('../../assets/img/bg-curtains.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -90,13 +95,6 @@
 
 .about-company__bottom-block-card {
   width: 23%;
-}
-
-.about-company__top-block:not(.about-company__top-block.from-left),
-.about-company__bottom-block-cards:not(
-    .about-company__bottom-block-cards.from-right
-  ) {
-  opacity: 0;
 }
 
 @media (max-width: 1210px) {

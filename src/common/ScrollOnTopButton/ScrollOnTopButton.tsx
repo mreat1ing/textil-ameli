@@ -18,15 +18,24 @@ const ScrollOnTopButton: FC = () => {
     } else setShowScrollTopButton(false);
   }, []);
 
-  const resizeHandler = useCallback(() => {
+  const resizeHandler = useCallback((e?: UIEvent | '_', insta = false) => {
     const currWidth = window.innerWidth;
 
-    if (currWidth >= 320 && currWidth <= 1920) {
+    if (insta) {
+      const newWidth = currWidth * 0.02;
+      if (newWidth < 40) setCurPos(newWidth);
+      else setCurPos(40);
+    } else if (currWidth >= 320 && currWidth <= 1920) {
       if (!(currWidth % 16)) {
         setCurPos(currWidth * 0.02);
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (!isShowScrollTopButton) return;
+    resizeHandler('_', true);
+  }, [isShowScrollTopButton, resizeHandler]);
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler);

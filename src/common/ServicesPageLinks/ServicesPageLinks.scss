@@ -1,5 +1,9 @@
 @use '../../variables.scss' as v;
 
+.services-page-links:not(.animated) {
+  opacity: 0;
+}
+
 .services-page-links {
   margin-left: 24px;
   background-color: v.$color-white;
@@ -11,10 +15,6 @@
   position: -webkit-sticky;
   top: 24px;
   height: max-content;
-}
-
-.services-page-links:not(.services-page-links.from-right) {
-  opacity: 0;
 }
 
 .services-page-link-title {

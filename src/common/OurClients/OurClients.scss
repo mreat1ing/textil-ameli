@@ -1,5 +1,11 @@
 @use '../../variables.scss' as v;
 
+.our-clients__title:not(.animated),
+.our-clients__cards:not(.animated),
+.our-clients__description:not(.animated) {
+  opacity: 0;
+}
+
 .our-clients {
   width: 100%;
   background-color: v.$color-white;

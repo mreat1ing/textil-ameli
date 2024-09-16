@@ -14,7 +14,6 @@ interface IAssortmentRimskie {
   headerImage: string;
   isProfiles?: boolean;
   images2?: string[];
-  // descrTitle?: string;
   descriptionText?: string;
   desctriptionList?: descrList[];
 }
@@ -25,7 +24,6 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
   headerImage,
   isProfiles = false,
   images2 = [],
-  // descrTitle = '',
   descriptionText = '',
   desctriptionList = [],
 }) => {
@@ -82,7 +80,9 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
       {images.length ? (
         <>
           <h2 className="services-h2">Комплектующие и схемы:</h2>
-          <PhotoGallery type="assortment">{normalizedImages}</PhotoGallery>
+          <PhotoGallery className="animated smooth-render" type="assortment">
+            {normalizedImages}
+          </PhotoGallery>
         </>
       ) : null}
       {images2.length ? (

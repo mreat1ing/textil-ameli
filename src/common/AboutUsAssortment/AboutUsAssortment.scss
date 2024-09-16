@@ -1,5 +1,10 @@
 @use '../../variables.scss' as v;
 
+.assortment__title:not(.animated),
+.assortment__cards:not(.animated) {
+  opacity: 0;
+}
+
 .assortment {
   width: 100%;
   padding: 100px 16px;

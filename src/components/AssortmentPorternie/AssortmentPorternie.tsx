@@ -2,27 +2,28 @@ import { FC } from 'react';
 
 import './AssortmentPorternie.scss';
 import AssortmentPorternieListItem from 'src/common/AssortmentPorternieListItem';
+import { hostImages } from 'src/constants/hosting';
 
-import bgadeco1 from './assets/img/background/adeco1-img.jpg';
-import bgadeco2 from './assets/img/background/adeco2-img.jpg';
-import bgadeco3 from './assets/img/background/adeco3-img.jpg';
-import bgyork from './assets/img/background/york-img.jpg';
-import bgepocada from './assets/img/background/epocada-img.jpg';
-import bgdesign from './assets/img/background/el-design-img.jpg';
-import bgkado from './assets/img/background/kado-img.jpg';
-import bgmirodim from './assets/img/background/microdim-img.jpg';
-import bgdali from './assets/img/background/dali-img.jpg';
-import bgsg from './assets/img/background/sg-img.jpg';
-import bgrunotex from './assets/img/background/runotex-img.jpg';
-import logoadeco from './assets/img/logos/adeco.png';
-import logoyork from './assets/img/logos/york.png';
-import logoepocada from './assets/img/logos/epocada.png';
-import logodesign from './assets/img/logos/el-design.png';
-import logokado from './assets/img/logos/kado.png';
-import logomirodim from './assets/img/logos/mirodim.png';
-import logodali from './assets/img/logos/dali.png';
-import logosg from './assets/img/logos/sg.png';
-import logorunotex from './assets/img/logos/runotex.png';
+const bgadeco1 = `${hostImages}/background/adeco1-img.jpg`;
+const bgadeco2 = `${hostImages}/background/adeco2-img.jpg`;
+const bgadeco3 = `${hostImages}/background/adeco3-img.jpg`;
+const bgyork = `${hostImages}/background/york-img.jpg`;
+const bgepocada = `${hostImages}/background/epocada-img.jpg`;
+const bgdesign = `${hostImages}/background/el-design-img.jpg`;
+const bgkado = `${hostImages}/background/kado-img.jpg`;
+const bgmirodim = `${hostImages}/background/microdim-img.jpg`;
+const bgdali = `${hostImages}/background/dali-img.jpg`;
+const bgsg = `${hostImages}/background/sg-img.jpg`;
+const bgrunotex = `${hostImages}/background/runotex-img.jpg`;
+const logoadeco = `${hostImages}/logos/adeco.png`;
+const logoyork = `${hostImages}/logos/york.png`;
+const logoepocada = `${hostImages}/logos/epocada.png`;
+const logodesign = `${hostImages}/logos/el-design.png`;
+const logokado = `${hostImages}/logos/kado.png`;
+const logomirodim = `${hostImages}/logos/mirodim.png`;
+const logodali = `${hostImages}/logos/dali.png`;
+const logosg = `${hostImages}/logos/sg.png`;
+const logorunotex = `${hostImages}/logos/runotex.png`;
 
 const AssortmentPorternie: FC = () => {
   return (

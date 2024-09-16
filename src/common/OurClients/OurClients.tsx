@@ -1,16 +1,17 @@
 import { FC, useEffect } from 'react';
 
-import chayka from 'src/assets/img/companies/chayka.jpg';
-import discovery from 'src/assets/img/companies/discovery.jpg';
-import fns from 'src/assets/img/companies/fns.jpg';
-import institut from 'src/assets/img/companies/institut.jpg';
-import kirov from 'src/assets/img/companies/kirov.jpg';
-import montazh from 'src/assets/img/companies/montazh.jpg';
-import palmira from 'src/assets/img/companies/palmira.jpg';
-import tavros from 'src/assets/img/companies/tavros.jpg';
+import { hostImages } from 'src/constants/hosting';
 import observer from 'src/utils/observer.utils';
-
 import './OurClients.scss';
+
+const chayka = `${hostImages}/companies/chayka.jpg`;
+const discovery = `${hostImages}/companies/discovery.jpg`;
+const fns = `${hostImages}/companies/fns.jpg`;
+const institut = `${hostImages}/companies/institut.jpg`;
+const kirov = `${hostImages}/companies/kirov.jpg`;
+const montazh = `${hostImages}/companies/montazh.jpg`;
+const palmira = `${hostImages}/companies/palmira.jpg`;
+const tavros = `${hostImages}/companies/tavros.jpg`;
 
 const OurClients: FC = () => {
   useEffect(() => {

@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import PhotoGallery from 'src/common/PhotoGallery';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
-import photo1 from 'src/assets/img/ourWorks/1.jpg';
-import photo2 from 'src/assets/img/ourWorks/2.jpg';
-import photo3 from 'src/assets/img/ourWorks/3.jpg';
-import photo4 from 'src/assets/img/ourWorks/4.jpg';
-import photo5 from 'src/assets/img/ourWorks/5.jpg';
-import photo6 from 'src/assets/img/ourWorks/6.jpg';
+const photo1 = 'https://cd11149.tw1.ru/assets/images/ourWorks/1.jpg';
+const photo2 = 'https://cd11149.tw1.ru/assets/images/ourWorks/2.jpg';
+const photo3 = 'https://cd11149.tw1.ru/assets/images/ourWorks/3.jpg';
+const photo4 = 'https://cd11149.tw1.ru/assets/images/ourWorks/4.jpg';
+const photo5 = 'https://cd11149.tw1.ru/assets/images/ourWorks/5.jpg';
+const photo6 = 'https://cd11149.tw1.ru/assets/images/ourWorks/6.jpg';
 
 import './CompletedOrders.scss';
 

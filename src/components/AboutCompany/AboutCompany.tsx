@@ -9,7 +9,6 @@ import {
   Clock,
 } from 'src/common/icons';
 import ParallaxBgImage from 'src/common/ParallaxBgImage';
-import bgCurtains from 'src/assets/img/bg-curtains.jpg';
 import observer from 'src/utils/observer.utils';
 import AssortmentCart from 'src/common/AssortmentCart';
 import TitleCard from 'src/common/TitleCard';
@@ -69,7 +68,10 @@ const AboutCompany: FC = () => {
         </div>
       </div>
       <div className="about-company__bottom-block">
-        <ParallaxBgImage image={bgCurtains} padding={150}>
+        <ParallaxBgImage
+          image="https://cd11149.tw1.ru/assets/images/bg-curtains.jpg"
+          padding={150}
+        >
           <div className="about-company__bottom-block-cards">
             <TitleCard
               className="about-company__bottom-block-card"
@@ -93,7 +95,6 @@ const AboutCompany: FC = () => {
             />
           </div>
         </ParallaxBgImage>
-        {/* <div className="about-company__bottom-block-image"></div> */}
       </div>
     </div>
   );

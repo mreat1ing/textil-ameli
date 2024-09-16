@@ -2,11 +2,13 @@ import { FC, useEffect } from 'react';
 
 import AssortmentPageContainer from 'src/common/AssortmentPageContainer';
 import ServicesItem from 'src/common/ServicesItem';
-import cornices from 'src/assets/img/serviceCards/karniz-img.jpg';
-import rimka from 'src/assets/img/assormentCards/rimka.jpg';
-import tkani from 'src/assets/img/assormentCards/tkani.webp';
-import accessories from 'src/assets/img/assormentCards/accessories.jpeg';
-import pokrivalo from 'src/assets/img/assormentCards/pokrivalo.webp';
+import { hostImages } from 'src/constants/hosting';
+
+const cornices = `${hostImages}/serviceCards/karniz-img.jpg`;
+const rimka = `${hostImages}/assormentCards/rimka.jpg`;
+const tkani = `${hostImages}/assormentCards/tkani.webp`;
+const accessories = `${hostImages}/assormentCards/accessories.jpeg`;
+const pokrivalo = `${hostImages}/assormentCards/pokrivalo.webp`;
 
 const Assortment: FC = () => {
   useEffect(() => {

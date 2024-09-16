@@ -1,216 +1,211 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 
-import balcony1 from 'src/assets/img/ourWorksCards/balcony/1.jpeg';
-import balcony2 from 'src/assets/img/ourWorksCards/balcony/2.jpeg';
-import balcony3 from 'src/assets/img/ourWorksCards/balcony/3.jpeg';
-import bathroom1 from 'src/assets/img/ourWorksCards/bathroom/1.jpeg';
-import bathroom2 from 'src/assets/img/ourWorksCards/bathroom/2.jpeg';
-import accessories1 from 'src/assets/img/ourWorksCards/accessories/1.jpeg';
-import accessories2 from 'src/assets/img/ourWorksCards/accessories/2.jpeg';
-import accessories3 from 'src/assets/img/ourWorksCards/accessories/3.jpeg';
-import accessories4 from 'src/assets/img/ourWorksCards/accessories/4.jpeg';
-import accessories5 from 'src/assets/img/ourWorksCards/accessories/5.jpeg';
-import accessories6 from 'src/assets/img/ourWorksCards/accessories/6.jpeg';
-import accessories7 from 'src/assets/img/ourWorksCards/accessories/7.jpeg';
-import accessories8 from 'src/assets/img/ourWorksCards/accessories/8.jpeg';
-import accessories9 from 'src/assets/img/ourWorksCards/accessories/9.jpeg';
-import accessories10 from 'src/assets/img/ourWorksCards/accessories/10.jpeg';
-import accessories11 from 'src/assets/img/ourWorksCards/accessories/11.jpeg';
-import accessories12 from 'src/assets/img/ourWorksCards/accessories/12.jpeg';
-import accessories13 from 'src/assets/img/ourWorksCards/accessories/13.jpeg';
-import accessories14 from 'src/assets/img/ourWorksCards/accessories/14.jpeg';
-import accessories15 from 'src/assets/img/ourWorksCards/accessories/15.jpeg';
-import accessories16 from 'src/assets/img/ourWorksCards/accessories/16.jpeg';
-import arcWindows1 from 'src/assets/img/ourWorksCards/arcWindows/1.jpeg';
-import arcWindows2 from 'src/assets/img/ourWorksCards/arcWindows/2.jpeg';
-import arcWindows3 from 'src/assets/img/ourWorksCards/arcWindows/3.jpeg';
-import arcWindows4 from 'src/assets/img/ourWorksCards/arcWindows/4.jpeg';
-import arcWindows5 from 'src/assets/img/ourWorksCards/arcWindows/5.jpeg';
-import arcWindows6 from 'src/assets/img/ourWorksCards/arcWindows/6.jpeg';
-import arcWindows7 from 'src/assets/img/ourWorksCards/arcWindows/7.jpeg';
-import arcWindows8 from 'src/assets/img/ourWorksCards/arcWindows/8.jpeg';
-import arcWindows9 from 'src/assets/img/ourWorksCards/arcWindows/9.jpeg';
-import arcWindows10 from 'src/assets/img/ourWorksCards/arcWindows/10.jpeg';
-import arcWindows11 from 'src/assets/img/ourWorksCards/arcWindows/11.jpeg';
-import arcWindows12 from 'src/assets/img/ourWorksCards/arcWindows/12.jpeg';
-import arcWindows13 from 'src/assets/img/ourWorksCards/arcWindows/13.jpeg';
-import alcoves1 from 'src/assets/img/ourWorksCards/alcoves/1.jpeg';
-import alcoves2 from 'src/assets/img/ourWorksCards/alcoves/2.jpeg';
-import alcoves3 from 'src/assets/img/ourWorksCards/alcoves/3.jpeg';
-import alcoves4 from 'src/assets/img/ourWorksCards/alcoves/4.jpeg';
-import alcoves5 from 'src/assets/img/ourWorksCards/alcoves/5.jpeg';
-import alcoves6 from 'src/assets/img/ourWorksCards/alcoves/6.jpeg';
-import alcoves7 from 'src/assets/img/ourWorksCards/alcoves/7.jpeg';
-import alcoves8 from 'src/assets/img/ourWorksCards/alcoves/8.jpeg';
-import alcoves9 from 'src/assets/img/ourWorksCards/alcoves/9.jpeg';
-import childrenRoom1 from 'src/assets/img/ourWorksCards/childrenRoom/1.jpeg';
-import childrenRoom2 from 'src/assets/img/ourWorksCards/childrenRoom/2.jpeg';
-import childrenRoom3 from 'src/assets/img/ourWorksCards/childrenRoom/3.jpeg';
-import childrenRoom4 from 'src/assets/img/ourWorksCards/childrenRoom/4.jpeg';
-import childrenRoom5 from 'src/assets/img/ourWorksCards/childrenRoom/5.jpeg';
-import childrenRoom6 from 'src/assets/img/ourWorksCards/childrenRoom/6.jpeg';
-import childrenRoom7 from 'src/assets/img/ourWorksCards/childrenRoom/7.jpeg';
-import childrenRoom8 from 'src/assets/img/ourWorksCards/childrenRoom/8.jpeg';
-import childrenRoom9 from 'src/assets/img/ourWorksCards/childrenRoom/9.jpeg';
-import childrenRoom10 from 'src/assets/img/ourWorksCards/childrenRoom/10.jpeg';
-import childrenRoom11 from 'src/assets/img/ourWorksCards/childrenRoom/11.jpeg';
-import childrenRoom12 from 'src/assets/img/ourWorksCards/childrenRoom/12.jpeg';
-import childrenRoom13 from 'src/assets/img/ourWorksCards/childrenRoom/13.jpeg';
-import childrenRoom14 from 'src/assets/img/ourWorksCards/childrenRoom/14.jpeg';
-import childrenRoom15 from 'src/assets/img/ourWorksCards/childrenRoom/15.jpeg';
-import childrenRoom16 from 'src/assets/img/ourWorksCards/childrenRoom/16.jpeg';
-import childrenRoom17 from 'src/assets/img/ourWorksCards/childrenRoom/17.jpeg';
-import childrenRoom18 from 'src/assets/img/ourWorksCards/childrenRoom/18.jpeg';
-import childrenRoom19 from 'src/assets/img/ourWorksCards/childrenRoom/19.jpeg';
-import childrenRoom20 from 'src/assets/img/ourWorksCards/childrenRoom/20.jpeg';
-import childrenRoom21 from 'src/assets/img/ourWorksCards/childrenRoom/21.jpeg';
-import childrenRoom22 from 'src/assets/img/ourWorksCards/childrenRoom/22.jpeg';
-import childrenRoom23 from 'src/assets/img/ourWorksCards/childrenRoom/23.jpeg';
-import zoning1 from 'src/assets/img/ourWorksCards/zoning/1.jpeg';
-import zoning2 from 'src/assets/img/ourWorksCards/zoning/2.jpeg';
-import zoning3 from 'src/assets/img/ourWorksCards/zoning/3.jpeg';
-import zoning4 from 'src/assets/img/ourWorksCards/zoning/4.jpeg';
-import zoning5 from 'src/assets/img/ourWorksCards/zoning/5.jpeg';
-import covers1 from 'src/assets/img/ourWorksCards/covers/1.jpeg';
-import covers2 from 'src/assets/img/ourWorksCards/covers/2.jpeg';
-import covers3 from 'src/assets/img/ourWorksCards/covers/3.jpeg';
-import covers4 from 'src/assets/img/ourWorksCards/covers/4.jpeg';
-import covers5 from 'src/assets/img/ourWorksCards/covers/5.jpeg';
-import covers6 from 'src/assets/img/ourWorksCards/covers/6.jpeg';
-import covers7 from 'src/assets/img/ourWorksCards/covers/7.jpeg';
-import covers8 from 'src/assets/img/ourWorksCards/covers/8.jpeg';
-import covers9 from 'src/assets/img/ourWorksCards/covers/9.jpeg';
-import covers10 from 'src/assets/img/ourWorksCards/covers/10.jpeg';
-import bedspreads1 from 'src/assets/img/ourWorksCards/bedspreads/1.jpeg';
-import bedspreads2 from 'src/assets/img/ourWorksCards/bedspreads/2.jpeg';
-import bedspreads3 from 'src/assets/img/ourWorksCards/bedspreads/3.jpeg';
-import bedspreads4 from 'src/assets/img/ourWorksCards/bedspreads/4.jpeg';
-import bedspreads5 from 'src/assets/img/ourWorksCards/bedspreads/5.jpeg';
-import bedspreads6 from 'src/assets/img/ourWorksCards/bedspreads/6.jpeg';
-import bedspreads7 from 'src/assets/img/ourWorksCards/bedspreads/7.jpeg';
-import bedspreads8 from 'src/assets/img/ourWorksCards/bedspreads/8.jpeg';
-import bedspreads9 from 'src/assets/img/ourWorksCards/bedspreads/9.jpeg';
-import bedspreads10 from 'src/assets/img/ourWorksCards/bedspreads/10.jpeg';
-import bedspreads11 from 'src/assets/img/ourWorksCards/bedspreads/11.jpeg';
-import bedspreads12 from 'src/assets/img/ourWorksCards/bedspreads/12.jpeg';
-import bedspreads13 from 'src/assets/img/ourWorksCards/bedspreads/13.jpeg';
-import bedspreads14 from 'src/assets/img/ourWorksCards/bedspreads/14.jpeg';
-import bedspreads15 from 'src/assets/img/ourWorksCards/bedspreads/15.jpeg';
-import bedspreads16 from 'src/assets/img/ourWorksCards/bedspreads/16.jpeg';
-import bedspreads17 from 'src/assets/img/ourWorksCards/bedspreads/17.jpeg';
-import bedspreads18 from 'src/assets/img/ourWorksCards/bedspreads/18.jpeg';
-import bedspreads19 from 'src/assets/img/ourWorksCards/bedspreads/19.jpeg';
-import bedspreads20 from 'src/assets/img/ourWorksCards/bedspreads/20.jpeg';
-import bedspreads21 from 'src/assets/img/ourWorksCards/bedspreads/21.jpeg';
-import bedspreads22 from 'src/assets/img/ourWorksCards/bedspreads/22.jpeg';
-import bedspreads23 from 'src/assets/img/ourWorksCards/bedspreads/23.jpeg';
-import bedspreads24 from 'src/assets/img/ourWorksCards/bedspreads/24.jpeg';
-import bedspreads25 from 'src/assets/img/ourWorksCards/bedspreads/25.jpeg';
-import bedspreads26 from 'src/assets/img/ourWorksCards/bedspreads/26.jpeg';
-import bedspreads27 from 'src/assets/img/ourWorksCards/bedspreads/27.jpeg';
-import bedspreads28 from 'src/assets/img/ourWorksCards/bedspreads/28.jpeg';
-import bedspreads29 from 'src/assets/img/ourWorksCards/bedspreads/29.jpeg';
-import bedspreads30 from 'src/assets/img/ourWorksCards/bedspreads/30.jpeg';
-import bedspreads31 from 'src/assets/img/ourWorksCards/bedspreads/31.jpeg';
-import rimCurtains1 from 'src/assets/img/ourWorksCards/rimskie/1.jpeg';
-import rimCurtains2 from 'src/assets/img/ourWorksCards/rimskie/2.jpeg';
-import rimCurtains3 from 'src/assets/img/ourWorksCards/rimskie/3.jpeg';
-import rimCurtains4 from 'src/assets/img/ourWorksCards/rimskie/4.jpeg';
-import rimCurtains5 from 'src/assets/img/ourWorksCards/rimskie/5.jpeg';
-import rimCurtains6 from 'src/assets/img/ourWorksCards/rimskie/6.jpeg';
-import rimCurtains7 from 'src/assets/img/ourWorksCards/rimskie/7.jpeg';
-import rimCurtains8 from 'src/assets/img/ourWorksCards/rimskie/8.jpeg';
-import rimCurtains9 from 'src/assets/img/ourWorksCards/rimskie/9.jpeg';
-import rimCurtains10 from 'src/assets/img/ourWorksCards/rimskie/10.jpeg';
-import rimCurtains11 from 'src/assets/img/ourWorksCards/rimskie/11.jpeg';
-import rimCurtains12 from 'src/assets/img/ourWorksCards/rimskie/12.jpeg';
-import plisCurtains1 from 'src/assets/img/ourWorksCards/plisse/1.jpeg';
-import plisCurtains2 from 'src/assets/img/ourWorksCards/plisse/2.jpeg';
-import plisCurtains3 from 'src/assets/img/ourWorksCards/plisse/3.jpeg';
-import plisCurtains4 from 'src/assets/img/ourWorksCards/plisse/4.jpeg';
-import plisCurtains5 from 'src/assets/img/ourWorksCards/plisse/5.jpeg';
-import plisCurtains6 from 'src/assets/img/ourWorksCards/plisse/6.jpeg';
-import plisCurtains7 from 'src/assets/img/ourWorksCards/plisse/7.jpeg';
-import plisCurtains8 from 'src/assets/img/ourWorksCards/plisse/8.jpeg';
-import plisCurtains9 from 'src/assets/img/ourWorksCards/plisse/9.jpeg';
-import plisCurtains10 from 'src/assets/img/ourWorksCards/plisse/10.jpeg';
-import plisCurtains11 from 'src/assets/img/ourWorksCards/plisse/11.jpeg';
-import plisCurtains12 from 'src/assets/img/ourWorksCards/plisse/12.jpeg';
-import plisCurtains13 from 'src/assets/img/ourWorksCards/plisse/13.jpeg';
-import plisCurtains14 from 'src/assets/img/ourWorksCards/plisse/14.jpeg';
-import plisCurtains15 from 'src/assets/img/ourWorksCards/plisse/15.jpeg';
-import plisCurtains16 from 'src/assets/img/ourWorksCards/plisse/16.jpeg';
-import plisCurtains17 from 'src/assets/img/ourWorksCards/plisse/17.jpeg';
-import plisCurtains18 from 'src/assets/img/ourWorksCards/plisse/18.jpeg';
-import curtains1 from 'src/assets/img/ourWorksCards/curtains/1.jpeg';
-import curtains2 from 'src/assets/img/ourWorksCards/curtains/2.jpeg';
-import curtains3 from 'src/assets/img/ourWorksCards/curtains/3.jpeg';
-import curtains4 from 'src/assets/img/ourWorksCards/curtains/4.jpeg';
-import curtains5 from 'src/assets/img/ourWorksCards/curtains/5.jpeg';
-import curtains6 from 'src/assets/img/ourWorksCards/curtains/6.jpeg';
-import curtains7 from 'src/assets/img/ourWorksCards/curtains/7.jpeg';
-import curtains8 from 'src/assets/img/ourWorksCards/curtains/8.jpeg';
-import curtains9 from 'src/assets/img/ourWorksCards/curtains/9.jpeg';
-import curtains10 from 'src/assets/img/ourWorksCards/curtains/10.jpeg';
-import curtains11 from 'src/assets/img/ourWorksCards/curtains/11.jpeg';
-import curtains12 from 'src/assets/img/ourWorksCards/curtains/12.jpeg';
-import curtains13 from 'src/assets/img/ourWorksCards/curtains/13.jpeg';
-import curtains14 from 'src/assets/img/ourWorksCards/curtains/14.jpeg';
-import curtains15 from 'src/assets/img/ourWorksCards/curtains/15.jpeg';
-import curtains16 from 'src/assets/img/ourWorksCards/curtains/16.jpeg';
-import curtains17 from 'src/assets/img/ourWorksCards/curtains/17.jpeg';
-import curtains18 from 'src/assets/img/ourWorksCards/curtains/18.jpeg';
-import curtains19 from 'src/assets/img/ourWorksCards/curtains/19.jpeg';
-import curtains20 from 'src/assets/img/ourWorksCards/curtains/20.jpeg';
-import curtains21 from 'src/assets/img/ourWorksCards/curtains/21.jpeg';
-import curtains22 from 'src/assets/img/ourWorksCards/curtains/22.jpeg';
-import curtains23 from 'src/assets/img/ourWorksCards/curtains/23.jpeg';
-import curtains24 from 'src/assets/img/ourWorksCards/curtains/24.jpeg';
-import curtains25 from 'src/assets/img/ourWorksCards/curtains/25.jpeg';
-import curtains26 from 'src/assets/img/ourWorksCards/curtains/26.jpeg';
-import curtains27 from 'src/assets/img/ourWorksCards/curtains/27.jpeg';
-import curtains28 from 'src/assets/img/ourWorksCards/curtains/28.jpeg';
-import curtains29 from 'src/assets/img/ourWorksCards/curtains/29.jpeg';
-import curtains30 from 'src/assets/img/ourWorksCards/curtains/30.jpeg';
-import curtains31 from 'src/assets/img/ourWorksCards/curtains/31.jpeg';
-import curtains32 from 'src/assets/img/ourWorksCards/curtains/32.jpeg';
-import curtains33 from 'src/assets/img/ourWorksCards/curtains/33.jpeg';
-import curtains34 from 'src/assets/img/ourWorksCards/curtains/34.jpeg';
-import curtains35 from 'src/assets/img/ourWorksCards/curtains/35.jpeg';
-import curtains36 from 'src/assets/img/ourWorksCards/curtains/36.jpeg';
-import curtains37 from 'src/assets/img/ourWorksCards/curtains/37.jpeg';
-import curtains38 from 'src/assets/img/ourWorksCards/curtains/38.jpeg';
-import curtains39 from 'src/assets/img/ourWorksCards/curtains/39.jpeg';
-import curtains40 from 'src/assets/img/ourWorksCards/curtains/40.jpeg';
-import curtains41 from 'src/assets/img/ourWorksCards/curtains/41.jpeg';
-import curtains42 from 'src/assets/img/ourWorksCards/curtains/42.jpeg';
-import curtains43 from 'src/assets/img/ourWorksCards/curtains/43.jpeg';
-import curtains44 from 'src/assets/img/ourWorksCards/curtains/44.jpeg';
-import curtains45 from 'src/assets/img/ourWorksCards/curtains/45.jpeg';
-import curtains46 from 'src/assets/img/ourWorksCards/curtains/46.jpeg';
-import curtains47 from 'src/assets/img/ourWorksCards/curtains/47.jpeg';
-import curtains48 from 'src/assets/img/ourWorksCards/curtains/48.jpeg';
-import curtains49 from 'src/assets/img/ourWorksCards/curtains/49.jpeg';
-import curtains50 from 'src/assets/img/ourWorksCards/curtains/50.jpeg';
-import curtains51 from 'src/assets/img/ourWorksCards/curtains/51.jpeg';
-import curtains52 from 'src/assets/img/ourWorksCards/curtains/52.jpeg';
-import curtains53 from 'src/assets/img/ourWorksCards/curtains/53.jpeg';
-import curtains54 from 'src/assets/img/ourWorksCards/curtains/54.jpeg';
-import curtains55 from 'src/assets/img/ourWorksCards/curtains/55.jpeg';
-import curtains56 from 'src/assets/img/ourWorksCards/curtains/56.jpeg';
-import curtains57 from 'src/assets/img/ourWorksCards/curtains/57.jpeg';
-import curtains58 from 'src/assets/img/ourWorksCards/curtains/58.jpeg';
-import curtains59 from 'src/assets/img/ourWorksCards/curtains/59.jpeg';
-import curtains60 from 'src/assets/img/ourWorksCards/curtains/60.jpeg';
-import curtains61 from 'src/assets/img/ourWorksCards/curtains/61.jpeg';
-import curtains62 from 'src/assets/img/ourWorksCards/curtains/62.jpeg';
-import curtains63 from 'src/assets/img/ourWorksCards/curtains/63.jpeg';
-import curtains64 from 'src/assets/img/ourWorksCards/curtains/64.jpeg';
-import curtains65 from 'src/assets/img/ourWorksCards/curtains/65.jpeg';
-import curtains66 from 'src/assets/img/ourWorksCards/curtains/66.jpeg';
-import curtains67 from 'src/assets/img/ourWorksCards/curtains/67.jpeg';
-import curtains68 from 'src/assets/img/ourWorksCards/curtains/68.jpeg';
-// import curtains69 from 'src/assets/img/ourWorksCards/curtains/69.MOV';
+import { hostImages } from 'src/constants/hosting';
+
+const balcony1 = `${hostImages}/ourWorksCards/balcony/1.jpeg`;
+const balcony2 = `${hostImages}/ourWorksCards/balcony/2.jpeg`;
+const balcony3 = `${hostImages}/ourWorksCards/balcony/3.jpeg`;
+const bathroom1 = `${hostImages}/ourWorksCards/bathroom/1.jpeg`;
+const bathroom2 = `${hostImages}/ourWorksCards/bathroom/2.jpeg`;
+const accessories1 = `${hostImages}/ourWorksCards/accessories/1.jpeg`;
+const accessories2 = `${hostImages}/ourWorksCards/accessories/2.jpeg`;
+const accessories3 = `${hostImages}/ourWorksCards/accessories/3.jpeg`;
+const accessories4 = `${hostImages}/ourWorksCards/accessories/4.jpeg`;
+const accessories5 = `${hostImages}/ourWorksCards/accessories/5.jpeg`;
+const accessories6 = `${hostImages}/ourWorksCards/accessories/6.jpeg`;
+const accessories7 = `${hostImages}/ourWorksCards/accessories/7.jpeg`;
+const accessories8 = `${hostImages}/ourWorksCards/accessories/8.jpeg`;
+const accessories9 = `${hostImages}/ourWorksCards/accessories/9.jpeg`;
+const accessories10 = `${hostImages}/ourWorksCards/accessories/10.jpeg`;
+const accessories11 = `${hostImages}/ourWorksCards/accessories/11.jpeg`;
+const accessories12 = `${hostImages}/ourWorksCards/accessories/12.jpeg`;
+const accessories13 = `${hostImages}/ourWorksCards/accessories/13.jpeg`;
+const accessories14 = `${hostImages}/ourWorksCards/accessories/14.jpeg`;
+const accessories15 = `${hostImages}/ourWorksCards/accessories/15.jpeg`;
+const accessories16 = `${hostImages}/ourWorksCards/accessories/16.jpeg`;
+const arcWindows1 = `${hostImages}/ourWorksCards/arcWindows/1.jpeg`;
+const arcWindows2 = `${hostImages}/ourWorksCards/arcWindows/2.jpeg`;
+const arcWindows3 = `${hostImages}/ourWorksCards/arcWindows/3.jpeg`;
+const arcWindows4 = `${hostImages}/ourWorksCards/arcWindows/4.jpeg`;
+const arcWindows5 = `${hostImages}/ourWorksCards/arcWindows/5.jpeg`;
+const arcWindows6 = `${hostImages}/ourWorksCards/arcWindows/6.jpeg`;
+const arcWindows7 = `${hostImages}/ourWorksCards/arcWindows/7.jpeg`;
+const arcWindows8 = `${hostImages}/ourWorksCards/arcWindows/8.jpeg`;
+const arcWindows9 = `${hostImages}/ourWorksCards/arcWindows/9.jpeg`;
+const arcWindows10 = `${hostImages}/ourWorksCards/arcWindows/10.jpeg`;
+const arcWindows11 = `${hostImages}/ourWorksCards/arcWindows/11.jpeg`;
+const arcWindows12 = `${hostImages}/ourWorksCards/arcWindows/12.jpeg`;
+const arcWindows13 = `${hostImages}/ourWorksCards/arcWindows/13.jpeg`;
+const alcoves1 = `${hostImages}/ourWorksCards/alcoves/1.jpeg`;
+const alcoves2 = `${hostImages}/ourWorksCards/alcoves/2.jpeg`;
+const alcoves3 = `${hostImages}/ourWorksCards/alcoves/3.jpeg`;
+const alcoves4 = `${hostImages}/ourWorksCards/alcoves/4.jpeg`;
+const alcoves5 = `${hostImages}/ourWorksCards/alcoves/5.jpeg`;
+const alcoves6 = `${hostImages}/ourWorksCards/alcoves/6.jpeg`;
+const alcoves7 = `${hostImages}/ourWorksCards/alcoves/7.jpeg`;
+const alcoves8 = `${hostImages}/ourWorksCards/alcoves/8.jpeg`;
+const alcoves9 = `${hostImages}/ourWorksCards/alcoves/9.jpeg`;
+const childrenRoom1 = `${hostImages}/ourWorksCards/childrenRoom/1.jpeg`;
+const childrenRoom2 = `${hostImages}/ourWorksCards/childrenRoom/2.jpeg`;
+const childrenRoom3 = `${hostImages}/ourWorksCards/childrenRoom/3.jpeg`;
+const childrenRoom4 = `${hostImages}/ourWorksCards/childrenRoom/4.jpeg`;
+const childrenRoom5 = `${hostImages}/ourWorksCards/childrenRoom/5.jpeg`;
+const childrenRoom6 = `${hostImages}/ourWorksCards/childrenRoom/6.jpeg`;
+const childrenRoom7 = `${hostImages}/ourWorksCards/childrenRoom/7.jpeg`;
+const childrenRoom8 = `${hostImages}/ourWorksCards/childrenRoom/8.jpeg`;
+const childrenRoom9 = `${hostImages}/ourWorksCards/childrenRoom/9.jpeg`;
+const childrenRoom10 = `${hostImages}/ourWorksCards/childrenRoom/10.jpeg`;
+const childrenRoom11 = `${hostImages}/ourWorksCards/childrenRoom/11.jpeg`;
+const childrenRoom12 = `${hostImages}/ourWorksCards/childrenRoom/12.jpeg`;
+const childrenRoom13 = `${hostImages}/ourWorksCards/childrenRoom/13.jpeg`;
+const childrenRoom14 = `${hostImages}/ourWorksCards/childrenRoom/14.jpeg`;
+const childrenRoom15 = `${hostImages}/ourWorksCards/childrenRoom/15.jpeg`;
+const childrenRoom16 = `${hostImages}/ourWorksCards/childrenRoom/16.jpeg`;
+const childrenRoom17 = `${hostImages}/ourWorksCards/childrenRoom/17.jpeg`;
+const childrenRoom18 = `${hostImages}/ourWorksCards/childrenRoom/18.jpeg`;
+const childrenRoom19 = `${hostImages}/ourWorksCards/childrenRoom/19.jpeg`;
+const childrenRoom20 = `${hostImages}/ourWorksCards/childrenRoom/20.jpeg`;
+const childrenRoom21 = `${hostImages}/ourWorksCards/childrenRoom/21.jpeg`;
+const zoning1 = `${hostImages}/ourWorksCards/zoning/1.jpeg`;
+const zoning2 = `${hostImages}/ourWorksCards/zoning/2.jpeg`;
+const zoning3 = `${hostImages}/ourWorksCards/zoning/3.jpeg`;
+const zoning4 = `${hostImages}/ourWorksCards/zoning/4.jpeg`;
+const zoning5 = `${hostImages}/ourWorksCards/zoning/5.jpeg`;
+const covers1 = `${hostImages}/ourWorksCards/covers/1.jpeg`;
+const covers2 = `${hostImages}/ourWorksCards/covers/2.jpeg`;
+const covers3 = `${hostImages}/ourWorksCards/covers/3.jpeg`;
+const covers4 = `${hostImages}/ourWorksCards/covers/4.jpeg`;
+const covers5 = `${hostImages}/ourWorksCards/covers/5.jpeg`;
+const covers6 = `${hostImages}/ourWorksCards/covers/6.jpeg`;
+const covers7 = `${hostImages}/ourWorksCards/covers/7.jpeg`;
+const covers8 = `${hostImages}/ourWorksCards/covers/8.jpeg`;
+const covers9 = `${hostImages}/ourWorksCards/covers/9.jpeg`;
+const covers10 = `${hostImages}/ourWorksCards/covers/10.jpeg`;
+const bedspreads1 = `${hostImages}/ourWorksCards/bedspreads/1.jpeg`;
+const bedspreads2 = `${hostImages}/ourWorksCards/bedspreads/2.jpeg`;
+const bedspreads3 = `${hostImages}/ourWorksCards/bedspreads/3.jpeg`;
+const bedspreads4 = `${hostImages}/ourWorksCards/bedspreads/4.jpeg`;
+const bedspreads5 = `${hostImages}/ourWorksCards/bedspreads/5.jpeg`;
+const bedspreads6 = `${hostImages}/ourWorksCards/bedspreads/6.jpeg`;
+const bedspreads7 = `${hostImages}/ourWorksCards/bedspreads/7.jpeg`;
+const bedspreads8 = `${hostImages}/ourWorksCards/bedspreads/8.jpeg`;
+const bedspreads9 = `${hostImages}/ourWorksCards/bedspreads/9.jpeg`;
+const bedspreads10 = `${hostImages}/ourWorksCards/bedspreads/10.jpeg`;
+const bedspreads11 = `${hostImages}/ourWorksCards/bedspreads/11.jpeg`;
+const bedspreads12 = `${hostImages}/ourWorksCards/bedspreads/12.jpeg`;
+const bedspreads13 = `${hostImages}/ourWorksCards/bedspreads/13.jpeg`;
+const bedspreads14 = `${hostImages}/ourWorksCards/bedspreads/14.jpeg`;
+const bedspreads15 = `${hostImages}/ourWorksCards/bedspreads/15.jpeg`;
+const bedspreads16 = `${hostImages}/ourWorksCards/bedspreads/16.jpeg`;
+const bedspreads17 = `${hostImages}/ourWorksCards/bedspreads/17.jpeg`;
+const bedspreads18 = `${hostImages}/ourWorksCards/bedspreads/18.jpeg`;
+const bedspreads19 = `${hostImages}/ourWorksCards/bedspreads/19.jpeg`;
+const bedspreads20 = `${hostImages}/ourWorksCards/bedspreads/20.jpeg`;
+const bedspreads21 = `${hostImages}/ourWorksCards/bedspreads/21.jpeg`;
+const bedspreads22 = `${hostImages}/ourWorksCards/bedspreads/22.jpeg`;
+const bedspreads23 = `${hostImages}/ourWorksCards/bedspreads/23.jpeg`;
+const bedspreads24 = `${hostImages}/ourWorksCards/bedspreads/24.jpeg`;
+const bedspreads25 = `${hostImages}/ourWorksCards/bedspreads/25.jpeg`;
+const bedspreads26 = `${hostImages}/ourWorksCards/bedspreads/26.jpeg`;
+const bedspreads27 = `${hostImages}/ourWorksCards/bedspreads/27.jpeg`;
+const rimCurtains1 = `${hostImages}/ourWorksCards/rimskie/1.jpeg`;
+const rimCurtains2 = `${hostImages}/ourWorksCards/rimskie/2.jpeg`;
+const rimCurtains3 = `${hostImages}/ourWorksCards/rimskie/3.jpeg`;
+const rimCurtains4 = `${hostImages}/ourWorksCards/rimskie/4.jpeg`;
+const rimCurtains5 = `${hostImages}/ourWorksCards/rimskie/5.jpeg`;
+const rimCurtains6 = `${hostImages}/ourWorksCards/rimskie/6.jpeg`;
+const rimCurtains7 = `${hostImages}/ourWorksCards/rimskie/7.jpeg`;
+const rimCurtains8 = `${hostImages}/ourWorksCards/rimskie/8.jpeg`;
+const rimCurtains9 = `${hostImages}/ourWorksCards/rimskie/9.jpeg`;
+const rimCurtains10 = `${hostImages}/ourWorksCards/rimskie/10.jpeg`;
+const rimCurtains11 = `${hostImages}/ourWorksCards/rimskie/11.jpeg`;
+const rimCurtains12 = `${hostImages}/ourWorksCards/rimskie/12.jpeg`;
+const plisCurtains1 = `${hostImages}/ourWorksCards/plisse/1.jpeg`;
+const plisCurtains2 = `${hostImages}/ourWorksCards/plisse/2.jpeg`;
+const plisCurtains3 = `${hostImages}/ourWorksCards/plisse/3.jpeg`;
+const plisCurtains4 = `${hostImages}/ourWorksCards/plisse/4.jpeg`;
+const plisCurtains5 = `${hostImages}/ourWorksCards/plisse/5.jpeg`;
+const plisCurtains6 = `${hostImages}/ourWorksCards/plisse/6.jpeg`;
+const plisCurtains7 = `${hostImages}/ourWorksCards/plisse/7.jpeg`;
+const plisCurtains8 = `${hostImages}/ourWorksCards/plisse/8.jpeg`;
+const plisCurtains9 = `${hostImages}/ourWorksCards/plisse/9.jpeg`;
+const plisCurtains10 = `${hostImages}/ourWorksCards/plisse/10.jpeg`;
+const plisCurtains11 = `${hostImages}/ourWorksCards/plisse/11.jpeg`;
+const plisCurtains12 = `${hostImages}/ourWorksCards/plisse/12.jpeg`;
+const plisCurtains13 = `${hostImages}/ourWorksCards/plisse/13.jpeg`;
+const plisCurtains14 = `${hostImages}/ourWorksCards/plisse/14.jpeg`;
+const plisCurtains15 = `${hostImages}/ourWorksCards/plisse/15.jpeg`;
+const plisCurtains16 = `${hostImages}/ourWorksCards/plisse/16.jpeg`;
+const plisCurtains17 = `${hostImages}/ourWorksCards/plisse/17.jpeg`;
+const curtains1 = `${hostImages}/ourWorksCards/curtains/1.jpeg`;
+const curtains2 = `${hostImages}/ourWorksCards/curtains/2.jpeg`;
+const curtains3 = `${hostImages}/ourWorksCards/curtains/3.jpeg`;
+const curtains4 = `${hostImages}/ourWorksCards/curtains/4.jpeg`;
+const curtains5 = `${hostImages}/ourWorksCards/curtains/5.jpeg`;
+const curtains6 = `${hostImages}/ourWorksCards/curtains/6.jpeg`;
+const curtains7 = `${hostImages}/ourWorksCards/curtains/7.jpeg`;
+const curtains8 = `${hostImages}/ourWorksCards/curtains/8.jpeg`;
+const curtains9 = `${hostImages}/ourWorksCards/curtains/9.jpeg`;
+const curtains10 = `${hostImages}/ourWorksCards/curtains/10.jpeg`;
+const curtains11 = `${hostImages}/ourWorksCards/curtains/11.jpeg`;
+const curtains12 = `${hostImages}/ourWorksCards/curtains/12.jpeg`;
+const curtains13 = `${hostImages}/ourWorksCards/curtains/13.jpeg`;
+const curtains14 = `${hostImages}/ourWorksCards/curtains/14.jpeg`;
+const curtains15 = `${hostImages}/ourWorksCards/curtains/15.jpeg`;
+const curtains16 = `${hostImages}/ourWorksCards/curtains/16.jpeg`;
+const curtains17 = `${hostImages}/ourWorksCards/curtains/17.jpeg`;
+const curtains18 = `${hostImages}/ourWorksCards/curtains/18.jpeg`;
+const curtains19 = `${hostImages}/ourWorksCards/curtains/19.jpeg`;
+const curtains20 = `${hostImages}/ourWorksCards/curtains/20.jpeg`;
+const curtains21 = `${hostImages}/ourWorksCards/curtains/21.jpeg`;
+const curtains22 = `${hostImages}/ourWorksCards/curtains/22.jpeg`;
+const curtains23 = `${hostImages}/ourWorksCards/curtains/23.jpeg`;
+const curtains24 = `${hostImages}/ourWorksCards/curtains/24.jpeg`;
+const curtains25 = `${hostImages}/ourWorksCards/curtains/25.jpeg`;
+const curtains26 = `${hostImages}/ourWorksCards/curtains/26.jpeg`;
+const curtains27 = `${hostImages}/ourWorksCards/curtains/27.jpeg`;
+const curtains28 = `${hostImages}/ourWorksCards/curtains/28.jpeg`;
+const curtains29 = `${hostImages}/ourWorksCards/curtains/29.jpeg`;
+const curtains30 = `${hostImages}/ourWorksCards/curtains/30.jpeg`;
+const curtains31 = `${hostImages}/ourWorksCards/curtains/31.jpeg`;
+const curtains32 = `${hostImages}/ourWorksCards/curtains/32.jpeg`;
+const curtains33 = `${hostImages}/ourWorksCards/curtains/33.jpeg`;
+const curtains34 = `${hostImages}/ourWorksCards/curtains/34.jpeg`;
+const curtains35 = `${hostImages}/ourWorksCards/curtains/35.jpeg`;
+const curtains36 = `${hostImages}/ourWorksCards/curtains/36.jpeg`;
+const curtains37 = `${hostImages}/ourWorksCards/curtains/37.jpeg`;
+const curtains38 = `${hostImages}/ourWorksCards/curtains/38.jpeg`;
+const curtains39 = `${hostImages}/ourWorksCards/curtains/39.jpeg`;
+const curtains40 = `${hostImages}/ourWorksCards/curtains/40.jpeg`;
+const curtains41 = `${hostImages}/ourWorksCards/curtains/41.jpeg`;
+const curtains42 = `${hostImages}/ourWorksCards/curtains/42.jpeg`;
+const curtains43 = `${hostImages}/ourWorksCards/curtains/43.jpeg`;
+const curtains44 = `${hostImages}/ourWorksCards/curtains/44.jpeg`;
+const curtains45 = `${hostImages}/ourWorksCards/curtains/45.jpeg`;
+const curtains46 = `${hostImages}/ourWorksCards/curtains/46.jpeg`;
+const curtains47 = `${hostImages}/ourWorksCards/curtains/47.jpeg`;
+const curtains48 = `${hostImages}/ourWorksCards/curtains/48.jpeg`;
+const curtains49 = `${hostImages}/ourWorksCards/curtains/49.jpeg`;
+const curtains50 = `${hostImages}/ourWorksCards/curtains/50.jpeg`;
+const curtains51 = `${hostImages}/ourWorksCards/curtains/51.jpeg`;
+const curtains52 = `${hostImages}/ourWorksCards/curtains/52.jpeg`;
+const curtains53 = `${hostImages}/ourWorksCards/curtains/53.jpeg`;
+const curtains54 = `${hostImages}/ourWorksCards/curtains/54.jpeg`;
+const curtains55 = `${hostImages}/ourWorksCards/curtains/55.jpeg`;
+const curtains56 = `${hostImages}/ourWorksCards/curtains/56.jpeg`;
+const curtains57 = `${hostImages}/ourWorksCards/curtains/57.jpeg`;
+const curtains58 = `${hostImages}/ourWorksCards/curtains/58.jpeg`;
+const curtains59 = `${hostImages}/ourWorksCards/curtains/59.jpeg`;
+const curtains60 = `${hostImages}/ourWorksCards/curtains/60.jpeg`;
+const curtains61 = `${hostImages}/ourWorksCards/curtains/61.jpeg`;
+const curtains62 = `${hostImages}/ourWorksCards/curtains/62.jpeg`;
+const curtains63 = `${hostImages}/ourWorksCards/curtains/63.jpeg`;
+const curtains64 = `${hostImages}/ourWorksCards/curtains/64.jpeg`;
+const curtains65 = `${hostImages}/ourWorksCards/curtains/65.jpeg`;
+const curtains66 = `${hostImages}/ourWorksCards/curtains/66.jpeg`;
+const curtains67 = `${hostImages}/ourWorksCards/curtains/67.jpeg`;
+// import curtains68 from `${hostImages}/ourWorksCards/curtains/68.jpeg`;
+// import curtains69 from `${hostImages}/ourWorksCards/curtains/69.MOV';
 
 export interface IImagesStore {
   [key: string]: { images: string[] };
@@ -258,9 +253,6 @@ const imagesStore: IImagesStore = {
       arcWindows11,
       arcWindows12,
       arcWindows13,
-      accessories14,
-      accessories15,
-      accessories16,
     ],
   },
   alcoves: {
@@ -299,8 +291,6 @@ const imagesStore: IImagesStore = {
       childrenRoom19,
       childrenRoom20,
       childrenRoom21,
-      childrenRoom22,
-      childrenRoom23,
     ],
   },
   zoning: {
@@ -349,10 +339,6 @@ const imagesStore: IImagesStore = {
       bedspreads25,
       bedspreads26,
       bedspreads27,
-      bedspreads28,
-      bedspreads29,
-      bedspreads30,
-      bedspreads31,
     ],
   },
   rimCurtains: {
@@ -390,7 +376,6 @@ const imagesStore: IImagesStore = {
       plisCurtains15,
       plisCurtains16,
       plisCurtains17,
-      plisCurtains18,
     ],
   },
   curtains: {
@@ -462,8 +447,7 @@ const imagesStore: IImagesStore = {
       curtains65,
       curtains66,
       curtains67,
-      curtains68,
-      // curtains69,
+      // curtains68,
     ],
   },
 };

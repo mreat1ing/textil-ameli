@@ -24,7 +24,7 @@ interface IAssortmentElectro {
   descriptionText?: string;
   descrTitle?: boolean;
   showPrivodsTitles?: boolean;
-  showHarakteristics?: boolean
+  showHarakteristics?: boolean;
 }
 
 const AssortmentElectro: FC<IAssortmentElectro> = ({
@@ -50,15 +50,15 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
     <li key={item.title} className="assortment-electro__list-item">
       {item.items.length ? (
         <>
-        <h3 className='assortment-electro__item--title'>{item.title}</h3>
-        <ul>
-          {item.items.map((elem) => (
-            <li key={elem} className="assortment-electro__item">
-              {elem}
-            </li>
-          ))}
-        </ul>
-        </> 
+          <h3 className="assortment-electro__item--title">{item.title}</h3>
+          <ul>
+            {item.items.map((elem) => (
+              <li key={elem} className="assortment-electro__item">
+                {elem}
+              </li>
+            ))}
+          </ul>
+        </>
       ) : null}
     </li>
   ));
@@ -104,7 +104,9 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
           <Button className="assortment-item-button">Отправить запрос</Button>
         </div>
       </div>
-      {showHarakteristics ? <h3 className='assortment-electro__harakteristics'>Характеристики</h3> : null}
+      {showHarakteristics ? (
+        <h3 className="assortment-electro__harakteristics">Характеристики</h3>
+      ) : null}
       {showPrivodsTitles ? (
         <div className="assortment-electro__privods">
           <div className="assortment-electro__privods__title">
@@ -122,7 +124,9 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
         <div className="assortment-electro__privods">
           <div className="assortment-electro__privods__title">
             <h3 className="assortment-electro__privods__title--title">
-              {showPrivodsTitles ? 'Варианты управления:' : 'Варианты приводов:'}
+              {showPrivodsTitles
+                ? 'Варианты управления:'
+                : 'Варианты приводов:'}
             </h3>
             <p className="assortment-electro__privods__title--items">
               {normalizedVariants}
@@ -148,7 +152,7 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
         <h2 className="assortment-electro__images-title">{imagesTitle}</h2>
       ) : null}
       {images.length ? (
-        <div className='assortment-electro__images'>{normalizedImages}</div>
+        <div className="assortment-electro__images">{normalizedImages}</div>
       ) : null}
     </div>
   );

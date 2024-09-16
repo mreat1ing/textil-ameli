@@ -1,10 +1,10 @@
+.assortment-cards:not(.animated) {
+  opacity: 0;
+}
+
 .assortment-cards {
   width: 100%;
   padding: 75px 16px;
-}
-
-.assortment-cards:not(.assortment-cards.smooth-render) {
-  opacity: 0;
 }
 
 .assortment-cards__wrapper {

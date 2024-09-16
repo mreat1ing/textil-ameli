@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import placeholder from 'src/assets/img/assortment/placeholder.jpg';
 import { names } from 'src/constants/imageReduxNames';
 import { IImagesStore } from 'src/store';
 import { pluralizePhotos } from 'src/utils/pluralizePhotos.utils';
+import { hostImages } from 'src/constants/hosting';
 
 import './PhotoLink.scss';
 
@@ -14,6 +14,7 @@ interface IPhotoLink {
   name: string;
   folder?: string;
 }
+const placeholder = `${hostImages}/assortment/placeholder.jpg`;
 
 const PhotoLink: FC<IPhotoLink> = ({ name, image }) => {
   const imageStoreName = names[name];

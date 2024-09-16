@@ -1,1 +1,91 @@
 @use '../../variables.scss' as v;
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.assortment-b {
+  color: v.$text;
+  font-size: 19px;
+}
+
+.assortment-inline-list {
+  display: inline-block;
+  margin: auto 0 auto 0;
+  text-align: end;
+}
+
+.assortment-inline-list li {
+  display: inline;
+  list-style-type: ',';
+  color: v.$text;
+}
+
+.assortment-item-header__list:has(> li.no-style) {
+  margin-left: 0;
+}
+
+li.no-style {
+  list-style-type: none;
+}
+
+.assortment-electro__harakteristics {
+  text-align: start;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.assortment-electro__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assortment-electro__line {
+  border: 0;
+  background-color: v.$primary;
+  height: 1px;
+  margin: 0;
+  margin: 8px 0 16px;
+}
+
+.assortment-electro__image {
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assortment-electro__image img {
+  max-width: 80%;
+}
+
+@media (max-width: 1150px) {
+  .assortment-item-button {
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .assortment-electro__image img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .assortment-electro__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .assortment-inline-list {
+    text-align: start;
+    padding: 0;
+    margin-top: 8px;
+  }
+}

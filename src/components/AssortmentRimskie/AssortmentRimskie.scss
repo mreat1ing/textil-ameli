@@ -4,10 +4,12 @@
   display: flex;
   gap: 32px;
   justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .assortment-item-header__photo {
   outline: 7px solid v.$primary;
+  border-radius: 6px;
   display: block;
   width: auto;
 }
@@ -33,10 +35,16 @@
   text-align: left;
   text-decoration: none;
   text-transform: none;
+  padding-left: 0;
+  margin-left: 24px;
 }
 
 .assortment-item-header__list li {
   list-style: disc;
+}
+
+.assortment-item-header__right-block-wrapper {
+  padding-left: 24px;
 }
 
 .assortment-item-header__right-block-wrapper h4 {
@@ -76,6 +84,10 @@
   .assortment-item-header__photo li {
     width: 100% !important;
     height: 530px;
+  }
+
+  .assortment-item-header__right-block-wrapper {
+    padding-left: 0;
   }
 }
 

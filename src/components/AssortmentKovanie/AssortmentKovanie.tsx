@@ -1,32 +1,41 @@
 import { FC, Fragment, useEffect } from 'react';
 
-import './AssortmentRimskie.scss';
+import './AssortmentKovanie.scss';
 import PhotoGallery from 'src/common/PhotoGallery';
 import Button from 'src/ui/button';
 import { normalizedHeaderImages } from 'src/utils/normalizeHeaderImage.utils';
+
 type descrList = {
   title: string;
   items: string[];
 };
 
-interface IAssortmentRimskie {
+interface IAssortmentKovanie {
   description?: string[];
   images?: string[];
   headerImage: string[];
-  isProfiles?: boolean;
   images2?: string[];
   descriptionText?: string;
   desctriptionList?: descrList[];
+  imagesTitle?: string;
+  images2Title?: string;
+  images3?: string[];
+  images3Title?: string;
+  multicolor?: boolean;
 }
 
-const AssortmentRimskie: FC<IAssortmentRimskie> = ({
+const AssortmentKovanie: FC<IAssortmentKovanie> = ({
   description = [],
   images = [],
   headerImage,
-  isProfiles = false,
   images2 = [],
   descriptionText = '',
   desctriptionList = [],
+  imagesTitle = '',
+  images2Title = '',
+  images3 = [],
+  images3Title = '',
+  multicolor = false,
 }) => {
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -43,6 +52,10 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
   ));
 
   const normalizedImages2 = images2.map((image) => (
+    <img src={image} alt="" key={image} />
+  ));
+
+  const normalizedImages3 = images3.map((image) => (
     <img src={image} alt="" key={image} />
   ));
 
@@ -73,9 +86,7 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
             normalizedDescriptionList
           ) : (
             <>
-              <h4 className="services-h4">
-                {isProfiles ? 'Характеристики' : 'Характеристики карниза'}
-              </h4>
+              <h4 className="services-h4">{'Характеристики'}</h4>
               <ul className="assortment-item-header__list">
                 {normalizedDescription}
               </ul>
@@ -87,24 +98,39 @@ const AssortmentRimskie: FC<IAssortmentRimskie> = ({
       </div>
       {images.length ? (
         <>
-          <h2 className="services-h2">Комплектующие и схемы:</h2>
-          <PhotoGallery type="assortment">{normalizedImages}</PhotoGallery>
+          {imagesTitle ? <h2 className="services-h2">{imagesTitle}</h2> : null}
+          {multicolor ? (
+            <div className="assortment-electro__image">{normalizedImages}</div>
+          ) : (
+            <PhotoGallery
+              type="gallery"
+              photoHeight={120}
+              inLineCount={4}
+              className="assortment-colors"
+            >
+              {normalizedImages}
+            </PhotoGallery>
+          )}
         </>
       ) : null}
       {images2.length ? (
         <>
-          <h2 className="services-h2">Чертеж и нагрузка:</h2>
+          {images2Title ? (
+            <h2 className="services-h2">{images2Title}</h2>
+          ) : null}
           <PhotoGallery type="assortment">{normalizedImages2}</PhotoGallery>
         </>
       ) : null}
-      {!isProfiles ? (
-        <p className="services-p">
-          На всех видах карнизов Компакт возможно исполнение с боковой фиксацией
-          (для мансардных окон)
-        </p>
+      {images3.length ? (
+        <>
+          {images3Title ? (
+            <h2 className="services-h2">{images3Title}</h2>
+          ) : null}
+          <PhotoGallery type="assortment">{normalizedImages3}</PhotoGallery>
+        </>
       ) : null}
     </div>
   );
 };
 
-export default AssortmentRimskie;
+export default AssortmentKovanie;

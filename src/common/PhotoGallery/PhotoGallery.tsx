@@ -24,6 +24,7 @@ interface IPhotoGallery {
   children?: ReactElement<HTMLImageElement>[] | ReactElement<HTMLImageElement>;
   type?: 'default' | 'assortment' | 'gallery';
   className?: string;
+  gap?: number;
 }
 
 interface IImage {
@@ -40,6 +41,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   photoWidth,
   type = 'default',
   className,
+  gap,
 }) => {
   // const bodyRef = useRef(document.querySelector('body'));
   // const lastScrollPos = useRef(0);
@@ -133,15 +135,22 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   }, [screenW]);
 
   useEffect(() => {
-    const componentFirst = document.querySelector('.photo-gallery');
-    const observerFirst =
-      componentFirst && observer(componentFirst, 'smooth-render');
+    const components = document.querySelectorAll('.photo-gallery');
+    const observers: IntersectionObserver[] = [];
+    components.forEach((el) => {
+      observers.push(observer(el, 'smooth-render'));
+    });
+
+    observers.forEach((obs, index) => {
+      obs.observe(components[index]);
+    });
 
     window.addEventListener('resize', handleResizeWindow);
-    componentFirst && observerFirst?.observe(componentFirst);
 
     return () => {
-      observerFirst?.disconnect();
+      observers.forEach((obs) => {
+        obs.disconnect();
+      });
       window.removeEventListener('resize', handleResizeWindow);
     };
   }, []);
@@ -561,6 +570,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       <ul
         onClick={clickHandler}
         className={`photo-gallery${additionalClass}${className ? ' ' + className : ''}`}
+        style={gap ? { gap: gap } : undefined}
       >
         {items}
       </ul>

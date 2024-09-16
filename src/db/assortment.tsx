@@ -1,147 +1,147 @@
 import AssortmentAccessories from 'src/components/AssortmentAccessories';
 import AssortmentRimskie from 'src/components/AssortmentRimskie';
 import AssortmentElectro from 'src/components/AssortmentElectro';
+import AssortmentKovanie from 'src/components/AssortmentKovanie';
 import IAssortment from 'src/interfaces/assortment.interface';
 import { hostImages } from 'src/constants/hosting';
-import kovanieColors1 from 'src/assets/img/assormentCards/cornices/kovanie/colors/vista-serebro-matovoe.jpg';
-import kovanieColors2 from 'src/assets/img/assormentCards/cornices/kovanie/colors/vista-zoloto-matovoe.jpg';
-import kovanieColors3 from 'src/assets/img/assormentCards/cornices/kovanie/colors/swan-shtanga--1-.jpg';
-import kovanieColors4 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--hrom-1.jpg';
-import kovanieColors5 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--satin-1.jpg';
-import kovanieColors6 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-5.jpg';
-import kovanieColors7 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-glyanets.jpg';
-import kovanieColors8 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-beloe-zoloto-1.jpg';
-import kovanieColors9 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-hrom-2-1.jpg';
-import kovanieColors10 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16-satin-2-1.jpg';
-import kovanieColors11 from 'src/assets/img/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-6-2.jpg';
-import KovanieVidi1 from 'src/assets/img/assormentCards/cornices/kovanie/vidi/dyv-16-gladkaya-shtanga.jpg';
-import KovanieVidi2 from 'src/assets/img/assormentCards/cornices/kovanie/vidi/dyv-16-vitaya-shtanga.jpg';
-import kovanieNakonechniki1 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-afina-satin-diy16-1.jpg';
-import kovanieNakonechniki2 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-listochki-satin-1.png';
-import kovanieNakonechniki3 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-modul-diy16-satin-1.jpg';
-import kovanieNakonechniki4 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-11.jpg';
-import kovanieNakonechniki5 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-13.jpg';
-import kovanieNakonechniki6 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-15.jpg';
-import kovanieNakonechniki7 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-16.jpg';
-import kovanieNakonechniki9 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-17.jpg';
-import kovanieNakonechniki10 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-18.jpg';
-import kovanieNakonechniki11 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-2.png';
-import kovanieNakonechniki12 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-20.jpg';
-import kovanieNakonechniki13 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-21.jpg';
-import kovanieNakonechniki14 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-22.jpg';
-import kovanieNakonechniki15 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-23.jpg';
-import kovanieNakonechniki16 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-25.jpg';
-import kovanieNakonechniki17 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-27.jpg';
-import kovanieNakonechniki18 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-3.jpg';
-import kovanieNakonechniki19 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-30.jpg';
-import kovanieNakonechniki20 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-32.jpg';
-import kovanieNakonechniki21 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-33.jpg';
-import kovanieNakonechniki22 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-5.jpg';
-import kovanieNakonechniki23 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-zaglushka.jpg';
-import kovanieNakonechniki24 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-shar-riflennyj-diy16-satin.jpg';
-import kovanieColors12 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-beloe-zoloto.jpg';
-import kovanieColors13 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-hrom.jpg';
-import kovanieColors14 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-satin.jpg';
-import kovanieColors15 from 'src/assets/img/assormentCards/cornices/kovanie/colors/diy28-zoloto-antik.jpg';
-import kovanieNakonechniki25 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-10.jpg';
-import kovanieNakonechniki26 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-37.jpg';
-import kovanieNakonechniki27 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-38.jpg';
-import kovanieNakonechniki28 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-39.jpg';
-import kovanieNakonechniki29 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-41.jpg';
-import kovanieNakonechniki30 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-42.jpg';
-import kovanieNakonechniki31 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-43.jpg';
-import kovanieNakonechniki32 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-45.jpg';
-import kovanieNakonechniki33 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-47.jpg';
-import kovanieNakonechniki34 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-7.jpg';
-import kovanieNakonechniki35 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-8.jpg';
-import kovanieNakonechniki36 from 'src/assets/img/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-sirius-satin-diy28.jpg';
-import kovanieColorsSintra from 'src/assets/img/assormentCards/cornices/kovanie/colors/sintra/top-dekor_str-25--1-.jpg';
-import kovanieKomplektacia1 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-2--1-.jpg';
-import kovanieKomplektacia2 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-4--1-.jpg';
-import kovanieKomplektacia3 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-10.jpg';
-import kovanieKomplektacia4 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-12.jpg';
-import kovanieKomplektacia5 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-13.jpg';
-import kovanieKomplektacia6 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-14.jpg';
-import kovanieKomplektacia7 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-2.jpg';
-import kovanieKomplektacia8 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-4.jpg';
-import kovanieKomplektacia9 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-6.jpg';
-import kovanieKomplektacia10 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-8.jpg';
-import kovanieRozetki1 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-1.jpg';
-import kovanieRozetki2 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-10.jpg';
-import kovanieRozetki3 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-11.jpg';
-import kovanieRozetki4 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-12.jpg';
-import kovanieRozetki5 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-2.jpg';
-import kovanieRozetki6 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-3.jpg';
-import kovanieRozetki7 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-4.jpg';
-import kovanieRozetki8 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-5.jpg';
-import kovanieRozetki9 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-6.jpg';
-import kovanieRozetki10 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-7.jpg';
-import kovanieRozetki11 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-8.jpg';
-import kovanieRozetki12 from 'src/assets/img/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-9.jpg';
-import kovanieDerzhateli1 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-1.jpg';
-import kovanieDerzhateli2 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-2.jpg';
-import kovanieDerzhateli3 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-3.jpg';
-import kovanieDerzhateli4 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-4.jpg';
-import kovanieColorsOst from 'src/assets/img/assormentCards/cornices/kovanie/colors/ost/ost-tsveta.png';
-import kovanieKomplektacia11 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-11.jpg';
-import kovanieKomplektacia12 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-13.jpg';
-import kovanieKomplektacia13 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-15.jpg';
-import kovanieKomplektacia14 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-16.jpg';
-import kovanieKomplektacia15 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-3.jpg';
-import kovanieKomplektacia16 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-5.jpg';
-import kovanieKomplektacia17 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-7.jpg';
-import kovanieKomplektacia18 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-9.jpg';
-import kovanieDerzhateli5 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-1.jpg';
-import kovanieDerzhateli6 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-2.jpg';
-import kovanieDerzhateli7 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-3.jpg';
-import kovanieDerzhateli8 from 'src/assets/img/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-4.jpg';
-import kovanieKomplektacia19 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_3.jpg';
-import kovanieKomplektacia20 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_5.jpg';
-import kovanieKomplektacia21 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_7.jpg';
-import kovanieKomplektacia22 from 'src/assets/img/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_8.jpg';
-import AssortmentKovanie from 'src/components/AssortmentKovanie';
-import derevyannieColors1 from 'src/assets/img/assormentCards/cornices/derevyannie/colors/binario-tsvet-profiley.png';
-import derevyannieKomplektaciya1 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-2--1-.jpg';
-import derevyannieKomplektaciya2 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-4--1-.jpg';
-import derevyannieKomplektaciya3 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-6--1-.jpg';
-import derevyannieColors2 from 'src/assets/img/assormentCards/cornices/derevyannie/colors/tsveta-vintazh.png';
-import derevyannieKomplektaciya4 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_3--1-.jpg';
-import derevyannieKomplektaciya5 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_5--1-.jpg';
-import derevyannieKomplektaciya6 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_3--1-.jpg';
-import derevyannieKomplektaciya7 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_5--1-.jpg';
-import derevyannieKomplektaciya8 from 'src/assets/img/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_6--1-.jpg';
-import exclusuveColors1 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-antik.jpg';
-import exclusuveColors2 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-bel--1-.jpg';
-import exclusuveColors3 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-satin.jpg';
-import exclusuveColors4 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-h-ryadnyj.jpg';
-import exclusuveColors5 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-1.jpg';
-import exclusuveColors6 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-serebro-1.jpg';
-import exclusuveColors7 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/colors/selebrity-bone-2-royal.jpg';
-import exclusuveColors8 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-h-ryadnyj-kor.jpg';
-import exclusuveColors9 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-antik.jpg';
-import exclusuveColors10 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-serebro.jpg';
-import exclusuveColors11 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-slonovaya-kost.jpg';
-import exclusuveColors12 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product2_big.png';
-import exclusuveColors13 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product3_big.png';
-import exclusuveColors14 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product_big.png';
-import exclusuveNakonechniki1 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/liana-2-h-ryadnyj-bel--1-.jpg';
-import exclusuveNakonechniki2 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-malyj-2-h-ryadnyj-bel--1-.jpg';
-import exclusuveNakonechniki3 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-riflenyj-2-h-ryadnyj-bel.jpg';
-import exclusuveNakonechniki4 from 'src/assets/img/assormentCards/cornices/exclusive/renome19/nakonechniki/trapetsiya-2-h-ryadnyj-bel.jpg';
-import exclusuveNakonechniki5 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-kedr.jpg';
-import exclusuveNakonechniki6 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-lanterna.jpg';
-import exclusuveNakonechniki7 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-rose.jpg';
-import exclusuveNakonechniki8 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-royal.jpg';
-import exclusuveNakonechniki9 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-twist.jpg';
-import exclusuveNakonechniki10 from 'src/assets/img/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-zagl.jpg';
-import exclusuveNakonechniki11 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/emily-roza-2-ryadnyj-serebro.jpg';
-import exclusuveNakonechniki12 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/filigran-2-ryadnyj-serebro.jpg';
-import exclusuveNakonechniki13 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/giostra-2-ryadnyj-serebro.jpg';
-import exclusuveNakonechniki14 from 'src/assets/img/assormentCards/cornices/exclusive/Emily/nakon/rikamo-2-ryadnyj-serebro.jpg';
-import exclusuveNakonechniki15 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/ursula2_img_product_big.png';
-import exclusuveNakonechniki16 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/vanesa2_img_product_big.png';
-import exclusuveNakonechniki17 from 'src/assets/img/assormentCards/cornices/exclusive/Kupel/nakon/walda2_img_product_big.png';
 
+const kovanieColors1 = `${hostImages}/assormentCards/cornices/kovanie/colors/vista-serebro-matovoe.jpg`;
+const kovanieColors2 = `${hostImages}/assormentCards/cornices/kovanie/colors/vista-zoloto-matovoe.jpg`;
+const kovanieColors3 = `${hostImages}/assormentCards/cornices/kovanie/colors/swan-shtanga--1-.jpg`;
+const kovanieColors4 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16--hrom-1.jpg`;
+const kovanieColors5 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16--satin-1.jpg`;
+const kovanieColors6 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-5.jpg`;
+const kovanieColors7 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-glyanets.jpg`;
+const kovanieColors8 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16-beloe-zoloto-1.jpg`;
+const kovanieColors9 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16-hrom-2-1.jpg`;
+const kovanieColors10 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16-satin-2-1.jpg`;
+const kovanieColors11 = `${hostImages}/assormentCards/cornices/kovanie/colors/dyv-16--zoloto-antichnoe-6-2.jpg`;
+const KovanieVidi1 = `${hostImages}/assormentCards/cornices/kovanie/vidi/dyv-16-gladkaya-shtanga.jpg`;
+const KovanieVidi2 = `${hostImages}/assormentCards/cornices/kovanie/vidi/dyv-16-vitaya-shtanga.jpg`;
+const kovanieNakonechniki1 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-afina-satin-diy16-1.jpg`;
+const kovanieNakonechniki2 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-listochki-satin-1.png`;
+const kovanieNakonechniki3 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-modul-diy16-satin-1.jpg`;
+const kovanieNakonechniki4 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-11.jpg`;
+const kovanieNakonechniki5 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-13.jpg`;
+const kovanieNakonechniki6 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-15.jpg`;
+const kovanieNakonechniki7 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-16.jpg`;
+const kovanieNakonechniki9 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-17.jpg`;
+const kovanieNakonechniki10 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-18.jpg`;
+const kovanieNakonechniki11 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-2.png`;
+const kovanieNakonechniki12 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-20.jpg`;
+const kovanieNakonechniki13 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-21.jpg`;
+const kovanieNakonechniki14 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-22.jpg`;
+const kovanieNakonechniki15 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-23.jpg`;
+const kovanieNakonechniki16 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-25.jpg`;
+const kovanieNakonechniki17 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-27.jpg`;
+const kovanieNakonechniki18 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-3.jpg`;
+const kovanieNakonechniki19 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-30.jpg`;
+const kovanieNakonechniki20 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-32.jpg`;
+const kovanieNakonechniki21 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-33.jpg`;
+const kovanieNakonechniki22 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-5.jpg`;
+const kovanieNakonechniki23 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-satin-zaglushka.jpg`;
+const kovanieNakonechniki24 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/dyv-16-nacon-shar-riflennyj-diy16-satin.jpg`;
+const kovanieColors12 = `${hostImages}/assormentCards/cornices/kovanie/colors/diy28-beloe-zoloto.jpg`;
+const kovanieColors13 = `${hostImages}/assormentCards/cornices/kovanie/colors/diy28-hrom.jpg`;
+const kovanieColors14 = `${hostImages}/assormentCards/cornices/kovanie/colors/diy28-satin.jpg`;
+const kovanieColors15 = `${hostImages}/assormentCards/cornices/kovanie/colors/diy28-zoloto-antik.jpg`;
+const kovanieNakonechniki25 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-10.jpg`;
+const kovanieNakonechniki26 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-37.jpg`;
+const kovanieNakonechniki27 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-38.jpg`;
+const kovanieNakonechniki28 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-39.jpg`;
+const kovanieNakonechniki29 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-41.jpg`;
+const kovanieNakonechniki30 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-42.jpg`;
+const kovanieNakonechniki31 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-43.jpg`;
+const kovanieNakonechniki32 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-45.jpg`;
+const kovanieNakonechniki33 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-47.jpg`;
+const kovanieNakonechniki34 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-7.jpg`;
+const kovanieNakonechniki35 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-satin-8.jpg`;
+const kovanieNakonechniki36 = `${hostImages}/assormentCards/cornices/kovanie/nakonechniki/diy28/diy28-sirius-satin-diy28.jpg`;
+const kovanieColorsSintra = `${hostImages}/assormentCards/cornices/kovanie/colors/sintra/top-dekor_str-25--1-.jpg`;
+const kovanieKomplektacia1 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-2--1-.jpg`;
+const kovanieKomplektacia2 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/sintra/12-top-dekor-sintra_2018-4--1-.jpg`;
+const kovanieKomplektacia3 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-10.jpg`;
+const kovanieKomplektacia4 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-12.jpg`;
+const kovanieKomplektacia5 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-13.jpg`;
+const kovanieKomplektacia6 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-14.jpg`;
+const kovanieKomplektacia7 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-2.jpg`;
+const kovanieKomplektacia8 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-4.jpg`;
+const kovanieKomplektacia9 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-6.jpg`;
+const kovanieKomplektacia10 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ampir/5-ampir_2018-8.jpg`;
+const kovanieRozetki1 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-1.jpg`;
+const kovanieRozetki2 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-10.jpg`;
+const kovanieRozetki3 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-11.jpg`;
+const kovanieRozetki4 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-12.jpg`;
+const kovanieRozetki5 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-2.jpg`;
+const kovanieRozetki6 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-3.jpg`;
+const kovanieRozetki7 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-4.jpg`;
+const kovanieRozetki8 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-5.jpg`;
+const kovanieRozetki9 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-6.jpg`;
+const kovanieRozetki10 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-7.jpg`;
+const kovanieRozetki11 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-8.jpg`;
+const kovanieRozetki12 = `${hostImages}/assormentCards/cornices/kovanie/rozetki/ampir-rozetka-9.jpg`;
+const kovanieDerzhateli1 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-1.jpg`;
+const kovanieDerzhateli2 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-2.jpg`;
+const kovanieDerzhateli3 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-3.jpg`;
+const kovanieDerzhateli4 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/ampir-derzhatel-4.jpg`;
+const kovanieColorsOst = `${hostImages}/assormentCards/cornices/kovanie/colors/ost/ost-tsveta.png`;
+const kovanieKomplektacia11 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-11.jpg`;
+const kovanieKomplektacia12 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-13.jpg`;
+const kovanieKomplektacia13 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-15.jpg`;
+const kovanieKomplektacia14 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-16.jpg`;
+const kovanieKomplektacia15 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-3.jpg`;
+const kovanieKomplektacia16 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-5.jpg`;
+const kovanieKomplektacia17 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-7.jpg`;
+const kovanieKomplektacia18 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/ost/ost_str-9.jpg`;
+const kovanieDerzhateli5 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-1.jpg`;
+const kovanieDerzhateli6 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-2.jpg`;
+const kovanieDerzhateli7 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-3.jpg`;
+const kovanieDerzhateli8 = `${hostImages}/assormentCards/cornices/kovanie/derzhateli/gotika/gotika-derzhatel-4.jpg`;
+const kovanieKomplektacia19 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_3.jpg`;
+const kovanieKomplektacia20 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_5.jpg`;
+const kovanieKomplektacia21 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_7.jpg`;
+const kovanieKomplektacia22 = `${hostImages}/assormentCards/cornices/kovanie/komplektacia/gotika/gotika_stranitsa_8.jpg`;
+const derevyannieColors1 = `${hostImages}/assormentCards/cornices/derevyannie/colors/binario-tsvet-profiley.png`;
+const derevyannieKomplektaciya1 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-2--1-.jpg`;
+const derevyannieKomplektaciya2 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-4--1-.jpg`;
+const derevyannieKomplektaciya3 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/17-binario_2018-6--1-.jpg`;
+const derevyannieColors2 = `${hostImages}/assormentCards/cornices/derevyannie/colors/tsveta-vintazh.png`;
+const derevyannieKomplektaciya4 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_3--1-.jpg`;
+const derevyannieKomplektaciya5 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/vintazh/vintazh_stranitsa_5--1-.jpg`;
+const derevyannieKomplektaciya6 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_3--1-.jpg`;
+const derevyannieKomplektaciya7 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_5--1-.jpg`;
+const derevyannieKomplektaciya8 = `${hostImages}/assormentCards/cornices/derevyannie/komplektaciya/renessans/renessans_stranitsa_6--1-.jpg`;
+const exclusuveColors1 = `${hostImages}/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-antik.jpg`;
+const exclusuveColors2 = `${hostImages}/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-bel--1-.jpg`;
+const exclusuveColors3 = `${hostImages}/assormentCards/cornices/exclusive/renome19/colors/liana-2-h-ryadnyj-satin.jpg`;
+const exclusuveColors4 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-h-ryadnyj.jpg`;
+const exclusuveColors5 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-1.jpg`;
+const exclusuveColors6 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/colors/royal-2-ryadnyj-serebro-1.jpg`;
+const exclusuveColors7 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/colors/selebrity-bone-2-royal.jpg`;
+const exclusuveColors8 = `${hostImages}/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-h-ryadnyj-kor.jpg`;
+const exclusuveColors9 = `${hostImages}/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-antik.jpg`;
+const exclusuveColors10 = `${hostImages}/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-serebro.jpg`;
+const exclusuveColors11 = `${hostImages}/assormentCards/cornices/exclusive/Emily/colors/emily-roza-2-ryadnyj-slonovaya-kost.jpg`;
+const exclusuveColors12 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product2_big.png`;
+const exclusuveColors13 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product3_big.png`;
+const exclusuveColors14 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/colors/walda2_img_product_big.png`;
+const exclusuveNakonechniki1 = `${hostImages}/assormentCards/cornices/exclusive/renome19/nakonechniki/liana-2-h-ryadnyj-bel--1-.jpg`;
+const exclusuveNakonechniki2 = `${hostImages}/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-malyj-2-h-ryadnyj-bel--1-.jpg`;
+const exclusuveNakonechniki3 = `${hostImages}/assormentCards/cornices/exclusive/renome19/nakonechniki/shar-riflenyj-2-h-ryadnyj-bel.jpg`;
+const exclusuveNakonechniki4 = `${hostImages}/assormentCards/cornices/exclusive/renome19/nakonechniki/trapetsiya-2-h-ryadnyj-bel.jpg`;
+const exclusuveNakonechniki5 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-kedr.jpg`;
+const exclusuveNakonechniki6 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-lanterna.jpg`;
+const exclusuveNakonechniki7 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-rose.jpg`;
+const exclusuveNakonechniki8 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-royal.jpg`;
+const exclusuveNakonechniki9 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-twist.jpg`;
+const exclusuveNakonechniki10 = `${hostImages}/assormentCards/cornices/exclusive/Selebrity/komp/selebrity-bone-2-zagl.jpg`;
+const exclusuveNakonechniki11 = `${hostImages}/assormentCards/cornices/exclusive/Emily/nakon/emily-roza-2-ryadnyj-serebro.jpg`;
+const exclusuveNakonechniki12 = `${hostImages}/assormentCards/cornices/exclusive/Emily/nakon/filigran-2-ryadnyj-serebro.jpg`;
+const exclusuveNakonechniki13 = `${hostImages}/assormentCards/cornices/exclusive/Emily/nakon/giostra-2-ryadnyj-serebro.jpg`;
+const exclusuveNakonechniki14 = `${hostImages}/assormentCards/cornices/exclusive/Emily/nakon/rikamo-2-ryadnyj-serebro.jpg`;
+const exclusuveNakonechniki15 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/nakon/ursula2_img_product_big.png`;
+const exclusuveNakonechniki16 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/nakon/vanesa2_img_product_big.png`;
+const exclusuveNakonechniki17 = `${hostImages}/assormentCards/cornices/exclusive/Kupel/nakon/walda2_img_product_big.png`;
 const electro = `${hostImages}/assormentCards/cornices/electro.png`;
 const alluminum = `${hostImages}/assormentCards/cornices/alluminum.jpg`;
 const kovannii = `${hostImages}/assormentCards/cornices/kovannii.webp`;
@@ -438,7 +438,7 @@ export const assortment: IAssortment[] = [
           <AssortmentRimskie
             description={rimskieMekhanizmi['compact-m'].descriptionList}
             images={rimskieMekhanizmi['compact-m'].images}
-            headerImage={compactM}
+            headerImage={[compactM]}
           />
         ),
       },
@@ -451,7 +451,7 @@ export const assortment: IAssortment[] = [
           <AssortmentRimskie
             description={rimskieMekhanizmi['compact-luxe'].descriptionList}
             images={rimskieMekhanizmi['compact-luxe'].images}
-            headerImage={compactLuxe}
+            headerImage={[compactLuxe]}
           />
         ),
       },
@@ -464,7 +464,7 @@ export const assortment: IAssortment[] = [
           <AssortmentRimskie
             description={rimskieMekhanizmi['compact-lip'].descriptionList}
             images={rimskieMekhanizmi['compact-lip'].images}
-            headerImage={compactLip}
+            headerImage={[compactLip]}
           />
         ),
       },
@@ -477,7 +477,7 @@ export const assortment: IAssortment[] = [
           <AssortmentRimskie
             description={rimskieMekhanizmi['compact-60'].descriptionList}
             images={rimskieMekhanizmi['compact-60'].images}
-            headerImage={compact60}
+            headerImage={[compact60]}
           />
         ),
       },
@@ -536,7 +536,7 @@ const electroKarnizi = {
         items: [],
       },
     ],
-    variants: ['индивидуальное,', 'групповое,', 'индивидуальное и групповое'],
+    variants: ['индивидуальное', 'групповое', 'индивидуальное и групповое'],
     variantsText: [
       'Происхождение Франция',
       'Широкие возможности модернизации',
@@ -599,7 +599,7 @@ const electroKarnizi = {
       'Максимальная площадь – 5м2',
     ],
     privods: [{ title: 'Sonesse Ultra WireFree RTS', items: [] }],
-    variants: ['индивидуальное,', 'групповое,', 'индивидуальное и групповое'],
+    variants: ['индивидуальное', 'групповое', 'индивидуальное и групповое'],
     variantsText: [
       'Не требуется устанавливать и заменять батареи',
       'Возможность поднимать тяжелые шторы',
@@ -649,9 +649,9 @@ const electroKarnizi = {
       'Электрокарниз glydea с регулируемой скоростью',
     ],
     variants: [
-      'Glydea Ultra,',
-      'Irismo WireFree,',
-      'Movelite,',
+      'Glydea Ultra',
+      'Irismo WireFree',
+      'Movelite',
       'Movelite WireFree',
     ],
     privods: [
@@ -1273,8 +1273,8 @@ export const cornicesAssortment: IAssortment[] = [
             images={electroKarnizi['somfy-40'].images}
             variantsText={electroKarnizi['somfy-40'].variantsText}
             variants={electroKarnizi['somfy-40'].variants}
-            headerImage={somfy40}
-            showHarakteristics={true}
+            headerImage={[somfy40]}
+            showHarakteristics
           />
         ),
       },
@@ -1287,7 +1287,8 @@ export const cornicesAssortment: IAssortment[] = [
           <AssortmentElectro
             description={electroKarnizi['somfy'].descriptionList}
             privods={electroKarnizi['somfy'].privods}
-            headerImage={somfy}
+            headerImage={[somfy]}
+            showHarakteristics
           />
         ),
       },
@@ -1306,8 +1307,8 @@ export const cornicesAssortment: IAssortment[] = [
             pluses={electroKarnizi['compact60electro'].pluses}
             images={electroKarnizi['compact60electro'].images}
             descrTitle={true}
-            headerImage={somfy}
-            showHarakteristics={true}
+            headerImage={[somfy]}
+            showHarakteristics
           />
         ),
       },
@@ -1324,9 +1325,10 @@ export const cornicesAssortment: IAssortment[] = [
             variants={electroKarnizi['karniz'].variants}
             imagesTitle={electroKarnizi['karniz'].imagesTitle}
             images={electroKarnizi['karniz'].images}
-            showPrivodsTitles={false}
-            descrTitle={true}
-            headerImage={somfy}
+            showPrivodsTitles
+            showHarakteristics
+            descrTitle
+            headerImage={[somfy]}
           />
         ),
       },
@@ -1347,8 +1349,8 @@ export const cornicesAssortment: IAssortment[] = [
             description={profilya['s1'].description}
             images={profilya['s1'].images}
             images2={profilya['s1'].images2}
-            headerImage={s1}
-            isProfiles={true}
+            headerImage={[s1]}
+            isProfiles
           />
         ),
       },
@@ -1363,7 +1365,7 @@ export const cornicesAssortment: IAssortment[] = [
             description={profilya['s2'].description}
             images={profilya['s2'].images}
             images2={profilya['s2'].images2}
-            headerImage={s2}
+            headerImage={[s2]}
             isProfiles={true}
           />
         ),
@@ -1379,7 +1381,7 @@ export const cornicesAssortment: IAssortment[] = [
             description={profilya['l1'].description}
             images={profilya['l1'].images}
             images2={profilya['l1'].images2}
-            headerImage={l1}
+            headerImage={[l1]}
             isProfiles={true}
           />
         ),
@@ -1395,7 +1397,7 @@ export const cornicesAssortment: IAssortment[] = [
             description={profilya['t1'].description}
             images={profilya['t1'].images}
             images2={profilya['t1'].images2}
-            headerImage={t1}
+            headerImage={[t1]}
             isProfiles={true}
           />
         ),
@@ -1410,7 +1412,7 @@ export const cornicesAssortment: IAssortment[] = [
             descriptionText={profilya['st2'].descriptionText}
             description={profilya['st2'].description}
             images2={profilya['st2'].images2}
-            headerImage={st2}
+            headerImage={[st2]}
             isProfiles={true}
           />
         ),
@@ -1425,7 +1427,7 @@ export const cornicesAssortment: IAssortment[] = [
             descriptionText={profilya['st3'].descriptionText}
             description={profilya['st3'].description}
             images2={profilya['st3'].images2}
-            headerImage={st3}
+            headerImage={[st3]}
             isProfiles={true}
           />
         ),
@@ -1439,7 +1441,7 @@ export const cornicesAssortment: IAssortment[] = [
           <AssortmentRimskie
             descriptionText={profilya['glide1'].descriptionText}
             desctriptionList={profilya['glide1'].descriptionList}
-            headerImage={glide1}
+            headerImage={[glide1]}
             isProfiles={true}
           />
         ),
@@ -1453,7 +1455,7 @@ export const cornicesAssortment: IAssortment[] = [
           <AssortmentRimskie
             descriptionText={profilya['glide2'].descriptionText}
             desctriptionList={profilya['glide2'].descriptionList}
-            headerImage={glide2}
+            headerImage={[glide2]}
             isProfiles={true}
           />
         ),
@@ -1467,7 +1469,7 @@ export const cornicesAssortment: IAssortment[] = [
           <AssortmentRimskie
             descriptionText={profilya['glide3'].descriptionText}
             desctriptionList={profilya['glide3'].descriptionList}
-            headerImage={glide3}
+            headerImage={[glide3]}
             isProfiles={true}
           />
         ),
@@ -1489,7 +1491,7 @@ export const cornicesAssortment: IAssortment[] = [
             desctriptionList={kovanieKarnizi['vista16'].descriptionList}
             images={kovanieKarnizi['vista16'].images}
             imagesTitle={kovanieKarnizi['vista16'].imagesTitle}
-            headerImage={vista16}
+            headerImage={[vista16, somfy40]}
             multicolor={false}
           />
         ),
@@ -1505,7 +1507,7 @@ export const cornicesAssortment: IAssortment[] = [
             desctriptionList={kovanieKarnizi['swan22'].descriptionList}
             images={kovanieKarnizi['swan22'].images}
             imagesTitle={kovanieKarnizi['swan22'].imagesTitle}
-            headerImage={swan22}
+            headerImage={[swan22]}
             multicolor={false}
           />
         ),
@@ -1525,7 +1527,7 @@ export const cornicesAssortment: IAssortment[] = [
             images2Title={kovanieKarnizi['diy16'].images2Title}
             images3={kovanieKarnizi['diy16'].images3}
             images3Title={kovanieKarnizi['diy16'].images3Title}
-            headerImage={diy16}
+            headerImage={[diy16]}
             multicolor={false}
           />
         ),
@@ -1543,7 +1545,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={kovanieKarnizi['diy28'].imagesTitle}
             images3={kovanieKarnizi['diy28'].images3}
             images3Title={kovanieKarnizi['diy28'].images3Title}
-            headerImage={diy28}
+            headerImage={[diy28]}
             multicolor={false}
           />
         ),
@@ -1561,7 +1563,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={kovanieKarnizi['sintra'].imagesTitle}
             images3={kovanieKarnizi['sintra'].images3}
             images3Title={kovanieKarnizi['sintra'].images3Title}
-            headerImage={sintra}
+            headerImage={[sintra]}
             multicolor={true}
           />
         ),
@@ -1581,7 +1583,7 @@ export const cornicesAssortment: IAssortment[] = [
             images2Title={kovanieKarnizi['ampir'].images2Title}
             images3={kovanieKarnizi['ampir'].images3}
             images3Title={kovanieKarnizi['ampir'].images3Title}
-            headerImage={ampir}
+            headerImage={[ampir]}
             multicolor={false}
           />
         ),
@@ -1599,7 +1601,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={kovanieKarnizi['ost'].imagesTitle}
             images3={kovanieKarnizi['ost'].images3}
             images3Title={kovanieKarnizi['ost'].images3Title}
-            headerImage={ost}
+            headerImage={[ost]}
             multicolor={true}
           />
         ),
@@ -1617,7 +1619,7 @@ export const cornicesAssortment: IAssortment[] = [
             images2Title={kovanieKarnizi['gotika'].images2Title}
             images3={kovanieKarnizi['gotika'].images3}
             images3Title={kovanieKarnizi['gotika'].images3Title}
-            headerImage={gotika}
+            headerImage={[gotika]}
             multicolor={false}
           />
         ),
@@ -1640,7 +1642,7 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['binario'].images}
             images3={karniziDerevyannie['binario'].images3}
             images3Title={karniziDerevyannie['binario'].images3Title}
-            headerImage={binario}
+            headerImage={[binario]}
             multicolor={true}
           />
         ),
@@ -1657,7 +1659,7 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['vintage'].images}
             images3={karniziDerevyannie['vintage'].images3}
             images3Title={karniziDerevyannie['vintage'].images3Title}
-            headerImage={vintage}
+            headerImage={[vintage]}
             multicolor={true}
           />
         ),
@@ -1674,7 +1676,7 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['renessans'].images}
             images3={karniziDerevyannie['renessans'].images3}
             images3Title={karniziDerevyannie['renessans'].images3Title}
-            headerImage={renessans}
+            headerImage={[renessans]}
             multicolor={true}
           />
         ),
@@ -1698,7 +1700,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={karniziExclusive['renome19'].imagesTitle}
             images3={karniziExclusive['renome19'].images3}
             images3Title={karniziExclusive['renome19'].images3Title}
-            headerImage={renome19}
+            headerImage={[renome19]}
             multicolor={false}
           />
         ),
@@ -1716,7 +1718,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={karniziExclusive['selebrity33'].imagesTitle}
             images3={karniziExclusive['selebrity33'].images3}
             images3Title={karniziExclusive['selebrity33'].images3Title}
-            headerImage={selebrity33}
+            headerImage={[selebrity33]}
             multicolor={false}
           />
         ),
@@ -1734,7 +1736,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={karniziExclusive['emily19'].imagesTitle}
             images3={karniziExclusive['emily19'].images3}
             images3Title={karniziExclusive['emily19'].images3Title}
-            headerImage={emily19}
+            headerImage={[emily19]}
             multicolor={false}
           />
         ),
@@ -1752,7 +1754,7 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={karniziExclusive['kupel35'].imagesTitle}
             images3={karniziExclusive['kupel35'].images3}
             images3Title={karniziExclusive['kupel35'].images3Title}
-            headerImage={kupel35}
+            headerImage={[kupel35]}
             multicolor={false}
           />
         ),

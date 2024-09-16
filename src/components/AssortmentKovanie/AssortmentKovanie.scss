@@ -1,0 +1,91 @@
+@use '../../variables.scss' as v;
+
+.swiper {
+  height: 100%;
+  width: 530px;
+  user-select: none;
+  margin: 0;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: v.$primary;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: auto;
+  height: auto;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: flex;
+  color: white;
+  background-color: v.$primary;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  background-color: v.$accent;
+}
+
+.assortment-item-header__photo {
+  min-width: 530px;
+  height: 530px;
+}
+
+.swiper-slide img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 90%;
+}
+
+.assortment-card-description-p {
+  margin-top: 0 !important;
+  margin-bottom: 16px !important;
+}
+
+@media (max-width: 1150px) {
+  .assortment-item-header__photo {
+    min-width: 280px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 580px) {
+  .assortment-item-header__photo {
+    min-width: auto;
+    height: 280px;
+  }
+}
+
+@media (max-width: 430px) {
+  .assortment-colors {
+    gap: 16px;
+  }
+
+  .assortment-rimskie
+    ul.photo-gallery.photo-gallery-gallery.assortment-colors
+    li {
+    width: 100% !important;
+    border: 3px solid lightgray;
+    border-radius: 5px;
+  }
+}

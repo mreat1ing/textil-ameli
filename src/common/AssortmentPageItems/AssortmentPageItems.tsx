@@ -45,7 +45,12 @@ const AssortmentPageItems: FC = () => {
   } else if (splittedPath[2] === 'pokrivala') {
     return (
       <AssortmentItemContainer
-        component={<h1>Pokrivala</h1>}
+        component={
+          <p className="services-p">
+            Изготовление покрывал по индивидуальным пожеланиям и параметрам
+            заказчика.
+          </p>
+        }
         title="Покрывала"
       />
     );

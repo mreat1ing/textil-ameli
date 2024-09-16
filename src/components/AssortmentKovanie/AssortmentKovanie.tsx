@@ -1,8 +1,10 @@
-import { FC, Fragment } from 'react';
+import { FC, Fragment, useEffect } from 'react';
 
 import './AssortmentKovanie.scss';
 import PhotoGallery from 'src/common/PhotoGallery';
 import Button from 'src/ui/button';
+import { normalizedHeaderImages } from 'src/utils/normalizeHeaderImage.utils';
+
 type descrList = {
   title: string;
   items: string[];
@@ -11,7 +13,7 @@ type descrList = {
 interface IAssortmentKovanie {
   description?: string[];
   images?: string[];
-  headerImage: string;
+  headerImage: string[];
   images2?: string[];
   descriptionText?: string;
   desctriptionList?: descrList[];
@@ -35,20 +37,28 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
   images3Title = '',
   multicolor = false,
 }) => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   const normalizedDescription = description.map((text) => (
     <li key={text} className="assortment-decription__item">
       {text}
     </li>
   ));
+
   const normalizedImages = images.map((image) => (
     <img src={image} alt="" key={image} />
   ));
+
   const normalizedImages2 = images2.map((image) => (
     <img src={image} alt="" key={image} />
   ));
+
   const normalizedImages3 = images3.map((image) => (
     <img src={image} alt="" key={image} />
   ));
+
   const normalizedDescriptionList = desctriptionList.map((item) => (
     <Fragment key={item.title}>
       <h4 className="services-h4">{item.title}</h4>
@@ -65,12 +75,12 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
   return (
     <div className="assortment-rimskie">
       <div className="assortment-item-header">
-        <PhotoGallery className="assortment-item-header__photo">
-          <img src={headerImage} alt="" />
-        </PhotoGallery>
+        {normalizedHeaderImages(headerImage)}
         <div className="assortment-item-header__right-block-wrapper">
           {descriptionText ? (
-            <p className="assortment-rimskie__description">{descriptionText}</p>
+            <p className="services-p assortment-card-description-p">
+              {descriptionText}
+            </p>
           ) : null}
           {desctriptionList.length ? (
             normalizedDescriptionList
@@ -90,9 +100,16 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
         <>
           {imagesTitle ? <h2 className="services-h2">{imagesTitle}</h2> : null}
           {multicolor ? (
-            <div className="assortment-electro__images">{normalizedImages}</div>
+            <div className="assortment-electro__image">{normalizedImages}</div>
           ) : (
-            <PhotoGallery type="assortment">{normalizedImages}</PhotoGallery>
+            <PhotoGallery
+              type="gallery"
+              photoHeight={120}
+              inLineCount={4}
+              className="assortment-colors"
+            >
+              {normalizedImages}
+            </PhotoGallery>
           )}
         </>
       ) : null}

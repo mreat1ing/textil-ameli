@@ -7,11 +7,14 @@ import Logo from 'src/ui/logo';
 import Number from 'src/ui/number';
 import Button from 'src/ui/button';
 import Instagram from 'src/ui/instagram';
+import OrderModal from 'src/modals/order';
+import { toggleModalOrder } from 'src/utils/modalOrderToggle.utils';
 
 import './Header.scss';
 
 const Header: FC = () => {
   const [instaShow, setInstaShow] = useState(true);
+  const [isModalOpen, setModalOpen] = useState(false);
 
   const handleResize = useCallback(() => {
     if (window.innerWidth <= 990) {
@@ -28,6 +31,12 @@ const Header: FC = () => {
 
   return (
     <header className="header">
+      {isModalOpen && (
+        <OrderModal
+          type="call"
+          onClose={() => toggleModalOrder(true, () => setModalOpen(false))}
+        />
+      )}
       <div className="header--desktop">
         <div className="header__top-wrapper">
           <div className="header__top">
@@ -60,7 +69,13 @@ const Header: FC = () => {
                 </p>
               </div>
               <div className="header__button-wrapper">
-                <Button>Заказать звонок</Button>
+                <Button
+                  onClick={() =>
+                    toggleModalOrder(false, () => setModalOpen(true))
+                  }
+                >
+                  Заказать звонок
+                </Button>
               </div>
             </div>
             <div className="header__instagram-wrapper">

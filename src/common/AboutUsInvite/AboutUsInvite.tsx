@@ -1,9 +1,11 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import './AboutUsInvite.scss';
 import Number from 'src/ui/number';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
+import { toggleModalOrder } from 'src/utils/modalOrderToggle.utils';
+import OrderModal from 'src/modals/order';
 
 interface IAboutUsInvite {
   description?: boolean;
@@ -14,6 +16,8 @@ const AboutUsInvite: FC<IAboutUsInvite> = ({
   description = true,
   className,
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     const component = document.querySelector('.invitation__description');
     const componentSecond = document.getElementById('first-block');
@@ -37,6 +41,12 @@ const AboutUsInvite: FC<IAboutUsInvite> = ({
 
   return (
     <div className="invitation">
+      {isModalOpen && (
+        <OrderModal
+          type="call"
+          onClose={() => toggleModalOrder(true, () => setModalOpen(false))}
+        />
+      )}
       <div className="invitation__wrapper">
         {description && (
           <p className="invitation__description">
@@ -72,7 +82,12 @@ const AboutUsInvite: FC<IAboutUsInvite> = ({
               В нерабочее время нажмите, чтобы заказать звонок — мы перезвоним
               вам:
             </p>
-            <Button className="block__button">заказать звонок</Button>
+            <Button
+              className="block__button"
+              onClick={() => toggleModalOrder(false, () => setModalOpen(true))}
+            >
+              заказать звонок
+            </Button>
           </div>
         </div>
       </div>

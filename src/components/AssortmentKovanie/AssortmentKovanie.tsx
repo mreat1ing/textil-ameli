@@ -1,9 +1,11 @@
-import { FC, Fragment, useEffect } from 'react';
+import { FC, Fragment, useEffect, useState } from 'react';
 
 import './AssortmentKovanie.scss';
 import PhotoGallery from 'src/common/PhotoGallery';
 import Button from 'src/ui/button';
 import { normalizedHeaderImages } from 'src/utils/normalizeHeaderImage.utils';
+import OrderModal from 'src/modals/order';
+import { toggleModalOrder } from 'src/utils/modalOrderToggle.utils';
 
 type descrList = {
   title: string;
@@ -37,6 +39,8 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
   images3Title = '',
   multicolor = false,
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -74,6 +78,12 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
 
   return (
     <div className="assortment-rimskie">
+      {isModalOpen && (
+        <OrderModal
+          type="request"
+          onClose={() => toggleModalOrder(true, () => setModalOpen(false))}
+        />
+      )}
       <div className="assortment-item-header">
         {normalizedHeaderImages(headerImage)}
         <div className="assortment-item-header__right-block-wrapper">
@@ -93,7 +103,12 @@ const AssortmentKovanie: FC<IAssortmentKovanie> = ({
             </>
           )}
 
-          <Button className="assortment-item-button">Отправить запрос</Button>
+          <Button
+            className="assortment-item-button"
+            onClick={() => toggleModalOrder(false, () => setModalOpen(true))}
+          >
+            Отправить запрос
+          </Button>
         </div>
       </div>
       {images.length ? (

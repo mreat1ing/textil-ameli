@@ -24,7 +24,6 @@ export const normalizedHeaderImages = (array: string[]) => {
       speed={600}
       modules={[Autoplay, Pagination, Navigation]}
       navigation
-      loop
     >
       {images}
     </Swiper>

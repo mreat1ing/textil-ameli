@@ -37,6 +37,10 @@
   font-size: 13px;
   letter-spacing: 0px;
   padding-left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
 }
 
 .checkbox-image__checkbox-container input {
@@ -50,8 +54,8 @@
 .checkbox-image__checkbox {
   cursor: pointer;
   position: absolute;
-  top: -6px;
   left: 0px;
+  bottom: 0.5rem;
   height: 25px;
   width: 25px;
   background-color: #eee;
@@ -89,7 +93,6 @@
   scale: 1;
 }
 
-/* Style the checkmark/indicator */
 .checkbox-image__checkbox-container .checkbox-image__checkbox:after {
   left: 9px;
   top: 5px;

@@ -60,6 +60,21 @@
   margin: 25px 0;
 }
 
+.order__input {
+  border: none;
+  outline: 1px solid lightgray;
+  transition: all 0.2s ease;
+}
+
+.order__input:hover {
+  background-color: rgba(v.$color-white, 1);
+}
+
+.order__input:focus {
+  box-shadow: 0 10px 20px 0 v.$shadow;
+  background-color: rgba(v.$color-white, 1);
+}
+
 .order__description {
   margin-bottom: 15px;
   color: v.$text;
@@ -89,11 +104,12 @@
 }
 
 .order__categories > div:last-child,
-.order__categories > div:nth-last-child(2) {
+.order__categories > div:nth-last-child(2),
+.order__categories > div:nth-last-child(3) {
   border-top-color: transparent;
 }
 
-.order__categories > div:nth-last-child(2),
+.order__categories > div:nth-last-child(3),
 .order__categories > div:first-child {
   border-left-color: v.$border;
 }

@@ -1,5 +1,7 @@
 const preventDefault = (e: TouchEvent) => {
-  e.preventDefault();
+  if (e.touches.length < 2) {
+    e.preventDefault();
+  }
 };
 
 export const disableScroll = () => {

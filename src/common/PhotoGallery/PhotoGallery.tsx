@@ -10,12 +10,9 @@ import {
   useRef,
 } from 'react';
 
-import 'swiper/css';
-import 'swiper/css/navigation';
-
 import './PhotoGallery.scss';
 import observer from 'src/utils/observer.utils';
-// import modalToggle from 'src/utils/modalToggle.utils';
+import modalToggle from 'src/utils/modalToggle.utils';
 import { disableScroll, enableScroll } from 'src/utils/scrollToggle.utils';
 
 interface IPhotoGallery {
@@ -44,8 +41,6 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   className,
   gap,
 }) => {
-  // const bodyRef = useRef(document.querySelector('body'));
-  // const lastScrollPos = useRef(0);
   const initialScreenW = window.innerWidth > 320 ? window.innerWidth : 320;
   const prevValueX = useRef(0);
   const curValueX = useRef(0);
@@ -97,32 +92,6 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     [next, prev]
   );
 
-  //TODO: сделать эту дрочь на айфоны что бы не блымала
-  // const lockBody = () => {
-  //   lastScrollPos.current = window.scrollY;
-  //   const body = bodyRef.current;
-  //   if (!body) return;
-  //   body.style.overflow = 'hidden';
-  //   body.style.position = 'fixed';
-  //   body.style.top = `-${lastScrollPos.current}px`;
-  //   body.style.width = '100%';
-  // };
-
-  // const unlockBody = () => {
-  //   const body = bodyRef.current;
-  //   if (!body) return;
-  //   body.style.removeProperty('overflow');
-  //   body.style.removeProperty('position');
-  //   body.style.removeProperty('top');
-  //   body.style.removeProperty('width');
-  //   window.scrollTo(0, lastScrollPos.current);
-  // };
-
-  // useEffect(() => {
-  //   if (isExpanded) disableScroll();
-  //   else enableScroll();
-  // }, [isExpanded]);
-
   useEffect(() => {
     setButtons();
   }, [next, prev, setButtons]);
@@ -165,7 +134,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     setTimeout(() => {
       setExpanded(false);
       enableScroll();
-      // modalToggle();
+      modalToggle();
       setNext(initialImage);
       setCurr(initialImage);
       setPrev(initialImage);
@@ -201,7 +170,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     if (items[itemId - 1]) prevItem = items[itemId - 1];
     if (items[itemId + 1]) nextItem = items[itemId + 1];
     disableScroll();
-    // modalToggle();
+    modalToggle();
     if (nextItem) {
       setNext(setItem(nextItem, itemId + 1));
     }

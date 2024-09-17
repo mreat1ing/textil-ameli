@@ -15,7 +15,8 @@ import 'swiper/css/navigation';
 
 import './PhotoGallery.scss';
 import observer from 'src/utils/observer.utils';
-import modalToggle from 'src/utils/modalToggle.utils';
+// import modalToggle from 'src/utils/modalToggle.utils';
+import { disableScroll, enableScroll } from 'src/utils/scrollToggle.utils';
 
 interface IPhotoGallery {
   inLineCount?: number;
@@ -118,8 +119,8 @@ const PhotoGallery: FC<IPhotoGallery> = ({
   // };
 
   // useEffect(() => {
-  //   if (isExpanded) lockBody();
-  //   else unlockBody();
+  //   if (isExpanded) disableScroll();
+  //   else enableScroll();
   // }, [isExpanded]);
 
   useEffect(() => {
@@ -163,7 +164,8 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     if (to) closedElement?.classList.add(to);
     setTimeout(() => {
       setExpanded(false);
-      modalToggle();
+      enableScroll();
+      // modalToggle();
       setNext(initialImage);
       setCurr(initialImage);
       setPrev(initialImage);
@@ -198,7 +200,8 @@ const PhotoGallery: FC<IPhotoGallery> = ({
     let prevItem = null;
     if (items[itemId - 1]) prevItem = items[itemId - 1];
     if (items[itemId + 1]) nextItem = items[itemId + 1];
-    modalToggle();
+    disableScroll();
+    // modalToggle();
     if (nextItem) {
       setNext(setItem(nextItem, itemId + 1));
     }

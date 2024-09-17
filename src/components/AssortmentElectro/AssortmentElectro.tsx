@@ -1,8 +1,10 @@
-import { FC, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import './AssortmentElectro.scss';
 import Button from 'src/ui/button';
 import { normalizedHeaderImages } from 'src/utils/normalizeHeaderImage.utils';
+import { toggleModalOrder } from 'src/utils/modalOrderToggle.utils';
+import OrderModal from 'src/modals/order';
 type privod = {
   title: string;
   items: string[];
@@ -41,6 +43,8 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
   showPrivodsTitles = true,
   showHarakteristics = false,
 }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
@@ -108,6 +112,12 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
   ));
   return (
     <div className="assortment-electro">
+      {isModalOpen && (
+        <OrderModal
+          type="request"
+          onClose={() => toggleModalOrder(true, () => setModalOpen(false))}
+        />
+      )}
       <div className="assortment-item-header justify-start">
         {normalizedHeaderImages(headerImage)}
         <div className="assortment-item-header__right-block-wrapper">
@@ -124,7 +134,10 @@ const AssortmentElectro: FC<IAssortmentElectro> = ({
           <ul className="assortment-item-header__list">
             {normalizedDescription}
           </ul>
-          <Button className="assortment-item-button center">
+          <Button
+            className="assortment-item-button center"
+            onClick={() => toggleModalOrder(false, () => setModalOpen(true))}
+          >
             Отправить запрос
           </Button>
         </div>

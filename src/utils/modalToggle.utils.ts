@@ -1,7 +1,7 @@
 import { MODAL_EXPANDED } from 'src/constants/classes';
 
-export default function modalToggle() {
-  let isExpanded = false;
+export default function modalToggle(value?: boolean) {
+  let isExpanded = value;
   const rootElement = document.querySelector('body');
   const isRootElementExpanded = rootElement?.classList.contains(MODAL_EXPANDED);
 

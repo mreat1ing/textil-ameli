@@ -80,12 +80,16 @@ const Order: FC<IOrder> = ({
                   Куда вам нужны шторы?
                 </h4>
                 <div className="order__categories">
-                  <CheckboxWithImage image={placeholder} label="test" />
-                  <CheckboxWithImage image={placeholder} label="test" />
-                  <CheckboxWithImage image={placeholder} label="test" />
-                  <CheckboxWithImage image={placeholder} label="test" />
-                  <CheckboxWithImage image={placeholder} label="test" />
-                  <CheckboxWithImage image={placeholder} label="test" />
+                  <CheckboxWithImage image={placeholder} label="В гостинную" />
+                  <CheckboxWithImage image={placeholder} label="В спальню" />
+                  <CheckboxWithImage image={placeholder} label="В детскую" />
+                  <CheckboxWithImage image={placeholder} label="На кухню" />
+                  <CheckboxWithImage image={placeholder} label="В ванную" />
+                  <CheckboxWithImage
+                    image={placeholder}
+                    label="Для коммерческих помещений"
+                  />
+                  <CheckboxWithImage image={placeholder} label="Другое" />
                 </div>
               </>
             )}

@@ -24,6 +24,11 @@ const ExpandableNavLink: FC<IExpandable> = ({
   const timer2 = useRef<NodeJS.Timeout>();
   const refList: React.RefObject<HTMLUListElement> | null = useRef(null);
   const [isHover, setHover] = useState(false);
+  const [touchCount, setTouchCount] = useState(0);
+
+  useEffect(() => {
+    if (!isHover && touchCount > 0) setTouchCount(0);
+  }, [isHover, touchCount]);
 
   useEffect(() => {
     if (!refList.current?.style || type !== 'default') return;
@@ -77,6 +82,19 @@ const ExpandableNavLink: FC<IExpandable> = ({
     timer.current = setTimeout(() => setHover(value), 200 + timeoutOver);
   };
 
+  const test = (e: React.MouseEvent<HTMLAnchorElement, PointerEvent>) => {
+    const native = e.nativeEvent;
+    if (native.pointerType === 'touch') {
+      setTouchCount((state) => state + 1);
+      setHover(true);
+      if (touchCount < 1) e.preventDefault();
+      else {
+        setTouchCount(0);
+        setHover(false);
+      }
+    }
+  };
+
   const structuredItems = items?.map((item) => (
     <li key={item.key} className={'expandable-nav-link__item'}>
       {item}
@@ -88,6 +106,7 @@ const ExpandableNavLink: FC<IExpandable> = ({
       <NavLink
         className="expandable-nav-link"
         to={to}
+        onClick={test}
         onMouseOver={() => hoverHandler(true)}
         onMouseOut={() => hoverHandler(false)}
       >

@@ -10,7 +10,11 @@ const Address: FC<IAddress> = ({ className }) => {
   const addressClass = 'address' + (className ? ' ' + className : '');
 
   return (
-    <a href="/">
+    <a
+      href="https://yandex.ru/maps/org/semeynaya_studiya_tekstilnogo_dizayna_amelie/114290593576/?ll=33.544464%2C44.538785&z=19.4"
+      target="_blank"
+      rel="noreferrer"
+    >
       <p className={addressClass}>
         <span>
           <svg

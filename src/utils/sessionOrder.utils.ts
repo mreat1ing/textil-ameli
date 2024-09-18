@@ -33,6 +33,8 @@ export const setSessionChecks = (value: string[]) => {
   sessionStorage.setItem('checks', checks);
 };
 
-export const getSessionChecks = () => {
+export const getSessionChecks = (): string[] => {
   const checks = sessionStorage.getItem('checks') || '';
+  if (!checks) return [];
+  return JSON.parse(checks);
 };

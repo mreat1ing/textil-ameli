@@ -29,6 +29,10 @@
   margin-bottom: 30px;
 }
 
+.services-design__cards--row-two .services-design__item {
+  width: calc(50% - 16px);
+}
+
 .services-design__item h4 {
   margin: 0;
 }
@@ -122,6 +126,12 @@
 
   .order__categories > div:nth-last-child(3) {
     border-left-color: v.$border;
+  }
+}
+
+@media (max-width: 620px) {
+  .services-design__cards--row-two .services-design__item {
+    width: 100%;
   }
 }
 

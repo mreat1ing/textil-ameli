@@ -11,7 +11,9 @@
   resize: vertical;
   min-height: 150px;
   font-size: 13px;
-  transition: all 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .textarea:hover {

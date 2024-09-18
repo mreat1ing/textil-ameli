@@ -5,7 +5,7 @@
   border-radius: 2px;
   display: block;
   padding: 16px;
-  background-color: v.$bg-input;
+  background-color: v.$color-white;
   width: 100%;
   border: none;
   resize: vertical;
@@ -15,12 +15,12 @@
 }
 
 .textarea:hover {
-  background-color: rgba(v.$color-white, 1);
+  background-color: v.$bg-input;
 }
 
 .textarea:focus {
   box-shadow: 0 10px 20px 0 v.$shadow;
-  background-color: rgba(v.$color-white, 1);
+  background-color: v.$bg-input;
 }
 
 .label {

@@ -91,6 +91,10 @@
   margin-bottom: 20px;
 }
 
+.contacts-contact-us__mail svg g g {
+  fill: v.$text;
+}
+
 .contacts-contact-us__order {
   width: 48%;
   border: 7px solid v.$primary;
@@ -135,6 +139,10 @@
 .contacts-contact-us__phone:hover,
 .contacts-contact-us__mail:hover {
   color: v.$primary;
+}
+
+.contacts-contact-us__mail:hover svg g g {
+  fill: v.$primary;
 }
 
 @media (max-width: 990px) {

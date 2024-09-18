@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 
-import { hostImages } from 'src/constants/hosting';
+import { hostImages, hostIcons } from 'src/constants/hosting';
 import Input from 'src/ui/input';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
@@ -8,7 +8,13 @@ import CheckboxWithImage from 'src/common/CheckboxWithImage';
 import { PaperPlane } from 'src/common/icons';
 
 const Eskiz = `${hostImages}/eskiz.jpg`;
-const placeholder = `${hostImages}/item-placeholder.png`;
+const bathroom = `${hostIcons}/bathroom.svg`;
+const bedroom = `${hostIcons}/bedroom.svg`;
+const kitchen = `${hostIcons}/kitchen.svg`;
+const livingRoom = `${hostIcons}/living-room.svg`;
+const other = `${hostIcons}/other.svg`;
+const playroom = `${hostIcons}/playroom.svg`;
+const reception = `${hostIcons}/reception.svg`;
 
 import './Order.scss';
 
@@ -80,16 +86,16 @@ const Order: FC<IOrder> = ({
                   Куда вам нужны шторы?
                 </h4>
                 <div className="order__categories">
-                  <CheckboxWithImage image={placeholder} label="В гостинную" />
-                  <CheckboxWithImage image={placeholder} label="В спальню" />
-                  <CheckboxWithImage image={placeholder} label="В детскую" />
-                  <CheckboxWithImage image={placeholder} label="На кухню" />
-                  <CheckboxWithImage image={placeholder} label="В ванную" />
+                  <CheckboxWithImage image={livingRoom} label="В гостинную" />
+                  <CheckboxWithImage image={bedroom} label="В спальню" />
+                  <CheckboxWithImage image={playroom} label="В детскую" />
+                  <CheckboxWithImage image={kitchen} label="На кухню" />
+                  <CheckboxWithImage image={bathroom} label="В ванную" />
                   <CheckboxWithImage
-                    image={placeholder}
+                    image={reception}
                     label="Для коммерческих помещений"
                   />
-                  <CheckboxWithImage image={placeholder} label="Другое" />
+                  <CheckboxWithImage image={other} label="Другое" />
                 </div>
               </>
             )}

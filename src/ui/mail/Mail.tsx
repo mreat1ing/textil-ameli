@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { Mail as MailIcon } from 'src/common/icons';
+
 import './Mail.scss';
 
 interface IMail {
@@ -12,6 +14,7 @@ const Mail: FC<IMail> = ({ className }) => {
       className={`mail${className ? ' ' + className : ''}`}
       href="mailto:stdamelie@gmail.com"
     >
+      <MailIcon />
       stdamelie@gmail.com
     </a>
   );

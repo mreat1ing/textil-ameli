@@ -67,12 +67,12 @@
 }
 
 .order__input:hover {
-  background-color: rgba(v.$color-white, 1);
+  background-color: v.$bg-input;
 }
 
 .order__input:focus {
   box-shadow: 0 10px 20px 0 v.$shadow;
-  background-color: rgba(v.$color-white, 1);
+  background-color: v.$bg-input;
 }
 
 .order__description {

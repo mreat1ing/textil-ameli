@@ -5,3 +5,17 @@
   font-size: 15px;
   font-weight: normal;
 }
+
+.address span {
+  position: relative;
+  padding-left: 24px;
+}
+
+.address svg {
+  left: 0;
+  top: 0;
+  position: absolute;
+  min-width: 16px;
+  min-height: 16px;
+  margin-right: 4px;
+}

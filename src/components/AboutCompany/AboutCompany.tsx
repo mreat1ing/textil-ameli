@@ -1,17 +1,8 @@
 import { FC, useEffect } from 'react';
 
-import {
-  Curtain,
-  Photos,
-  Calculator,
-  Delivery,
-  Pencil,
-  Clock,
-} from 'src/common/icons';
-import ParallaxBgImage from 'src/common/ParallaxBgImage';
+import { Curtain, Photos } from 'src/common/icons';
 import observer from 'src/utils/observer.utils';
 import AssortmentCart from 'src/common/AssortmentCart';
-import TitleCard from 'src/common/TitleCard';
 
 import './AboutCompany.scss';
 
@@ -67,35 +58,9 @@ const AboutCompany: FC = () => {
           </div>
         </div>
       </div>
-      <div className="about-company__bottom-block">
-        <ParallaxBgImage
-          image="https://cd11149.tw1.ru/assets/images/bg-curtains.jpg"
-          padding={150}
-        >
-          <div className="about-company__bottom-block-cards">
-            <TitleCard
-              className="about-company__bottom-block-card"
-              image={<Calculator width={60} height={60} />}
-              text="Оптовые цены на ткани"
-            />
-            <TitleCard
-              className="about-company__bottom-block-card"
-              image={<Clock width={60} height={60} />}
-              text="Время пошива до 4 недель"
-            />
-            <TitleCard
-              className="about-company__bottom-block-card"
-              image={<Pencil width={60} height={60} />}
-              text="Бесплатный замер"
-            />
-            <TitleCard
-              className="about-company__bottom-block-card"
-              image={<Delivery width={60} height={60} />}
-              text="Доставим и оформим"
-            />
-          </div>
-        </ParallaxBgImage>
-      </div>
+      {/* <div className="about-company__bottom-block"> */}
+
+      {/* </div> */}
     </div>
   );
 };

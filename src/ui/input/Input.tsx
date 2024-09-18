@@ -1,4 +1,9 @@
-import { forwardRef, LegacyRef } from 'react';
+import {
+  ChangeEventHandler,
+  forwardRef,
+  HTMLInputAutoCompleteAttribute,
+  LegacyRef,
+} from 'react';
 
 import './Input.scss';
 
@@ -11,6 +16,8 @@ interface IInput {
   label?: string;
   placeholder?: string;
   type?: string;
+  autoComplete?: HTMLInputAutoCompleteAttribute;
+  onChange?: ChangeEventHandler;
 }
 
 const Input = forwardRef(
@@ -23,7 +30,8 @@ const Input = forwardRef(
       required,
       value,
       placeholder,
-      type,
+      autoComplete,
+      onChange,
     } = props;
     const randomNumber = Math.round(
       new Date().getMilliseconds() * Math.random() * 100
@@ -41,6 +49,8 @@ const Input = forwardRef(
         required={required}
         type="text"
         ref={ref}
+        autoComplete={autoComplete}
+        onChange={onChange}
       />
     );
 

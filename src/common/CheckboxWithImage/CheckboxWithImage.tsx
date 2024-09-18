@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import './CheckboxWithImage.scss';
+import { getSessionChecks } from 'src/utils/sessionOrder.utils';
 
 interface ICheckboxWithImage {
   image: string;
@@ -9,6 +10,14 @@ interface ICheckboxWithImage {
 
 const CheckboxWithImage: FC<ICheckboxWithImage> = ({ image, label }) => {
   const [isChecked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const sessionChecks = getSessionChecks();
+    if (sessionChecks.findIndex((el) => el === label) > -1) {
+      setChecked(true);
+    }
+  }, [label]),
+    [];
 
   return (
     <div
@@ -20,7 +29,7 @@ const CheckboxWithImage: FC<ICheckboxWithImage> = ({ image, label }) => {
         {label}
         <input
           type="checkbox"
-          id="checkbox"
+          id={label}
           readOnly
           checked={isChecked}
           onClick={() => setChecked((checked) => !checked)}

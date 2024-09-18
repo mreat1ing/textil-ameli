@@ -1,8 +1,8 @@
-import { forwardRef, LegacyRef } from 'react';
+import { forwardRef, LegacyRef, TextareaHTMLAttributes } from 'react';
 
 import './Textarea.scss';
 
-interface ITextarea {
+interface ITextarea extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   required?: boolean;
   label?: string;
@@ -11,7 +11,8 @@ interface ITextarea {
 
 const Textarea = forwardRef(
   (props: ITextarea, ref: LegacyRef<HTMLTextAreaElement>): JSX.Element => {
-    const { className, label, required, placeholder } = props;
+    const { className, label, required, placeholder, onChange, defaultValue } =
+      props;
     const randomNumber = Math.round(
       new Date().getMilliseconds() * Math.random() * 100
     );
@@ -19,11 +20,13 @@ const Textarea = forwardRef(
     const inputClass = 'textarea' + (className ? ' ' + className : '');
     const input = (
       <textarea
+        defaultValue={defaultValue}
         id={inputId}
         className={inputClass}
         placeholder={placeholder}
         required={required}
         ref={ref}
+        onChange={onChange}
       />
     );
 

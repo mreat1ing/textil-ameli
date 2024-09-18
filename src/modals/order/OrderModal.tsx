@@ -9,11 +9,10 @@ import { disableScroll, enableScroll } from 'src/utils/scrollToggle.utils';
 
 interface IOrderModal {
   type: 'call' | 'consultation' | 'request';
-  product?: string;
   onClose: () => void;
 }
 
-const OrderModal: FC<IOrderModal> = ({ type, product, onClose }) => {
+const OrderModal: FC<IOrderModal> = ({ type, onClose }) => {
   const bgRef = useRef<HTMLDivElement>(null);
   const modalRef = useRef<HTMLDivElement>(null);
   const startY = useRef(0);
@@ -62,19 +61,10 @@ const OrderModal: FC<IOrderModal> = ({ type, product, onClose }) => {
     prevY.current = cury - startY.current;
   };
 
-  const touchEndHandler = (e: React.TouchEvent) => {
+  const touchEndHandler = () => {
     const modal = modalRef.current as HTMLDivElement;
     if (!modal) return;
     prevY.current = 0;
-    // const currTimestamp = e.timeStamp;
-    // const currY = e.changedTouches[0].clientY;
-    // const distance = currY - startY.current;
-    // const time = currTimestamp - timestampStart.current;
-    // const velocity = Math.abs(distance / time);
-    // const newScroll = modal.scrollTop - distance * velocity;
-    // console.log(distance, time, velocity);
-    // if (time < 200) modal.scrollTo({ top: newScroll, behavior: 'smooth' });
-    // scrollWithVelocity(distance / time);
   };
 
   if (!modalsContainer) return null;

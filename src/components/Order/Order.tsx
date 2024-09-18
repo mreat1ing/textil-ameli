@@ -9,9 +9,11 @@ import CheckboxWithImage from 'src/common/CheckboxWithImage';
 import { PaperPlane } from 'src/common/icons';
 import Textarea from 'src/ui/textarea';
 import {
+  getSessionChecks,
   getSessionComment,
   getSessionName,
   getSessionPhone,
+  setSessionChecks,
   setSessionComment,
   setSessionName,
   setSessionPhone,
@@ -51,7 +53,7 @@ const Order: FC<IOrder> = ({
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<InputMask>(null);
   const commentRef = useRef<HTMLTextAreaElement>(null);
-  const [checks, setChecks] = useState<string[]>([]);
+  const [checks, setChecks] = useState<string[]>(getSessionChecks());
 
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
@@ -59,53 +61,28 @@ const Order: FC<IOrder> = ({
 
     component && observerFirst?.observe(component);
 
-    // const checklist = checkListRef.current;
-    // if (checklist) {
-    //   const sessionChecks = getSessionChecks();
-    // }
-
     return () => {
       observerFirst?.disconnect();
     };
   }, []);
 
-  // useEffect(() => {
-  //   setSessionChecks(checks);
-  // }, [checks]);
-
   const submitHandler = (e: FormEvent) => {
     e.preventDefault();
-    // const phoneInput = phoneRef.current as InputMaskProps;
-    // const checkboxesChildrens = checkListRef.current
-    //   ?.children as HTMLCollection;
-    // const checkedBoxes = [];
-    // for (let i = 0; i < checkboxesChildrens?.length; i++) {
-    //   if (checkboxesChildrens[i].classList.contains('checked')) {
-    //     checkedBoxes.push(checkboxesChildrens[i].children[1].children[0].id);
-    //     continue;
-    //   }
-    // }
-    // const name = nameRef.current?.value;
-    // const phone = phoneInput.value;
-    // const comment = commentRef.current?.value;
-    // console.log('checks:', checkedBoxes);
-    // console.log('name:', name);
-    // console.log('phone:', phone);
-    // console.log('comment:', comment);
     sessionStorage.clear();
   };
 
   const setCheck = (e: React.MouseEvent<HTMLDivElement>) => {
     const target = e.target as HTMLDivElement;
     const label = target.children[1] as HTMLLabelElement;
-    if (!target.classList.contains('checked')) {
-      const newArr = [...checks, label.innerText];
-      setChecks(newArr);
+    let newArr = [];
+    const itemId = checks.findIndex((el) => label.innerText === el);
+    if (!target.classList.contains('checked') && itemId < 0) {
+      newArr = [...checks, label.innerText];
     } else {
-      const itemId = checks.findIndex((el) => label.innerText === el);
-      const newArr = [...checks.slice(0, itemId), ...checks.slice(itemId + 1)];
-      setChecks(newArr);
+      newArr = [...checks.slice(0, itemId), ...checks.slice(itemId + 1)];
     }
+    setChecks(newArr);
+    setSessionChecks(newArr);
   };
 
   return (

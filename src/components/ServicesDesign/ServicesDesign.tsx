@@ -5,7 +5,6 @@ import TitleCard from 'src/common/TitleCard';
 import Order from 'src/components/Order';
 import { Calculator, Clock, Pencil, Delivery } from 'src/common/icons';
 import { hostImages } from 'src/constants/hosting';
-import Textarea from 'src/ui/textarea';
 import PhotoGallery from 'src/common/PhotoGallery';
 const photo1 = `${hostImages}/ourWorks/1.jpg`;
 const photo2 = `${hostImages}/ourWorks/2.jpg`;
@@ -73,16 +72,7 @@ const ServicesDesign: FC = () => {
         вашу квартиру или дом. Вы ознакомитесь с образцами тканей и получите
         консультацию дизайнера текстиля.
       </p>
-      <Order
-        className="services__form"
-        textarea={
-          <Textarea
-            label="Комментарий для дизайнера (не обязательно)"
-            placeholder="Здесь вы можете кратко описать задачу или идею"
-          />
-        }
-        categories
-      />
+      <Order className="services__form" textarea categories />
       <p className="services-p">
         Мы знаем всё о шторах, о том, как ведёт себя та или иная ткань. В нашей
         студии вы можете не только заказать индивидуальный пошив, но и выбрать

@@ -18,6 +18,7 @@ import services from './services/services';
 import needle from './needle/needle';
 import guarantee from './guarantee/guarantee';
 import consultation from './consultation/consultation';
+import mail from './mail/mail';
 
 export {
   burgerMenu as BurgerIcon,
@@ -40,4 +41,5 @@ export {
   needle as Needle,
   guarantee as Guarantee,
   consultation as Consultation,
+  mail as Mail,
 };

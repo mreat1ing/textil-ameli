@@ -1,4 +1,5 @@
-import { FC, useEffect } from 'react';
+import { FC, FormEvent, useEffect, useRef, useState } from 'react';
+import { InputMask } from 'primereact/inputmask';
 
 import { hostImages, hostIcons } from 'src/constants/hosting';
 import Input from 'src/ui/input';
@@ -6,6 +7,17 @@ import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
 import CheckboxWithImage from 'src/common/CheckboxWithImage';
 import { PaperPlane } from 'src/common/icons';
+import Textarea from 'src/ui/textarea';
+import {
+  getSessionComment,
+  getSessionName,
+  getSessionPhone,
+  setSessionComment,
+  setSessionName,
+  setSessionPhone,
+} from 'src/utils/sessionOrder.utils';
+
+import './Order.scss';
 
 const Eskiz = `${hostImages}/eskiz.jpg`;
 const bathroom = `${hostIcons}/bathroom.svg`;
@@ -16,11 +28,9 @@ const other = `${hostIcons}/other.svg`;
 const playroom = `${hostIcons}/playroom.svg`;
 const reception = `${hostIcons}/reception.svg`;
 
-import './Order.scss';
-
 interface IOrder {
   image?: boolean;
-  textarea?: JSX.Element;
+  textarea?: boolean;
   title?: string;
   description?: boolean;
   titleSize?: string | number;
@@ -37,16 +47,66 @@ const Order: FC<IOrder> = ({
   titleSize = 40,
   className,
 }) => {
+  const checkListRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<InputMask>(null);
+  const commentRef = useRef<HTMLTextAreaElement>(null);
+  const [checks, setChecks] = useState<string[]>([]);
+
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
     const observerFirst = component && observer(component, 'from-left');
 
     component && observerFirst?.observe(component);
 
+    // const checklist = checkListRef.current;
+    // if (checklist) {
+    //   const sessionChecks = getSessionChecks();
+    // }
+
     return () => {
       observerFirst?.disconnect();
     };
   }, []);
+
+  // useEffect(() => {
+  //   setSessionChecks(checks);
+  // }, [checks]);
+
+  const submitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    // const phoneInput = phoneRef.current as InputMaskProps;
+    // const checkboxesChildrens = checkListRef.current
+    //   ?.children as HTMLCollection;
+    // const checkedBoxes = [];
+    // for (let i = 0; i < checkboxesChildrens?.length; i++) {
+    //   if (checkboxesChildrens[i].classList.contains('checked')) {
+    //     checkedBoxes.push(checkboxesChildrens[i].children[1].children[0].id);
+    //     continue;
+    //   }
+    // }
+    // const name = nameRef.current?.value;
+    // const phone = phoneInput.value;
+    // const comment = commentRef.current?.value;
+    // console.log('checks:', checkedBoxes);
+    // console.log('name:', name);
+    // console.log('phone:', phone);
+    // console.log('comment:', comment);
+    sessionStorage.clear();
+  };
+
+  const setCheck = (e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    const label = target.children[1] as HTMLLabelElement;
+    if (!target.classList.contains('checked')) {
+      const newArr = [...checks, label.innerText];
+      setChecks(newArr);
+    } else {
+      const itemId = checks.findIndex((el) => label.innerText === el);
+      const newArr = [...checks.slice(0, itemId), ...checks.slice(itemId + 1)];
+      setChecks(newArr);
+    }
+  };
 
   return (
     <div className={`order${className ? ' ' + className : ''}`}>
@@ -65,6 +125,7 @@ const Order: FC<IOrder> = ({
           )}
           <form
             className={`order__form${className ? ' ' + className + '--form' : ''}`}
+            onSubmit={submitHandler}
           >
             <h2
               className={`order__title${className ? ' ' + className + '--title' : ''}`}
@@ -85,7 +146,11 @@ const Order: FC<IOrder> = ({
                 <h4 className="order__categories-title">
                   Куда вам нужны шторы?
                 </h4>
-                <div className="order__categories">
+                <div
+                  className="order__categories"
+                  ref={checkListRef}
+                  onClick={setCheck}
+                >
                   <CheckboxWithImage image={livingRoom} label="В гостинную" />
                   <CheckboxWithImage image={bedroom} label="В спальню" />
                   <CheckboxWithImage image={playroom} label="В детскую" />
@@ -101,20 +166,42 @@ const Order: FC<IOrder> = ({
             )}
             <div className="order__input-wrapper">
               <Input
+                ref={nameRef}
+                defaultValue={getSessionName()}
                 label="Ваше имя: *"
                 className="order__input"
                 placeholder="Как к вам обращаться?"
                 required
+                autoComplete="name webauthn"
+                onChange={() => setSessionName(nameRef.current?.value)}
               />
-              <Input
-                label="Ваш телефон: *"
-                className="order__input"
-                pattern=""
-                type="number"
-                required
-              />
+              <label className="label" htmlFor="number">
+                Ваш телефон: *
+                <InputMask
+                  ref={phoneRef}
+                  value={getSessionPhone()}
+                  className="input order__input"
+                  required
+                  id="number"
+                  mask={'+7 (999) 999-99-99'}
+                  placeholder={'+7 (___) ___-__-__'}
+                  autoComplete="tel webauthn"
+                  onChange={(e) => {
+                    setSessionPhone(e.value as string);
+                  }}
+                />
+              </label>
             </div>
-            {textarea && textarea}
+            {textarea && (
+              <Textarea
+                defaultValue={getSessionComment()}
+                placeholder="Добавьте ваш комментарий"
+                label="Комментарий:"
+                className="modal-content__order-textarea"
+                ref={commentRef}
+                onChange={() => setSessionComment(commentRef.current?.value)}
+              />
+            )}
             <div className="order__button-wrapper">
               <Button type="submit" className="order__button">
                 <div className="order__button-text">

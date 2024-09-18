@@ -4,7 +4,6 @@ import { createPortal } from 'react-dom';
 import './OrderModal.scss';
 import Order from 'src/components/Order';
 import CloseButton from 'src/ui/closeButton';
-import Textarea from 'src/ui/textarea';
 import { disableScroll, enableScroll } from 'src/utils/scrollToggle.utils';
 
 interface IOrderModal {
@@ -89,13 +88,7 @@ const OrderModal: FC<IOrderModal> = ({ type, onClose }) => {
             image={false}
             description={false}
             title=" "
-            textarea={
-              <Textarea
-                placeholder="Добавьте ваш комментарий"
-                label="Комментарий:"
-                className="modal-content__order-textarea"
-              />
-            }
+            textarea
           />
         </div>
       </div>

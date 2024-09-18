@@ -20,7 +20,7 @@ const CheckboxWithImage: FC<ICheckboxWithImage> = ({ image, label }) => {
         {label}
         <input
           type="checkbox"
-          id="checkbox"
+          id={label}
           readOnly
           checked={isChecked}
           onClick={() => setChecked((checked) => !checked)}

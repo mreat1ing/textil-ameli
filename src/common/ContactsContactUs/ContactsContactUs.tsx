@@ -6,7 +6,6 @@ import Number from 'src/ui/number';
 import Address from 'src/ui/address';
 import Mail from 'src/ui/mail';
 import Instagram from 'src/ui/instagram';
-import Textarea from 'src/ui/textarea';
 import YMap from 'src/common/YMap';
 
 const ContactsContactUs: FC = () => {
@@ -73,9 +72,7 @@ const ContactsContactUs: FC = () => {
             titleSize={21}
             title="Оставьте ваши контакты и мы перезвоним:"
             className="contacts-contact-us__order"
-            textarea={
-              <Textarea label="Вопрос или сообщение (не обязательно)" />
-            }
+            textarea
           />
         </div>
         <YMap className="contact-contact-us__map" />

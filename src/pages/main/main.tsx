@@ -6,6 +6,7 @@ import CompletedOrders from 'src/components/CompletedOrders';
 import ContactUs from 'src/common/ContactUs';
 import Order from 'src/components/Order';
 import OurLocation from 'src/components/OurLocation';
+import AboutCompanyBottom from 'src/common/AboutCompanyBottom';
 
 const Main: FC = () => {
   useEffect(() => {
@@ -17,6 +18,7 @@ const Main: FC = () => {
     <>
       <TopBlock />
       <AboutCompany />
+      <AboutCompanyBottom />
       <Order />
       <CompletedOrders />
       <ContactUs />

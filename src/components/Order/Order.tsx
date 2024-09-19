@@ -1,5 +1,5 @@
 import { FC, FormEvent, useEffect, useRef, useState } from 'react';
-import { InputMask } from 'primereact/inputmask';
+import { InputMask, InputMaskProps } from 'primereact/inputmask';
 
 import { hostImages, hostIcons } from 'src/constants/hosting';
 import Input from 'src/ui/input';
@@ -9,15 +9,18 @@ import CheckboxWithImage from 'src/common/CheckboxWithImage';
 import { PaperPlane } from 'src/common/icons';
 import Textarea from 'src/ui/textarea';
 import {
+  getAllSession,
   getSessionChecks,
   getSessionComment,
   getSessionName,
   getSessionPhone,
+  ISessionOrder,
   setSessionChecks,
   setSessionComment,
   setSessionName,
   setSessionPhone,
 } from 'src/utils/sessionOrder.utils';
+import { orderTypes } from 'src/types/order.type';
 
 import './Order.scss';
 
@@ -38,6 +41,12 @@ interface IOrder {
   titleSize?: string | number;
   className?: string;
   categories?: boolean;
+  type?: orderTypes;
+}
+
+interface IData extends ISessionOrder {
+  type?: orderTypes;
+  link?: string;
 }
 
 const Order: FC<IOrder> = ({
@@ -48,12 +57,14 @@ const Order: FC<IOrder> = ({
   description = true,
   titleSize = 40,
   className,
+  type,
 }) => {
   const checkListRef = useRef<HTMLDivElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<InputMask>(null);
   const commentRef = useRef<HTMLTextAreaElement>(null);
   const [checks, setChecks] = useState<string[]>(getSessionChecks());
+  const [isPending, setPending] = useState(false);
 
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
@@ -66,9 +77,41 @@ const Order: FC<IOrder> = ({
     };
   }, []);
 
-  const submitHandler = (e: FormEvent) => {
-    e.preventDefault();
+  const clearAll = () => {
     sessionStorage.clear();
+    if (nameRef.current) nameRef.current.value = '';
+    if (phoneRef.current) {
+      const phone = phoneRef.current as InputMaskProps;
+      phone.value = '';
+    }
+    if (commentRef.current) commentRef.current.value = '';
+    setChecks([]);
+  };
+
+  const submitHandler = async (e: FormEvent) => {
+    e.preventDefault();
+    setPending(true);
+    const data: IData = getAllSession(categories);
+    let dataType: orderTypes = 'call';
+    if (type) dataType = type;
+    else if (categories) dataType = 'consultation';
+    data['type'] = dataType;
+    if (dataType === 'request') data['link'] = window.location.href;
+    const req = fetch('./file.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+
+    req
+      .then((p) => p.json())
+      .then((p) => p.status === 200)
+      .finally(() => {
+        setPending(false);
+        clearAll();
+      });
   };
 
   const setCheck = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -180,10 +223,14 @@ const Order: FC<IOrder> = ({
               />
             )}
             <div className="order__button-wrapper">
-              <Button type="submit" className="order__button">
+              <Button
+                disabled={isPending}
+                type="submit"
+                className="order__button"
+              >
                 <div className="order__button-text">
                   <PaperPlane width={30} height={30} />
-                  <span>Отправить</span>
+                  <span>{!isPending ? 'Отправить' : 'Отправка...'}</span>
                 </div>
               </Button>
             </div>

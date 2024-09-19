@@ -106,7 +106,6 @@ const Order: FC<IOrder> = ({
     });
 
     req
-      .then((p) => p.json())
       .then((p) => {
         if (p.status === 200) {
           clearAll();

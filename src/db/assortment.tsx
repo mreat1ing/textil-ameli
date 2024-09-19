@@ -301,8 +301,6 @@ const magnet537052img2 = `${hostImages}/assormentCards/accesories/magnets/537052
 const magnet537052img3 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-3.jpg`;
 const magnet537052img4 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-4.jpg`;
 const magnet537052img5 = `${hostImages}/assormentCards/accesories/magnets/537052/magniti-537052-5.jpg`;
-const electroSomfyHeaderImage1 = `${hostImages}/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy--1-.jpg`;
-const electroSomfyHeaderImage2 = `${hostImages}/assormentCards/cornices/electro/header/kompakt-s-elektroprivodami-somfy-2.jpg`;
 const electroSomfy40Image1 = `${hostImages}/assormentCards/cornices/electro/images/kompakt-60-s-elektroprivodom-somfy-sonesse-401.png`;
 const electroKarniziImage = `${hostImages}/assormentCards/cornices/electro/images/sravnenie.png`;
 const profilyaS1variantIzgiba1 = `${hostImages}/assormentCards/cornices/profilya/variant-izgiba-1.jpg`;
@@ -323,6 +321,82 @@ const profilyaSt2chertezh1 = `${hostImages}/assormentCards/cornices/profilya/st2
 const profilyaSt2chertezh2 = `${hostImages}/assormentCards/cornices/profilya/st2/blok-s-nagruzkoj.jpg`;
 const profilyaSt3chertezh1 = `${hostImages}/assormentCards/cornices/profilya/st3/shema.jpg`;
 const profilyaSt3chertezh2 = `${hostImages}/assormentCards/cornices/profilya/st3/blok-s-nagruzkoj-8.jpg`;
+const headerSomfy401 = `${hostImages}/assormentCards/cornices/electro/header/somfy40/1.jpg`;
+const headerSomfy402 = `${hostImages}/assormentCards/cornices/electro/header/somfy40/2.png`;
+const headerSomfy1 = `${hostImages}/assormentCards/cornices/electro/header/somfy/kompakt-s-elektroprivodami-somfy-1.jpg`;
+const headerSomfy2 = `${hostImages}/assormentCards/cornices/electro/header/somfy/kompakt-s-elektroprivodami-somfy-2.jpg`;
+const headerCompact601 = `${hostImages}/assormentCards/cornices/electro/header/compact60/1.jpg`;
+const headerCompact602 = `${hostImages}/assormentCards/cornices/electro/header/compact60/2.png`;
+const headerElectro1 = `${hostImages}/assormentCards/cornices/electro/header/electro/1.png`;
+const headerElectro2 = `${hostImages}/assormentCards/cornices/electro/header/electro/2.jpg`;
+const headerElectro3 = `${hostImages}/assormentCards/cornices/electro/header/electro/3.jpg`;
+const headerElectro4 = `${hostImages}/assormentCards/cornices/electro/header/electro/4.jpg`;
+const headerElectro5 = `${hostImages}/assormentCards/cornices/electro/header/electro/5.jpg`;
+const headerElectro6 = `${hostImages}/assormentCards/cornices/electro/header/electro/6.jpg`;
+const headerSintra1 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/1.jpg`;
+const headerSintra2 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/2.jpg`;
+const headerSintra3 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/3.jpg`;
+const headerSintra4 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/4.jpg`;
+const headerSintra5 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/5.jpg`;
+const headerSintra6 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/6.jpg`;
+const headerSintra7 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/7.jpg`;
+const headerSintra8 = `${hostImages}/assormentCards/cornices/kovanie/header/sintra/8.jpg`;
+const headerAmpir1 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-1.jpg`;
+const headerAmpir2 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-2.jpg`;
+const headerAmpir3 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-3.jpg`;
+const headerAmpir4 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-4.jpg`;
+const headerAmpir5 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-5.jpg`;
+const headerAmpir6 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-6.jpg`;
+const headerAmpir7 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-7.jpg`;
+const headerAmpir8 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-8.jpg`;
+const headerAmpir9 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-9.jpg`;
+const headerAmpir10 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-10.jpg`;
+const headerAmpir11 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-11.jpg`;
+const headerAmpir12 = `${hostImages}/assormentCards/cornices/kovanie/header/ampir/ampir-12.jpg`;
+const headerOst1 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-1.jpg`;
+const headerOst2 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-2.jpg`;
+const headerOst3 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-3.jpg`;
+const headerOst4 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-4.jpg`;
+const headerOst5 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-5.jpg`;
+const headerOst6 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-6.jpg`;
+const headerOst7 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-7.jpg`;
+const headerOst8 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-8.jpg`;
+const headerOst9 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-9.jpg`;
+const headerOst10 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-10.jpg`;
+const headerOst11 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-11.jpg`;
+const headerOst12 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-12.jpg`;
+const headerOst13 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-13.jpg`;
+const headerOst14 = `${hostImages}/assormentCards/cornices/kovanie/header/ost/ost-14.jpg`;
+const headerGotika1 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-1.jpg`;
+const headerGotika2 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-2.jpg`;
+const headerGotika3 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-3.jpg`;
+const headerGotika4 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-4.jpg`;
+const headerGotika5 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-5.jpg`;
+const headerGotika6 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-6.jpg`;
+const headerGotika7 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/gotika-7.jpg`;
+const headerGotika8 = `${hostImages}/assormentCards/cornices/kovanie/header/gotika/vanil-zoloto.jpg`;
+const headerBinario1 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/1.jpg`;
+const headerBinario2 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/2.jpg`;
+const headerBinario3 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/3.jpg`;
+const headerBinario4 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/4.jpg`;
+const headerBinario5 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/5.jpg`;
+const headerBinario6 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/6.jpg`;
+const headerBinario7 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/7.jpg`;
+const headerBinario8 = `${hostImages}/assormentCards/cornices/derevyannie/header/binario/8.jpg`;
+const headerRenessans1 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/1.jpg`;
+const headerRenessans2 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/2.jpg`;
+const headerRenessans3 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/3.jpg`;
+const headerRenessans4 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/4.jpg`;
+const headerRenessans5 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/5.jpg`;
+const headerRenessans6 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/6.jpg`;
+const headerRenessans7 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/7.jpg`;
+const headerRenessans8 = `${hostImages}/assormentCards/cornices/derevyannie/header/renessans/8.jpg`;
+const headerVintage1 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/1.jpg`;
+const headerVintage2 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/2.jpg`;
+const headerVintage3 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/3.jpg`;
+const headerVintage4 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/4.jpg`;
+const headerVintage5 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/5.jpg`;
+const headerVintage6 = `${hostImages}/assormentCards/cornices/derevyannie/header/vintage/6.jpg`;
 
 export const getItems = (where: string, search: string) => {
   let searchedObject;
@@ -1273,7 +1347,7 @@ export const cornicesAssortment: IAssortment[] = [
             images={electroKarnizi['somfy-40'].images}
             variantsText={electroKarnizi['somfy-40'].variantsText}
             variants={electroKarnizi['somfy-40'].variants}
-            headerImage={[somfy40]}
+            headerImage={[headerSomfy401, headerSomfy402]}
             showHarakteristics
           />
         ),
@@ -1287,7 +1361,7 @@ export const cornicesAssortment: IAssortment[] = [
           <AssortmentElectro
             description={electroKarnizi['somfy'].descriptionList}
             privods={electroKarnizi['somfy'].privods}
-            headerImage={[somfy]}
+            headerImage={[headerSomfy1, headerSomfy2]}
             showHarakteristics
           />
         ),
@@ -1307,7 +1381,7 @@ export const cornicesAssortment: IAssortment[] = [
             pluses={electroKarnizi['compact60electro'].pluses}
             images={electroKarnizi['compact60electro'].images}
             descrTitle={true}
-            headerImage={[somfy]}
+            headerImage={[headerCompact601, headerCompact602]}
             showHarakteristics
           />
         ),
@@ -1328,7 +1402,14 @@ export const cornicesAssortment: IAssortment[] = [
             showPrivodsTitles
             showHarakteristics
             descrTitle
-            headerImage={[somfy]}
+            headerImage={[
+              headerElectro1,
+              headerElectro2,
+              headerElectro3,
+              headerElectro4,
+              headerElectro5,
+              headerElectro6,
+            ]}
           />
         ),
       },
@@ -1563,7 +1644,16 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={kovanieKarnizi['sintra'].imagesTitle}
             images3={kovanieKarnizi['sintra'].images3}
             images3Title={kovanieKarnizi['sintra'].images3Title}
-            headerImage={[sintra]}
+            headerImage={[
+              headerSintra1,
+              headerSintra2,
+              headerSintra3,
+              headerSintra4,
+              headerSintra5,
+              headerSintra6,
+              headerSintra7,
+              headerSintra8,
+            ]}
             multicolor={true}
           />
         ),
@@ -1583,7 +1673,20 @@ export const cornicesAssortment: IAssortment[] = [
             images2Title={kovanieKarnizi['ampir'].images2Title}
             images3={kovanieKarnizi['ampir'].images3}
             images3Title={kovanieKarnizi['ampir'].images3Title}
-            headerImage={[ampir]}
+            headerImage={[
+              headerAmpir1,
+              headerAmpir2,
+              headerAmpir3,
+              headerAmpir4,
+              headerAmpir5,
+              headerAmpir6,
+              headerAmpir7,
+              headerAmpir8,
+              headerAmpir9,
+              headerAmpir10,
+              headerAmpir11,
+              headerAmpir12,
+            ]}
             multicolor={false}
           />
         ),
@@ -1601,7 +1704,22 @@ export const cornicesAssortment: IAssortment[] = [
             imagesTitle={kovanieKarnizi['ost'].imagesTitle}
             images3={kovanieKarnizi['ost'].images3}
             images3Title={kovanieKarnizi['ost'].images3Title}
-            headerImage={[ost]}
+            headerImage={[
+              headerOst1,
+              headerOst2,
+              headerOst3,
+              headerOst4,
+              headerOst5,
+              headerOst6,
+              headerOst7,
+              headerOst8,
+              headerOst9,
+              headerOst10,
+              headerOst11,
+              headerOst12,
+              headerOst13,
+              headerOst14,
+            ]}
             multicolor={true}
           />
         ),
@@ -1619,7 +1737,16 @@ export const cornicesAssortment: IAssortment[] = [
             images2Title={kovanieKarnizi['gotika'].images2Title}
             images3={kovanieKarnizi['gotika'].images3}
             images3Title={kovanieKarnizi['gotika'].images3Title}
-            headerImage={[gotika]}
+            headerImage={[
+              headerGotika1,
+              headerGotika2,
+              headerGotika3,
+              headerGotika4,
+              headerGotika5,
+              headerGotika6,
+              headerGotika7,
+              headerGotika8,
+            ]}
             multicolor={false}
           />
         ),
@@ -1642,7 +1769,16 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['binario'].images}
             images3={karniziDerevyannie['binario'].images3}
             images3Title={karniziDerevyannie['binario'].images3Title}
-            headerImage={[binario]}
+            headerImage={[
+              headerBinario1,
+              headerBinario2,
+              headerBinario3,
+              headerBinario4,
+              headerBinario5,
+              headerBinario6,
+              headerBinario7,
+              headerBinario8,
+            ]}
             multicolor={true}
           />
         ),
@@ -1659,7 +1795,14 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['vintage'].images}
             images3={karniziDerevyannie['vintage'].images3}
             images3Title={karniziDerevyannie['vintage'].images3Title}
-            headerImage={[vintage]}
+            headerImage={[
+              headerVintage1,
+              headerVintage2,
+              headerVintage3,
+              headerVintage4,
+              headerVintage5,
+              headerVintage6,
+            ]}
             multicolor={true}
           />
         ),
@@ -1676,7 +1819,16 @@ export const cornicesAssortment: IAssortment[] = [
             images={karniziDerevyannie['renessans'].images}
             images3={karniziDerevyannie['renessans'].images3}
             images3Title={karniziDerevyannie['renessans'].images3Title}
-            headerImage={[renessans]}
+            headerImage={[
+              headerRenessans1,
+              headerRenessans2,
+              headerRenessans3,
+              headerRenessans4,
+              headerRenessans5,
+              headerRenessans6,
+              headerRenessans7,
+              headerRenessans8,
+            ]}
             multicolor={true}
           />
         ),

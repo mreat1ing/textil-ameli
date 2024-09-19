@@ -122,6 +122,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
         obs.disconnect();
       });
       window.removeEventListener('resize', handleResizeWindow);
+      modalToggle(true);
     };
   }, []);
 

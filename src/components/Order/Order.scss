@@ -143,11 +143,11 @@
   text-align: center;
 }
 
-.order__button:hover {
+.order__button:not(:disabled):hover {
   transform: translate(0);
 }
 
-.order__button:hover .order__button-text {
+.order__button:not(:disabled):hover .order__button-text {
   transform: translateX(19%);
 }
 

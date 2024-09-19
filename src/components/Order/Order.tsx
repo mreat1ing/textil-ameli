@@ -107,10 +107,13 @@ const Order: FC<IOrder> = ({
 
     req
       .then((p) => p.json())
-      .then((p) => p.status === 200)
+      .then((p) => {
+        if (p.status === 200) {
+          clearAll();
+        }
+      })
       .finally(() => {
         setPending(false);
-        clearAll();
       });
   };
 

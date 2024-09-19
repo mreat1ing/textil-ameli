@@ -23,7 +23,6 @@ const OrderModal: FC<IOrderModal> = ({ type, onClose }) => {
 
   useEffect(() => {
     disableScroll();
-    modalToggle(false);
 
     return () => {
       modalToggle(true);

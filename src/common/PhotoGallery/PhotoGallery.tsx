@@ -123,6 +123,7 @@ const PhotoGallery: FC<IPhotoGallery> = ({
       });
       window.removeEventListener('resize', handleResizeWindow);
       modalToggle(true);
+      enableScroll();
     };
   }, []);
 

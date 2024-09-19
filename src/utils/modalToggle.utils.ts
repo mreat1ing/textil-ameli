@@ -8,8 +8,8 @@ export default function modalToggle(value?: boolean) {
   if (isRootElementExpanded) isExpanded = true;
 
   if (isExpanded) {
-    isRootElementExpanded && rootElement?.classList.remove(MODAL_EXPANDED);
+    rootElement?.classList.remove(MODAL_EXPANDED);
   } else {
-    !isRootElementExpanded && rootElement?.classList.add(MODAL_EXPANDED);
+    rootElement?.classList.add(MODAL_EXPANDED);
   }
 }

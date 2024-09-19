@@ -8,6 +8,7 @@ interface IButton {
   type?: 'submit' | 'button';
   submitHandler?: () => void;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const Button: FC<IButton> = ({
@@ -16,6 +17,7 @@ const Button: FC<IButton> = ({
   type,
   submitHandler,
   onClick,
+  disabled,
 }) => {
   const buttonClass = 'base-button' + (className ? ' ' + className : '');
 
@@ -25,7 +27,12 @@ const Button: FC<IButton> = ({
   };
 
   return (
-    <button className={buttonClass} type={type} onClick={handleSubmit}>
+    <button
+      className={buttonClass}
+      type={type}
+      onClick={handleSubmit}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

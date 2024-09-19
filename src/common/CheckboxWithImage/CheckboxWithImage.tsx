@@ -10,14 +10,13 @@ interface ICheckboxWithImage {
 
 const CheckboxWithImage: FC<ICheckboxWithImage> = ({ image, label }) => {
   const [isChecked, setChecked] = useState(false);
+  const sessionChecks = getSessionChecks();
 
   useEffect(() => {
-    const sessionChecks = getSessionChecks();
     if (sessionChecks.findIndex((el) => el === label) > -1) {
       setChecked(true);
-    }
-  }, [label]),
-    [];
+    } else setChecked(false);
+  }, [label, sessionChecks]);
 
   return (
     <div

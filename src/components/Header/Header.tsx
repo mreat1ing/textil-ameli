@@ -1,5 +1,5 @@
 import { FC, useCallback, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Address from 'src/ui/address';
 import Mail from 'src/ui/mail';
@@ -15,6 +15,11 @@ import './Header.scss';
 const Header: FC = () => {
   const [instaShow, setInstaShow] = useState(true);
   const [isModalOpen, setModalOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setModalOpen(false);
+  }, [pathname]);
 
   const handleResize = useCallback(() => {
     if (window.innerWidth <= 990) {

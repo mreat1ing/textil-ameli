@@ -5,9 +5,11 @@ import './OrderModal.scss';
 import Order from 'src/components/Order';
 import CloseButton from 'src/ui/closeButton';
 import { disableScroll, enableScroll } from 'src/utils/scrollToggle.utils';
+import modalToggle from 'src/utils/modalToggle.utils';
+import { orderTypes } from 'src/types/order.type';
 
 interface IOrderModal {
-  type: 'call' | 'consultation' | 'request';
+  type: orderTypes;
   onClose: () => void;
 }
 
@@ -21,8 +23,10 @@ const OrderModal: FC<IOrderModal> = ({ type, onClose }) => {
 
   useEffect(() => {
     disableScroll();
+    modalToggle(false);
 
     return () => {
+      modalToggle(true);
       enableScroll();
     };
   }, []);
@@ -83,6 +87,7 @@ const OrderModal: FC<IOrderModal> = ({ type, onClose }) => {
             мы проконсультируем про наличие, оплату, доставку и монтаж.
           </h2>
           <Order
+            type={type}
             className="modal-content__order"
             categories={type === 'consultation'}
             image={false}

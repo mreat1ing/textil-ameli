@@ -20,7 +20,7 @@ import {
   setSessionName,
   setSessionPhone,
 } from 'src/utils/sessionOrder.utils';
-import { orderTypes } from 'src/types/order.type';
+import { orderTypes, orderRuTypes } from 'src/types/order.type';
 
 import './Order.scss';
 
@@ -32,6 +32,8 @@ const livingRoom = `${hostIcons}/living-room.svg`;
 const other = `${hostIcons}/other.svg`;
 const playroom = `${hostIcons}/playroom.svg`;
 const reception = `${hostIcons}/reception.svg`;
+
+type mailStatus = 'sending' | 'sended' | 'error' | 'default';
 
 interface IOrder {
   image?: boolean;
@@ -45,7 +47,7 @@ interface IOrder {
 }
 
 interface IData extends ISessionOrder {
-  type?: orderTypes;
+  type?: orderRuTypes;
   link?: string;
 }
 
@@ -64,7 +66,18 @@ const Order: FC<IOrder> = ({
   const phoneRef = useRef<InputMask>(null);
   const commentRef = useRef<HTMLTextAreaElement>(null);
   const [checks, setChecks] = useState<string[]>(getSessionChecks());
-  const [isPending, setPending] = useState(false);
+  const [mailStatus, setMailStatus] = useState<mailStatus>('default');
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    if (mailStatus === 'sended' || mailStatus === 'error') {
+      timeout = setTimeout(() => setMailStatus('default'), 1500);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [mailStatus]);
 
   useEffect(() => {
     const component = document.querySelector('.order__image-wrapper');
@@ -90,14 +103,24 @@ const Order: FC<IOrder> = ({
 
   const submitHandler = async (e: FormEvent) => {
     e.preventDefault();
-    setPending(true);
+    setMailStatus('sending');
     const data: IData = getAllSession(categories);
     let dataType: orderTypes = 'call';
     if (type) dataType = type;
     else if (categories) dataType = 'consultation';
-    data['type'] = dataType;
+    switch (dataType) {
+      case 'call':
+        data['type'] = 'Звонок';
+        break;
+      case 'consultation':
+        data['type'] = 'Консультация';
+        break;
+      case 'request':
+        data['type'] = 'Запрос';
+        break;
+    }
     if (dataType === 'request') data['link'] = window.location.href;
-    const req = fetch('./file.php', {
+    const req = fetch('https://textil-amelie.ru/file.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -105,15 +128,15 @@ const Order: FC<IOrder> = ({
       body: JSON.stringify(data),
     });
 
-    req
-      .then((p) => {
+    req.then(
+      (p) => {
         if (p.status === 200) {
+          setMailStatus('sended');
           clearAll();
-        }
-      })
-      .finally(() => {
-        setPending(false);
-      });
+        } else setMailStatus('error');
+      },
+      () => setMailStatus('error')
+    );
   };
 
   const setCheck = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -226,13 +249,21 @@ const Order: FC<IOrder> = ({
             )}
             <div className="order__button-wrapper">
               <Button
-                disabled={isPending}
+                disabled={mailStatus !== 'default'}
                 type="submit"
                 className="order__button"
               >
                 <div className="order__button-text">
                   <PaperPlane width={30} height={30} />
-                  <span>{!isPending ? 'Отправить' : 'Отправка...'}</span>
+                  <span>
+                    {mailStatus === 'default'
+                      ? 'Отправить'
+                      : mailStatus === 'sending'
+                        ? 'Отправка...'
+                        : mailStatus === 'error'
+                          ? 'Не отправлено'
+                          : 'Отправлено'}
+                  </span>
                 </div>
               </Button>
             </div>

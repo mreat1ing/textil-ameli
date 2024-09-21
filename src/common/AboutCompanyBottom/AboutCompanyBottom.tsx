@@ -8,7 +8,7 @@ import './AboutCompanyBottom.scss';
 const AboutCompanyBottom: FC = () => {
   return (
     <ParallaxBgImage
-      image="https://cd11149.tw1.ru/assets/images/bg-curtains.jpg"
+      image="https://textil-amelie.ru/assets/images/bg-curtains.jpg"
       padding={150}
     >
       <div className="about-company__bottom-block-cards">

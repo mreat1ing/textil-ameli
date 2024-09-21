@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 import PhotoGallery from 'src/common/PhotoGallery';
 import Button from 'src/ui/button';
 import observer from 'src/utils/observer.utils';
-const photo1 = 'https://cd11149.tw1.ru/assets/images/ourWorks/1.jpg';
-const photo2 = 'https://cd11149.tw1.ru/assets/images/ourWorks/2.jpg';
-const photo3 = 'https://cd11149.tw1.ru/assets/images/ourWorks/3.jpg';
-const photo4 = 'https://cd11149.tw1.ru/assets/images/ourWorks/4.jpg';
-const photo5 = 'https://cd11149.tw1.ru/assets/images/ourWorks/5.jpg';
-const photo6 = 'https://cd11149.tw1.ru/assets/images/ourWorks/6.jpg';
+const photo1 = 'https://textil-amelie.ru/assets/images/ourWorks/1.jpg';
+const photo2 = 'https://textil-amelie.ru/assets/images/ourWorks/2.jpg';
+const photo3 = 'https://textil-amelie.ru/assets/images/ourWorks/3.jpg';
+const photo4 = 'https://textil-amelie.ru/assets/images/ourWorks/4.jpg';
+const photo5 = 'https://textil-amelie.ru/assets/images/ourWorks/5.jpg';
+const photo6 = 'https://textil-amelie.ru/assets/images/ourWorks/6.jpg';
 
 import './CompletedOrders.scss';
 

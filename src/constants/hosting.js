@@ -1,3 +1,3 @@
-export const hostImages = 'https://cd11149.tw1.ru/assets/images';
-export const hostIcons = 'https://cd11149.tw1.ru/assets/icons';
-export const hostVideos = 'https://cd11149.tw1.ru/assets/videos';
+export const hostImages = 'https://textil-amelie.ru/assets/images';
+export const hostIcons = 'https://textil-amelie.ru/assets/icons';
+export const hostVideos = 'https://textil-amelie.ru/assets/videos';
